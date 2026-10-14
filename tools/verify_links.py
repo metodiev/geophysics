@@ -26,13 +26,21 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parent.parent
 TSV = Path(__file__).resolve().parent / "verified_links.tsv"
 SKIP_DIRS = {
-    ".git", "node_modules", "__pycache__", ".venv", "venv", "site-packages",
-    # Keep this set identical to tools/check_all.py: tool caches are generated
-    # artefacts, not repository content. pytest writes a .pytest_cache/README.md
-    # containing docs.pytest.org, which is not a link this repository cites.
-    ".pytest_cache", ".mypy_cache", ".ruff_cache", ".ipynb_checkpoints",
-    "build", "dist",
+    "node_modules",
+    "venv",
+    "site-packages",
+    "build",
+    "dist",
 }
+# Keep this rule identical to tools/check_all.py: a dot-prefixed path component
+# is never repository content, which covers .git, .venv and every tool cache,
+# and keeps a hidden scratch or backup directory from being scanned for
+# citations. pytest's own .pytest_cache/README.md cites docs.pytest.org and was
+# once reported as a link this repository makes.
+
+
+def _skipped(path: Path) -> bool:
+    return any(part.startswith(".") or part in SKIP_DIRS for part in path.parts)
 
 URL_RE = re.compile(r"https?://[^\s\)\]\"'<>]+")
 
@@ -65,7 +73,7 @@ def load_registry() -> dict[str, tuple[str, str]]:
 def iter_markdown() -> list[Path]:
     return [
         path for path in sorted(REPO_ROOT.rglob("*.md"))
-        if not any(part in SKIP_DIRS for part in path.parts)
+        if not _skipped(path)
     ]
 
 

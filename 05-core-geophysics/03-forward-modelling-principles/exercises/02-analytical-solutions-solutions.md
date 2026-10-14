@@ -102,3 +102,46 @@ error:
 Conclusion: a potential-field depth estimate reports the depth of the *assumed
 shape* that best explains the anomaly width, not the depth of the body. Always
 report the assumed shape and, where possible, test more than one.
+---
+
+## ★★★10
+
+**Derivation.** For the semi-infinite sheet,
+$g_z(x) = 2G\sigma[\pi/2 + \arctan(x/d)]$, and
+
+$$\frac{\mathrm{d}g_z}{\mathrm{d}x}
+= 2G\sigma\cdot\frac{1/d}{1+(x/d)^2} = \frac{2G\sigma\,d}{x^2+d^2},$$
+
+which is maximal at $x = 0$ with value $2G\sigma/d$. Inverting gives
+$d = 2G\sigma/(\mathrm{d}g_z/\mathrm{d}x)_{\max}$. Units:
+$[G\sigma d^{-1}] = \mathrm{m^3kg^{-1}s^{-2}\cdot kg\,m^{-2}\cdot m^{-1}}
+= \mathrm{s^{-2}}$, a gradient ✓. Note also *where* the maximum sits: directly
+over the edge, so the rule locates the edge as well as estimating the depth.
+
+**Numbers.** $\sigma = 400 \times 100 = 4\times10^{4}$ kg m⁻², $d = 150$ m:
+
+$$\left(\frac{\mathrm{d}g_z}{\mathrm{d}x}\right)_{\max}
+= \frac{2(6.6743\times10^{-11})(4\times10^{4})}{150}
+= 3.5596\times10^{-8}\ \mathrm{s^{-2}}
+= 3.560\times10^{-3}\ \mathrm{mGal\,m^{-1}}
+= 3.560\ \mathrm{\mu Gal\,m^{-1}} .$$
+
+**Station interval.** To see a change of at least the 0.01 mGal resolution across
+the gradient peak, the interval $\Delta x$ must satisfy
+$3.560\times10^{-3}\Delta x \ge 0.01$, i.e. $\Delta x \ge 2.8$ m. So a
+**10 m station interval resolves the edge comfortably** (a 0.036 mGal change
+between stations), while a 50 m interval (0.18 mGal) is more than adequate and a
+1 m interval would be needlessly fine.
+
+**Why a dyke gives two peaks, and the bias from misreading it.** A finite-width
+dyke is the difference of two semi-infinite sheets, so its gradient is the
+*difference* of two peaked functions centred on the two edges — hence two peaks,
+separated by the dyke's width $w$. If the two peaks are unresolved and treated as
+one broad step, the inferred depth is set by the *apparent* gradient maximum, which
+is smaller than the true single-edge value because the two peaks partially cancel
+between them. A smaller maximum in
+$d = 2G\sigma/(\mathrm{d}g/\mathrm{d}x)_{\max}$ gives a **larger** inferred depth —
+so misreading a dyke as a step biases the depth *upward*, potentially by a factor
+approaching 2 when the separation is comparable to the depth. That is the same
+shape-ambiguity quantified in the lesson's error budget, expressed in the gradient
+domain.

@@ -98,6 +98,169 @@ boundary of the measurement surface. It cannot be a spike. This is the deepest
 reason that potential-field resolution degrades with depth
 ([05-01-03](../01-what-geophysics-measures/03-resolution-depth-tradeoff.md)).
 
+### 3.4 Poisson's equation, derived from Gauss's law
+
+Section 3.3 quoted $\nabla^2\Phi = 4\pi G\rho$. It is worth deriving, because the
+sign and the factor $4\pi$ are both consequences of a physical statement rather
+than conventions.
+
+Gauss's law for gravity states that the flux of $\mathbf{g}$ through any closed
+surface equals $-4\pi G$ times the enclosed mass:
+
+$$\oint_{\partial V}\mathbf{g}\cdot\mathrm{d}\mathbf{A} = -4\pi G\,M_\text{enc}
+= -4\pi G\int_V\rho\,\mathrm{d}V .$$
+
+Apply the divergence theorem to the left side and equate the integrands, valid
+for every volume:
+
+$$\int_V \nabla\cdot\mathbf{g}\,\mathrm{d}V = -4\pi G\int_V\rho\,\mathrm{d}V
+\qquad\Longrightarrow\qquad
+\nabla\cdot\mathbf{g} = -4\pi G\rho .$$
+
+Now substitute the definition of the potential, $\mathbf{g} = -\nabla\Phi$:
+
+$$\nabla\cdot(-\nabla\Phi) = -4\pi G\rho
+\qquad\Longrightarrow\qquad
+\boxed{\;\nabla^2\Phi = 4\pi G\rho\;}$$
+
+Units: $[\Phi] = \mathrm{m^2\,s^{-2}}$, so $[\nabla^2\Phi] =
+\mathrm{m^2s^{-2}/m^2} = \mathrm{s^{-2}}$; and
+$[G\rho] = \mathrm{m^3kg^{-1}s^{-2}\cdot kg\,m^{-3}} = \mathrm{s^{-2}}$. ✓
+
+**Physical interpretation.** The Laplacian measures how a function differs from
+its local average (Section 3.6 makes this precise). So $\nabla^2\Phi = 4\pi G\rho$
+says: *wherever there is mass, the potential at a point lies below the average of
+its neighbourhood — the function is "dished" inward toward the mass.* Where
+$\rho = 0$ there is no dishing at all, and the function is exactly its own local
+average: harmonic.
+
+### 3.5 The dipole field, derived from a potential
+
+The dipole formula was asserted in Section 3.2. Deriving it shows why the
+$r^{-3}$ and the factor $(3\cos^2\!-$-type angular dependence are inevitable.
+
+In a current-free region a magnetic scalar potential exists with
+$\mathbf{B} = -\mu_0\nabla\psi$. For a dipole,
+
+$$\psi(\mathbf{r}) = \frac{1}{4\pi}\frac{\mathbf{m}\cdot\hat{\mathbf{r}}}{r^2}
+= \frac{1}{4\pi}\frac{\mathbf{m}\cdot\mathbf{r}}{r^3}.$$
+
+Differentiate. For a fixed vector $\mathbf{m}$,
+
+$$\frac{\partial}{\partial x_i}\frac{m_jx_j}{r^3}
+= \frac{m_i}{r^3} - \frac{3(\mathbf{m}\cdot\mathbf{r})\,x_i}{r^5},$$
+
+so
+
+$$\mathbf{B} = -\mu_0\nabla\psi
+= -\frac{\mu_0}{4\pi}\left[\frac{\mathbf{m}}{r^3}
+- \frac{3(\mathbf{m}\cdot\mathbf{r})\,\mathbf{r}}{r^5}\right]
+= \frac{\mu_0}{4\pi}\,\frac{3(\mathbf{m}\cdot\hat{\mathbf{r}})\hat{\mathbf{r}}
+-\mathbf{m}}{r^3},$$
+
+which is the asserted dipole field. Two consequences are now visible rather than
+memorised:
+
+- the field is $r^{-3}$ because $\psi$ is $r^{-2}$ (one more derivative, one more
+  power — the rule of Section 3.1);
+- the field is **tangential to $\hat{\mathbf{r}}$ in the sense that
+  $\hat{\mathbf{r}}\cdot\mathbf{B} = 2(\mu_0/4\pi)(\mathbf{m}\cdot\hat{\mathbf{r}})/r^3 \ne 0$**:
+  a dipole field is *not* radial, unlike the monopole field of gravity. That is
+  why magnetic anomalies have sign reversals and gravity anomalies of a compact
+  body do not.
+
+**Measured check.** A synthetic dipole of $|\mathbf{m}| = 5\times10^{6}$ A m²
+about 300 m from the observer gives $B_z = -18.518519$ nT while $B_x = B_y = 0$,
+so $|\mathbf{B}| = 18.518519$ nT = $\frac{\mu_0}{4\pi}\frac{m}{r^3}$ exactly, as
+the algebra requires for a transverse observation. At 100 m the same observable
+is 1000.0000 nT against 1.3717 nT at 900 m: a ratio of 729.0 for a ratio of 9.0
+in distance, i.e. exactly $9^3$. ✓
+
+### 3.6 Why "no interior extrema": the mean-value property, derived
+
+The smoothness consequence of Section 3.3 becomes precise through the
+**mean-value property** of harmonic functions:
+
+$$\Phi(\mathbf{x}_0) = \frac{1}{4\pi R^2}\oint_{|\mathbf{x}-\mathbf{x}_0| = R}
+\Phi(\mathbf{x})\,\mathrm{d}A .$$
+
+**Proof sketch.** Apply the divergence theorem to $\mathbf{g} = -\nabla\Phi$ over
+the ball $|\mathbf{x}-\mathbf{x}_0| \le R$, the reverse of Section 3.4:
+$0 = \int_V\nabla\cdot\mathbf{g}\,\mathrm{d}V = \oint -\partial\Phi/\partial n\,
+\mathrm{d}A$ shows the surface integral of the normal derivative vanishes, and
+differentiating the spherical average with respect to $R$ gives zero. Hence the
+average is independent of $R$; letting $R\to0$ identifies it with $\Phi(\mathbf{x}_0)$. ∎
+
+**Extremum principle.** Suppose $\Phi$ has a strict local maximum at an interior
+point $\mathbf{x}_0$. Then for small $R$ every point on the sphere has
+$\Phi < \Phi(\mathbf{x}_0)$, so the average of the sphere is strictly less than
+$\Phi(\mathbf{x}_0)$ — contradicting the mean-value property. Therefore a
+non-constant harmonic function has **no interior extremum**; its extrema lie on
+the boundary of the region.
+
+**Consequence for surveys.** For a gravity survey the region is the half-space
+above the sources, and its boundary is the observation surface plus "infinity".
+So the extreme values of an anomaly occur *on the measurement surface itself* or
+at infinity — never floating above it. Practically:
+
+- a potential-field anomaly cannot be narrower than the surface sampling
+  suggests without extra information; there is no "lens" above the surface;
+- any computed field with an interior extremum is a numerical or processing
+  artefact;
+- the anomaly's extremum position is where the source is closest, which is how
+  half-width depth rules get their physical content.
+
+### 3.7 The multipole hierarchy, and why gravity and magnetics differ
+
+Expand the potential of a finite source in powers of $1/r$ about the origin:
+
+$$\Phi(\mathbf{r}) = -\frac{G}{r}\left[M + \frac{\mathbf{d}\cdot\hat{\mathbf{r}}}{r}
++ \frac{1}{2}\frac{Q_{ij}\hat r_i\hat r_j}{r^2} + \cdots\right],$$
+
+with $M$ the total mass (monopole), $\mathbf{d}$ the dipole moment (which
+vanishes when the origin is at the centre of mass), and $Q_{ij}$ the quadrupole
+moment. The successive terms fall as $r^{-1}, r^{-2}, r^{-3}$, and each
+derivative of the potential adds one power.
+
+**The structural difference.** For gravity the monopole term $M > 0$ always
+exists, so the leading far-field behaviour is $r^{-2}$ for the field and the
+next term is a *relative* correction of order (size/depth). For magnetostatics no
+magnetic monopole exists, so the first term in the expansion is absent, the
+leading behaviour is the dipole $r^{-3}$, and the next term is the quadrupole.
+This is the *reason* for the decay-exponent difference asserted in Section 3.1,
+and it has a practical consequence: a magnetic anomaly's shape is more sensitive
+to the body's orientation and internal structure than a gravity anomaly's, while
+its amplitude dies faster with depth.
+
+**Measured confirmation.** The demonstration's point mass gives a factor of 64.0
+in amplitude for a factor of 8 in depth ($= 8^2$), and its dipole gives 729.0 for
+a factor of 9 ($= 9^3$). The exponents are the levels in the hierarchy.
+
+### 3.8 The multipole hierarchy, quantified by measurement
+
+Section 3.7 gave the hierarchy in words. Here it is with the demonstration's
+numbers, because the arithmetic makes the structure unmistakable.
+
+| source level | field decay | measured amplitude ratio | depth ratio |
+|---|---|---|---|
+| monopole (gravity) | $r^{-2}$ | 64.0 at 100 m → 800 m | 8 |
+| dipole (magnetics) | $r^{-3}$ | 729.0 at 100 m → 900 m | 9 |
+
+$8^2 = 64$ and $9^3 = 729$ exactly, to the precision of the table. **The exponent
+of the decay equals the level of the multipole at which the source first appears**,
+and there is no way to change the exponent without changing the source's
+symmetry. A distribution with zero total mass (a positive body over a negative
+one of equal mass) has no monopole term and decays as $r^{-3}$, which is one
+reason gravity interpretations of *compensated* structures (isostatic roots, salt
+overhangs) have much shorter spatial reach than the bodies' sizes suggest.
+
+**The practical asymmetry.** Because a magnetic source has no monopole, its
+leading term is the dipole and it decays one power faster than a gravitating mass
+of the same compactness. That is why magnetometers see shallow geology so well
+and deep geologic structure so poorly, while gravimeters see the deep structure
+and blur the shallow detail — a division of labour that follows from Section 3.4's
+Poisson equation plus Section 3.7's expansion, and from nothing else.
+
 ## 4. Units and dimensional analysis
 
 | Quantity | Symbol | SI unit | Dimension |
@@ -141,36 +304,72 @@ and 0.00472 mGal at 800 m: a factor of 64 for a factor of 8 in depth, exactly
 $d^{-2}$. A dipole at the same depths would give $d^{-3}$: 1000 nT at 100 m and
 1.37 nT at 900 m (a factor of 730 for a factor of 9).
 
-## 7. Python demonstration
+### 6.3 Worked arithmetic: from potential to field, both ways
 
-Run `code/field_conventions_demo.py` in module 02. Section 2 prints the
-numerical-versus-analytic gradient check; Section 3 prints the dipole
-components, $|\mathbf{B}|$, and $\Delta T$ for three ambient inclinations, which
-is the projection lesson made numeric.
+**Forward: potential → field.** For the point mass of Section 6.1 with
+$m = 10^{10}$ kg, $d = 250$ m, the potential on the vertical through the mass is
 
-## 8. Exercises, mistakes, applications
+$$\Phi(z) = -\frac{Gm}{|z-d|} = -\frac{(6.6743\times10^{-11})(10^{10})}{|z-250|}
+= -\frac{0.66743}{|z-250|}\ \mathrm{m^2\,s^{-2}} .$$
 
-Exercises: [`exercises/01-scalar-vs-vector-fields-exercises.md`](./exercises/01-scalar-vs-vector-fields-exercises.md).
+At $z = 0$: $\Phi = -0.66743/250 = -2.6697\times10^{-3}$ m² s⁻². For a
+central difference the two samples are
 
-**Common mistakes.**
+$$\Phi(\pm h) = -\frac{0.66743}{250 \mp h}
+\qquad\Longrightarrow\qquad
+\frac{\mathrm{d}\Phi}{\mathrm{d}z}\bigg|_{0}
+\approx \frac{\Phi(h)-\Phi(-h)}{2h},$$
 
-1. **Saying a gravimeter "measures the potential."** It measures a gradient of
-   it — usually one component, usually a difference between two stations.
-2. **Confusing $|\mathbf{B}|$ with $\Delta T$.** They agree only when the
-   anomaly is small relative to the main field.
-3. **Assuming smoothness is a processing artefact.** It is a property of
-   harmonic functions.
-4. **Dropping signs.** $\mathbf{g} = -\nabla\Phi$ with the negative sign
-   defined by the sign convention for $\Phi$.
-5. **Using $\mu_0 = 4\pi\times10^{-7}$ without saying so.** It is
-   $1.25663706212\times10^{-6}$ H/m in the 2019 SI.
+which is the slowness-average form $-\mathrm{d}\Phi/\mathrm{d}z =
+\frac{0.66743}{250^2-h^2}$ — exactly $Gm/(d^2-h^2)$, tending to $Gm/d^2$ as
+$h\to0$. Evaluate numerically rather than by hand: the demonstration reports
+$-\mathrm{d}\Phi/\mathrm{d}z = 1.067888\times10^{-5}$ m s⁻², and the analytic
+value $Gm/d^2 = (6.6743\times10^{-11})(10^{10})/250^2 = 1.067888\times10^{-5}$
+m s⁻². The relative difference is $3.1\times10^{-11}$.
 
-**Real-world applications.** Airborne magnetic gradiometry measures field
-*gradients* directly, which suppresses the regional field without any
-processing; borehole gravity measures a vertical gradient, which is far more
-sensitive to nearby mass than the absolute field.
+**Where that $3\times10^{-11}$ comes from.** It is not physics. The two values of
+$\Phi$ being differenced are $-2.6697\times10^{-3}$ and $-2.6718\times10^{-3}$
+m² s⁻², which agree to six significant figures; subtracting them discards five of
+them, and the surviving digits carry the rounding of each. This is catastrophic
+cancellation ([01-01-04](../../01-mathematics/01-arithmetic/04-floating-point.md)),
+and the cure is analytic differentiation or a larger step with a Richardson
+extrapolation — not a smaller step, which makes it worse.
 
-## Extended worked example: measuring the maximum principle and the decay powers
+**Inverse: field → potential.** Because $\Phi = -Gm/r$, inverting the measured
+field is a two-step problem: measure $g_z$ (one component of a gradient), then
+integrate to get $\Phi$ up to a constant. The constant is unobservable — which is
+exactly why every potential-field method ties to a datum, and why "absolute"
+gravity is a metrological achievement rather than a geometric one.
+
+### 6.4 A shortcut that fails: "the field is harmonic, so I can extrapolate it"
+
+Because $\Phi$ is harmonic above the sources, an analytic continuation of the
+measured field exists and is unique. The temptation is to conclude that
+extrapolation is therefore safe.
+
+It is not. Section 3.3's relation $\hat h(k) = 2\pi G e^{-|k|d}$ shows the reason
+in one line: continuing *downward* by $\Delta d$ multiplies a component of
+wavelength $\lambda$ by $e^{2\pi\Delta d/\lambda}$. For $\Delta d = 300$ m:
+
+| $\lambda$ (m) | amplification |
+|---|---|
+| 1000 | 6.59 |
+| 500 | 43.4 |
+| 200 | $1.23\times10^{4}$ |
+
+A 1% error in the data becomes a 123-fold error in the model at $\lambda = 200$ m.
+The measurement in
+[05-01-04](../01-what-geophysics-measures/04-ambiguity-and-nonuniqueness.md)
+confirms the practical consequence: inverting for a source at 1200 m depth drives
+the condition number to $8.27\times10^{15}$ and the recovered model RMS to
+$5.66\times10^{14}$ kg/m², while the data misfit *degrades* to
+$1.0\times10^{-4}$ — the linear algebra, not the physics, has taken over.
+
+**The rule.** Harmonicity guarantees uniqueness of the continuation; it says
+nothing about stability. Uniqueness and stability are different properties, and
+only the first follows from Laplace's equation.
+
+### 6.5 Extended worked example: measuring the maximum principle and the decay powers
 
 **The gradient check, in numbers.** A synthetic point mass of
 $10^{10}$ kg at 250 m depth has potential $\Phi(z) = -Gm/|z-d|$ along the
@@ -210,6 +409,35 @@ sampled profile. A numerical check: sample $g_z(x)$ densely, locate the maximum,
 and confirm it lies at the endpoint closest to the source when the profile does
 not include the point directly above it. Any interior sharp spike in a
 potential-field anomaly is a processing artefact, not geology.
+
+## 7. Python demonstration
+
+Run `code/field_conventions_demo.py` in module 02. Section 2 prints the
+numerical-versus-analytic gradient check; Section 3 prints the dipole
+components, $|\mathbf{B}|$, and $\Delta T$ for three ambient inclinations, which
+is the projection lesson made numeric.
+
+## 8. Exercises, mistakes, applications
+
+Exercises: [`exercises/01-scalar-vs-vector-fields-exercises.md`](./exercises/01-scalar-vs-vector-fields-exercises.md).
+
+**Common mistakes.**
+
+1. **Saying a gravimeter "measures the potential."** It measures a gradient of
+   it — usually one component, usually a difference between two stations.
+2. **Confusing $|\mathbf{B}|$ with $\Delta T$.** They agree only when the
+   anomaly is small relative to the main field.
+3. **Assuming smoothness is a processing artefact.** It is a property of
+   harmonic functions.
+4. **Dropping signs.** $\mathbf{g} = -\nabla\Phi$ with the negative sign
+   defined by the sign convention for $\Phi$.
+5. **Using $\mu_0 = 4\pi\times10^{-7}$ without saying so.** It is
+   $1.25663706212\times10^{-6}$ H/m in the 2019 SI.
+
+**Real-world applications.** Airborne magnetic gradiometry measures field
+*gradients* directly, which suppresses the regional field without any
+processing; borehole gravity measures a vertical gradient, which is far more
+sensitive to nearby mass than the absolute field.
 
 ## 9. Further reading
 

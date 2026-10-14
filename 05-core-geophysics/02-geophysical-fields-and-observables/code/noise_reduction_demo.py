@@ -50,9 +50,12 @@ def main() -> None:
           f" = {free_air_grad:.4e} (m/s^2)/m = "
           f"{free_air_grad/MGAL:.6f} mGal/m")
     print("    (g = GM/r^2 differentiated; M is never needed.  The classical")
-    print("     0.3086 mGal/m differs slightly because it also carries a")
-    print("     second-order term and uses ellipsoidal normal gravity.  We use")
-    print("     the derived leading term and say so.)")
+    print("     0.3086 mGal/m is the ELLIPSOIDAL normal-gravity gradient,")
+    print("     -2*gamma/a*(1 + f + m - 2f sin^2 phi).  For WGS 84 at 45 deg")
+    print("     that factor is 1.00344979, giving -0.308555 mGal/m.  The")
+    print("     difference is the ellipsoidal factor, NOT a second-order term")
+    print("     in h: the latter is of relative order h/R ~ 1e-6 at survey")
+    print("     elevations.  We use the spherical leading term and say so.)")
     print(f"  Bouguer : dg/dh = 2 pi G rho = 2 pi * {G:.4e} * {rho_slab:.0f}"
           f" = {bouguer_grad:.4e} (m/s^2)/m")
     print(f"          = {bouguer_grad/MGAL:.6f} mGal/m")

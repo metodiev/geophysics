@@ -109,6 +109,164 @@ $V_s^\text{sat}/V_s^\text{dry} = 0.955925$.
 - Fluid substitution at constant $\phi$ changes density exactly and modulus
   approximately.
 
+### 3.5 Porosity from a mass balance, and how badly it amplifies errors
+
+The density law of Section 3.1 is usually used in reverse: measure $\rho_b$,
+assume $\rho_m$ and $\rho_f$, and solve for $\phi$. The inversion is trivial and
+the error propagation is not.
+
+$$\rho_b = (1-\phi)\rho_m + \phi\rho_f
+\qquad\Longrightarrow\qquad
+\boxed{\;\phi = \frac{\rho_m - \rho_b}{\rho_m - \rho_f}\;}$$
+
+Dimensional check: numerator and denominator are both kg m⁻³, so $\phi$ is
+dimensionless ✓ — and note that the *result* is a ratio of density differences,
+which is exactly where the sensitivity comes from.
+
+**Sensitivity.** Differentiate with respect to the measured quantity:
+
+$$\frac{\partial\phi}{\partial\rho_b} = -\frac{1}{\rho_m-\rho_f},
+\qquad
+\frac{\partial\phi}{\partial\rho_m} = \frac{\rho_b-\rho_f}{(\rho_m-\rho_f)^2},
+\qquad
+\frac{\partial\phi}{\partial\rho_f} = \frac{\rho_m-\rho_b}{(\rho_m-\rho_f)^2}.$$
+
+With $\rho_m = 2650$, $\rho_f = 1020$ kg/m³ the denominator is 1630 kg/m³, so:
+
+| error in the input | resulting error in $\phi$ |
+|---|---|
+| $\rho_b$ known to $\pm10$ kg/m³ | $\pm0.0061$ |
+| $\rho_m$ assumed wrong by $\pm30$ kg/m³ | $\pm0.018$ |
+| $\rho_f$ assumed wrong by $\pm50$ kg/m³ | $\pm0.009$ |
+
+**Physical interpretation.** The *grain density* is the dominant error source,
+and it is the one usually assumed. A 30 kg/m³ error in $\rho_m$ — about 1.1%,
+easily produced by getting the clay fraction or the heavy-mineral content wrong —
+costs 1.8 porosity units. Since typical porosities are 0.05–0.35, that is a
+5–36% relative error in porosity from an assumption rather than a measurement.
+**The grain density is measurable (on cuttings or by pycnometry) and should be
+measured**, and its provenance reported with any porosity derived this way.
+
+### 3.6 Three phases, and the bound-water trap
+
+Clay-bearing rocks have a third component that is not free fluid: water bound to
+clay surfaces. It contributes to the total mass and to the total porosity, but it
+does not behave as a free fluid for flow *or* for most elastic purposes.
+
+Write total porosity as $\phi_t = \phi_\text{eff} + \phi_\text{bw}$ and include
+bound water in the solid (since it moves with the frame):
+
+$$\rho_b = (1-\phi_t)\rho_m + \phi_\text{bw}\rho_\text{bw}
++ \phi_\text{eff}\rho_f .$$
+
+Rearranged, this is the *same* two-phase law with an effective grain density
+
+$$\rho_m^\text{eff} = \rho_m + \frac{\phi_\text{bw}}{1-\phi_t}
+\left(\rho_\text{bw} - \rho_m\right),$$
+
+and a density *below* $\rho_m$ because $\rho_\text{bw}<\rho_m$. **The trap:** an
+analyst who uses $\rho_m = 2650$ kg/m³ on a clay-rich rock is implicitly using a
+value too high, and by the table of Section 3.5 that error propagates directly
+into porosity. With $\phi_\text{bw}/(1-\phi_t) = 0.05$ and
+$\rho_\text{bw} = 1000$ kg/m³, $\rho_m^\text{eff} = 2650 - 0.05(1650) =
+2567.5$ kg/m³ — a 82.5 kg/m³ reduction, giving a porosity error of
+$0.05$ by the sensitivity above. **Bound water is not a refinement; it is a
+first-order term in shaly rocks.**
+
+### 3.7 Impedance, and how much it moves with porosity
+
+The seismic observable at normal incidence depends on the acoustic impedance
+$Z = \rho_bV_p$. Its porosity sensitivity is the sum of a density part and a
+velocity part:
+
+$$\frac{\partial\ln Z}{\partial\phi}
+= \frac{1}{\rho_b}\frac{\partial\rho_b}{\partial\phi}
++ \frac{1}{V_p}\frac{\partial V_p}{\partial\phi}
+= \frac{\rho_f-\rho_m}{\rho_b}
++ \frac{1}{V_p}\frac{\partial V_p}{\partial\phi} .$$
+
+The first term is known exactly:
+
+$$\frac{\rho_f-\rho_m}{\rho_b}
+= \frac{1020-2650}{2237.5} = -0.7285\ \text{per unit } \phi
+\quad\text{(using Section 6.1's values)} .$$
+
+So **each unit of porosity costs 73% of the impedance through density alone**.
+The second (velocity) term requires a rock-physics model
+([05-04-02](./02-effective-medium-theory.md),
+[05-04-03](./03-gassmann-fluid-substitution.md)) and is typically of the same
+magnitude, which is why impedance is such a sensitive porosity indicator and
+such a poor *uniquely interpretable* one: two terms of comparable size, one
+known and one modelled.
+
+### 3.8 The impedance sensitivity, with the measured velocity term
+
+Section 3.7 separated the impedance sensitivity into a known density term and a
+modelled velocity term. The demonstration supplies the second.
+
+$$\frac{\partial\ln Z}{\partial\phi}
+= \underbrace{\frac{\rho_f-\rho_m}{\rho_b}}_{\text{known: }-0.7285}
++ \underbrace{\frac{1}{V_p}\frac{\partial V_p}{\partial\phi}}_{\text{modelled}} .$$
+
+Evaluating the velocity term from the stated synthetic frame law
+($K_\text{dry} = K_\text{min}(1-\phi/\phi_c)$, $\phi_c = 0.40$, fluid A) and
+Gassmann, the measured impedances are
+$Z(0.10) = 1.3470\times10^{7}$, $Z(0.20) = 1.0809\times10^{7}$ and
+$Z(0.30) = 7.7267\times10^{6}$ kg m⁻² s⁻¹, so the central difference at
+$\phi = 0.20$ gives
+
+$$\frac{\partial\ln Z}{\partial\phi} = \frac{\ln Z(0.10)-\ln Z(0.30)}
+{0.10-0.30} = -2.779 .$$
+
+Splitting it with the density term evaluated at the same state
+($\rho_b = 2320$ kg m⁻³, so $(\rho_f-\rho_m)/\rho_b = -0.7112$):
+
+| contribution | value | share |
+|---|---|---|
+| density, $(\rho_f-\rho_m)/\rho_b$ | $-0.7112$ | 26% |
+| velocity, $(1/V_p)\,\partial V_p/\partial\phi$ | $-2.068$ | 74% |
+| total $\partial\ln Z/\partial\phi$ | $-2.779$ | 100% |
+
+with $\partial V_p/\partial\phi = -9175$ m s⁻¹ per unit porosity
+(central difference, same states).
+
+**Read that as a design conclusion — and note it is the opposite of the intuitive
+guess.** The **velocity term dominates the impedance sensitivity by a factor of
+2.9**. An impedance-derived porosity is therefore *mostly a rock-physics model
+result*, not a density measurement, and it inherits the frame-law uncertainty
+rather than the grain-density uncertainty of Section 3.5. The intuition that
+"density is the well-known part, so impedance is mostly density" is exactly
+backwards here, and only the arithmetic shows it.
+
+**The caveat that keeps this honest.** The split depends on the frame law, which
+is a stated *synthetic* choice. A different frame law changes the velocity term
+markedly — that is the point: **the dominant term is the modelled one**, so the
+conclusion's uncertainty is dominated by the rock-physics model, not by the
+density measurement.
+
+### 3.9 Why density cannot give velocity: the counting argument
+
+Count the unknowns and the observables, because the reason is structural and not
+a matter of cleverness.
+
+| quantity | status |
+|---|---|
+| $\phi$ | unknown |
+| $\rho_m$, $\rho_f$ | mineralogy and fluid — partly independent |
+| $K_\text{dry}$, $G_\text{dry}$ | **not observable in density** |
+| $K_\text{min}$, $K_\text{fl}$ | constituent moduli |
+| $S_w$ | unknown |
+
+Measuring $\rho_b$ gives **one** number, and it constrains only the combination
+$(1-\phi)\rho_m + \phi\rho_f$. Velocity depends on $\phi$, on the *frame*
+moduli $K_\text{dry}$ and $G_\text{dry}$, on $K_\text{min}$ and on $K_\text{fl}$.
+The frame moduli are a function of the pore *geometry* — crack-like versus
+equidimensional pores stiffen a rock completely differently at the same porosity
+— and geometry leaves no trace in density at all. **Two rocks with identical
+porosity, mineralogy and saturation can have velocities differing by tens of
+percent; they necessarily have identical densities.** That is the whole
+justification for the effective-medium machinery of the next two lessons.
+
 ## 4. Units and dimensional analysis
 
 | Quantity | Symbol | Unit |
@@ -155,27 +313,7 @@ $V_p$ by $+0.17\%$; at $\phi = 0.35$ by $-7.70\%$. The fluid effect grows steepl
 with porosity — and changes sign for $V_p$ at high porosity, because there the
 density reduction outweighs the modulus reduction.
 
-## 7. Python demonstration
-
-`code/gassmann_demo.py` (Sections 2, 3 and 5) and `code/petrophysics_demo.py`
-(Section 1) provide the numbers above. All inputs are labelled SYNTHETIC.
-
-## 8. Exercises, mistakes, applications
-
-Exercises: [`exercises/01-porosity-density-velocity-exercises.md`](./exercises/01-porosity-density-velocity-exercises.md).
-
-**Common mistakes.** (1) Quoting a "typical" porosity, density or velocity
-without a range. (2) Using total porosity where effective porosity is required.
-(3) Ignoring fluid density dependence on pressure and temperature. (4) Assuming
-that a density change implies a proportional velocity change. (5) Using grain
-density as a fitted parameter when it can be measured.
-
-**Applications.** Density logs and their interpretation; synthetic seismogram
-generation (acoustic impedance = $\rho V_p$); 4-D seismic feasibility, where the
-$\phi(\rho_2-\rho_1)$ term sets the amplitude; gravity modelling with a
-petrophysically constrained density.
-
-## Extended worked example: a complete 4-D feasibility calculation
+### 6.5 Extended worked example: a complete 4-D feasibility calculation
 
 This is the calculation that decides whether time-lapse seismic could monitor a
 fluid change, and it uses every part of this lesson.
@@ -243,6 +381,76 @@ $K_f$ fell from 2.2 GPa to 0.2809 GPa on going from $S_w = 1.0$ to 0.5.
 **The conclusion "the impedance change is detectable" survives a plausible
 uncertainty budget; the conclusion "the saturation change is exactly 0.5" does
 not**, and a real study must report the two statements separately.
+
+### 6.6 Worked arithmetic: the same rock, three assumed grain densities
+
+Take a measured bulk density $\rho_b = 2237.5$ kg/m³ and a fluid density of
+1020 kg/m³, and compute porosity under three assumptions.
+
+| assumed $\rho_m$ (kg/m³) | $\phi = (\rho_m-\rho_b)/(\rho_m-\rho_f)$ |
+|---|---|
+| 2650 (quartz-rich) | $(2650-2237.5)/1630 = 0.2531$ |
+| 2750 (heavy minerals) | $(2750-2237.5)/1730 = 0.2962$ |
+| 2567.5 (clay-corrected, Section 3.6) | $(2567.5-2237.5)/1547.5 = 0.2132$ |
+
+**The spread is 0.213 to 0.296 — a factor of 1.39 in porosity — from an
+assumption about mineralogy, with the density measurement held fixed.** Any
+interpretation that depends on porosity (permeability, flow, velocity) inherits
+that factor. This is the concrete form of Section 3.5's sensitivity table, and it
+is why a petrophysical report must state the grain density *and its provenance*
+alongside the porosity.
+
+**Cross-check with the direct calculation.** Section 6.1 computed
+$\rho_b = 2237.5$ kg/m³ from $\phi = 0.25$, $\rho_m = 2650$,
+$\rho_f = 1000$ kg/m³. Inverting with the same inputs:
+$(2650-2237.5)/(2650-1000) = 412.5/1650 = 0.2500$ ✓ — the round trip is exact,
+which checks the algebra but not the assumptions. **A round trip with the same
+assumed inputs always returns the same answer; that is what makes it necessary
+and not sufficient.**
+
+### 6.7 A shortcut that fails: "porosity follows from density"
+
+**The shortcut.** Report a porosity log computed from a density log using a
+literature grain density, and treat it as a measurement.
+
+**Why it fails, in three ways.**
+
+1. **It is not a measurement.** It is an *inversion* of a measurement under two
+   assumptions ($\rho_m$, $\rho_f$), and the sensitivity table of Section 3.5
+   shows the assumptions can dominate. The correct description is "porosity
+   inferred from bulk density assuming $\rho_m = 2650$ and $\rho_f = 1020$
+   kg/m³", and the uncertainty must be carried through.
+2. **It ignores bound water.** Section 3.6: in shaly rock the effective grain
+   density can be 80 kg/m³ below the mineral value, worth 5 porosity units.
+3. **It is unfalsifiable as stated.** Nothing in the density measurement tests
+   the mineralogy assumption, so the error is invisible in the report unless an
+   independent porosity measurement (NMR, neutron, core) is compared.
+
+**What to do instead.** Measure $\rho_m$ where possible (cores, cuttings,
+mineralogy from XRD); where not, quote a *range* of grain densities, carry the
+resulting porosity range, and report the sensitivity
+$\partial\phi/\partial\rho_m = (\rho_b-\rho_f)/(\rho_m-\rho_f)^2$ so a reader can
+recompute it for their own assumptions.
+
+## 7. Python demonstration
+
+`code/gassmann_demo.py` (Sections 2, 3 and 5) and `code/petrophysics_demo.py`
+(Section 1) provide the numbers above. All inputs are labelled SYNTHETIC.
+
+## 8. Exercises, mistakes, applications
+
+Exercises: [`exercises/01-porosity-density-velocity-exercises.md`](./exercises/01-porosity-density-velocity-exercises.md).
+
+**Common mistakes.** (1) Quoting a "typical" porosity, density or velocity
+without a range. (2) Using total porosity where effective porosity is required.
+(3) Ignoring fluid density dependence on pressure and temperature. (4) Assuming
+that a density change implies a proportional velocity change. (5) Using grain
+density as a fitted parameter when it can be measured.
+
+**Applications.** Density logs and their interpretation; synthetic seismogram
+generation (acoustic impedance = $\rho V_p$); 4-D seismic feasibility, where the
+$\phi(\rho_2-\rho_1)$ term sets the amplitude; gravity modelling with a
+petrophysically constrained density.
 
 ## 9. Further reading
 

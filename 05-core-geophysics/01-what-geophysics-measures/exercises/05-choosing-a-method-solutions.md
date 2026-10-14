@@ -70,14 +70,32 @@ but a naive single-station check over the target would show nothing.
 
 $\delta = \sqrt{2/(\mu\sigma\omega)}$ with $\sigma = 0.02$ S/m,
 $\mu_0 = 1.2566\times10^{-6}$ H/m: $\mu\sigma = 2.513\times10^{-8}$.
-Setting $\delta = 500$ m gives $2/(\mu\sigma\omega) = 2.5\times10^5$, so
-$\omega = 2/(2.513\times10^{-8}\cdot2.5\times10^5) = 0.3183$ rad/s and
-$T = 2\pi/\omega = 19.7$ s. A 1 Hz transmitter is **not** adequate: at 1 Hz,
-$\delta = \sqrt{2/(2.513\times10^{-8}\cdot6.283)} = 3561$ m, which is actually
-deeper than needed — so on penetration grounds 1 Hz is fine, but the resolution
-and the instrument's signal strength at low frequency must also be checked. The
-honest answer distinguishes the *penetration* requirement (T ≥ 1.3 s, satisfied)
-from the *resolution and signal* requirements (must be modelled).
+Setting $\delta = 500$ m means $\delta^2 = 2/(\mu\sigma\omega) = 2.5\times10^{5}$
+m², so
+
+$$\omega = \frac{2}{\mu\sigma\,\delta^2}
+= \frac{2}{2.513\times10^{-8}\cdot 2.5\times10^{5}} = 318.3\ \mathrm{rad\,s^{-1}},
+\qquad T = \frac{2\pi}{\omega} = 0.0197\ \mathrm{s}.$$
+
+(Equivalently $T = \pi\mu\sigma\delta^2$.) So the penetration requirement is met
+by any period **longer than about 0.02 s**, i.e. by frequencies below 50 Hz. A
+1 Hz transmitter is comfortably adequate on penetration grounds: at 1 Hz,
+$\delta = \sqrt{2/(2.513\times10^{-8}\cdot6.283)} = 3559$ m, far deeper than the
+500 m target. At 0.1 Hz, $\delta = 1.13\times10^{4}$ m.
+
+The honest answer therefore distinguishes the *penetration* requirement
+($T \gtrsim 0.02$ s, easily satisfied) from the *resolution and signal*
+requirements, which must be modelled: a very long period buys penetration but
+averages over a thick interval, so the achievable resolution falls.
+
+**Correction of an earlier draft.** A previous version of this solution gave
+$T = 19.7$ s, a factor of $10^{3}$ too long, by writing $2/(\mu\sigma\delta^2)$
+as $2.5\times10^{-3}$ where the correct value is $2.5\times10^{5}$ m². The
+conclusion inverted: the draft claimed 1 Hz was inadequate when in fact 1 Hz is
+2500 times deeper-reaching than needed. The error was caught by the dimensional
+sanction $T = \pi\mu\sigma\delta^2$ — check that
+$[\mathrm{H\,m^{-1}\cdot S\,m^{-1}\cdot m^2}] = \mathrm{s}$ before trusting any
+intermediate number.
 
 ---
 

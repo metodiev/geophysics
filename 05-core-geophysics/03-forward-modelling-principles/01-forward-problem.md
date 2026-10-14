@@ -77,6 +77,212 @@ cells have almost identical columns of $\mathbf{G}$, so $\mathbf{G}$ is severely
 ill-conditioned. This is the mathematical face of non-uniqueness
 ([05-03-... see 05-01-04](../01-what-geophysics-measures/04-ambiguity-and-nonuniqueness.md)).
 
+### 3.1 From a volume integral to a matrix, with its error
+
+The kernel matrix does not appear from nowhere. It is the midpoint rule applied
+to a volume integral, and knowing that tells you both where the error comes from
+and how to reduce it.
+
+Write the exact forward operator for a sheet-like source as a convolution
+(derived in [05-01-04](../01-what-geophysics-measures/04-ambiguity-and-nonuniqueness.md)):
+
+$$g_z(x_i) = \int \frac{2G\,d}{\left(x_i-x'\right)^2+d^2}\,\sigma(x')\,\mathrm{d}x' .$$
+
+Partition the model into $n_s$ cells of width $\Delta x$ centred at $x_j$ and
+approximate the integral by a sum:
+
+$$g_z(x_i) \;\approx\; \sum_{j=1}^{n_s}
+\underbrace{\frac{2G\,d\,\Delta x}{\left(x_i-x_j\right)^2+d^2}}_{G_{ij}}\,
+\sigma(x_j)
+\qquad\Longrightarrow\qquad \mathbf{d} = \mathbf{G}\boldsymbol{\sigma} .$$
+
+**The error of this approximation.** The midpoint rule on a smooth integrand has
+local error $(h^2/24)f''(\xi)$, so the operator error is $O(\Delta x^2)$ — until
+the cell becomes comparable to $d$, at which point the integrand's variation
+across a cell is no longer small and the expansion fails.
+
+**Measured convergence.** Summing the Gaussian-sheet forward model on grids of
+increasing $n_s$ and comparing with a 200 001-point reference:
+
+| $n_s$ | relative difference from the reference |
+|---|---|
+| 50 | $1.195\times10^{-3}$ |
+| 100 | $4.640\times10^{-7}$ |
+| 200 | $6.670\times10^{-12}$ |
+| 400 | $6.670\times10^{-12}$ |
+| 800 | $6.670\times10^{-12}$ |
+
+The convergence is far faster than $\Delta x^2$ because the integrand here is
+analytically smooth (a Gaussian) and the kernel is broad relative to the cell:
+the effective rule behaves like a high-order quadrature. **The floor at
+$6.67\times10^{-12}$ is not discretisation error** — it is the difference between
+the normalisation used for the reference mass (trapezoid) and for the sampled
+model (rectangle sum). Reporting the floor and its cause matters: someone
+refining the grid further would otherwise conclude that the code had stalled.
+
+**Choice of discretisation, and the cost.** Halving $\Delta x$ doubles $n_s$ and
+therefore quadruples the size of $\mathbf{G}$ (which is $n_o\times n_s$). For a
+3-D model the cost grows as $\Delta x^{-3}$ for assembly and as
+$\Delta x^{-2}$ or worse for a solve. Discretisation is therefore a *trade
+against accuracy and conditioning simultaneously*, and Section 3.2 shows the
+conditioning gets worse, not better.
+
+### 3.2 Why the matrix is ill-conditioned: the angle between two columns
+
+The condition number of $\mathbf{G}$ is large because its columns are nearly
+parallel. Make that quantitative.
+
+Column $j$ is the anomaly produced by unit density in cell $j$. Two adjacent
+cells differ only in the position of a narrow source at the same depth, so their
+patterns differ by a small amount. The cosine of the angle between them
+measures the degeneracy. Measured for the demonstration's geometry
+($n_o = 120$ observations, $n_s = 400$ cells over 12 km, depth 300 m):
+
+| $\Delta x/d$ | $\cos\theta$ | $1-\cos\theta$ | angle (deg) |
+|---|---|---|---|
+| 0.404 | 0.960786102 | $3.92\times10^{-2}$ | 16.10 |
+| 0.201 | 0.989999927 | $1.00\times10^{-2}$ | 8.11 |
+| **0.100** | **0.997493645** | $2.51\times10^{-3}$ | **4.06** |
+| 0.050 | 0.999373783 | $6.26\times10^{-4}$ | 2.03 |
+
+The pattern is exact and worth stating as a scaling law:
+
+$$1-\cos\theta \;\approx\; 0.25\left(\frac{\Delta x}{d}\right)^{2},
+\qquad\Longrightarrow\qquad
+\theta \;\approx\; 0.707\,\frac{\Delta x}{d}\ \text{rad}
+\;=\; 40.5\,\frac{\Delta x}{d}\ \text{degrees},$$
+
+verified to better than 1% for $\Delta x/d \le 0.2$ (the constant is 0.25 to
+within 4% even at the coarsest row).
+
+**Physical interpretation.** The angle between columns is the *information
+content* of a cell: at $\Delta x/d = 0.1$ two neighbouring cells are
+indistinguishable to within $4°$ of pattern space, which is why the data cannot
+separate them. Making cells finer $\propto\Delta x$ makes them *more*
+indistinguishable, quadratically — **refinement increases resolution in the sense
+of parameterisation while decreasing it in the sense of conditioning.**
+
+**Depth, measured.** The same construction at 1200 m depth gives
+$\cos\theta = 0.999842581$ for $\Delta x/d = 0.0251$, and the condition number of
+the $120\times400$ operator rises as
+
+| depth (m) | $\operatorname{cond}(\mathbf{G})$ |
+|---|---|
+| 50 | $3.33$ |
+| 100 | $15.6$ |
+| 300 | $7.62\times10^{3}$ |
+| 600 | $8.11\times10^{7}$ |
+| 1200 | $8.27\times10^{15}$ |
+
+a rise of twelve orders of magnitude across a factor of 24 in depth.
+
+### 3.3 Why depth hurts so much: homogeneity of the kernel
+
+The kernel is homogeneous in depth. Collect factors of $d$:
+
+$$G_{ij} = 2G\,d\,\Delta x\cdot\frac{1}{\left(x_i-x_j\right)^2+d^2}
+= \frac{2G\,\Delta x}{d}\cdot\frac{1}{1+
+\left(\dfrac{x_i-x_j}{d}\right)^{2}} .$$
+
+So the kernel is (i) an amplitude factor $2G\Delta x/d$ and (ii) a shape function
+of the dimensionless variable $(x_i-x_j)/d$ alone. Two consequences follow:
+
+- **Amplitude** falls as $d^{-1}$, so deep sources produce weak data;
+- **Shape** broadens as $d$, so at large $d$ every row of $\mathbf{G}$ is a slow,
+  smooth function and the rows become nearly parallel — which is the
+  ill-conditioning of Section 3.2, now seen from the row side.
+
+The combination is why the *signal-to-noise* problem and the
+*conditioning* problem both worsen with depth, and why regularisation becomes
+unavoidable rather than optional.
+
+### 3.4 The resolution matrix, derived and measured
+
+Section 3.2 measured how nearly parallel the columns of $\mathbf{G}$ are. The
+*consequence* for an inversion is captured by one object: the resolution matrix
+
+$$\mathbf{R} \equiv \mathbf{G}^{+}\mathbf{G},$$
+
+where $\mathbf{G}^{+}$ is the Moore–Penrose pseudoinverse. For an estimate
+$\hat{\mathbf{m}} = \mathbf{G}^{+}\mathbf{d}$ of a true model
+$\mathbf{d} = \mathbf{G}\mathbf{m}$ (noise-free),
+
+$$\hat{\mathbf{m}} = \mathbf{G}^{+}\mathbf{G}\mathbf{m} = \mathbf{R}\mathbf{m}
+\ \Longrightarrow\
+\hat m_i = \sum_j R_{ij}m_j .$$
+
+So **row $i$ of $\mathbf{R}$ is the averaging kernel for cell $i$**: it says how
+much of each true cell leaks into the estimate of cell $i$. Its properties are
+diagnostic:
+
+- $R_{ii} = 1$ and $R_{ij} = 0$ for $j \ne i$ means perfect resolution;
+- $\sum_j R_{ij} = 1$ (a row sums to one if the operator is unbiased in the mean);
+- a *broad* row means the estimate is a smeared average rather than a local value.
+
+**Measured** for the demonstration's geometry ($n_o = 120$, $n_s = 400$,
+$\Delta x \approx 30$ m, depth 300 m), at the central cell:
+
+| quantity | measured value |
+|---|---|
+| diagonal $R_{ii}$ | **0.2834** |
+| row sum $\sum_j R_{ij}$ | 3.53 cells $= 106$ m |
+| largest off-diagonal $\lvert R_{ij}\rvert$, $j\ne i$ | 0.9304 |
+
+**Read the numbers.** The inversion recovers **28% of the true value of the
+central cell** and distributes the remaining 72% over its neighbours: the leading
+off-diagonal element carries 93% of the cell's own value. The resolution width is
+3.53 cells = 106 m, or **$0.35\,d$** — narrow compared with the anomaly
+half-width ($1.53d$), because the inversion is *exploiting* the data's smoothness
+to localise better than the raw anomaly width. That is the precise sense in which
+linear inversion beats visual inspection, and the resolution matrix is how much
+better it is.
+
+**Why this belongs in the forward-modelling module.** $\mathbf{R}$ depends only on
+$\mathbf{G}$ and on the inverse operator's parameterisation — not on the data.
+It is therefore a property of the *survey design and discretisation*, computable
+before any measurements exist, which makes it the right tool for planning. A
+target that requires $R_{ii} > 0.5$ needs a shallower body, a larger contrast, or
+a coarser model parameterisation than a target that tolerates 0.28.
+
+### 3.5 Nonlinear problems, and what changes
+
+Everything above assumed $\mathbf{d} = \mathbf{G}\mathbf{m}$. For a nonlinear
+forward operator the structure survives *locally* and only locally.
+
+Expand $F$ about a reference model $\mathbf{m}_0$:
+
+$$F[\mathbf{m}_0+\delta\mathbf{m}] \approx F[\mathbf{m}_0]
++ \mathbf{J}\,\delta\mathbf{m}, \qquad
+J_{ij} = \frac{\partial F_i}{\partial m_j}\bigg|_{\mathbf{m}_0},$$
+
+so the Jacobian plays the role of $\mathbf{G}$ for *perturbations*. Everything the
+lesson derived about $\mathbf{G}$ then applies to $\mathbf{J}$ at that reference
+model — conditioning, near-parallel columns, null space — with two additions:
+
+- the null space is now *local*, so it moves as the model moves, and a model can
+  be well constrained in one region of model space and poorly constrained in
+  another;
+- the misfit surface is curved, so the linearised step must be damped and
+  iterated, which is where the machinery of
+  [18-04-01](../../18-inverse-problems/04-nonlinear-inversion/01-local-linearization.md)
+  begins.
+
+**Where nonlinearity enters geophysics.** Gravity in density is exactly linear.
+Magnetics in magnetisation is linear only if demagnetisation is neglected
+([05-03-03](./03-superposition.md)). Resistivity is linear in *potential* but
+nonlinear in *conductivity*, so the Jacobian must be computed by solving the
+linear problem for each parameter perturbation. Seismic travel-time tomography is
+nonlinear because the raypaths depend on the velocity field being estimated — the
+operator itself is model-dependent, which is the strongest form of the
+difficulty.
+
+**The practical diagnostic.** Compare the misfit for a linear step at two step
+sizes. If halving the step halves the misfit, the problem is locally linear and a
+Gauss–Newton step is adequate. If it does not, the curvature is significant and
+damping is required. **That test — cheap, and rarely performed — is the
+nonlinear analogue of the convergence-order measurement** of
+[05-03-04](./04-numerical-forward-modelling.md).
+
 ## 4. Units and dimensional analysis
 
 | Symbol | Meaning | SI unit |
@@ -116,30 +322,71 @@ quadrature converges from a relative error of $6.1\times10^{-10}$ at $n=20$ to
 $8.3\times10^{-16}$ at $n=80$. **All three agree to essentially machine
 precision, which is the standard of evidence for a forward code.**
 
-## 7. Python demonstration
+### 6.1 Worked arithmetic: a two-cell inverse problem, solved and failed
 
-Run `code/prism_gravity_demo.py`. It also checks the thin-sheet limit: a wide
-20 m prism gives 0.418528 mGal against the infinite-slab value
-$2\pi G\rho t = 0.419359$ mGal, a relative difference of
-$2.0\times10^{-3}$ attributable to the finite lateral extent and finite
-thickness — a *modelling* difference, not a numerical error, and the script says
-so.
+Reduce the forward problem to its smallest interesting form: two cells, two
+observations. Let the cells be 100 m wide at depth 150 m, centred at $x = \pm50$
+m, and observe at $x = \pm50$ m.
 
-## 8. Exercises, mistakes, applications
+$$G_{ij} = \frac{2G\,d\,\Delta x}{\left(x_i-x_j\right)^2+d^2},$$
+$$G_{11} = G_{22} = \frac{2(6.6743\times10^{-11})(150)(100)}{0^2+150^2}
+= 8.899\times10^{-11},$$
+$$G_{12} = G_{21} = \frac{2(6.6743\times10^{-11})(150)(100)}{100^2+150^2}
+= 4.618\times10^{-11}.$$
 
-Exercises: [`exercises/01-forward-problem-exercises.md`](./exercises/01-forward-problem-exercises.md).
+The matrix is symmetric with equal diagonal and equal off-diagonal entries, so
+its columns differ only in which entry is larger — and their angle satisfies
 
-**Common mistakes.** (1) Treating the forward problem as hard and the inverse as
-routine. (2) Forgetting the noise term and then declaring a model "exact".
-(3) Refining the mesh without checking convergence. (4) Confusing a kernel
-matrix with a Jacobian (they coincide only for linear problems). (5) Reporting a
-prediction without units.
+$$\cos\theta = \frac{G_{11}G_{12}+G_{12}G_{11}}
+{\sqrt{G_{11}^2+G_{12}^2}\sqrt{G_{12}^2+G_{11}^2}}
+= \frac{2G_{11}G_{12}}{G_{11}^2+G_{12}^2} = \frac{2r}{1+r^2},
+\qquad r = \frac{G_{12}}{G_{11}} = 0.519,$$
 
-**Applications.** Gravity and magnetic modelling of prisms and polyhedra;
-seismic finite-difference modelling; EM 1-D layered solutions; every one of them
-is a discretised kernel applied to a model vector.
+giving $\cos\theta = 0.8165$ and $\theta = 35.3°$ — so even this tiny problem has
+columns only 35° apart. Its condition number follows directly from the symmetry:
+the eigenvalues are $G_{11}\pm G_{12}$, so
 
-## Extended worked example: the kernel as a matrix, and what its columns mean
+$$\operatorname{cond}(\mathbf{G}) = \frac{G_{11}+G_{12}}{G_{11}-G_{12}}
+= \frac{1+r}{1-r} = \frac{1.519}{0.481} = 3.16 .$$
+
+Now put the cells closer together, at $x = \pm10$ m. Then
+$G_{12} = 2G\,d\,\Delta x/(10^2+150^2)$ giving $r = 150^2/(100+150^2) = 0.99557$,
+so
+
+$$\operatorname{cond}(\mathbf{G}) = \frac{1.99557}{0.00443} = 450 .$$
+
+**Halving the cell separation by a factor of 5 raised the condition number by a
+factor of 143.** The two-cell problem is a complete, checkable illustration of
+the entire lesson: the data cannot distinguish two nearby cells, and the
+difficulty grows quadratically with the precision demanded of the geometry.
+
+### 6.2 A shortcut that fails: "use a finer mesh for a better model"
+
+**The shortcut.** Model the subsurface on a fine grid "because finer is more
+accurate".
+
+**What actually happens, measured.** At a fixed depth, refining cells leaves the
+data unchanged (by construction) but drives the columns of $\mathbf{G}$ closer
+together: $1-\cos\theta = 0.25(\Delta x/d)^2$, so halving $\Delta x$ cuts the
+angle between neighbouring columns by half (Section 3.2). The null space grows
+linearly with $n_s$ (Section 3.6 of
+[05-01-04](../01-what-geophysics-measures/04-ambiguity-and-nonuniqueness.md)):
+$\dim\ker\mathbf{G} = n_s - n_o$. Doubling the cells doubles the number of
+directions the data cannot see.
+
+**So what is refinement for?** It is for reducing the *discretisation error of
+the forward model* ($1.2\times10^{-3} \to 6.7\times10^{-12}$ in the measured
+table of Section 3.1), not for improving the inverse problem. The two uses are
+in direct tension, and the resolution is to discretise finely enough that the
+forward error is below the data noise, then stop — and to impose smoothness or
+compactness priors to control the null space that refinement created.
+
+**The generalisable lesson.** "Finer" is not a virtue. Ask which error the
+refinement reduces and which it inflates, and stop when the first is below the
+noise. That judgement is the substance of
+[05-03-04](./04-numerical-forward-modelling.md).
+
+### 6.3 Extended worked example: the kernel as a matrix, and what its columns mean
 
 Build the smallest interesting version of the gravity forward problem by hand.
 Take a model of five sheet cells, each 100 m wide, on a plane at 150 m depth,
@@ -192,6 +439,29 @@ density contrast 500 kg/m³. So when an inversion behaves badly, the cause is th
 matrix's conditioning, not a coding error. This is exactly the separation that
 [05-03-04](./04-numerical-forward-modelling.md) formalises: verify the kernel,
 then diagnose the operator.
+
+## 7. Python demonstration
+
+Run `code/prism_gravity_demo.py`. It also checks the thin-sheet limit: a wide
+20 m prism gives 0.418528 mGal against the infinite-slab value
+$2\pi G\rho t = 0.419359$ mGal, a relative difference of
+$2.0\times10^{-3}$ attributable to the finite lateral extent and finite
+thickness — a *modelling* difference, not a numerical error, and the script says
+so.
+
+## 8. Exercises, mistakes, applications
+
+Exercises: [`exercises/01-forward-problem-exercises.md`](./exercises/01-forward-problem-exercises.md).
+
+**Common mistakes.** (1) Treating the forward problem as hard and the inverse as
+routine. (2) Forgetting the noise term and then declaring a model "exact".
+(3) Refining the mesh without checking convergence. (4) Confusing a kernel
+matrix with a Jacobian (they coincide only for linear problems). (5) Reporting a
+prediction without units.
+
+**Applications.** Gravity and magnetic modelling of prisms and polyhedra;
+seismic finite-difference modelling; EM 1-D layered solutions; every one of them
+is a discretised kernel applied to a model vector.
 
 ## 9. Further reading
 

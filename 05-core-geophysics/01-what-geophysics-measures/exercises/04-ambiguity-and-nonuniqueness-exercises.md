@@ -57,3 +57,15 @@ which prior information you would add to make any of these models defensible.
 the observed anomaly, so the model is reliable." Address: what is actually
 reproduced, what is not constrained, how the regularisation chose the answer,
 and what test would distinguish a meaningful model from an equivalent one.
+---
+
+**★★★11.** Derive the transfer function of the 2-D sheet operator from the
+contour integral, i.e. show that
+
+$$\int_{-\infty}^{\infty}\frac{d\,e^{-ikx}}{x^2+d^2}\,\mathrm{d}x = \pi e^{-|k|d},$$
+
+stating the contour you close and the residue you evaluate. Then use the result
+to derive the wavelength at which the transfer function falls to one tenth, and
+compare it with the anomaly half-width law $w_{1/2} = 1.532842\,d$ by quoting the
+ratio of the two constants. Explain, in one paragraph, why the *ratio* is more
+robust than either constant alone.

@@ -76,6 +76,179 @@ that is $(1+\text{weight})$ times the individual noise. Units: everything in
 mGal. Dimensional check is trivial here; the useful check is *magnitude* — is
 $\beta-\hat\beta$ smaller than the target anomaly?
 
+### 3.1 The residual variance after base-station tying, derived
+
+Section 3 showed *what* tying removes. Now compute *how much noise it adds*,
+because that sets the effective precision of a survey.
+
+Model the drift between two successive base occupations as a straight line
+interpolated from the two tied values $y_1$ and $y_2$, each with variance
+$\sigma_b^2$. At a fraction $t\in[0,1]$ along the interval the interpolated drift
+is $(1-t)y_1 + ty_2$, whose variance is
+
+$$\operatorname{Var}\!\left[(1-t)y_1+ty_2\right]
+= \left[(1-t)^2+t^2\right]\sigma_b^2$$
+
+using independence of the two ties. A station reading has variance $\sigma^2$,
+and its drift-corrected value is the difference of the two, so
+
+$$\boxed{\;\sigma^2_\text{corrected} = \sigma^2
++ \left[(1-t)^2+t^2\right]\sigma_b^2\;}$$
+
+The bracket $f(t) = (1-t)^2+t^2$ equals 1 at the ties and falls to $1/2$ at the
+midpoint:
+
+| position in the tie interval | $f(t)$ | $\sigma_\text{corrected}$, $\sigma = \sigma_b = 0.02$ mGal |
+|---|---|---|
+| at a tie | 1.000 | 0.02828 mGal |
+| quarter interval | 0.625 | 0.02646 mGal |
+| midpoint | 0.500 | 0.02449 mGal |
+
+**Physical interpretation.** Tying is not free. It converts an unbounded drifting
+error into a bounded one, at the price of a contribution between 0.5 and 1 times
+the base-station noise variance. For equal station and base noise the effective
+precision is degraded by 22% to 41% relative to the raw repeatability, so a
+gravimeter quoted at 0.02 mGal delivers roughly 0.024–0.028 mGal of *survey*
+precision in a tied loop. **A repeatability quoted without the tie interval is
+incomplete**, and this formula says how to complete it. Because $f$ is smallest
+at midpoints, accuracy is worst nearest the ties — a small free advantage to a
+survey whose target sits mid-interval.
+
+### 3.2 Residual drift after tying: the $\tau^2$ law
+
+Real drift is not exactly linear. Suppose it has a quadratic component
+$\beta(t) = c\,t^2$. Between ties at $t = 0$ and $t = \tau$, linear interpolation
+gives $L(t) = c\tau\,t$, so the residual is
+
+$$r(t) = \beta(t) - L(t) = c\,t^2 - c\tau t = c\,t(t-\tau),$$
+
+extremal at $t = \tau/2$ with
+
+$$|r|_{\max} = \frac{c\,\tau^2}{4} .$$
+
+**The $\tau^2$ law is the whole point:** halving the tie interval quarters the
+residual drift. **Worked arithmetic** for a total quadratic drift of 0.02 mGal
+over a 4-hour day ($c = 0.02/16 = 1.25\times10^{-3}$ mGal/h²):
+
+| tie interval $\tau$ | $\lvert r\rvert_{\max}$ |
+|---|---|
+| 1.0 h | 0.000313 mGal |
+| 1.5 h | 0.000703 mGal |
+| 2.0 h | 0.001250 mGal |
+
+All are far below a 0.02 mGal reading noise, so a 2-hour tie interval is more
+than adequate *for this drift curvature* — a calculation rather than a habit.
+The mismatch scales as the square of the interval because a parabola is the first
+function a straight line cannot follow; the same $\tau^2$ governs trapezoidal
+quadrature error and every piecewise-linear approximation of a smooth function.
+
+### 3.3 Correlated noise does not average as $\sqrt{N}$
+
+The $\sigma/\sqrt{N}$ rule requires *independent* samples, and field noise rarely
+is: microseism, instrument hysteresis and cultural vibration all have finite
+correlation times. For noise with lag-1 autocorrelation $\rho$ (the AR(1) model),
+
+$$\operatorname{Var}[\bar{x}] = \frac{\sigma^2}{N}\cdot\frac{1+\rho}{1-\rho},
+\qquad\text{so}\qquad
+N_\text{eff} = N\,\frac{1-\rho}{1+\rho}.$$
+
+**Measured check.** AR(1) series of length $N = 200$, averaged over 4000
+realisations:
+
+| $\rho$ | measured $\operatorname{Var}[\bar x]$ | AR(1) formula | $N_\text{eff}$ |
+|---|---|---|---|
+| 0.00 | 0.004943 | 0.004966 | 200 |
+| 0.80 | 0.122323 | 0.119798 | 22.2 |
+| 0.95 | 1.804048 | 1.643270 | 5.1 |
+
+At $\rho = 0.95$ the 200 samples are worth about **5**, so the achievable
+reduction is $\sqrt{5} = 2.2$ rather than $\sqrt{200} = 14.1$ — a factor of 6.4
+over-optimistic if $\sqrt{N}$ is applied blindly.
+
+**Design consequence.** The effective number of independent samples is set by the
+correlation time $t_c$ and the total recording time $T$, not by the sampling
+rate: $N_\text{eff}\approx T/(2t_c)$. Sampling faster than $t_c$ adds data but
+not information. The correct strategy is to **record longer**, and to estimate
+$t_c$ from the autocorrelation function of the data rather than assume it.
+
+### 3.4 The tidal signal, derived in form
+
+The tide is worth deriving in form even though evaluating it needs astronomical
+data, because the derivation shows why it is a *signal* rather than noise.
+
+The gravitational acceleration produced by the Moon at the Earth's centre is
+$a_0 = GM_m/d_m^2$ directed toward the Moon. At a surface point displaced by
+$\mathbf{R}$ from the centre, the acceleration differs by the *differential*
+(tidal) term. Expanding $GM_m/|\mathbf{d}_m-\mathbf{R}|^2$ to first order in
+$R/d_m$ and taking the difference gives the residual
+
+$$\mathbf{a}_\text{tidal} \approx \frac{2GM_m}{d_m^3}\,\mathbf{R} ,$$
+
+to the leading order (the full expansion in spherical harmonics also has the
+component that produces the permanent tide). Units:
+$\mathrm{m^3kg^{-1}s^{-2}\cdot kg\,m^{-3}\cdot m} = \mathrm{m\,s^{-2}}$ ✓.
+
+**The important structural facts, all derived and none needing a number:**
+
+- the tide scales as $d_m^{-3}$, the *cube* of the body's distance — so the
+  Moon's tide exceeds the Sun's by a large factor even though the Sun's
+  gravitational attraction at the Earth is far larger;
+- the ratio of the two is
+  $\left(M_s/M_m\right)\left(d_m/d_s\right)^{3}$, a pure number requiring only
+  tabulated masses and distances;
+- the amplitude depends on latitude and on the Earth's elasticity (the Love
+  numbers), so a *model*, not a formula, is required for survey work;
+- **and critically, it is perfectly predictable in time**, which is what makes it
+  a signal rather than noise. It can be computed for any station and epoch in
+  advance.
+
+**How to state it honestly.** The demonstration uses a *stated synthetic* tide of
+0.15 mGal amplitude with a 12.42 h period, which is the correct order for the
+semidiurnal band at mid-latitude. Evaluating a real tide requires an ephemeris,
+the Love numbers and an ocean-loading model; the standard formulation is
+Longman's (1959), cited in Section 9. **Do not quote a remembered tidal amplitude
+as though it were universal** — it varies with latitude, time and local
+elasticity, and the ocean-loading term alone can reach a tenth of the body tide
+near a coast.
+
+### 3.5 Why drift and signal can be confused
+
+There is a deeper difficulty than "estimate the drift well", and it is worth
+stating because it limits what any processing can do.
+
+Suppose the true signal contains a long-wavelength component and the instrument
+drift is a slow monotonic function of time. In a survey where *time correlates
+with position* — a traverse run in one direction, a loop closed over the same
+ground — the drift and the long-wavelength signal are **not separable**. Both are
+smooth functions of a variable that is itself correlated with the independent
+variable. Formally, the design matrix of a regression of reading on (position,
+time) is ill-conditioned, exactly as in
+[05-03-01](../03-forward-modelling-principles/01-forward-problem.md).
+
+**The practical consequences, all of which follow from that one observation:**
+
+- **Loop closure is not optional.** Running back over the same stations in
+  reverse (a "forward and reverse" or "repeat" traverse) breaks the
+  time–position correlation and makes drift and signal separable.
+- **Tie intervals bound what wavelengths of signal are recoverable.** If the drift
+  is interpolated over $\tau$, any geophysical signal with a time signature
+  comparable to $\tau$ is partly absorbed into the drift estimate. That is why
+  long-wavelength regional trends from a short survey should be treated with
+  suspicion.
+- **The $\tau^2$ law of Section 3.2 cuts both ways.** Shorter ties reduce residual
+  drift (good) and also absorb more short-wavelength signal (bad), because a
+  linear interpolation over a short interval tracks whatever varies in that
+  interval.
+- **Drift removed on a repeat traverse is the test.** If the drift estimate from
+  the forward pass disagrees with that from the reverse pass beyond the reading
+  noise, the model of drift (linearity, or the tie interval) is wrong.
+
+**How to state the residual honestly.** "Drift removed by linear interpolation
+between 90-minute ties, with residual drift bounded by 0.02 mGal (Section 3.2)"
+is a complete description: it names the model, the interval, and the bound.
+"Drift corrected" is not, because it asserts an accuracy without naming the
+operation that produced it.
+
 ## 4. Units and magnitudes
 
 | Source | Typical magnitude | Time signature | Removable? |
@@ -120,29 +293,40 @@ mGal, relief ±8 m, Bouguer density 2400 kg/m³):
 The demonstration notes explicitly that it removed drift *exactly*, which is
 optimistic; real residual drift of 0.01–0.05 mGal over a survey is routine.
 
-## 7. Python demonstration
+### 6.1 A shortcut that fails: "average more samples"
 
-`code/noise_reduction_demo.py` builds the survey, applies each correction, and
-prints the effect of each. Predict the raw RMS error before running. Then
-modify the script to make the drift *non-linear* (add a quadratic term) and
-observe how much residual survives base-station tying — that is the honest
-measure of a tie's power.
+**The shortcut.** A 0.03 mGal microseismic oscillation at 0.2 Hz corrupts a
+reading. Averaging 100 samples taken 1 s apart is expected to give
+$0.03/\sqrt{100} = 0.003$ mGal.
 
-## 8. Exercises, mistakes, applications
+**Why the arithmetic is wrong.** The period is 5 s, so 1 s samples are one fifth
+of a cycle apart and strongly correlated: for a sinusoid sampled at 1 s intervals
+the lag-1 correlation is $\cos(2\pi/5) = 0.309$, and the AR(1) result of
+Section 3.3 gives
 
-Exercises: [`exercises/03-noise-and-drift-exercises.md`](./exercises/03-noise-and-drift-exercises.md).
+$$N_\text{eff} = 100\cdot\frac{1-0.309}{1+0.309} = 52.8
+\qquad\Longrightarrow\qquad
+\sigma_\text{mean} \approx \frac{0.03}{\sqrt{52.8}} = 0.0041\ \mathrm{mGal},$$
 
-**Common mistakes.** (1) Averaging $N$ samples and claiming $\sqrt{N}$ noise
-reduction when the noise is correlated. (2) Forgetting the tide is a *signal* to
-be modelled, not noise. (3) Confusing precision with accuracy. (4) Tying only at
-the start and end of a long day. (5) Ignoring ocean-loading in coastal surveys.
+so the promised 0.003 mGal is not delivered — and even this understates the
+problem, because a pure tone has *no* decorrelation within one period.
 
-**Applications.** Microgravity monitoring of volcanoes and aquifers needs
-tidal and drift control at the 0.005 mGal level; magnetic base stations serve
-the same role for diurnal variation; repeat surveys for 4-D need *accuracy*
-reproducibility, which is a calibration problem.
+**The correct arithmetic.** Average over a whole number $n$ of periods. The
+residual of the sinusoid after averaging over $n$ complete periods is exactly
+zero at integer $n$; the error is bounded by the incomplete-period fraction,
+$\le 0.03/(\pi n)$. To reduce it tenfold, $n \approx 3$ whole periods are needed,
+i.e. **15 s of recording** — 15 samples, not 100. The count is irrelevant; the
+duration relative to the period is everything. Five hundred samples at 0.1 s
+intervals over the same 15 s achieve the same result; 100 samples at 1 s
+intervals over 100 s also work, but because 100 s is 20 periods, not because the
+count is 100.
 
-## Extended worked example: reading a residual plot
+**The generalisable lesson.** Reduction of correlated noise is governed by
+*duration divided by correlation time*. The same principle appears in the spatial
+domain as the distinction between sample spacing and aperture
+([05-01-02](../01-what-geophysics-measures/02-method-taxonomy.md)).
+
+### 6.2 Extended worked example: reading a residual plot
 
 The demonstration's synthetic survey provides a worked case in the order a field
 geophysicist would actually reason.
@@ -187,6 +371,28 @@ correction set).
 using the known drift function. Real ties estimate it, and residual drift of
 0.01–0.05 mGal is routine. Reporting a synthetic residual of 0.0212 mGal without
 that caveat would overstate the achievable precision by a factor of two or more.
+
+## 7. Python demonstration
+
+`code/noise_reduction_demo.py` builds the survey, applies each correction, and
+prints the effect of each. Predict the raw RMS error before running. Then
+modify the script to make the drift *non-linear* (add a quadratic term) and
+observe how much residual survives base-station tying — that is the honest
+measure of a tie's power.
+
+## 8. Exercises, mistakes, applications
+
+Exercises: [`exercises/03-noise-and-drift-exercises.md`](./exercises/03-noise-and-drift-exercises.md).
+
+**Common mistakes.** (1) Averaging $N$ samples and claiming $\sqrt{N}$ noise
+reduction when the noise is correlated. (2) Forgetting the tide is a *signal* to
+be modelled, not noise. (3) Confusing precision with accuracy. (4) Tying only at
+the start and end of a long day. (5) Ignoring ocean-loading in coastal surveys.
+
+**Applications.** Microgravity monitoring of volcanoes and aquifers needs
+tidal and drift control at the 0.005 mGal level; magnetic base stations serve
+the same role for diurnal variation; repeat surveys for 4-D need *accuracy*
+reproducibility, which is a calibration problem.
 
 ## 9. Further reading
 

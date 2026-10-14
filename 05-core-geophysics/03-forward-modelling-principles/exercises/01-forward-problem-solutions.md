@@ -95,3 +95,46 @@ uncertainty cannot detect a meaningful error. With a deliberate 2% error
 injected, the measured relative error becomes $2.000\times10^{-2}$, which fails
 $10^{-6}$ by four orders of magnitude — the test has demonstrated its own
 sensitivity.
+---
+
+## ★★★9
+
+**Measured values** for $n_o = 120$ observations over 12 km, $n_s = 400$ cells
+($\Delta x \approx 30$ m) at 300 m depth:
+
+| quantity | value |
+|---|---|
+| diagonal $R_{ii}$ at the central cell | **0.2834** |
+| row sum $\sum_j R_{ij}$ | 3.53 cells $= 106$ m |
+| largest off-diagonal $\lvert R_{ij}\rvert$, $j\ne i$ | 0.9304 |
+| resolution width / depth | $106/300 = 0.35$ |
+
+**How much is recovered, and where the rest goes.** The diagonal is 0.28, so the
+estimate of the central cell is only 28% of its true value; the remaining 72% is
+distributed over the neighbouring cells, dominated by the two adjacent cells
+(0.93 of the cell's own value each, before normalisation). The estimate is
+therefore a *weighted average of about 3.5 cells' worth of true model*, centred on
+the cell of interest — a smeared value, not a local one.
+
+**Why the resolution width is narrower than the anomaly half-width.** The anomaly
+half-width is $1.532842\,d = 460$ m, whereas the resolution width is
+$0.35\,d = 106$ m — a factor of 4.3 narrower. The reason is that $\mathbf{R}$ is a
+property of the *inverse operator*, not of the forward kernel: the pseudoinverse
+inverts the (band-limited) forward mapping as far as the data's conditioning
+allows, sharpening the averaging kernel below the anomaly width. It cannot
+sharpen it below the noise-limited resolution, which is why the improvement is a
+factor of a few rather than orders of magnitude.
+
+**Which change raises the diagonal most — argued from structure.** $R_{ii}$
+decreases as the columns of $\mathbf{G}$ become more parallel, and Section 3.2
+measured $1-\cos\theta \approx 0.25(\Delta x/d)^2$. Two structural levers follow:
+
+1. **Coarser model cells** raise $R_{ii}$ (fewer, more distinguishable columns)
+   but lose spatial detail — the classic resolution/parameterisation trade.
+2. **Observations off the source footprint** separate the columns more than
+   observations directly above, because the kernel's dependence on cell position
+   varies faster at large horizontal offset.
+
+Of the two, adding off-edge observations raises the diagonal without coarsening the
+model, so it is the better change — and that conclusion comes from the structure of
+$\mathbf{G}$ (the angle between columns) rather than from a sweep of parameters.

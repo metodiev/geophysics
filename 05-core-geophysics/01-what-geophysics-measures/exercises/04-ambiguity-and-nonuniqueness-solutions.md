@@ -118,3 +118,43 @@ when the regularisation weight is varied within the range that keeps the misfit
 acceptable? Does an independent data set (seismic, drilling) agree? Does the
 model predict a quantity that was not used in the inversion? A model that fails
 the last test is a fit, not an interpretation.
+---
+
+## ★★★11
+
+**The contour.** For $k>0$ the factor $e^{-ikx}$ decays as $\mathrm{Im}\,x\to
+-\infty$, so close in the **lower** half-plane, clockwise, enclosing the simple
+pole at $x = -id$. Writing the integrand as
+$d/[(x-id)(x+id)]$, the residue at $x=-id$ is
+
+$$\operatorname*{Res}_{x=-id}\frac{d}{(x-id)(x+id)}
+= \frac{d}{-id-id} = \frac{i}{2},$$
+
+and the exponential at the pole is $e^{-ik(-id)} = e^{-kd}$. Closing clockwise
+contributes $-2\pi i$ times the residue, so
+$I(k) = -2\pi i\cdot(i/2)e^{-kd} = \pi e^{-kd}$. For $k<0$ the same argument in
+the upper half-plane gives $\pi e^{+kd}$, and the two combine to
+$I(k) = \pi e^{-|k|d}$. With the factor $2G$:
+
+$$\hat h(k) = 2\pi G\,e^{-|k|d}.$$
+
+*Reasoning note: the sign of the closing direction and the sign of the
+exponential must be checked together. A common error is to close in the upper
+half-plane for $k>0$, which gives the wrong exponential and would predict
+amplification instead of attenuation.*
+
+**The tenth-amplitude wavelength.** Set $e^{-2\pi d/\lambda} = 0.1$:
+$2\pi d/\lambda = \ln 10 = 2.3026$, so $\lambda_{10} = (2\pi/\ln 10)d = 2.7288\,d$.
+
+**The comparison.** $w_{1/2} = 1.532842\,d$, so
+
+$$\frac{\lambda_{10}}{w_{1/2}} = \frac{2.7288}{1.5328} = 1.780 .$$
+
+**Why the ratio is more robust.** Both constants follow from the same kernel, so
+their *ratio* is independent of $d$, of the source strength and of any amplitude
+calibration — it depends only on the shape of the operator. A single constant,
+by contrast, can be corrupted by an error in the assumed body shape (the half-width
+constant is 1.533 for a sphere and 2.000 for a 2-D line), whereas the transfer
+function's $2\pi/\ln 10$ is fixed by the Fourier transform alone. So the ratio
+tests the *physics of the kernel*, and the individual constants test the *assumed
+geometry* — different questions, and worth keeping apart.

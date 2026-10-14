@@ -52,3 +52,13 @@ extract the depth from each using both the sphere and the cylinder half-width
 rules. Tabulate the four combinations of true shape and assumed shape, report
 the fractional depth error in each, and conclude with a sentence on what a
 potential-field depth estimate is actually reporting.
+---
+
+**★★★10.** Derive the *slope-based* depth rule for a semi-infinite sheet, showing
+that the maximum horizontal gradient of the anomaly is $2G\sigma/d$ and hence that
+$d = 2G\sigma/(\mathrm{d}g_z/\mathrm{d}x)_{\max}$. Then compute the expected peak
+gradient for a stated edge (contrast 400 kg/m³, sheet thickness 100 m, edge depth
+150 m), express it in mGal m⁻¹ and in µGal m⁻¹, and state the smallest station
+interval that would resolve it given a 0.01 mGal reading resolution. Finally,
+explain why a dyke produces *two* gradient peaks and how misreading them as one
+broad step biases the depth.

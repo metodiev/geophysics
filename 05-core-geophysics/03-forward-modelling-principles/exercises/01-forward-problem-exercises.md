@@ -46,3 +46,14 @@ Gauss–Legendre quadrature of the same integral, and report the measured relati
 agreement at $n = 4, 8, 16, 32, 64$ nodes. Identify the round-off floor and
 state the tolerance you would adopt for a production code, with justification.
 Then inject a 2% error into the kernel and confirm your tolerance rejects it.
+---
+
+**★★★9.** Build the resolution matrix $\mathbf{R} = \mathbf{G}^{+}\mathbf{G}$ for a
+stated line of observations and a stated sheet discretisation. Report (a) the
+diagonal entry at the central cell, (b) the row sum and the corresponding spatial
+width, (c) the largest off-diagonal entry, and (d) the ratio of the resolution
+width to the source depth. Then answer: what fraction of the true central-cell
+value does the inversion recover, where does the rest go, and why is the
+resolution width *narrower* than the anomaly half-width? Finally, state which
+single change to the survey would raise the diagonal most, and justify it from
+the structure of $\mathbf{R}$ rather than from trial and error.

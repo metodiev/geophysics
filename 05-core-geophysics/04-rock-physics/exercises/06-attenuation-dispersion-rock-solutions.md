@@ -99,3 +99,48 @@ $Q$: halving it halves the maximum frequency at every depth and doubles the
 resolution length. A second assumption worth flagging is the "factor of $e^{-1}$
 survives" criterion, which is arbitrary; using $e^{-3}$ (a stricter
 signal-to-noise case) moves every resolution number by a factor of about 1.7.
+---
+
+## ★★★10
+
+**Derivation.** The peak of $1/Q = \Delta\omega\tau/(1+\omega^2\tau^2)$ is
+$\Delta/2$ at $\omega\tau = 1$. Setting $1/Q$ equal to half the peak,
+
+$$\Delta\frac{\omega\tau}{1+\omega^2\tau^2} = \frac{\Delta}{4}
+\qquad\Longrightarrow\qquad
+4x = 1+x^2, \quad x \equiv \omega\tau ,$$
+
+a quadratic with roots $x = 2\pm\sqrt3 = 3.7321$ and $0.2679$.
+
+**The result.** The half-maximum points are separated by
+$3.7321/0.2679 = 13.9282$, i.e.
+
+$$\log_{10} 13.9282 = \mathbf{1.144\ \text{decades}} ,$$
+
+**independent of $\Delta$** — because $\Delta$ multiplies $1/Q$ uniformly and so
+cancels from the half-maximum condition. The relaxation strength sets the *height*
+of the absorption peak ($\Delta/2$), never its width in frequency.
+
+**The falsifiable test.** A measured $Q^{-1}$ spectrum whose half-maximum width
+differs materially from 1.14 decades is **not** a single relaxation, and this
+requires no fitting, no assumed $\Delta$ and no assumed mechanism — only the
+measured spectrum. A single-mechanism fit forced onto such data will produce
+systematic residuals whose shape is the diagnostic.
+
+**A flat spectrum over three decades.** $Q$ nearly constant over three decades
+(1.14 decades is the width of one element) cannot be produced by any single
+relaxation; it requires a **distribution of relaxation times** spanning the band.
+Two standard formulations that can represent it are (i) the **Cole–Cole** model,
+which replaces the single relaxation time by a distribution parameterised by an
+exponent, and (ii) **Kjartansson's constant-$Q$** model, which posits $Q$
+independent of frequency by construction and derives the corresponding dispersion
+from Kramers–Kronig.
+
+**What would distinguish them.** The *phase* of the modulus, or equivalently the
+velocity dispersion's frequency dependence: the Cole–Cole model gives a dispersion
+that flattens at high frequency, whereas constant-$Q$ gives a strictly logarithmic
+dispersion across all frequencies. Measuring velocity (not just attenuation) at
+three or more well-separated frequencies, and comparing the slope of $V$ against
+$\ln f$, therefore separates the two — a good illustration of the lesson's theme
+that attenuation and dispersion are two views of one mechanism, so each
+constrains the other.

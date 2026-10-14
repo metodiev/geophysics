@@ -74,6 +74,152 @@ A useful suite covers:
 a different code path (different algorithm, different library) so that a shared
 bug cannot hide.
 
+### 3.1 Richardson extrapolation and the grid-convergence index, derived
+
+An order measurement gives more than a number. If the error behaves as
+$E(h) = Ch^p$, then two resolutions determine both $C$ and the value the
+solution is converging *to*.
+
+Let $u_1 = u(h)$, $u_2 = u(h/r)$ for a refinement ratio $r$ (usually 2). Then
+
+$$u_1 - u_\text{exact} = Ch^p, \qquad u_2 - u_\text{exact} = C(h/r)^p,$$
+
+so dividing and solving for $p$:
+
+$$p = \frac{\log\!\left[(u_1-u_2)/(u_3-u_2)\right]}{\log r}
+\quad\text{(three grids)}, \qquad\text{or}\qquad
+p = \frac{\log(E_1/E_2)}{\log r}\quad\text{(if }u_\text{exact}\text{ is known)} .$$
+
+Eliminating $C$ gives the **Richardson-extrapolated** value
+
+$$u_\text{exact} \approx u_2 + \frac{u_2-u_1}{r^p-1},$$
+
+and the **grid-convergence index**, a conservative uncertainty estimate:
+
+$$\text{GCI} = F_s\,\frac{\lvert u_2-u_1\rvert/r^p}{\,r^p-1\,},
+\qquad F_s \approx 1.25 .$$
+
+**Measured application** to the manufactured-solution study of Section 6.4, where
+the exact solution is known and $r = 2$:
+$E_1 = 5.142005\times10^{-4}$ at $h = 0.025$,
+$E_2 = 1.285204\times10^{-4}$ at $h = 0.0125$:
+
+$$p = \frac{\log(5.142005\times10^{-4}/1.285204\times10^{-4})}{\log 2}
+= 2.000334,$$
+
+$$\text{GCI} = 1.25\,\frac{1.285204\times10^{-4}}{2^{2.000334}-1}
+= 5.3534\times10^{-5},$$
+
+and the Richardson error estimate at the finer grid is
+
+$$u_2 + \frac{u_2-u_1}{r^p-1} \;\Rightarrow\;
+\text{error} \approx \frac{E_2 - E_1/r^p}{r^p-1}
+= \frac{1.285204\times10^{-4}-3.212824\times10^{-5}}{3.0003}
+= 3.2121\times10^{-5},$$
+
+against the actual error $E_2 = 3.2128\times10^{-5}$ — agreement to 0.02%.
+
+**Physical interpretation.** Richardson extrapolation works because the leading
+error term is *systematic*, not random: it is a known power of $h$ with a smooth
+coefficient. That is exactly the property a benchmark is designed to expose, and
+it fails (giving nonsense) when the observed order is not the asymptotic one —
+for instance in a pre-asymptotic regime, or when the error is dominated by a
+discontinuity. **Always check that $p$ is close to the scheme's nominal order
+before trusting an extrapolation.**
+
+### 3.2 Why an order test is more sensitive than a point comparison
+
+A tolerance test asks "is the error below $\tau$?" An order test asks "does the
+error behave as $h^p$?" The second catches a wider class of bugs.
+
+Consider two ways a code can be wrong:
+
+- **A multiplicative error**, $u_\text{num} = (1+\delta)u_\text{exact}$. The
+  discretisation error is $\delta u_\text{exact}$, which is *independent of $h$*,
+  so the measured order is 0 while the correct code gives 2. Detected by both
+  tests, provided $\delta > \tau$.
+- **A lower-order error term**, e.g. a mis-stencilled boundary closure
+  contributing $O(h)$ instead of $O(h^2)$. At coarse resolution the second-order
+  term dominates and the error looks acceptable; at fine resolution the
+  first-order term takes over. A single-tolerance test at one resolution can miss
+  this entirely; the order test cannot, because the slope changes.
+
+**Concretely, from the demonstration:** the correct code passes a $10^{-6}$
+tolerance at relative error $3.981\times10^{-15}$; a 2% kernel error fails at
+$2.000\times10^{-2}$; and the manufactured-solution study returns orders
+2.0013, 2.0003, 2.0001, whose *constancy* is the evidence that no hidden
+lower-order term is present. **Report the order, not just the error.**
+
+### 3.3 Choosing a tolerance from the application, derived
+
+A tolerance is defensible only if it is tied to a physical uncertainty. Let the
+forward model feed an inversion whose input parameters are uncertain by a
+fraction $\delta_p$, and let the numerical error be $\epsilon$. Then
+
+$$\epsilon \ll \delta_p \quad\text{is required, typically}\quad
+\epsilon \le \delta_p/10 .$$
+
+**Numbers.** Densities in a rock-physics workflow are uncertain by 5–10%
+(they depend on mineralogy and porosity,
+[05-04-01](../04-rock-physics/01-porosity-density-velocity.md)). So a numerical
+tolerance of $10^{-2}$ is defensible and $10^{-6}$ is wasteful — it costs grid
+points for precision that the physics cannot use. Conversely, for a
+*differential* quantity, such as the change in anomaly produced by a 1% density
+change, the numerical error must be far below 1% or the difference is
+meaningless: here $\epsilon \le 10^{-3}$ is justified.
+
+**The rule in words.** Ask what question the model's output will answer. If the
+answer is "is this anomaly 3 mGal or 3.2 mGal?", a 1% tolerance suffices. If the
+answer is "which of two models differing by 1% fits better?", the tolerance must
+be an order of magnitude smaller than that difference — and the *grid* must be
+chosen accordingly, using the derived ppw rule of
+[05-03-04](./04-numerical-forward-modelling.md).
+
+### 3.4 Verification and validation, as a table of measurable criteria
+
+The distinction of Section 2 becomes operational when each row carries a test that
+can fail.
+
+| question | activity | test that can fail | what it cannot detect |
+|---|---|---|---|
+| Does the code solve the stated equations correctly? | verification | manufactured solution order; closed-form comparison; conservation check | wrong equations |
+| Are the stated equations adequate for the earth? | validation | comparison with independent data; prediction of an unused observable | a code bug that mimics the data |
+| Is the discretisation adequate at the working resolution? | verification | measured error at the *chosen* grid, not an asymptotic limit | modelling error |
+| Is the tolerance defensible? | both | error $\le$ physical uncertainty (Section 3.3) | wrong physical inputs |
+| Has round-off become the limit? | verification | error stops falling with refinement | all of the above |
+
+**The asymmetry that matters.** Verification can be completed by one person with a
+workstation. Validation cannot: it requires data the modeller does not control.
+**A report that claims "validated" on the basis of manufactured solutions has
+mis-described its evidence**, and this table is the language for saying so
+precisely.
+
+### 3.5 What would falsify this code? A worked analysis
+
+A validation is only as strong as the falsification it survives. Take the prism
+gravity code of this module and ask, explicitly, what would show it wrong.
+
+| candidate failure | test | would the suite catch it? |
+|---|---|---|
+| wrong kernel prefactor | closed-form/quadrature comparison | **yes** — a 2% perturbation gives $2.000\times10^{-2}$ against a $10^{-6}$ tolerance |
+| transposed coordinates | thin-sheet limit, symmetry | **partly** — the thin-sheet limit is symmetric, so only an asymmetric test catches it |
+| wrong sign of $z$ | closed-form comparison | **yes** — the sign flips |
+| wrong quadrature weights | convergence study | **yes** — convergence order collapses |
+| wrong physical model (point mass used where a prism is required) | far-field test | **yes, and it is the *measured* 13% discrepancy at $200$ m** |
+| wrong *equations* (e.g. ignoring a layer) | nothing in this suite | **no** — requires validation against data |
+
+**The honest conclusion.** Five of the six candidate failures are caught; the sixth
+— wrong physics — is not, and cannot be, by a suite that only checks the code
+against itself and the literature. Stating that explicitly, with the quantification
+of each catch, is what turns a benchmark table into a validation.
+
+**The quantitative version of "the test is sensitive".** A test with tolerance
+$\tau$ catches a bug of relative size $\delta$ iff $\delta > \tau$. Because the
+suite is passed only if *every* test passes, its detection threshold is
+$\min_i\tau_i$ — **one loose tolerance weakens the whole suite.** That is the
+argument for keeping every tolerance in a suite at the same order of magnitude,
+and for stating each one's justification rather than choosing round numbers.
+
 ## 4. Units and dimensional analysis
 
 Every benchmark must state: the physical quantity, its SI and field units, the
@@ -125,29 +271,68 @@ introduced, the relative error rises from $4.0\times10^{-15}$ to
 $2.000\times10^{-2}$, failing the $10^{-6}$ tolerance by seven orders of
 magnitude.
 
-## 7. Python demonstration
+### 6.6 Worked example: a complete expected-versus-measured validation
 
-Run `code/validation_benchmarks.py`. It is the benchmark suite described above:
-manufactured solution with measured order, quadrature convergence, a
-closed-form/independent-integral cross-check, and the injected-bug test. Every
-number quoted in this lesson comes from it.
+Good validation predicts the error *before* measuring it. Here is the full cycle
+for the prism gravity code.
 
-## 8. Exercises, mistakes, applications
+**Prediction.** The closed form and the quadrature share the model but not the
+algebra, so their difference should be pure round-off: for a few hundred
+floating-point operations, of order $\sqrt{N}\epsilon_\text{mach}
+\approx 20\cdot2.2\times10^{-16} = 4\times10^{-15}$ relative. **Predicted
+tolerance: $10^{-12}$**, two orders of safety margin.
 
-Exercises: [`exercises/05-forward-model-validation-exercises.md`](./exercises/05-forward-model-validation-exercises.md).
+**Measurement.** Closed form versus Gauss–Legendre ($n = 120$):
+$1.825\times10^{-15}$; closed form versus `scipy.tplquad`: $1.327\times10^{-15}$
+(estimated absolute error $7.9\times10^{-18}$).
 
-**Common mistakes.** (1) Using the same formula in the code and the reference.
-(2) Choosing the tolerance after seeing the error. (3) Benchmarking only the
-easy case (e.g. a body centred at the origin). (4) Reporting "agreement is good"
-with no number. (5) Concluding validation from verification: reproducing your
-own equations does not make them right.
+**Verdict.** Both are *below* the predicted floor, and the prediction was
+justified rather than fitted. This is what distinguishes a validation from a
+conformity check.
 
-**Applications.** Gravity and magnetic modelling packages (prism, polyhedron);
-seismic finite-difference codes; EM layered and 3-D codes; every serious
-inversion package ships a benchmark suite built this way
-([18-08-02 Synthetic Testing](../../18-inverse-problems/08-practical-inversion-workflow/02-synthetic-testing.md)).
+**Second prediction — the thin-sheet limit.** A prism of half-width 50 km and
+thickness 20 m should approach $2\pi G\rho t$ with a *modelling* residual from
+its finite lateral extent and thickness, of order (thickness/half-width) effects
+and edge truncation. Measured: 0.418528 mGal against 0.419359 mGal — a relative
+$1.98\times10^{-3}$. **Predicted $10^{-2}$, measured $2\times10^{-3}$:**
+consistent, and the residual is *irreducible by refinement* because it is
+geometric, which the demonstration states explicitly.
 
-## Extended worked example: a complete validation table for the module's codes
+**Third prediction — the injected bug.** Perturbing the kernel by a factor 1.02
+should produce a relative error of exactly 0.02, detectable against a $10^{-6}$
+tolerance. Measured: $2.000\times10^{-2}$. The test is demonstrably sensitive.
+
+**The pattern.** Predict the magnitude and the *kind* of each expected
+discrepancy (round-off, discretisation, or modelling), then measure. A
+discrepancy larger than predicted by more than the safety factor is a bug; one of
+the wrong *kind* is a modelling error; one that does not shrink with refinement
+is either modelling or round-off, and the measured order tells you which.
+
+### 6.7 A shortcut that fails: comparing a code against itself
+
+**The shortcut.** Validate by running the code on a fine grid and a coarse grid
+and checking that the answers agree to a few percent.
+
+**Why it fails.** Both runs share every line of code. A systematic bug — a wrong
+constant, a transposed index, a metres/kilometres confusion — appears in both and
+cancels in the comparison. The measured agreement then reflects only
+*discretisation*, which is exactly the error a convergence study is designed to
+measure, not the error a benchmark is designed to catch.
+
+**Quantified example.** A kernel with a 2% scaling error, run at two
+resolutions, gives two answers differing by the discretisation error
+($\sim10^{-12}$ relative for this smooth problem) *and both wrong by 2%*. The
+self-comparison passes at $10^{-12}$ while the code is wrong at the $10^{-2}$
+level — a false positive.
+
+**What to do instead.** Compare against an *independent* implementation of the
+same quantity: a closed form from the literature, an integral evaluated by a
+different algorithm, an exact limit, or a manufactured solution. Where a truly
+independent reference is impossible, say so — "verified to be self-consistent"
+is a much weaker claim than "verified against an analytic solution", and the
+difference must appear in the report.
+
+### 6.8 Extended worked example: a complete validation table for the module's codes
 
 The four demonstrations in this module form a single benchmark suite. Stating
 their measured results in one place is what a validation section in a paper or a
@@ -187,6 +372,28 @@ parameterisation, or whether the depth-to-cell-size ratio makes the
 discretisation meaningful. Those are modelling questions, and the honest place
 to record them is a "known limitations" paragraph alongside the table, not a
 pass/fail column.
+
+## 7. Python demonstration
+
+Run `code/validation_benchmarks.py`. It is the benchmark suite described above:
+manufactured solution with measured order, quadrature convergence, a
+closed-form/independent-integral cross-check, and the injected-bug test. Every
+number quoted in this lesson comes from it.
+
+## 8. Exercises, mistakes, applications
+
+Exercises: [`exercises/05-forward-model-validation-exercises.md`](./exercises/05-forward-model-validation-exercises.md).
+
+**Common mistakes.** (1) Using the same formula in the code and the reference.
+(2) Choosing the tolerance after seeing the error. (3) Benchmarking only the
+easy case (e.g. a body centred at the origin). (4) Reporting "agreement is good"
+with no number. (5) Concluding validation from verification: reproducing your
+own equations does not make them right.
+
+**Applications.** Gravity and magnetic modelling packages (prism, polyhedron);
+seismic finite-difference codes; EM layered and 3-D codes; every serious
+inversion package ships a benchmark suite built this way
+([18-08-02 Synthetic Testing](../../18-inverse-problems/08-practical-inversion-workflow/02-synthetic-testing.md)).
 
 ## 9. Further reading
 

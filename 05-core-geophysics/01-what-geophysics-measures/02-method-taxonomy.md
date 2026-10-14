@@ -96,6 +96,157 @@ bandwidth; potential-field methods have no bandwidth to spend**, because their
 fields are solutions of Laplace's equation and are therefore smooth away from
 sources.
 
+### 3.1 Fold and multiplicity, derived from the geometry
+
+"Fold" is the number of independent traces that contribute to one common
+midpoint (CMP) bin. It is a purely geometric quantity, and it follows from the
+survey layout rather than from the physics.
+
+Take a split-spread: $n$ receivers on a line, receiver interval $\Delta x_r$,
+and a shot interval $\Delta x_s$ that is an integer multiple $m$ of the receiver
+interval, $\Delta x_s = m\,\Delta x_r$. The CMP corresponding to a
+source–receiver pair lies at the midpoint of the pair. Moving to the next shot
+moves every midpoint by $\Delta x_s/2 = m\Delta x_r/2$. A CMP bin of width
+$\Delta x_r/2$ therefore receives contributions from successive shots for as
+long as the source–receiver offsets remain within the recorded range, which
+happens $n/(2m)$ times:
+
+$$\text{fold} \;=\; \frac{n}{2m},\qquad n = \text{channels},\;
+m = \frac{\Delta x_s}{\Delta x_r}.$$
+
+**Worked arithmetic.** With $n = 120$ channels, $\Delta x_r = 25$ m and
+$\Delta x_s = 50$ m ($m = 2$), fold $= 120/4 = 30$. That is the standard
+"3000% fold" language of the industry.
+
+**Physical interpretation.** Fold is not a resolution parameter; it is a
+**signal-to-noise** parameter. Stacking $N$ traces whose noise is independent
+and whose signal is coherent improves the ratio by
+
+$$\text{SNR}_\text{stacked}/\text{SNR}_\text{single} = \sqrt{N},$$
+
+because coherent amplitudes add linearly ($N A$) while independent noise adds in
+quadrature ($\sqrt{N}\,\sigma$). At fold 30 that is a factor of
+$\sqrt{30} = 5.48$ in amplitude — a genuine and large gain. But it does nothing
+to the *bandwidth*: the stack of 30 traces has the same frequency content as
+each of them, so the vertical resolution is unchanged. **Fold buys detection,
+not resolution**, and conflating the two is one of the most common design
+errors.
+
+Diminishing returns: the gain grows as $\sqrt{N}$, so raising fold from 30 to 120
+(a fourfold cost increase) buys a factor $\sqrt{120}/\sqrt{30} = 2$ in SNR. That
+is often worth it for a weak target and rarely worth it for a strong one.
+
+### 3.2 Spatial aliasing with dipping energy
+
+The Nyquist argument of Section 3 assumed a single spatial wavelength. Real
+energy arrives at an angle, and that changes the requirement.
+
+An upgoing plane wave of frequency $f$ arriving with emergence angle $\theta$
+from the vertical (velocity $v$) has horizontal wavenumber
+
+$$k_x = \frac{\omega\sin\theta}{v} = \frac{2\pi f\sin\theta}{v}.$$
+
+Alias-free recording requires $|k_x| \le k_N = \pi/\Delta x$, so
+
+$$\sin\theta \le \frac{v}{2 f \Delta x}.$$
+
+**Worked arithmetic.** $v = 2500$ m/s, $f = 50$ Hz, $\Delta x = 50$ m:
+
+$$\sin\theta_{\max} = \frac{2500}{2 \cdot 50 \cdot 50} = 0.5
+\qquad\Longrightarrow\qquad \theta_{\max} = 30^\circ .$$
+
+Energy dipping more steeply than 30° aliases: a genuine 45° event will appear
+in the data as a spurious event at a shallower apparent dip, and no later
+processing step can recover the original because the information was destroyed
+at the recording stage. Note the structure of the bound: it tightens with
+frequency (higher frequencies alias at shallower dips), which is why aliasing
+first appears as high-frequency noise on steep events.
+
+**A common error worth naming.** It is tempting to derive this with a factor 2
+in the denominator (from two-way travel times) and conclude that a survey
+aliases at half the dip it really does. The factor 2 belongs to *travel-time*
+expressions such as normal moveout, not to the wavenumber of the wavefield.
+Derive $k_x$ from $\omega\sin\theta/v$ and the question does not arise.
+
+### 3.3 Vertical resolution: the quarter-wavelength criterion, derived
+
+The widely quoted $\Delta z_\text{res} \approx v/(4B)$ is not an axiom. It comes
+from the interference of the reflections from the top and bottom of a bed.
+
+Let a bed of thickness $h$ have two-way time thickness $\Delta t = 2h/v$, and let
+the wavelet have period $T = 1/B$ where $B$ is the dominant bandwidth. The
+composite response of the top and bottom reflections is the sum of two wavelets
+displaced by $\Delta t$:
+
+- if $\Delta t \gg T$ the two are separated: two events are seen;
+- if $\Delta t \ll T$ the two merge into one event whose amplitude scales with
+  $h$ (the "thin-bed" regime, where amplitude is proportional to thickness);
+- at $\Delta t \approx T/2$ the trough of the first coincides with the peak of
+  the second at the dominant frequency, and the composite response changes
+  character.
+
+Setting $\Delta t = T/2$:
+
+$$\frac{2h}{v} = \frac{1}{2B}
+\qquad\Longrightarrow\qquad
+h = \frac{v}{4B} .$$
+
+**Worked arithmetic.** $v = 2500$ m/s, $B = 50$ Hz:
+$h = 2500/(4\cdot50) = 12.5$ m. Equivalently, the dominant wavelength is
+$\lambda_d = v/f = 50$ m and the criterion is $h = \lambda_d/4$. The two forms
+coincide because for a broad-band source the usable bandwidth is of order the
+dominant frequency.
+
+**Physical interpretation.** Below $\lambda/4$ the two reflections stop behaving
+as two events; the bed becomes visible only through amplitude tuning, which is
+diagnostic of *thickness* rather than of *existence*. This is the physical
+content of "sub-wavelength" resolution: you can detect a thin bed's presence and
+estimate its thickness from amplitude, but you cannot image it as a separate
+reflector.
+
+### 3.4 The horizontal resolution limit: the Fresnel zone
+
+For a wave, lateral resolution is not set by the receiver spacing but by the
+first Fresnel zone, whose radius at depth $z$ for zero offset is
+
+$$r_F = \sqrt{\frac{\lambda z}{2}} .$$
+
+**Derivation sketch.** Two paths from source to point and to a neighbouring point
+differ by less than a quarter wavelength when the lateral offset $r$ satisfies
+$\sqrt{r^2+z^2}-z \approx r^2/(2z) < \lambda/4$, i.e.
+$r < \sqrt{\lambda z/2}$; within that radius the contributions add
+constructively enough to be unresolvable.
+
+**Worked arithmetic.** $\lambda = 50$ m, $z = 1000$ m:
+$r_F = \sqrt{50\cdot1000/2} = 158.1$ m, so the Fresnel *zone* is 316 m across.
+That is far larger than a 25 m receiver spacing — which is the point:
+**stacking and migration improve the effective horizontal resolution beyond the
+Fresnel zone only by exploiting the aperture, and the aperture, not the spacing,
+is the limiting resource.**
+
+### 3.5 One survey, all four limits computed
+
+Collect the numbers for a stated synthetic design (all four derived above):
+$v = 2500$ m/s, dominant $f = 50$ Hz, $B = 50$ Hz, $\Delta x_r = 25$ m,
+$\Delta x_s = 50$ m, $n = 120$, target $z = 1000$ m.
+
+| Quantity | Expression | Value |
+|---|---|---|
+| dominant wavelength | $v/f$ | 50 m |
+| vertical resolution | $v/(4B)$ | 12.5 m |
+| Fresnel-zone radius | $\sqrt{\lambda z/2}$ | 158.1 m |
+| maximum unaliased dip | $\arcsin[v/(2f\Delta x)]$ with $\Delta x = 50$ m | 30° |
+| fold | $n/(2m)$, $m = 2$ | 30 |
+| stacking SNR gain | $\sqrt{\text{fold}}$ | 5.48× |
+| shortest lateral wavelength | $2\Delta x_r$ | 50 m |
+
+**Read the table as a budget.** Vertical resolution 12.5 m and lateral
+resolution ~158 m differ by more than an order of magnitude: a reflection survey
+resolves thin layers far better than it separates nearby features. Both numbers
+are fixed before acquisition. The only entry the interpreter can change *after*
+recording is the Fresnel-zone figure, and only by using the aperture in
+migration — and the aperture itself was chosen before the survey.
+
 ## 4. Units and dimensional analysis
 
 | Quantity | Symbol | SI unit | Typical field expression |
@@ -142,6 +293,38 @@ $L$ has resolution set by $L$ alone; it cannot buy bandwidth because the
 source spectrum is not under control. This is why microseismic locations are
 an order of magnitude coarser than reflection images, and why the comparison
 "seismic is high resolution" is method-specific, not universal.
+
+### 6.4 A plausible shortcut that gives the wrong answer
+
+**The shortcut:** *"The target at 2 km is too poorly resolved, so let us double
+the channel count and double the fold."*
+
+**Why it fails.** Fold enters only the signal-to-noise ratio, as
+$\sqrt{N}$ (Section 3.1). Doubling the fold improves SNR by
+$\sqrt{2} = 1.41$ — useful, but it does not move a single entry in the
+resolution column of the Section 3.5 table: the wavelength, the quarter-
+wavelength limit, the Fresnel radius and the alias limit are unchanged, because
+they depend on velocity, frequency and spacing, not on multiplicity.
+
+**Do the arithmetic both ways.** Starting from fold 30 ($\sqrt{30} = 5.48$):
+
+| design change | SNR gain | vertical resolution |
+|---|---|---|
+| fold 30 → 60 | 1.41× | 12.5 m (unchanged) |
+| $B$: 50 → 100 Hz | — | 6.3 m (halved) |
+| $\Delta x$: 50 → 25 m | — | unchanged; alias limit from 30° to 90° |
+
+The second row is the change that improves resolution, and it is only available
+if the earth transmits 100 Hz to the target. That is the trade-off of
+[05-04-06](../04-rock-physics/06-attenuation-dispersion-rock.md): bandwidth and
+penetration are two ends of one lever, and at 2 km the usable bandwidth is set
+by attenuation, not by the source. The third row improves *aliasing*, not
+resolution — a distinction that also matters, and one that the fold increase
+does not touch either.
+
+**The generalisable lesson.** Before spending money, identify which *expression*
+in the Section 3.5 table the proposed change appears in. A design change that
+does not appear in the expression cannot alter the quantity.
 
 ## 7. Python demonstration
 

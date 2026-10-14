@@ -11,10 +11,10 @@ Legend: **B** beginner · **I** intermediate · **A** advanced · **G** graduate
 | Folders | 27 |
 | Modules | 216 |
 | Lessons planned | 1146 |
-| Lessons written | 372 |
-| Lessons with valid frontmatter | 372 |
-| Exercise/solution companions written | 698 / 2190 |
-| Completion | 32.5% |
+| Lessons written | 377 |
+| Lessons with valid frontmatter | 377 |
+| Exercise/solution companions written | 708 / 2190 |
+| Completion | 32.9% |
 
 > Companion files are the conventional `exercises/<lesson>-exercises.md` and `<lesson>-solutions.md` pairs. Lessons in `00-orientation` and `26-reference-library` are process material and reference pages, so they carry no companions by design.
 
@@ -500,7 +500,7 @@ Module index: [`11-physics-of-earths-interior-and-atmosphere/README.md`](./02-ph
 
 ## Scientific Computing and Python
 
-`03-scientific-computing` — **13 modules**, **81/86 lessons written**
+`03-scientific-computing` — **13 modules**, **86/86 lessons written**
 
 [Folder index](./03-scientific-computing/README.md)
 
@@ -654,17 +654,17 @@ Module index: [`11-pygmt-and-mapping/README.md`](./03-scientific-computing/11-py
 | ✓ | [Plotting Seismicity, Focal Mechanisms and Plate Boundaries](./03-scientific-computing/11-pygmt-and-mapping/03-seismicity-maps.md) | A |
 | ✓ | [Layout, Insets, Legends and Multi-Panel Maps](./03-scientific-computing/11-pygmt-and-mapping/04-inset-and-layout.md) | A |
 
-### [ ] Building Numerical Simulation Code in Python (0/5)
+### [x] Building Numerical Simulation Code in Python (5/5)
 
 Module index: [`12-numerical-simulation-python/README.md`](./03-scientific-computing/12-numerical-simulation-python/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [A 1-D Finite-Difference Solver from Scratch](./03-scientific-computing/12-numerical-simulation-python/01-finite-difference-1d.md) | I |
-| · | [Numerical Stability, CFL Conditions and Convergence Testing](./03-scientific-computing/12-numerical-simulation-python/02-stability-and-cfl.md) | A |
-| · | [Designing Reusable Model Code: Grids, Operators, Boundaries](./03-scientific-computing/12-numerical-simulation-python/03-modular-design.md) | A |
-| · | [Verification vs Validation: Benchmarks and Convergence Tests](./03-scientific-computing/12-numerical-simulation-python/04-verification-and-validation.md) | G |
-| · | [Parallelism in Python: Multiprocessing, Threads, Numba, JAX](./03-scientific-computing/12-numerical-simulation-python/05-parallel-python.md) | G |
+| ✓ | [A 1-D Finite-Difference Solver from Scratch](./03-scientific-computing/12-numerical-simulation-python/01-finite-difference-1d.md) | I |
+| ✓ | [Numerical Stability, CFL Conditions and Convergence Testing](./03-scientific-computing/12-numerical-simulation-python/02-stability-and-cfl.md) | A |
+| ✓ | [Designing Reusable Model Code: Grids, Operators, Boundaries](./03-scientific-computing/12-numerical-simulation-python/03-modular-design.md) | A |
+| ✓ | [Verification vs Validation: Benchmarks and Convergence Tests](./03-scientific-computing/12-numerical-simulation-python/04-verification-and-validation.md) | G |
+| ✓ | [Parallelism in Python: Multiprocessing, Threads, Numba, JAX](./03-scientific-computing/12-numerical-simulation-python/05-parallel-python.md) | G |
 
 ### [x] Testing, Profiling, and Packaging (8/8)
 

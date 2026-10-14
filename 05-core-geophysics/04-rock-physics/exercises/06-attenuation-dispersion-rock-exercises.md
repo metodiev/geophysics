@@ -46,3 +46,12 @@ that survives to depths of 500 m, 1 km, 2 km and 4 km for a stated initial
 bandwidth. Convert each to a vertical resolution via $v/(4B)$ and plot (or
 tabulate) resolution against depth. State the assumptions and identify the one
 that would most change your conclusion.
+---
+
+**★★★10.** Derive the frequency separation between the two half-maximum points of
+a single Zener element's $1/Q$ spectrum. Show that it is a fixed number of decades
+*independent of the relaxation strength* $\Delta$, evaluate it, and use it as a
+falsifiable test of the single-mechanism model. Then explain what a measured
+$Q^{-1}$ spectrum that is nearly flat over three decades implies about the
+underlying mechanism, and name two formulations that can represent such a
+spectrum. State what additional measurement you would need to distinguish them.
