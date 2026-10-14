@@ -11,10 +11,10 @@ Legend: **B** beginner · **I** intermediate · **A** advanced · **G** graduate
 | Folders | 27 |
 | Modules | 216 |
 | Lessons planned | 1146 |
-| Lessons written | 582 |
-| Lessons with valid frontmatter | 582 |
-| Exercise/solution companions written | 1118 / 2190 |
-| Completion | 50.8% |
+| Lessons written | 692 |
+| Lessons with valid frontmatter | 692 |
+| Exercise/solution companions written | 1338 / 2190 |
+| Completion | 60.4% |
 
 > Companion files are the conventional `exercises/<lesson>-exercises.md` and `<lesson>-solutions.md` pairs. Lessons in `00-orientation` and `26-reference-library` are process material and reference pages, so they carry no companions by design.
 
@@ -42,10 +42,10 @@ Legend: **B** beginner · **I** intermediate · **A** advanced · **G** graduate
 - [x] [Geomagnetism and Electromagnetic Fields](./08-geomagnetism-electromagnetism/README.md) — `08-geomagnetism-electromagnetism` · stages: intermediate->research
 - [x] [Electrical and Electromagnetic Methods](./09-electrical-em-methods/README.md) — `09-electrical-em-methods` · stages: intermediate->research
 - [x] [Ground-Penetrating Radar and Near-Surface Geophysics](./10-gpr-near-surface/README.md) — `10-gpr-near-surface` · stages: beginner->doctoral
-- [ ] [Exploration Geophysics](./11-exploration-geophysics/README.md) — `11-exploration-geophysics` · stages: intermediate->research
-- [ ] [Global Geophysics and the Earth's Interior](./12-global-geophysics-interior/README.md) — `12-global-geophysics-interior` · stages: advanced->research
-- [ ] [Geodynamics and Tectonophysics](./13-geodynamics-tectonics/README.md) — `13-geodynamics-tectonics` · stages: advanced->research
-- [ ] [Hydrology, Hydrogeophysics and Environmental Geophysics](./14-hydrology-hydrogeophysics/README.md) — `14-hydrology-hydrogeophysics` · stages: intermediate->research
+- [x] [Exploration Geophysics](./11-exploration-geophysics/README.md) — `11-exploration-geophysics` · stages: intermediate->research
+- [x] [Global Geophysics and the Earth's Interior](./12-global-geophysics-interior/README.md) — `12-global-geophysics-interior` · stages: advanced->research
+- [x] [Geodynamics and Tectonophysics](./13-geodynamics-tectonics/README.md) — `13-geodynamics-tectonics` · stages: advanced->research
+- [x] [Hydrology, Hydrogeophysics and Environmental Geophysics](./14-hydrology-hydrogeophysics/README.md) — `14-hydrology-hydrogeophysics` · stages: intermediate->research
 - [ ] [Oceanography and Marine Geophysics](./15-oceanography-marine/README.md) — `15-oceanography-marine` · stages: intermediate->research
 - [ ] [Atmospheric Physics, Meteorology and Climate Science](./16-atmosphere-climate/README.md) — `16-atmosphere-climate` · stages: beginner->research
 - [ ] [Remote Sensing, GIS and Satellite Geophysics](./17-remote-sensing-gis/README.md) — `17-remote-sensing-gis` · stages: beginner->research
@@ -1407,326 +1407,326 @@ Module index: [`06-nearsurface-monitoring/README.md`](./10-gpr-near-surface/06-n
 
 ## Exploration Geophysics
 
-`11-exploration-geophysics` — **7 modules**, **0/31 lessons written**
+`11-exploration-geophysics` — **7 modules**, **31/31 lessons written**
 
 [Folder index](./11-exploration-geophysics/README.md)
 
-### [ ] The Exploration Workflow (0/3)
+### [x] The Exploration Workflow (3/3)
 
 Module index: [`01-exploration-workflow/README.md`](./11-exploration-geophysics/01-exploration-workflow/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Exploration Lifecycle: Reconnaissance to Reserve Definition](./11-exploration-geophysics/01-exploration-workflow/01-exploration-lifecycle.md) | I |
-| · | [Targeting Strategy and Method Selection](./11-exploration-geophysics/01-exploration-workflow/02-targeting-and-strategy.md) | A |
-| · | [Cost, Risk and Value of Information in Exploration](./11-exploration-geophysics/01-exploration-workflow/03-cost-benefit.md) | D |
+| ✓ | [Exploration Lifecycle: Reconnaissance to Reserve Definition](./11-exploration-geophysics/01-exploration-workflow/01-exploration-lifecycle.md) | I |
+| ✓ | [Targeting Strategy and Method Selection](./11-exploration-geophysics/01-exploration-workflow/02-targeting-and-strategy.md) | A |
+| ✓ | [Cost, Risk and Value of Information in Exploration](./11-exploration-geophysics/01-exploration-workflow/03-cost-benefit.md) | D |
 
-### [ ] Mineral Exploration Geophysics (0/7)
+### [x] Mineral Exploration Geophysics (7/7)
 
 Module index: [`02-mineral-exploration/README.md`](./11-exploration-geophysics/02-mineral-exploration/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Geophysical Signatures of Major Deposit Types](./11-exploration-geophysics/02-mineral-exploration/01-deposit-signatures.md) | A |
-| · | [Magnetics for IOCG, Porphyry and Magmatic Sulphides](./11-exploration-geophysics/02-mineral-exploration/02-magnetics-for-minerals.md) | G |
-| · | [Gravity for Chromite, Massive Sulphide and Iron Ore](./11-exploration-geophysics/02-mineral-exploration/03-gravity-for-minerals.md) | G |
-| · | [EM for Conductors, Massive Sulphides and Graphite](./11-exploration-geophysics/02-mineral-exploration/04-em-for-minerals.md) | G |
-| · | [Radiometrics and Alteration Mapping](./11-exploration-geophysics/02-mineral-exploration/05-radiometrics-for-minerals.md) | G |
-| · | [IP for Disseminated Sulphides and Porphyry Systems](./11-exploration-geophysics/02-mineral-exploration/06-ip-for-minerals.md) | G |
-| · | [Multi-Method Targeting and Prospectivity Analysis](./11-exploration-geophysics/02-mineral-exploration/07-multi-method-targeting.md) | R |
+| ✓ | [Geophysical Signatures of Major Deposit Types](./11-exploration-geophysics/02-mineral-exploration/01-deposit-signatures.md) | A |
+| ✓ | [Magnetics for IOCG, Porphyry and Magmatic Sulphides](./11-exploration-geophysics/02-mineral-exploration/02-magnetics-for-minerals.md) | G |
+| ✓ | [Gravity for Chromite, Massive Sulphide and Iron Ore](./11-exploration-geophysics/02-mineral-exploration/03-gravity-for-minerals.md) | G |
+| ✓ | [EM for Conductors, Massive Sulphides and Graphite](./11-exploration-geophysics/02-mineral-exploration/04-em-for-minerals.md) | G |
+| ✓ | [Radiometrics and Alteration Mapping](./11-exploration-geophysics/02-mineral-exploration/05-radiometrics-for-minerals.md) | G |
+| ✓ | [IP for Disseminated Sulphides and Porphyry Systems](./11-exploration-geophysics/02-mineral-exploration/06-ip-for-minerals.md) | G |
+| ✓ | [Multi-Method Targeting and Prospectivity Analysis](./11-exploration-geophysics/02-mineral-exploration/07-multi-method-targeting.md) | R |
 
-### [ ] Hydrocarbon Exploration Geophysics (0/6)
+### [x] Hydrocarbon Exploration Geophysics (6/6)
 
 Module index: [`03-hydrocarbon-exploration/README.md`](./11-exploration-geophysics/03-hydrocarbon-exploration/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Reflection Seismic in Exploration: From 2-D to 3-D](./11-exploration-geophysics/03-hydrocarbon-exploration/01-seismic-in-exploration.md) | G |
-| · | [Seismic Stratigraphy and Sequence Interpretation](./11-exploration-geophysics/03-hydrocarbon-exploration/02-seismic-stratigraphy.md) | D |
-| · | [Reservoir Characterisation and Property Prediction](./11-exploration-geophysics/03-hydrocarbon-exploration/03-reservoir-characterisation.md) | R |
-| · | [Seismic Inversion for Reservoir Properties](./11-exploration-geophysics/03-hydrocarbon-exploration/04-seismic-inversion-reservoir.md) | R |
-| · | [Geophysics for Unconventional Reservoirs](./11-exploration-geophysics/03-hydrocarbon-exploration/05-unconventional-geophysics.md) | D |
-| · | [Integrating Borehole Data with Seismic](./11-exploration-geophysics/03-hydrocarbon-exploration/06-borehole-and-integration.md) | G |
+| ✓ | [Reflection Seismic in Exploration: From 2-D to 3-D](./11-exploration-geophysics/03-hydrocarbon-exploration/01-seismic-in-exploration.md) | G |
+| ✓ | [Seismic Stratigraphy and Sequence Interpretation](./11-exploration-geophysics/03-hydrocarbon-exploration/02-seismic-stratigraphy.md) | D |
+| ✓ | [Reservoir Characterisation and Property Prediction](./11-exploration-geophysics/03-hydrocarbon-exploration/03-reservoir-characterisation.md) | R |
+| ✓ | [Seismic Inversion for Reservoir Properties](./11-exploration-geophysics/03-hydrocarbon-exploration/04-seismic-inversion-reservoir.md) | R |
+| ✓ | [Geophysics for Unconventional Reservoirs](./11-exploration-geophysics/03-hydrocarbon-exploration/05-unconventional-geophysics.md) | D |
+| ✓ | [Integrating Borehole Data with Seismic](./11-exploration-geophysics/03-hydrocarbon-exploration/06-borehole-and-integration.md) | G |
 
-### [ ] Geothermal Exploration Geophysics (0/3)
+### [x] Geothermal Exploration Geophysics (3/3)
 
 Module index: [`04-geothermal-exploration-geophysics/README.md`](./11-exploration-geophysics/04-geothermal-exploration-geophysics/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Geophysical Signatures of Geothermal Reservoirs](./11-exploration-geophysics/04-geothermal-exploration-geophysics/01-geothermal-signatures.md) | D |
-| · | [Magnetotellurics for Geothermal Resource Assessment](./11-exploration-geophysics/04-geothermal-exploration-geophysics/02-mt-for-geothermal.md) | R |
-| · | [Microseismic Monitoring of Geothermal Fields](./11-exploration-geophysics/04-geothermal-exploration-geophysics/03-microseismic-geothermal.md) | D |
+| ✓ | [Geophysical Signatures of Geothermal Reservoirs](./11-exploration-geophysics/04-geothermal-exploration-geophysics/01-geothermal-signatures.md) | D |
+| ✓ | [Magnetotellurics for Geothermal Resource Assessment](./11-exploration-geophysics/04-geothermal-exploration-geophysics/02-mt-for-geothermal.md) | R |
+| ✓ | [Microseismic Monitoring of Geothermal Fields](./11-exploration-geophysics/04-geothermal-exploration-geophysics/03-microseismic-geothermal.md) | D |
 
-### [ ] Groundwater Exploration Geophysics (0/4)
+### [x] Groundwater Exploration Geophysics (4/4)
 
 Module index: [`05-groundwater-exploration/README.md`](./11-exploration-geophysics/05-groundwater-exploration/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Geophysical Signatures of Aquifers and Saline Interfaces](./11-exploration-geophysics/05-groundwater-exploration/01-aquifer-signatures.md) | A |
-| · | [EM and ERT for Groundwater Mapping](./11-exploration-geophysics/05-groundwater-exploration/02-em-and-ert-groundwater.md) | G |
-| · | [Seismic Refraction and Surface Waves for Aquifers](./11-exploration-geophysics/05-groundwater-exploration/03-seismic-groundwater.md) | G |
-| · | [Airborne EM for Regional Aquifer Mapping](./11-exploration-geophysics/05-groundwater-exploration/04-airborne-groundwater.md) | D |
+| ✓ | [Geophysical Signatures of Aquifers and Saline Interfaces](./11-exploration-geophysics/05-groundwater-exploration/01-aquifer-signatures.md) | A |
+| ✓ | [EM and ERT for Groundwater Mapping](./11-exploration-geophysics/05-groundwater-exploration/02-em-and-ert-groundwater.md) | G |
+| ✓ | [Seismic Refraction and Surface Waves for Aquifers](./11-exploration-geophysics/05-groundwater-exploration/03-seismic-groundwater.md) | G |
+| ✓ | [Airborne EM for Regional Aquifer Mapping](./11-exploration-geophysics/05-groundwater-exploration/04-airborne-groundwater.md) | D |
 
-### [ ] Geotechnical and Engineering Geophysics (0/4)
+### [x] Geotechnical and Engineering Geophysics (4/4)
 
 Module index: [`06-geotechnical-and-engineering/README.md`](./11-exploration-geophysics/06-geotechnical-and-engineering/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Site Investigation: Objectives and Method Selection](./11-exploration-geophysics/06-geotechnical-and-engineering/01-site-investigation.md) | A |
-| · | [Geophysics for Tunnels, Dams and Foundations](./11-exploration-geophysics/06-geotechnical-and-engineering/02-tunnelling-and-dams.md) | D |
-| · | [Buried Objects, UXO Detection and Clearance](./11-exploration-geophysics/06-geotechnical-and-engineering/03-buried-objects-uxo.md) | G |
-| · | [Landfill, Waste and Brownfield Site Assessment](./11-exploration-geophysics/06-geotechnical-and-engineering/04-landfill-and-waste.md) | G |
+| ✓ | [Site Investigation: Objectives and Method Selection](./11-exploration-geophysics/06-geotechnical-and-engineering/01-site-investigation.md) | A |
+| ✓ | [Geophysics for Tunnels, Dams and Foundations](./11-exploration-geophysics/06-geotechnical-and-engineering/02-tunnelling-and-dams.md) | D |
+| ✓ | [Buried Objects, UXO Detection and Clearance](./11-exploration-geophysics/06-geotechnical-and-engineering/03-buried-objects-uxo.md) | G |
+| ✓ | [Landfill, Waste and Brownfield Site Assessment](./11-exploration-geophysics/06-geotechnical-and-engineering/04-landfill-and-waste.md) | G |
 
-### [ ] Exploration Case Studies (0/4)
+### [x] Exploration Case Studies (4/4)
 
 Module index: [`07-exploration-case-studies/README.md`](./11-exploration-geophysics/07-exploration-case-studies/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Case Study: Porphyry Copper District](./11-exploration-geophysics/07-exploration-case-studies/01-case-study-porphyry.md) | R |
-| · | [Case Study: Basin Analysis and Play Assessment](./11-exploration-geophysics/07-exploration-case-studies/02-case-study-basin.md) | R |
-| · | [Case Study: Geothermal Field Development](./11-exploration-geophysics/07-exploration-case-studies/03-case-study-geothermal.md) | R |
-| · | [Case Study: Arid-Region Groundwater Exploration](./11-exploration-geophysics/07-exploration-case-studies/04-case-study-groundwater.md) | R |
+| ✓ | [Case Study: Porphyry Copper District](./11-exploration-geophysics/07-exploration-case-studies/01-case-study-porphyry.md) | R |
+| ✓ | [Case Study: Basin Analysis and Play Assessment](./11-exploration-geophysics/07-exploration-case-studies/02-case-study-basin.md) | R |
+| ✓ | [Case Study: Geothermal Field Development](./11-exploration-geophysics/07-exploration-case-studies/03-case-study-geothermal.md) | R |
+| ✓ | [Case Study: Arid-Region Groundwater Exploration](./11-exploration-geophysics/07-exploration-case-studies/04-case-study-groundwater.md) | R |
 
 ## Global Geophysics and the Earth's Interior
 
-`12-global-geophysics-interior` — **7 modules**, **0/25 lessons written**
+`12-global-geophysics-interior` — **7 modules**, **25/25 lessons written**
 
 [Folder index](./12-global-geophysics-interior/README.md)
 
-### [ ] Seismic Structure of the Earth (0/6)
+### [x] Seismic Structure of the Earth (6/6)
 
 Module index: [`01-seismic-structure-of-the-earth/README.md`](./12-global-geophysics-interior/01-seismic-structure-of-the-earth/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [PREM, IASP91 and Reference Earth Models](./12-global-geophysics-interior/01-seismic-structure-of-the-earth/01-prem-and-reference-models.md) | G |
-| · | [Crustal Structure and Continental vs Oceanic Crust](./12-global-geophysics-interior/01-seismic-structure-of-the-earth/02-crustal-structure.md) | A |
-| · | [Upper-Mantle Discontinuities at 410 and 660 km](./12-global-geophysics-interior/01-seismic-structure-of-the-earth/03-upper-mantle-discontinuities.md) | D |
-| · | [Lower-Mantle Heterogeneity and LLSVPs](./12-global-geophysics-interior/01-seismic-structure-of-the-earth/04-lower-mantle-heterogeneity.md) | R |
-| · | [Core-Mantle Boundary: ULVZ, D'' and Post-Perovskite](./12-global-geophysics-interior/01-seismic-structure-of-the-earth/05-core-mantle-boundary.md) | R |
-| · | [Outer Core, Inner Core Anisotropy and Rotation](./12-global-geophysics-interior/01-seismic-structure-of-the-earth/06-outer-and-inner-core.md) | R |
+| ✓ | [PREM, IASP91 and Reference Earth Models](./12-global-geophysics-interior/01-seismic-structure-of-the-earth/01-prem-and-reference-models.md) | G |
+| ✓ | [Crustal Structure and Continental vs Oceanic Crust](./12-global-geophysics-interior/01-seismic-structure-of-the-earth/02-crustal-structure.md) | A |
+| ✓ | [Upper-Mantle Discontinuities at 410 and 660 km](./12-global-geophysics-interior/01-seismic-structure-of-the-earth/03-upper-mantle-discontinuities.md) | D |
+| ✓ | [Lower-Mantle Heterogeneity and LLSVPs](./12-global-geophysics-interior/01-seismic-structure-of-the-earth/04-lower-mantle-heterogeneity.md) | R |
+| ✓ | [Core-Mantle Boundary: ULVZ, D'' and Post-Perovskite](./12-global-geophysics-interior/01-seismic-structure-of-the-earth/05-core-mantle-boundary.md) | R |
+| ✓ | [Outer Core, Inner Core Anisotropy and Rotation](./12-global-geophysics-interior/01-seismic-structure-of-the-earth/06-outer-and-inner-core.md) | R |
 
-### [ ] Composition and Mineral Physics (0/4)
+### [x] Composition and Mineral Physics (4/4)
 
 Module index: [`02-composition-and-mineral-physics/README.md`](./12-global-geophysics-interior/02-composition-and-mineral-physics/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Mantle Composition and Peridotite Models](./12-global-geophysics-interior/02-composition-and-mineral-physics/01-mantle-composition.md) | D |
-| · | [High-Pressure Experiments and Diamond Anvil Cells](./12-global-geophysics-interior/02-composition-and-mineral-physics/02-high-pressure-experiments.md) | R |
-| · | [Ab Initio Mineral Physics and Elastic Constants](./12-global-geophysics-interior/02-composition-and-mineral-physics/03-ab-initio-mineral-physics.md) | R |
-| · | [Core Composition, Light Elements and the Geodynamo](./12-global-geophysics-interior/02-composition-and-mineral-physics/04-core-composition.md) | R |
+| ✓ | [Mantle Composition and Peridotite Models](./12-global-geophysics-interior/02-composition-and-mineral-physics/01-mantle-composition.md) | D |
+| ✓ | [High-Pressure Experiments and Diamond Anvil Cells](./12-global-geophysics-interior/02-composition-and-mineral-physics/02-high-pressure-experiments.md) | R |
+| ✓ | [Ab Initio Mineral Physics and Elastic Constants](./12-global-geophysics-interior/02-composition-and-mineral-physics/03-ab-initio-mineral-physics.md) | R |
+| ✓ | [Core Composition, Light Elements and the Geodynamo](./12-global-geophysics-interior/02-composition-and-mineral-physics/04-core-composition.md) | R |
 
-### [ ] Geotherms and the Earth's Heat Budget (0/3)
+### [x] Geotherms and the Earth's Heat Budget (3/3)
 
 Module index: [`03-geotherms-and-heat-budget/README.md`](./12-global-geophysics-interior/03-geotherms-and-heat-budget/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Radiogenic Heat Production and Mantle Geotherms](./12-global-geophysics-interior/03-geotherms-and-heat-budget/01-radiogenic-heat.md) | D |
-| · | [Global Heat Flow and Its Distribution](./12-global-geophysics-interior/03-geotherms-and-heat-budget/02-heat-flow-global.md) | G |
-| · | [Thermal Evolution of the Earth and Secular Cooling](./12-global-geophysics-interior/03-geotherms-and-heat-budget/03-thermal-evolution.md) | R |
+| ✓ | [Radiogenic Heat Production and Mantle Geotherms](./12-global-geophysics-interior/03-geotherms-and-heat-budget/01-radiogenic-heat.md) | D |
+| ✓ | [Global Heat Flow and Its Distribution](./12-global-geophysics-interior/03-geotherms-and-heat-budget/02-heat-flow-global.md) | G |
+| ✓ | [Thermal Evolution of the Earth and Secular Cooling](./12-global-geophysics-interior/03-geotherms-and-heat-budget/03-thermal-evolution.md) | R |
 
-### [ ] Geomagnetic Field and Core Dynamics (0/3)
+### [x] Geomagnetic Field and Core Dynamics (3/3)
 
 Module index: [`04-geomagnetism-and-core/README.md`](./12-global-geophysics-interior/04-geomagnetism-and-core/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Observations of the Core Field and Secular Variation](./12-global-geophysics-interior/04-geomagnetism-and-core/01-core-field-observations.md) | G |
-| · | [Numerical Geodynamo Models](./12-global-geophysics-interior/04-geomagnetism-and-core/02-geodynamo-numerical.md) | R |
-| · | [Palaeomagnetic Record and Reversal Frequency](./12-global-geophysics-interior/04-geomagnetism-and-core/03-palaeomagnetic-record.md) | D |
+| ✓ | [Observations of the Core Field and Secular Variation](./12-global-geophysics-interior/04-geomagnetism-and-core/01-core-field-observations.md) | G |
+| ✓ | [Numerical Geodynamo Models](./12-global-geophysics-interior/04-geomagnetism-and-core/02-geodynamo-numerical.md) | R |
+| ✓ | [Palaeomagnetic Record and Reversal Frequency](./12-global-geophysics-interior/04-geomagnetism-and-core/03-palaeomagnetic-record.md) | D |
 
-### [ ] Tides, Rotation and the Global Earth Response (0/3)
+### [x] Tides, Rotation and the Global Earth Response (3/3)
 
 Module index: [`05-earth-tides-rotation-global/README.md`](./12-global-geophysics-interior/05-earth-tides-rotation-global/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Free Oscillations of the Earth (Normal Modes)](./12-global-geophysics-interior/05-earth-tides-rotation-global/01-free-oscillations.md) | R |
-| · | [Tidal Response and the Quality Factor of the Whole Earth](./12-global-geophysics-interior/05-earth-tides-rotation-global/02-tidal-response.md) | D |
-| · | [Rotation Variations, LOD and Core-Mantle Coupling](./12-global-geophysics-interior/05-earth-tides-rotation-global/03-rotation-and-length-of-day.md) | R |
+| ✓ | [Free Oscillations of the Earth (Normal Modes)](./12-global-geophysics-interior/05-earth-tides-rotation-global/01-free-oscillations.md) | R |
+| ✓ | [Tidal Response and the Quality Factor of the Whole Earth](./12-global-geophysics-interior/05-earth-tides-rotation-global/02-tidal-response.md) | D |
+| ✓ | [Rotation Variations, LOD and Core-Mantle Coupling](./12-global-geophysics-interior/05-earth-tides-rotation-global/03-rotation-and-length-of-day.md) | R |
 
-### [ ] Geodetic Constraints on the Interior (0/3)
+### [x] Geodetic Constraints on the Interior (3/3)
 
 Module index: [`06-geodesy-constraints-interior/README.md`](./12-global-geophysics-interior/06-geodesy-constraints-interior/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Moment of Inertia, Figure and Interior Constraints](./12-global-geophysics-interior/06-geodesy-constraints-interior/01-moment-of-inertia.md) | D |
-| · | [Love Numbers and Theoretical Tides](./12-global-geophysics-interior/06-geodesy-constraints-interior/02-tidal-love-numbers.md) | R |
-| · | [Nutation and Constraints on Core Properties](./12-global-geophysics-interior/06-geodesy-constraints-interior/03-nutation-constraints.md) | R |
+| ✓ | [Moment of Inertia, Figure and Interior Constraints](./12-global-geophysics-interior/06-geodesy-constraints-interior/01-moment-of-inertia.md) | D |
+| ✓ | [Love Numbers and Theoretical Tides](./12-global-geophysics-interior/06-geodesy-constraints-interior/02-tidal-love-numbers.md) | R |
+| ✓ | [Nutation and Constraints on Core Properties](./12-global-geophysics-interior/06-geodesy-constraints-interior/03-nutation-constraints.md) | R |
 
-### [ ] Comparative Planetary Interiors (0/3)
+### [x] Comparative Planetary Interiors (3/3)
 
 Module index: [`07-planetary-interiors-comparative/README.md`](./12-global-geophysics-interior/07-planetary-interiors-comparative/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Interiors of Mars, Venus, Mercury and the Moon](./12-global-geophysics-interior/07-planetary-interiors-comparative/01-terrestrial-planets-interiors.md) | D |
-| · | [Icy Moons, Subsurface Oceans and Induction Studies](./12-global-geophysics-interior/07-planetary-interiors-comparative/02-icy-moons.md) | R |
-| · | [Giant Planet Interiors and Magnetic Fields](./12-global-geophysics-interior/07-planetary-interiors-comparative/03-giant-planets.md) | R |
+| ✓ | [Interiors of Mars, Venus, Mercury and the Moon](./12-global-geophysics-interior/07-planetary-interiors-comparative/01-terrestrial-planets-interiors.md) | D |
+| ✓ | [Icy Moons, Subsurface Oceans and Induction Studies](./12-global-geophysics-interior/07-planetary-interiors-comparative/02-icy-moons.md) | R |
+| ✓ | [Giant Planet Interiors and Magnetic Fields](./12-global-geophysics-interior/07-planetary-interiors-comparative/03-giant-planets.md) | R |
 
 ## Geodynamics and Tectonophysics
 
-`13-geodynamics-tectonics` — **7 modules**, **0/26 lessons written**
+`13-geodynamics-tectonics` — **7 modules**, **26/26 lessons written**
 
 [Folder index](./13-geodynamics-tectonics/README.md)
 
-### [ ] Geodynamic Principles (0/4)
+### [x] Geodynamic Principles (4/4)
 
 Module index: [`01-geodynamic-principles/README.md`](./13-geodynamics-tectonics/01-geodynamic-principles/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Momentum, Mass and Energy Balances in the Solid Earth](./13-geodynamics-tectonics/01-geodynamic-principles/01-momentum-mass-energy.md) | G |
-| · | [Rheology: Elastic, Viscous, Plastic and Power-Law Creep](./13-geodynamics-tectonics/01-geodynamic-principles/02-rheology-of-earth.md) | D |
-| · | [Lithospheric Strength, Effective Elastic Thickness and Flexure](./13-geodynamics-tectonics/01-geodynamic-principles/03-lithospheric-strength.md) | D |
-| · | [Driving Forces, Stress Fields and Intraplate Stress](./13-geodynamics-tectonics/01-geodynamic-principles/04-forces-and-stresses.md) | D |
+| ✓ | [Momentum, Mass and Energy Balances in the Solid Earth](./13-geodynamics-tectonics/01-geodynamic-principles/01-momentum-mass-energy.md) | G |
+| ✓ | [Rheology: Elastic, Viscous, Plastic and Power-Law Creep](./13-geodynamics-tectonics/01-geodynamic-principles/02-rheology-of-earth.md) | D |
+| ✓ | [Lithospheric Strength, Effective Elastic Thickness and Flexure](./13-geodynamics-tectonics/01-geodynamic-principles/03-lithospheric-strength.md) | D |
+| ✓ | [Driving Forces, Stress Fields and Intraplate Stress](./13-geodynamics-tectonics/01-geodynamic-principles/04-forces-and-stresses.md) | D |
 
-### [ ] Mantle Convection (0/4)
+### [x] Mantle Convection (4/4)
 
 Module index: [`02-mantle-convection/README.md`](./13-geodynamics-tectonics/02-mantle-convection/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Rayleigh-Benard Convection Applied to the Mantle](./13-geodynamics-tectonics/02-mantle-convection/01-rayleigh-benard-mantle.md) | R |
-| · | [Numerical Modelling of Mantle Convection](./13-geodynamics-tectonics/02-mantle-convection/02-convection-numerical.md) | R |
-| · | [Mantle Plumes, Hotspots and Large Igneous Provinces](./13-geodynamics-tectonics/02-mantle-convection/03-mantle-plumes.md) | D |
-| · | [Subduction Dynamics, Slab Geometry and Slab Pull](./13-geodynamics-tectonics/02-mantle-convection/04-subduction-dynamics.md) | R |
+| ✓ | [Rayleigh-Benard Convection Applied to the Mantle](./13-geodynamics-tectonics/02-mantle-convection/01-rayleigh-benard-mantle.md) | R |
+| ✓ | [Numerical Modelling of Mantle Convection](./13-geodynamics-tectonics/02-mantle-convection/02-convection-numerical.md) | R |
+| ✓ | [Mantle Plumes, Hotspots and Large Igneous Provinces](./13-geodynamics-tectonics/02-mantle-convection/03-mantle-plumes.md) | D |
+| ✓ | [Subduction Dynamics, Slab Geometry and Slab Pull](./13-geodynamics-tectonics/02-mantle-convection/04-subduction-dynamics.md) | R |
 
-### [ ] Quantitative Plate Tectonics (0/4)
+### [x] Quantitative Plate Tectonics (4/4)
 
 Module index: [`03-plate-tectonics-quantitative/README.md`](./13-geodynamics-tectonics/03-plate-tectonics-quantitative/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Plate Kinematic Models and Euler Pole Inversion](./13-geodynamics-tectonics/03-plate-tectonics-quantitative/01-plate-kinematics-models.md) | D |
-| · | [Rifting, Break-Up and Passive Margin Formation](./13-geodynamics-tectonics/03-plate-tectonics-quantitative/02-rift-and-breakup.md) | D |
-| · | [Orogenic Systems, Crustal Thickening and Collapse](./13-geodynamics-tectonics/03-plate-tectonics-quantitative/03-orogenic-systems.md) | R |
-| · | [Basin Formation and Subsidence Modelling](./13-geodynamics-tectonics/03-plate-tectonics-quantitative/04-basin-geodynamics.md) | D |
+| ✓ | [Plate Kinematic Models and Euler Pole Inversion](./13-geodynamics-tectonics/03-plate-tectonics-quantitative/01-plate-kinematics-models.md) | D |
+| ✓ | [Rifting, Break-Up and Passive Margin Formation](./13-geodynamics-tectonics/03-plate-tectonics-quantitative/02-rift-and-breakup.md) | D |
+| ✓ | [Orogenic Systems, Crustal Thickening and Collapse](./13-geodynamics-tectonics/03-plate-tectonics-quantitative/03-orogenic-systems.md) | R |
+| ✓ | [Basin Formation and Subsidence Modelling](./13-geodynamics-tectonics/03-plate-tectonics-quantitative/04-basin-geodynamics.md) | D |
 
-### [ ] Tectonophysics and Deformation (0/4)
+### [x] Tectonophysics and Deformation (4/4)
 
 Module index: [`04-tectonophysics-deformation/README.md`](./13-geodynamics-tectonics/04-tectonophysics-deformation/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Crustal Deformation from GNSS and Strain Rates](./13-geodynamics-tectonics/04-tectonophysics-deformation/01-crustal-deformation-gps.md) | G |
-| · | [Fault Mechanics, Coulomb Stress and Stress Transfer](./13-geodynamics-tectonics/04-tectonophysics-deformation/02-fault-mechanics.md) | R |
-| · | [Postseismic Relaxation and Viscoelastic Models](./13-geodynamics-tectonics/04-tectonophysics-deformation/03-postseismic-viscoelastic.md) | R |
-| · | [Interseismic Coupling and Megathrust Locking](./13-geodynamics-tectonics/04-tectonophysics-deformation/04-interseismic-coupling.md) | R |
+| ✓ | [Crustal Deformation from GNSS and Strain Rates](./13-geodynamics-tectonics/04-tectonophysics-deformation/01-crustal-deformation-gps.md) | G |
+| ✓ | [Fault Mechanics, Coulomb Stress and Stress Transfer](./13-geodynamics-tectonics/04-tectonophysics-deformation/02-fault-mechanics.md) | R |
+| ✓ | [Postseismic Relaxation and Viscoelastic Models](./13-geodynamics-tectonics/04-tectonophysics-deformation/03-postseismic-viscoelastic.md) | R |
+| ✓ | [Interseismic Coupling and Megathrust Locking](./13-geodynamics-tectonics/04-tectonophysics-deformation/04-interseismic-coupling.md) | R |
 
-### [ ] Geodynamic Modelling Practice (0/4)
+### [x] Geodynamic Modelling Practice (4/4)
 
 Module index: [`05-geodynamic-modelling/README.md`](./13-geodynamics-tectonics/05-geodynamic-modelling/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Finite Element and Finite Volume Methods in Geodynamics](./13-geodynamics-tectonics/05-geodynamic-modelling/01-finite-element-geodynamics.md) | R |
-| · | [Solving the Stokes Equations for Mantle Flow](./13-geodynamics-tectonics/05-geodynamic-modelling/02-stokes-flow-solvers.md) | R |
-| · | [Benchmarking Geodynamic Codes](./13-geodynamics-tectonics/05-geodynamic-modelling/03-benchmarking-geodynamics.md) | R |
-| · | [Data Assimilation and Adjoint Geodynamics](./13-geodynamics-tectonics/05-geodynamic-modelling/04-data-assimilation-geodynamics.md) | R |
+| ✓ | [Finite Element and Finite Volume Methods in Geodynamics](./13-geodynamics-tectonics/05-geodynamic-modelling/01-finite-element-geodynamics.md) | R |
+| ✓ | [Solving the Stokes Equations for Mantle Flow](./13-geodynamics-tectonics/05-geodynamic-modelling/02-stokes-flow-solvers.md) | R |
+| ✓ | [Benchmarking Geodynamic Codes](./13-geodynamics-tectonics/05-geodynamic-modelling/03-benchmarking-geodynamics.md) | R |
+| ✓ | [Data Assimilation and Adjoint Geodynamics](./13-geodynamics-tectonics/05-geodynamic-modelling/04-data-assimilation-geodynamics.md) | R |
 
-### [ ] Crustal and Lithospheric Dynamics (0/3)
+### [x] Crustal and Lithospheric Dynamics (3/3)
 
 Module index: [`06-crustal-and-lithospheric-dynamics/README.md`](./13-geodynamics-tectonics/06-crustal-and-lithospheric-dynamics/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Isostasy and Flexure: Modelling Lithospheric Strength](./13-geodynamics-tectonics/06-crustal-and-lithospheric-dynamics/01-isostasy-flexure-modelling.md) | D |
-| · | [Volcano Deformation, Magma Chamber Models and InSAR](./13-geodynamics-tectonics/06-crustal-and-lithospheric-dynamics/02-volcano-geodesy.md) | R |
-| · | [Glacial Isostatic Adjustment: Ice, Viscosity and Sea Level](./13-geodynamics-tectonics/06-crustal-and-lithospheric-dynamics/03-glacial-isostatic-adjustment.md) | R |
+| ✓ | [Isostasy and Flexure: Modelling Lithospheric Strength](./13-geodynamics-tectonics/06-crustal-and-lithospheric-dynamics/01-isostasy-flexure-modelling.md) | D |
+| ✓ | [Volcano Deformation, Magma Chamber Models and InSAR](./13-geodynamics-tectonics/06-crustal-and-lithospheric-dynamics/02-volcano-geodesy.md) | R |
+| ✓ | [Glacial Isostatic Adjustment: Ice, Viscosity and Sea Level](./13-geodynamics-tectonics/06-crustal-and-lithospheric-dynamics/03-glacial-isostatic-adjustment.md) | R |
 
-### [ ] Tectonics, Surface Processes and Climate Coupling (0/3)
+### [x] Tectonics, Surface Processes and Climate Coupling (3/3)
 
 Module index: [`07-geomorphology-tectonics-climate/README.md`](./13-geodynamics-tectonics/07-geomorphology-tectonics-climate/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Erosion, Uplift and Thermochronology](./13-geodynamics-tectonics/07-geomorphology-tectonics-climate/01-erosion-and-uplift.md) | R |
-| · | [River Profiles, Steepness Indices and Uplift Inference](./13-geodynamics-tectonics/07-geomorphology-tectonics-climate/02-river-profile-tectonics.md) | D |
-| · | [Tectonic-Climate Feedbacks on Geological Timescales](./13-geodynamics-tectonics/07-geomorphology-tectonics-climate/03-tectonics-climate-feedback.md) | R |
+| ✓ | [Erosion, Uplift and Thermochronology](./13-geodynamics-tectonics/07-geomorphology-tectonics-climate/01-erosion-and-uplift.md) | R |
+| ✓ | [River Profiles, Steepness Indices and Uplift Inference](./13-geodynamics-tectonics/07-geomorphology-tectonics-climate/02-river-profile-tectonics.md) | D |
+| ✓ | [Tectonic-Climate Feedbacks on Geological Timescales](./13-geodynamics-tectonics/07-geomorphology-tectonics-climate/03-tectonics-climate-feedback.md) | R |
 
 ## Hydrology, Hydrogeophysics and Environmental Geophysics
 
-`14-hydrology-hydrogeophysics` — **6 modules**, **0/28 lessons written**
+`14-hydrology-hydrogeophysics` — **6 modules**, **28/28 lessons written**
 
 [Folder index](./14-hydrology-hydrogeophysics/README.md)
 
-### [ ] Hydrology Fundamentals for Geophysicists (0/6)
+### [x] Hydrology Fundamentals for Geophysicists (6/6)
 
 Module index: [`01-hydrology-fundamentals/README.md`](./14-hydrology-hydrogeophysics/01-hydrology-fundamentals/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [The Hydrologic Cycle and Water Balance](./14-hydrology-hydrogeophysics/01-hydrology-fundamentals/01-hydrologic-cycle.md) | B |
-| · | [Aquifers, Porosity, Permeability and Storativity](./14-hydrology-hydrogeophysics/01-hydrology-fundamentals/02-aquifer-types-and-properties.md) | I |
-| · | [Hydraulic Head, Darcy's Law and Groundwater Flow](./14-hydrology-hydrogeophysics/01-hydrology-fundamentals/03-hydraulic-head-darcy.md) | A |
-| · | [Well Hydraulics, Pumping Tests and Aquifer Parameters](./14-hydrology-hydrogeophysics/01-hydrology-fundamentals/04-well-hydraulics.md) | A |
-| · | [Groundwater Chemistry and Salinity](./14-hydrology-hydrogeophysics/01-hydrology-fundamentals/05-groundwater-chemistry.md) | I |
-| · | [The Unsaturated Zone, Infiltration and Soil Moisture](./14-hydrology-hydrogeophysics/01-hydrology-fundamentals/06-unsaturated-zone.md) | A |
+| ✓ | [The Hydrologic Cycle and Water Balance](./14-hydrology-hydrogeophysics/01-hydrology-fundamentals/01-hydrologic-cycle.md) | B |
+| ✓ | [Aquifers, Porosity, Permeability and Storativity](./14-hydrology-hydrogeophysics/01-hydrology-fundamentals/02-aquifer-types-and-properties.md) | I |
+| ✓ | [Hydraulic Head, Darcy's Law and Groundwater Flow](./14-hydrology-hydrogeophysics/01-hydrology-fundamentals/03-hydraulic-head-darcy.md) | A |
+| ✓ | [Well Hydraulics, Pumping Tests and Aquifer Parameters](./14-hydrology-hydrogeophysics/01-hydrology-fundamentals/04-well-hydraulics.md) | A |
+| ✓ | [Groundwater Chemistry and Salinity](./14-hydrology-hydrogeophysics/01-hydrology-fundamentals/05-groundwater-chemistry.md) | I |
+| ✓ | [The Unsaturated Zone, Infiltration and Soil Moisture](./14-hydrology-hydrogeophysics/01-hydrology-fundamentals/06-unsaturated-zone.md) | A |
 
-### [ ] Hydrogeophysical Methods (0/7)
+### [x] Hydrogeophysical Methods (7/7)
 
 Module index: [`02-hydrogeophysics-methods/README.md`](./14-hydrology-hydrogeophysics/02-hydrogeophysics-methods/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [ERT for Aquifer Characterisation and Salinity Mapping](./14-hydrology-hydrogeophysics/02-hydrogeophysics-methods/01-ert-for-hydrology.md) | G |
-| · | [EM and TDEM for Groundwater Exploration](./14-hydrology-hydrogeophysics/02-hydrogeophysics-methods/02-em-for-hydrology.md) | G |
-| · | [Seismic Methods for Aquifer Geometry](./14-hydrology-hydrogeophysics/02-hydrogeophysics-methods/03-seismic-hydrogeophysics.md) | G |
-| · | [GPR for Soil Moisture and Water Table](./14-hydrology-hydrogeophysics/02-hydrogeophysics-methods/04-gpr-for-soil-moisture.md) | D |
-| · | [Surface NMR for Direct Water Detection](./14-hydrology-hydrogeophysics/02-hydrogeophysics-methods/05-nmr-for-groundwater.md) | R |
-| · | [Microgravity and Satellite Gravity for Water Storage Change](./14-hydrology-hydrogeophysics/02-hydrogeophysics-methods/06-gravity-for-groundwater.md) | D |
-| · | [Borehole Geophysics for Aquifer Characterisation](./14-hydrology-hydrogeophysics/02-hydrogeophysics-methods/07-borehole-hydrogeophysics.md) | G |
+| ✓ | [ERT for Aquifer Characterisation and Salinity Mapping](./14-hydrology-hydrogeophysics/02-hydrogeophysics-methods/01-ert-for-hydrology.md) | G |
+| ✓ | [EM and TDEM for Groundwater Exploration](./14-hydrology-hydrogeophysics/02-hydrogeophysics-methods/02-em-for-hydrology.md) | G |
+| ✓ | [Seismic Methods for Aquifer Geometry](./14-hydrology-hydrogeophysics/02-hydrogeophysics-methods/03-seismic-hydrogeophysics.md) | G |
+| ✓ | [GPR for Soil Moisture and Water Table](./14-hydrology-hydrogeophysics/02-hydrogeophysics-methods/04-gpr-for-soil-moisture.md) | D |
+| ✓ | [Surface NMR for Direct Water Detection](./14-hydrology-hydrogeophysics/02-hydrogeophysics-methods/05-nmr-for-groundwater.md) | R |
+| ✓ | [Microgravity and Satellite Gravity for Water Storage Change](./14-hydrology-hydrogeophysics/02-hydrogeophysics-methods/06-gravity-for-groundwater.md) | D |
+| ✓ | [Borehole Geophysics for Aquifer Characterisation](./14-hydrology-hydrogeophysics/02-hydrogeophysics-methods/07-borehole-hydrogeophysics.md) | G |
 
-### [ ] Petrophysical Relations for Saturated Media (0/4)
+### [x] Petrophysical Relations for Saturated Media (4/4)
 
 Module index: [`03-petrophysics-hydrology/README.md`](./14-hydrology-hydrogeophysics/03-petrophysics-hydrology/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Porosity-Permeability and Kozeny-Carman Relations](./14-hydrology-hydrogeophysics/03-petrophysics-hydrology/01-porosity-permeability-relations.md) | D |
-| · | [Archie's Law and Saturation Estimation](./14-hydrology-hydrogeophysics/03-petrophysics-hydrology/02-archie-and-saturation.md) | G |
-| · | [Seismic Velocity vs Saturation and Gassmann](./14-hydrology-hydrogeophysics/03-petrophysics-hydrology/03-seismic-velocity-saturation.md) | D |
-| · | [Building Geophysical Proxies for Hydrological Properties](./14-hydrology-hydrogeophysics/03-petrophysics-hydrology/04-geophysical-proxy-relations.md) | R |
+| ✓ | [Porosity-Permeability and Kozeny-Carman Relations](./14-hydrology-hydrogeophysics/03-petrophysics-hydrology/01-porosity-permeability-relations.md) | D |
+| ✓ | [Archie's Law and Saturation Estimation](./14-hydrology-hydrogeophysics/03-petrophysics-hydrology/02-archie-and-saturation.md) | G |
+| ✓ | [Seismic Velocity vs Saturation and Gassmann](./14-hydrology-hydrogeophysics/03-petrophysics-hydrology/03-seismic-velocity-saturation.md) | D |
+| ✓ | [Building Geophysical Proxies for Hydrological Properties](./14-hydrology-hydrogeophysics/03-petrophysics-hydrology/04-geophysical-proxy-relations.md) | R |
 
-### [ ] Contaminant and Environmental Geophysics (0/5)
+### [x] Contaminant and Environmental Geophysics (5/5)
 
 Module index: [`04-contaminant-and-environmental/README.md`](./14-hydrology-hydrogeophysics/04-contaminant-and-environmental/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Contaminant Plumes and Their Geophysical Signature](./14-hydrology-hydrogeophysics/04-contaminant-and-environmental/01-contaminant-plumes.md) | D |
-| · | [Landfill Investigation and Leachate Mapping](./14-hydrology-hydrogeophysics/04-contaminant-and-environmental/02-landfill-investigation.md) | G |
-| · | [Seawater Intrusion and Coastal Aquifer Monitoring](./14-hydrology-hydrogeophysics/04-contaminant-and-environmental/03-saline-intrusion.md) | D |
-| · | [Acid Mine Drainage and Mining Environmental Geophysics](./14-hydrology-hydrogeophysics/04-contaminant-and-environmental/04-acid-mine-drainage.md) | D |
-| · | [Permafrost Monitoring with Geophysics](./14-hydrology-hydrogeophysics/04-contaminant-and-environmental/05-permafrost-monitoring.md) | R |
+| ✓ | [Contaminant Plumes and Their Geophysical Signature](./14-hydrology-hydrogeophysics/04-contaminant-and-environmental/01-contaminant-plumes.md) | D |
+| ✓ | [Landfill Investigation and Leachate Mapping](./14-hydrology-hydrogeophysics/04-contaminant-and-environmental/02-landfill-investigation.md) | G |
+| ✓ | [Seawater Intrusion and Coastal Aquifer Monitoring](./14-hydrology-hydrogeophysics/04-contaminant-and-environmental/03-saline-intrusion.md) | D |
+| ✓ | [Acid Mine Drainage and Mining Environmental Geophysics](./14-hydrology-hydrogeophysics/04-contaminant-and-environmental/04-acid-mine-drainage.md) | D |
+| ✓ | [Permafrost Monitoring with Geophysics](./14-hydrology-hydrogeophysics/04-contaminant-and-environmental/05-permafrost-monitoring.md) | R |
 
-### [ ] Time-Lapse and Monitoring Hydrogeophysics (0/3)
+### [x] Time-Lapse and Monitoring Hydrogeophysics (3/3)
 
 Module index: [`05-hydrogeophysical-monitoring/README.md`](./14-hydrology-hydrogeophysics/05-hydrogeophysical-monitoring/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Time-Lapse ERT for Infiltration and Transport](./14-hydrology-hydrogeophysics/05-hydrogeophysical-monitoring/01-time-lapse-ert.md) | R |
-| · | [Cross-Borehole Monitoring and Tracer Tests](./14-hydrology-hydrogeophysics/05-hydrogeophysical-monitoring/02-cross-borehole-monitoring.md) | R |
-| · | [Assimilating Geophysical Data into Hydrological Models](./14-hydrology-hydrogeophysics/05-hydrogeophysical-monitoring/03-geophysical-data-assimilation-hydrology.md) | R |
+| ✓ | [Time-Lapse ERT for Infiltration and Transport](./14-hydrology-hydrogeophysics/05-hydrogeophysical-monitoring/01-time-lapse-ert.md) | R |
+| ✓ | [Cross-Borehole Monitoring and Tracer Tests](./14-hydrology-hydrogeophysics/05-hydrogeophysical-monitoring/02-cross-borehole-monitoring.md) | R |
+| ✓ | [Assimilating Geophysical Data into Hydrological Models](./14-hydrology-hydrogeophysics/05-hydrogeophysical-monitoring/03-geophysical-data-assimilation-hydrology.md) | R |
 
-### [ ] Integrated Catchment and Watershed Studies (0/3)
+### [x] Integrated Catchment and Watershed Studies (3/3)
 
 Module index: [`06-integrated-catchment-studies/README.md`](./14-hydrology-hydrogeophysics/06-integrated-catchment-studies/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Integrated Catchment Characterisation](./14-hydrology-hydrogeophysics/06-integrated-catchment-studies/01-catchment-characterisation.md) | R |
-| · | [Groundwater-Surface Water Interaction](./14-hydrology-hydrogeophysics/06-integrated-catchment-studies/02-groundwater-surface-water.md) | R |
-| · | [Water Resource Assessment and Sustainable Yield](./14-hydrology-hydrogeophysics/06-integrated-catchment-studies/03-water-resource-assessment.md) | D |
+| ✓ | [Integrated Catchment Characterisation](./14-hydrology-hydrogeophysics/06-integrated-catchment-studies/01-catchment-characterisation.md) | R |
+| ✓ | [Groundwater-Surface Water Interaction](./14-hydrology-hydrogeophysics/06-integrated-catchment-studies/02-groundwater-surface-water.md) | R |
+| ✓ | [Water Resource Assessment and Sustainable Yield](./14-hydrology-hydrogeophysics/06-integrated-catchment-studies/03-water-resource-assessment.md) | D |
 
 ## Oceanography and Marine Geophysics
 
