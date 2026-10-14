@@ -11,10 +11,10 @@ Legend: **B** beginner · **I** intermediate · **A** advanced · **G** graduate
 | Folders | 27 |
 | Modules | 216 |
 | Lessons planned | 1146 |
-| Lessons written | 247 |
-| Lessons with valid frontmatter | 247 |
-| Exercise/solution companions written | 448 / 2190 |
-| Completion | 21.6% |
+| Lessons written | 256 |
+| Lessons with valid frontmatter | 256 |
+| Exercise/solution companions written | 466 / 2190 |
+| Completion | 22.3% |
 
 > Companion files are the conventional `exercises/<lesson>-exercises.md` and `<lesson>-solutions.md` pairs. Lessons in `00-orientation` and `26-reference-library` are process material and reference pages, so they carry no companions by design.
 
@@ -683,7 +683,7 @@ Module index: [`13-testing-profiling-packaging/README.md`](./03-scientific-compu
 
 ## Earth Science, Geology and Planetary Context
 
-`04-earth-science-geology` — **8 modules**, **0/37 lessons written**
+`04-earth-science-geology` — **8 modules**, **9/37 lessons written**
 
 [Folder index](./04-earth-science-geology/README.md)
 
@@ -734,28 +734,28 @@ Module index: [`04-structural-geology/README.md`](./04-earth-science-geology/04-
 | · | [Fractures, Joints and Their Geophysical Signature](./04-earth-science-geology/04-structural-geology/04-fractures-joints.md) | A |
 | · | [Reading Geological Maps and Constructing Cross-Sections](./04-earth-science-geology/04-structural-geology/05-geologic-maps-sections.md) | I |
 
-### [ ] Geomorphology and Quaternary Geology (0/4)
+### [x] Geomorphology and Quaternary Geology (4/4)
 
 Module index: [`05-geomorphology-and-quaternary/README.md`](./04-earth-science-geology/05-geomorphology-and-quaternary/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Landform Processes and Shapes](./04-earth-science-geology/05-geomorphology-and-quaternary/01-landforms.md) | B |
-| · | [Glacial and Periglacial Landforms and Sediments](./04-earth-science-geology/05-geomorphology-and-quaternary/02-glacial-landforms.md) | I |
-| · | [Fluvial, Coastal and Aeolian Systems](./04-earth-science-geology/05-geomorphology-and-quaternary/03-fluvial-coastal.md) | I |
-| · | [Quaternary Climate Change and Landscape Records](./04-earth-science-geology/05-geomorphology-and-quaternary/04-quaternary-climate.md) | A |
+| ✓ | [Landform Processes and Shapes](./04-earth-science-geology/05-geomorphology-and-quaternary/01-landforms.md) | B |
+| ✓ | [Glacial and Periglacial Landforms and Sediments](./04-earth-science-geology/05-geomorphology-and-quaternary/02-glacial-landforms.md) | I |
+| ✓ | [Fluvial, Coastal and Aeolian Systems](./04-earth-science-geology/05-geomorphology-and-quaternary/03-fluvial-coastal.md) | I |
+| ✓ | [Quaternary Climate Change and Landscape Records](./04-earth-science-geology/05-geomorphology-and-quaternary/04-quaternary-climate.md) | A |
 
-### [ ] Petroleum, Mineral and Geothermal Systems (0/5)
+### [x] Petroleum, Mineral and Geothermal Systems (5/5)
 
 Module index: [`06-petroleum-and-mineral-systems/README.md`](./04-earth-science-geology/06-petroleum-and-mineral-systems/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Source, Reservoir, Seal and Trap: The Petroleum System](./04-earth-science-geology/06-petroleum-and-mineral-systems/01-petroleum-system.md) | I |
-| · | [Mineral Deposit Types and Their Geophysical Signatures](./04-earth-science-geology/06-petroleum-and-mineral-systems/02-mineral-deposits.md) | A |
-| · | [Geothermal Systems, Heat Flow and Resource Assessment](./04-earth-science-geology/06-petroleum-and-mineral-systems/03-geothermal-systems.md) | A |
-| · | [Aquifer Types and Groundwater Occurrence](./04-earth-science-geology/06-petroleum-and-mineral-systems/04-groundwater-aquifers.md) | I |
-| · | [Unconventional Resources: Shale, Tight Gas, Hydrates](./04-earth-science-geology/06-petroleum-and-mineral-systems/05-unconventional-resources.md) | A |
+| ✓ | [Source, Reservoir, Seal and Trap: The Petroleum System](./04-earth-science-geology/06-petroleum-and-mineral-systems/01-petroleum-system.md) | I |
+| ✓ | [Mineral Deposit Types and Their Geophysical Signatures](./04-earth-science-geology/06-petroleum-and-mineral-systems/02-mineral-deposits.md) | A |
+| ✓ | [Geothermal Systems, Heat Flow and Resource Assessment](./04-earth-science-geology/06-petroleum-and-mineral-systems/03-geothermal-systems.md) | A |
+| ✓ | [Aquifer Types and Groundwater Occurrence](./04-earth-science-geology/06-petroleum-and-mineral-systems/04-groundwater-aquifers.md) | I |
+| ✓ | [Unconventional Resources: Shale, Tight Gas, Hydrates](./04-earth-science-geology/06-petroleum-and-mineral-systems/05-unconventional-resources.md) | A |
 
 ### [ ] Geologic and Geophysical Hazards (0/5)
 
