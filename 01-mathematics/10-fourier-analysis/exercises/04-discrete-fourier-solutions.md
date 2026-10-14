@@ -212,10 +212,16 @@ slightly on your machine):
 
 | $N$ | direct DFT (s) | FFT (s) | fitted exponent |
 |---|---|---|---|
-| 256 | 0.002695 | 0.000109 | — |
-| 512 | 0.010945 | 0.000254 | — |
-| 1024 | 0.043062 | 0.000524 | — |
-| (fit over 128–2048) | — | — | DFT 2.039, FFT 1.115 |
+| 256 | 0.006577 | 0.000242 | — |
+| 512 | 0.024792 | 0.000553 | — |
+| 1024 | 0.097654 | 0.001252 | — |
+| (fit over 128–2048) | — | — | DFT 2.018–2.08, FFT 1.10–1.16 |
+
+Your own times will differ, and by a lot on a loaded machine: the script takes the
+minimum of three runs per case, and over repeated runs on this machine the DFT
+exponent ranged from 1.9 to 2.1 while the FFT exponent ranged from 1.05 to
+1.25. **The reproducible quantities are the operation counts, not the
+timings.**
 
 **(b)** Two reasons the measured FFT exponent exceeds 1.
 

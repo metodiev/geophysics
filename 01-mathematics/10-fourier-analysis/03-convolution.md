@@ -327,7 +327,7 @@ exercises of [01-10-02](./02-fourier-transform.md), and the same statement that
 ## 6. Python demonstration
 
 [`code/convolution_demo.py`](./code/convolution_demo.py) produces every table
-above; it runs in about four seconds using only the standard library:
+above; it runs in several seconds using only the standard library:
 
 ```text
 python3 code/convolution_demo.py

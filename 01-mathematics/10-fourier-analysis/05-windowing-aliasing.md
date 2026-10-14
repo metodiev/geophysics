@@ -298,7 +298,7 @@ threshold is not a claim.
 ## 5. Python demonstration
 
 [`code/aliasing_leakage_demo.py`](./code/aliasing_leakage_demo.py) produces every
-table above and runs in about two seconds:
+table above and runs in a few seconds:
 
 ```text
 python3 code/aliasing_leakage_demo.py

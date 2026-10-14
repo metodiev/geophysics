@@ -355,7 +355,7 @@ as being about measurement rather than about mathematics.**
 ## 9. Python demonstration
 
 [`code/fourier_transform_demo.py`](./code/fourier_transform_demo.py) implements
-every table above and takes under a second to run:
+every table above and takes about a second to run:
 
 ```text
 python3 code/fourier_transform_demo.py

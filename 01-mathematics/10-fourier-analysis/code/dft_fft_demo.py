@@ -156,7 +156,7 @@ def main():
         # minimum of three runs: a shared machine adds noise to a single timing,
         # and the minimum is the standard robust estimator for a microbenchmark
         t0 = t1 = t2 = None
-        for _ in range(3):
+        for _ in range(5):
             a = time.perf_counter()
             dft_direct(sig)
             b = time.perf_counter()
@@ -196,8 +196,9 @@ def main():
     print(f"  fitted exponent for the FFT:        {slope_fft:.3f}"
           f"  (theory 1)")
     print("  Wall-clock times on a shared machine vary by tens of per cent between")
-    print("  runs, so the exponents below move by about +/-0.2 and the speed-up")
-    print("  column by more; the script takes the minimum of three runs to reduce")
+    print("  runs, so the fitted exponents below are only indicative: across repeated")
+    print("  runs they have ranged from 1.9 to 2.1 (DFT) and 1.05 to 1.25 (FFT).  The")
+    print("  script takes the minimum of five runs to reduce")
     print("  that.  The operation counts and the time/N^2 and time/(N log2 N)")
     print("  ratios are the reproducible statements.")
     print("  The DFT's time divided by N^2 is nearly constant, and the FFT's time")

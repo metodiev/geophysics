@@ -263,7 +263,7 @@ trustworthy.
 ## 8. Python demonstration
 
 [`code/fk_filter_demo.py`](./code/fk_filter_demo.py) produces every table above in
-about a fifth of a second:
+a second or two:
 
 ```text
 python3 code/fk_filter_demo.py

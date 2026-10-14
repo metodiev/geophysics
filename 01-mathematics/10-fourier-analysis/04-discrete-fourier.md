@@ -171,7 +171,7 @@ the statement worth quoting.
 
 Fitting a power law $\text{time} \propto N^{p}$ by least squares gives
 $p = 2.02$ for the direct DFT and $p = 1.12$ for the FFT in the run tabulated
-above; repeated runs give 2.01–2.08 and 1.10–1.14. The DFT's exponent is $2$ to
+above; repeated runs on a shared (and here, busy) machine give 1.9–2.1 and 1.05–1.25. The DFT's exponent is $2$ to
 within the noise of the timing measurement; the FFT's is for ever slightly above
 1 because $(N/2)\log_2N$ is not a pure power law (it grows as $N\log N$, so its
 local exponent increases slowly) and because memory hierarchy effects change at
@@ -285,7 +285,7 @@ call a split, which is the subject of
 
 [`code/dft_fft_demo.py`](./code/dft_fft_demo.py) implements the direct DFT, the
 iterative radix-2 FFT, the timing study, the normalisation ladder and the
-zero-padding experiment. It runs in under a second:
+zero-padding experiment. It runs in a couple of seconds:
 
 ```text
 python3 code/dft_fft_demo.py

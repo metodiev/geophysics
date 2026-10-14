@@ -277,7 +277,7 @@ testable at all. Uncertainties, not just best values.
 ## 5. Python demonstration
 
 [`code/power_spectra_demo.py`](./code/power_spectra_demo.py) produces every table
-above in about four seconds, using only the standard library:
+above in a few seconds, using only the standard library:
 
 ```text
 python3 code/power_spectra_demo.py

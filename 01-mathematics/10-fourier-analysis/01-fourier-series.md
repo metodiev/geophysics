@@ -356,7 +356,7 @@ predictable rather than mysterious.**
 
 The companion script is
 [`code/fourier_series_demo.py`](./code/fourier_series_demo.py). It requires only
-the standard library and runs in about two seconds. Run it with
+the standard library and runs in a few seconds. Run it with
 
 ```text
 python3 code/fourier_series_demo.py

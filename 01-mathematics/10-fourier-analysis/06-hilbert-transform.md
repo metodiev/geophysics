@@ -265,7 +265,7 @@ $1/(2\,dt)$; they fold, like everything else
 
 [`code/hilbert_demo.py`](./code/hilbert_demo.py) implements the transform through
 a one-sided FFT with the conventions of Section 6.2, and produces every table
-above in under a second:
+above in well under a second:
 
 ```text
 python3 code/hilbert_demo.py
