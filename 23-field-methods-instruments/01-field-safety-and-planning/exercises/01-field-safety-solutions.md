@@ -1,0 +1,171 @@
+# Solutions — 23-01-01 Field Safety, Risk Assessment and Remote-Area Protocols
+
+> Read after attempting. Lesson:
+> [01 Field Safety](../01-field-safety.md). All values are **SYNTHETIC**.
+
+---
+
+## ★1 — Ranking the register
+
+| $(L,S)$ | 2,5 | 3,4 | 4,2 | 1,5 | 2,2 | 3,3 |
+|---|---|---|---|---|---|---|
+| $R = LS$ | 10 | 12 | 8 | 5 | 4 | 9 |
+
+Total $= 10+12+8+5+4+9 = 48$ (dimensionless ordinal units), mean
+$= 48/6 = 8.00$, maximum $= 12$.
+
+Ranking (high to low): 12, 10, 9, 8, 5, 4 — that is (3,4) > (2,5) > (3,3) >
+(4,2) > (1,5) > (2,2).
+
+The highest severity is the pair with $S = 5$: (2,5) and (1,5). The product
+places (2,5) second (score 10, below 12) and places (1,5) fifth of six
+(score 5). A rare catastrophe therefore ranks *below* a common moderate hazard,
+and below a mid-likelihood moderate one.
+
+---
+
+## ★2 — One likelihood control
+
+Halving with a floor of 1:
+
+| $L$ | 2 | 3 | 4 | 1 | 2 | 3 |
+|---|---|---|---|---|---|---|
+| $L'$ | 1 | 2 | 2 | 1 | 1 | 2 |
+| $S$ | 5 | 4 | 2 | 5 | 2 | 3 |
+| $R'$ | 5 | 8 | 4 | 5 | 2 | 6 |
+
+Total $= 5+8+4+5+2+6 = 30$. Reduction
+$= 1 - 30/48 = 0.375$, i.e. **37.5 %** (ratio $48/30 = 1.60\times$).
+
+Hazards at or above 5: 5, 8, 5 → **three** of six. The two severity-5 hazards
+now sit at $1\times5 = 5$ each: the floor of the likelihood scale is what stops
+them falling further.
+
+---
+
+## ★3 — Alarm arithmetic over 21 days
+
+Campaign length $T = 21\ \mathrm{d} = 504\ \mathrm{h}$.
+
+$\tau = 8\ \mathrm{h}$: $n = 504/8 = 63$ check-ins; expected alarms
+$= 63 \times 0.03 = 1.89$; probability of at least one
+$= 1-(1-0.03)^{63}$. With $\ln 0.97 = -0.030459$,
+$(1-0.03)^{63} = e^{-1.91892} = 0.14672$, so
+$P(\ge 1) = 0.8533$.
+
+$\tau = 24\ \mathrm{h}$: $n = 504/24 = 21$ check-ins; expected alarms
+$= 21 \times 0.03 = 0.63$; $(1-0.03)^{21} = e^{-0.63964} = 0.52748$, so
+$P(\ge 1) = 0.4725$.
+
+Ratio of expected alarm counts $= 63/21 = 3.00$, exactly the ratio of intervals.
+
+---
+
+## ★★4 — Detection delay at $\tau = 18\ \mathrm{h}$
+
+$$\mathbb{E}[t_{\text{wait}}] = \frac{\tau}{2} = 9.0\ \mathrm{h}, \qquad
+\mathbb{E}[t_{\text{alarm}}] = 9.0 + 1.5 = 10.5\ \mathrm{h}.$$
+
+$$P(t_{\text{alarm}} \le 12\ \mathrm{h}) = \frac{W - g}{\tau}
+= \frac{12 - 1.5}{18} = 0.5833 .$$
+
+Units: $\tau$, $g$, $W$ and both times in hours; the probability is
+dimensionless. The value 0.5833 says that roughly 42 % of incidents would be
+detected too late for the stated window — with no change to the hazard, only to
+the protocol.
+
+---
+
+## ★★5 — Sizing the interval from the requirement
+
+Requirement: $(W-g)/\tau \ge 0.95$ with $W - g = 8 - 2 = 6\ \mathrm{h}$, so
+
+$$\tau \le \frac{6}{0.95} = 6.316\ \mathrm{h}
+\;\Rightarrow\; \tau = 6\ \mathrm{h} \text{ (rounded down).}$$
+
+Check: $(8-2)/6 = 1.00 \ge 0.95$ ✔.
+
+Alarm burden over $T = 30\ \mathrm{d} = 720\ \mathrm{h}$:
+$n = 720/6 = 120$ check-ins; expected alarms $= 120 \times 0.02 = 2.40$; and
+
+$$P(\ge 1) = 1 - 0.98^{120} = 1 - e^{-2.42436} = 1 - 0.08855 = 0.9114 .$$
+
+So the design that guarantees the rescue window produces 2.4 alarms per month and
+a 91 % chance that at least one of them is spurious. Both numbers belong in the
+protocol document.
+
+---
+
+## ★★6 — The severity floor
+
+$L = 4$, $S = 5$: $R = 20$.
+
+After one control: $L' = 2$, $R = 10$ (reduction $1 - 10/20 = 50\ \%$).
+
+After two controls: $L'' = 1$ (the floor), $R = 5$ (cumulative reduction
+$1 - 5/20 = 75\ \%$).
+
+The score is $L \times S$ and the likelihood scale has a minimum of 1. With
+$S = 5$ fixed, the smallest attainable score is $1 \times 5 = 5$: the likelihood
+factor can never fall below 1 and the severity factor is untouched by this class
+of control. Any residual score below 5 requires reducing $S$, which means
+changing the consequence — different equipment, a different route, or removing
+the exposure altogether. That is the hierarchy of controls expressed as
+arithmetic.
+
+---
+
+## ★★★7 — Measuring alarm burden in the field
+
+**Metric.** Alarms per 1000 person-days, reported separately for
+(a) confirmed incidents, (b) missed check-ins with a benign explanation, and
+(c) false alarms from equipment error. Also report the *fraction of alarms that
+were acted on within the grace period*, because that, not the count, is the
+failure mode.
+
+**Data to log.** For every scheduled check-in: timestamp (UTC), person, whether
+the check-in occurred, whether an alarm was raised, the time between the alarm
+and its resolution (min), and a one-line cause code chosen from a fixed list.
+Person-days come from the roster, not from the alarm log.
+
+**Model.** Fit the count per person-day as a Poisson rate
+$\hat\lambda = N_{\text{alarms}}/N_{\text{person-days}}$ with a
+$\sqrt{N}$ uncertainty, and regress $\log \hat\lambda$ on $\log \tau$ across the
+interval values used in the campaign. The synthetic model predicts a slope of
+$-1$ (rate proportional to $1/\tau$); a measured slope shallower than $-1$ means
+that alarms are also being generated by something other than the schedule — for
+example equipment dropouts, which do not scale with $\tau$.
+
+**Separating an incident from an omission.** The distinction cannot be made at
+the moment of the alarm. It requires the post-campaign review: an alarm whose
+cause code remains "unknown" after contact with the party is a *missed
+check-in*, whereas a confirmed incident has a contemporaneous event record.
+Report the two rates separately and never pool them, because only the first
+scales with $\tau$.
+
+---
+
+## ★★★8 — How many check-ins bound $p$?
+
+**Estimator.** With $n$ independent trials and zero alarms observed, the exact
+one-sided upper bound on $p$ at confidence $1-\alpha$ is
+
+$$p_{\text{upper}} = 1 - \alpha^{1/n}.$$
+
+Setting $p_{\text{upper}} = 0.01$ and $\alpha = 0.05$:
+
+$$n \ge \frac{\ln 0.05}{\ln 0.99} = \frac{-2.99573}{-0.0100503} = 298.1 .$$
+
+So **$n \ge 299$ check-ins** with no alarms is required before you may claim
+$p < 1\ \%$ at 95 % confidence. At $\tau = 8\ \mathrm{h}$ that is
+$299 \times 8\ \mathrm{h} = 2392\ \mathrm{h} \approx 100$ days of continuous
+campaign time.
+
+**Assumption.** Independence of check-ins with a constant $p$. It is optimistic
+for a real camp in at least two ways. First, omissions cluster by day and by
+person, which inflates the variance of the count and lengthens the true
+confidence interval — the effective sample size is smaller than $n$. Second, the
+observed alarm log is itself incomplete: a check-in that was not attempted may
+not be recorded either, which biases $\hat p$ downward. The practical remedy is
+to log *all scheduled* check-ins from the roster rather than only the ones that
+produced traffic, so that the denominator is fixed in advance.
