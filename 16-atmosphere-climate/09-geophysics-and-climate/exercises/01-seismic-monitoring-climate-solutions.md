@@ -1,0 +1,162 @@
+# Solutions — 16-09-01 Seismic and Geodetic Monitoring of Cryosphere Change
+
+> **Read after attempting the exercises.** Numbers were computed, not estimated by
+> hand; the arithmetic is shown.
+
+Lesson: [01 Seismic and Geodetic Monitoring of Cryosphere Change](../01-seismic-monitoring-climate.md).
+
+---
+
+
+## ★ Foundational
+
+## ★1 — The STA/LTA ratio
+
+$$\text{ratio} = \frac{\text{STA}}{\text{LTA}} = \frac{3.0}{1.2} = 2.50.$$
+
+A threshold of $2.5$ is **not exceeded** in a strict `>` comparison ($2.50 = 2.50$),
+and is exceeded only marginally under `>=`. This is why trigger logic must state
+whether the test is strict and must include a quiet-time rule: a genuine event
+sitting exactly at the threshold produces an arbitrary verdict.
+
+---
+
+## ★2 — Stretch from a velocity change
+
+$$\varepsilon = -\frac{\mathrm{d}v}{v} = -(-0.002) = \mathbf{+0.0020}\ (+\mathbf{0.20\%}).$$
+
+The sign is positive: a slower medium produces a *stretched* coda. For a
+$10\ \mathrm{s}$ travel time,
+
+$$\delta t = 10 \times 0.002 = \mathbf{0.020\ s}.$$
+
+A $20\ \mathrm{ms}$ delay on a $10\ \mathrm{s}$ path is far below what a phase
+pick could resolve, which is the practical reason coda interferometry exists:
+it averages over the whole coda rather than reading one arrival.
+
+---
+
+## ★3 — Miss rate and operating point
+
+Miss rate at threshold $8.0$: $(40-36)/40 = \mathbf{0.10}$. To find all $40$
+events the threshold must be lowered to $2.0$ or $3.0$ in the demonstrated table —
+at the cost of $15$ (or $2$) false alarms. There is no threshold that finds every
+event **and** makes no false alarms in this synthetic record, which is the
+operating-point trade-off stated as a fact about the data rather than a preference.
+
+---
+
+## ★★ Applied
+
+## ★★4 — False alarms per unit time
+
+$15$ false alarms in $600\ \mathrm{s}$:
+
+$$\frac{15}{600}\times3600 = \mathbf{90\ \text{per hour}}.$$
+
+In one year ($8760$ hours), $90\times8760 = \mathbf{7.9\times10^{5}}$ false
+alarms — roughly $790{,}000$ per year from this single detector at that threshold.
+Two readers of the same 15-number would draw very different conclusions about the
+detector's suitability depending on whether it was quoted per record or per year;
+the per-year figure is the one that decides whether the catalogue is usable.
+
+---
+
+## ★★5 — Turning a noise floor into a detection threshold
+
+$$2\sigma = 2 \times 1.1\times10^{-4} = 2.2\times10^{-4} = 0.022\%.$$
+
+Against a $0.05\%$ signal:
+
+$$\frac{2\sigma}{\text{signal}} = \frac{2.2\times10^{-4}}{5.0\times10^{-4}} = 0.44.$$
+
+The threshold is $44\%$ of the signal, so a $0.05\%$ change is **resolvable** at
+$2\sigma$ at that noise level — but only at about $2.3\sigma$ significance, which
+is a single-detection claim, not a resolved cycle. To detect the same signal at
+$5\sigma$ one needs either a lower noise level or a longer coda window; the
+demonstration's table shows the noise-level dependence directly ($3.9\times10^{-6}$
+at noise $0.01$).
+
+---
+
+## ★★6 — Reporting a velocity change
+
+$$\frac{\mathrm{d}v}{v} = -\varepsilon = -0.0030 \pm 0.0004,$$
+
+that is, $-0.30\% \pm 0.04\%$, or a $2\sigma$ interval of $[-0.38\%, -0.22\%]$.
+
+Abstract sentence: *"Between the two states the coda-based estimate of the relative
+velocity change is $\mathrm{d}v/v = -0.30\% \pm 0.04\%$ (1$\sigma$, from a stretch
+estimate with a noise floor of $0.04\%$ on a $30\ \mathrm{s}$ coda window), i.e.
+the sampled firn/ice column became slower between the two surveys."*
+
+Note the sentence states the sign convention explicitly, the uncertainty as a
+standard deviation, and the noise floor that produced it. Without the last two, it
+is not reproducible.
+
+---
+
+## ★★★ Research-oriented
+
+## ★★★7 — A seasonal rate cycle versus a seasonal noise cycle (design)
+
+**Generator.** A synthetic continuous record of length $3$ years with:
+(i) an icequake rate that follows a chosen seasonal cycle
+$\lambda(t) = \lambda_0[1 + A\cos(2\pi t/\mathrm{yr})]$ with $A$ chosen (e.g.
+$0.5$); (ii) event amplitudes drawn from a fixed distribution; (iii) an **ambient
+noise level that also varies seasonally**, $n(t) = n_0[1+B\cos(2\pi t/\mathrm{yr})]$
+with $B$ chosen (e.g. $0.3$), reflecting storm and melt seasonality.
+
+**Estimator.** Run the detector at a **fixed** threshold and bin the triggers by
+month; separately, estimate the monthly noise level and the monthly amplitude of
+completeness, $a_{\min}(t)$, defined as the event amplitude at which the detection
+probability is $0.5$ at that month's threshold.
+
+**Metric.** The amplitude of the *recovered* annual harmonic in trigger rate,
+$\hat A$, compared with the true $A$, as a function of $B$. Also report the
+correlation between the recovered rate and the monthly noise level.
+
+**Result that would show the rate cycle is a noise artefact.** If, as $B$
+increases, the recovered $\hat A$ grows while the true $A$ is held constant, and
+the recovered rate is strongly correlated with the monthly noise level, then the
+apparent seasonal rate cycle is generated by the detector's changing completeness.
+Holding $A = 0$ makes the test sharper: any recovered cycle at $A = 0$ is pure
+detector artefact.
+
+---
+
+## ★★★8 — Distinguishing firn thinning from meltwater (design)
+
+**Observables.**
+1. Relative seismic velocity change $\mathrm{d}v/v$ from coda interferometry, at
+   several frequencies, on a dense array.
+2. Surface elevation change from repeat GNSS and/or repeat altimetry.
+3. Gravity or mass change (repeat relative gravimetry, or a satellite-gravity
+   solution corrected for GIA).
+4. Shallow temperature from boreholes or a thermistor string.
+
+**Forward relations needed.**
+- Firn thinning raises density and usually raises the elastic moduli; the net
+  velocity change depends on the competing density and modulus effects, and on
+  the depth sensitivity of the coda at each frequency. One needs a
+  density-to-velocity model for firn (which is its own uncertainty).
+- Meltwater content lowers the effective elastic moduli of the matrix and changes
+  the bulk modulus of the pore fluid; it affects velocity strongly and reversibly,
+  with little or no lasting mass change.
+
+**Pattern that distinguishes them.**
+- *Thinning*: velocity change **correlated with** surface-elevation change, and
+  accompanied by a mass change; the velocity change persists between seasons.
+- *Meltwater*: velocity change with a **seasonal cycle** that correlates with melt
+  season and with temperature, a **reversible** signature (recovered in winter),
+  and **little or no** corresponding mass change over a full cycle.
+
+**When the two are indistinguishable.** They are indistinguishable when (i) the
+velocity change is small relative to the noise floor, so a single-frequency series
+cannot resolve depth structure; (ii) the mass change is below the gravimetry
+detection threshold, so the mass criterion is unavailable; and (iii) thinning and
+meltwater happen on the same seasonal schedule — which is the normal situation in
+an ablation zone, where melting drives both. In that regime the honest conclusion
+is that the velocity change is detected but its mechanism is not identified, and
+the additional observation that would break the degeneracy is a **winter**
+comparison: meltwater must revert, thinning need not.
