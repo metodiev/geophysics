@@ -11,10 +11,10 @@ Legend: **B** beginner · **I** intermediate · **A** advanced · **G** graduate
 | Folders | 27 |
 | Modules | 216 |
 | Lessons planned | 1146 |
-| Lessons written | 348 |
-| Lessons with valid frontmatter | 348 |
-| Exercise/solution companions written | 650 / 2190 |
-| Completion | 30.4% |
+| Lessons written | 372 |
+| Lessons with valid frontmatter | 372 |
+| Exercise/solution companions written | 698 / 2190 |
+| Completion | 32.5% |
 
 > Companion files are the conventional `exercises/<lesson>-exercises.md` and `<lesson>-solutions.md` pairs. Lessons in `00-orientation` and `26-reference-library` are process material and reference pages, so they carry no companions by design.
 
@@ -500,7 +500,7 @@ Module index: [`11-physics-of-earths-interior-and-atmosphere/README.md`](./02-ph
 
 ## Scientific Computing and Python
 
-`03-scientific-computing` — **13 modules**, **73/86 lessons written**
+`03-scientific-computing` — **13 modules**, **81/86 lessons written**
 
 [Folder index](./03-scientific-computing/README.md)
 
@@ -628,20 +628,20 @@ Module index: [`09-geospatial-python/README.md`](./03-scientific-computing/09-ge
 | ✓ | [Raster-Vector Integration and Zonal Statistics](./03-scientific-computing/09-geospatial-python/04-vector-raster-ops.md) | A |
 | ✓ | [Cartopy: Map Projections and Geographic Plotting](./03-scientific-computing/09-geospatial-python/05-maps-cartopy.md) | I |
 
-### [ ] ObsPy and Seismological Data Handling (0/8)
+### [x] ObsPy and Seismological Data Handling (8/8)
 
 Module index: [`10-obspy-and-seismic-data/README.md`](./03-scientific-computing/10-obspy-and-seismic-data/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [ObsPy Architecture and Data Models](./03-scientific-computing/10-obspy-and-seismic-data/01-obspy-overview.md) | I |
-| · | [Reading MiniSEED/SAC: Trace and Stream](./03-scientific-computing/10-obspy-and-seismic-data/02-reading-waveforms.md) | I |
-| · | [StationXML Inventory, Response and Instrument Correction](./03-scientific-computing/10-obspy-and-seismic-data/03-inventory-and-metadata.md) | A |
-| · | [Event Catalogs, QuakeML and Phase Metadata](./03-scientific-computing/10-obspy-and-seismic-data/04-catalog-and-events.md) | I |
-| · | [Preprocessing: Detrend, Taper, Filter, Decimate](./03-scientific-computing/10-obspy-and-seismic-data/05-filtering-detrending.md) | I |
-| · | [Travel Times with TauP and Phase Naming](./03-scientific-computing/10-obspy-and-seismic-data/06-taup-travel-times.md) | I |
-| · | [Cross-Correlation, Polarisation and Array Processing](./03-scientific-computing/10-obspy-and-seismic-data/07-obspy-advanced.md) | A |
-| · | [Fetching Data from FDSN Web Services](./03-scientific-computing/10-obspy-and-seismic-data/08-fdsn-clients.md) | I |
+| ✓ | [ObsPy Architecture and Data Models](./03-scientific-computing/10-obspy-and-seismic-data/01-obspy-overview.md) | I |
+| ✓ | [Reading MiniSEED/SAC: Trace and Stream](./03-scientific-computing/10-obspy-and-seismic-data/02-reading-waveforms.md) | I |
+| ✓ | [StationXML Inventory, Response and Instrument Correction](./03-scientific-computing/10-obspy-and-seismic-data/03-inventory-and-metadata.md) | A |
+| ✓ | [Event Catalogs, QuakeML and Phase Metadata](./03-scientific-computing/10-obspy-and-seismic-data/04-catalog-and-events.md) | I |
+| ✓ | [Preprocessing: Detrend, Taper, Filter, Decimate](./03-scientific-computing/10-obspy-and-seismic-data/05-filtering-detrending.md) | I |
+| ✓ | [Travel Times with TauP and Phase Naming](./03-scientific-computing/10-obspy-and-seismic-data/06-taup-travel-times.md) | I |
+| ✓ | [Cross-Correlation, Polarisation and Array Processing](./03-scientific-computing/10-obspy-and-seismic-data/07-obspy-advanced.md) | A |
+| ✓ | [Fetching Data from FDSN Web Services](./03-scientific-computing/10-obspy-and-seismic-data/08-fdsn-clients.md) | I |
 
 ### [x] PyGMT and Professional Mapping (4/4)
 
@@ -782,7 +782,7 @@ Module index: [`08-planetary-science/README.md`](./04-earth-science-geology/08-p
 
 ## Core Geophysics: Principles and Methods
 
-`05-core-geophysics` — **9 modules**, **32/48 lessons written**
+`05-core-geophysics` — **9 modules**, **48/48 lessons written**
 
 [Folder index](./05-core-geophysics/README.md)
 
@@ -860,42 +860,42 @@ Module index: [`06-data-processing-principles/README.md`](./05-core-geophysics/0
 | ✓ | [Gridding, Merging and Levelling of Survey Data](./05-core-geophysics/06-data-processing-principles/05-merge-and-regularisation.md) | A |
 | ✓ | [Documenting Processing: Reproducibility in Practice](./05-core-geophysics/06-data-processing-principles/06-processing-transparency.md) | A |
 
-### [ ] Interpretation and Geological Integration (0/6)
+### [x] Interpretation and Geological Integration (6/6)
 
 Module index: [`07-interpretation-and-integration/README.md`](./05-core-geophysics/07-interpretation-and-integration/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Qualitative Interpretation: Anomaly Shape and Position Rules](./05-core-geophysics/07-interpretation-and-integration/01-qualitative-interpretation.md) | A |
-| · | [Quantitative Interpretation and Depth Estimation](./05-core-geophysics/07-interpretation-and-integration/02-quantitative-interpretation.md) | A |
-| · | [Integrating Multiple Methods and Constraints](./05-core-geophysics/07-interpretation-and-integration/03-multi-method-integration.md) | G |
-| · | [Ground Truthing: Boreholes, Outcrop and Drill Core](./05-core-geophysics/07-interpretation-and-integration/04-ground-truthing.md) | A |
-| · | [Reporting Geophysical Results with Honest Uncertainty](./05-core-geophysics/07-interpretation-and-integration/05-reporting-results.md) | A |
-| · | [Common Interpretation Pitfalls and False Positives](./05-core-geophysics/07-interpretation-and-integration/06-interpretation-pitfalls.md) | G |
+| ✓ | [Qualitative Interpretation: Anomaly Shape and Position Rules](./05-core-geophysics/07-interpretation-and-integration/01-qualitative-interpretation.md) | A |
+| ✓ | [Quantitative Interpretation and Depth Estimation](./05-core-geophysics/07-interpretation-and-integration/02-quantitative-interpretation.md) | A |
+| ✓ | [Integrating Multiple Methods and Constraints](./05-core-geophysics/07-interpretation-and-integration/03-multi-method-integration.md) | G |
+| ✓ | [Ground Truthing: Boreholes, Outcrop and Drill Core](./05-core-geophysics/07-interpretation-and-integration/04-ground-truthing.md) | A |
+| ✓ | [Reporting Geophysical Results with Honest Uncertainty](./05-core-geophysics/07-interpretation-and-integration/05-reporting-results.md) | A |
+| ✓ | [Common Interpretation Pitfalls and False Positives](./05-core-geophysics/07-interpretation-and-integration/06-interpretation-pitfalls.md) | G |
 
-### [ ] Borehole and Well-Log Geophysics (0/7)
+### [x] Borehole and Well-Log Geophysics (7/7)
 
 Module index: [`08-geophysical-logging/README.md`](./05-core-geophysics/08-geophysical-logging/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [The Borehole Environment and Invasion Profiles](./05-core-geophysics/08-geophysical-logging/01-borehole-environment.md) | A |
-| · | [Natural Gamma and Spectral Gamma Logging](./05-core-geophysics/08-geophysical-logging/02-gamma-logging.md) | A |
-| · | [Resistivity, Induction and Laterolog Tools](./05-core-geophysics/08-geophysical-logging/03-resistivity-logging.md) | A |
-| · | [Density, Neutron and Sonic Porosity Logs](./05-core-geophysics/08-geophysical-logging/04-porosity-logs.md) | G |
-| · | [Borehole Imaging, Dipmeter and Fracture Detection](./05-core-geophysics/08-geophysical-logging/05-imaging-logs.md) | G |
-| · | [Vertical Seismic Profiling and Check Shots](./05-core-geophysics/08-geophysical-logging/06-seismic-while-drilling.md) | G |
-| · | [Log Interpretation, Petrophysics and Uncertainty](./05-core-geophysics/08-geophysical-logging/07-log-interpretation.md) | G |
+| ✓ | [The Borehole Environment and Invasion Profiles](./05-core-geophysics/08-geophysical-logging/01-borehole-environment.md) | A |
+| ✓ | [Natural Gamma and Spectral Gamma Logging](./05-core-geophysics/08-geophysical-logging/02-gamma-logging.md) | A |
+| ✓ | [Resistivity, Induction and Laterolog Tools](./05-core-geophysics/08-geophysical-logging/03-resistivity-logging.md) | A |
+| ✓ | [Density, Neutron and Sonic Porosity Logs](./05-core-geophysics/08-geophysical-logging/04-porosity-logs.md) | G |
+| ✓ | [Borehole Imaging, Dipmeter and Fracture Detection](./05-core-geophysics/08-geophysical-logging/05-imaging-logs.md) | G |
+| ✓ | [Vertical Seismic Profiling and Check Shots](./05-core-geophysics/08-geophysical-logging/06-seismic-while-drilling.md) | G |
+| ✓ | [Log Interpretation, Petrophysics and Uncertainty](./05-core-geophysics/08-geophysical-logging/07-log-interpretation.md) | G |
 
-### [ ] Geothermal and Heat-Flow Methods (0/3)
+### [x] Geothermal and Heat-Flow Methods (3/3)
 
 Module index: [`09-geothermal-and-heat-flow-methods/README.md`](./05-core-geophysics/09-geothermal-and-heat-flow-methods/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Measuring Terrestrial Heat Flow](./05-core-geophysics/09-geothermal-and-heat-flow-methods/01-heat-flow-measurement.md) | G |
-| · | [Thermal Conductivity Measurement and Corrections](./05-core-geophysics/09-geothermal-and-heat-flow-methods/02-thermal-conductivity.md) | A |
-| · | [Geothermal Exploration Geophysics](./05-core-geophysics/09-geothermal-and-heat-flow-methods/03-geothermal-exploration.md) | G |
+| ✓ | [Measuring Terrestrial Heat Flow](./05-core-geophysics/09-geothermal-and-heat-flow-methods/01-heat-flow-measurement.md) | G |
+| ✓ | [Thermal Conductivity Measurement and Corrections](./05-core-geophysics/09-geothermal-and-heat-flow-methods/02-thermal-conductivity.md) | A |
+| ✓ | [Geothermal Exploration Geophysics](./05-core-geophysics/09-geothermal-and-heat-flow-methods/03-geothermal-exploration.md) | G |
 
 ## Seismology
 
