@@ -11,10 +11,10 @@ Legend: **B** beginner · **I** intermediate · **A** advanced · **G** graduate
 | Folders | 27 |
 | Modules | 216 |
 | Lessons planned | 1146 |
-| Lessons written | 456 |
-| Lessons with valid frontmatter | 456 |
-| Exercise/solution companions written | 866 / 2190 |
-| Completion | 39.8% |
+| Lessons written | 582 |
+| Lessons with valid frontmatter | 582 |
+| Exercise/solution companions written | 1118 / 2190 |
+| Completion | 50.8% |
 
 > Companion files are the conventional `exercises/<lesson>-exercises.md` and `<lesson>-solutions.md` pairs. Lessons in `00-orientation` and `26-reference-library` are process material and reference pages, so they carry no companions by design.
 
@@ -38,10 +38,10 @@ Legend: **B** beginner · **I** intermediate · **A** advanced · **G** graduate
 - [x] [Earth Science, Geology and Planetary Context](./04-earth-science-geology/README.md) — `04-earth-science-geology` · stages: beginner->advanced
 - [x] [Core Geophysics: Principles and Methods](./05-core-geophysics/README.md) — `05-core-geophysics` · stages: intermediate->graduate
 - [x] [Seismology](./06-seismology/README.md) — `06-seismology` · stages: intermediate->research
-- [ ] [Gravity, Geodesy and the Shape of the Earth](./07-gravity-geodesy/README.md) — `07-gravity-geodesy` · stages: intermediate->research
-- [ ] [Geomagnetism and Electromagnetic Fields](./08-geomagnetism-electromagnetism/README.md) — `08-geomagnetism-electromagnetism` · stages: intermediate->research
-- [ ] [Electrical and Electromagnetic Methods](./09-electrical-em-methods/README.md) — `09-electrical-em-methods` · stages: intermediate->research
-- [ ] [Ground-Penetrating Radar and Near-Surface Geophysics](./10-gpr-near-surface/README.md) — `10-gpr-near-surface` · stages: beginner->doctoral
+- [x] [Gravity, Geodesy and the Shape of the Earth](./07-gravity-geodesy/README.md) — `07-gravity-geodesy` · stages: intermediate->research
+- [x] [Geomagnetism and Electromagnetic Fields](./08-geomagnetism-electromagnetism/README.md) — `08-geomagnetism-electromagnetism` · stages: intermediate->research
+- [x] [Electrical and Electromagnetic Methods](./09-electrical-em-methods/README.md) — `09-electrical-em-methods` · stages: intermediate->research
+- [x] [Ground-Penetrating Radar and Near-Surface Geophysics](./10-gpr-near-surface/README.md) — `10-gpr-near-surface` · stages: beginner->doctoral
 - [ ] [Exploration Geophysics](./11-exploration-geophysics/README.md) — `11-exploration-geophysics` · stages: intermediate->research
 - [ ] [Global Geophysics and the Earth's Interior](./12-global-geophysics-interior/README.md) — `12-global-geophysics-interior` · stages: advanced->research
 - [ ] [Geodynamics and Tectonophysics](./13-geodynamics-tectonics/README.md) — `13-geodynamics-tectonics` · stages: advanced->research
@@ -1075,335 +1075,335 @@ Module index: [`13-planetary-and-exploration-seismology/README.md`](./06-seismol
 
 ## Gravity, Geodesy and the Shape of the Earth
 
-`07-gravity-geodesy` — **7 modules**, **0/35 lessons written**
+`07-gravity-geodesy` — **7 modules**, **35/35 lessons written**
 
 [Folder index](./07-gravity-geodesy/README.md)
 
-### [ ] Gravity Fundamentals (0/6)
+### [x] Gravity Fundamentals (6/6)
 
 Module index: [`01-gravity-fundamentals/README.md`](./07-gravity-geodesy/01-gravity-fundamentals/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Newtonian Gravitation, Field and Acceleration](./07-gravity-geodesy/01-gravity-fundamentals/01-newtonian-gravity.md) | I |
-| · | [Gravitational Potential, Equipotentials and the Geoid](./07-gravity-geodesy/01-gravity-fundamentals/02-gravity-potential.md) | A |
-| · | [Reference Ellipsoid, Normal Gravity and Clairaut's Theorem](./07-gravity-geodesy/01-gravity-fundamentals/03-normal-gravity.md) | G |
-| · | [Gravity Reductions: Free-Air, Bouguer, Isostatic and Terrain](./07-gravity-geodesy/01-gravity-fundamentals/04-gravity-reduction.md) | A |
-| · | [Units (Gal, mGal), Absolute vs Relative Measurement](./07-gravity-geodesy/01-gravity-fundamentals/05-gravity-units-and-instruments-relative.md) | I |
-| · | [Isostasy: Pratt, Airy and Flexural Models](./07-gravity-geodesy/01-gravity-fundamentals/06-isostasy.md) | G |
+| ✓ | [Newtonian Gravitation, Field and Acceleration](./07-gravity-geodesy/01-gravity-fundamentals/01-newtonian-gravity.md) | I |
+| ✓ | [Gravitational Potential, Equipotentials and the Geoid](./07-gravity-geodesy/01-gravity-fundamentals/02-gravity-potential.md) | A |
+| ✓ | [Reference Ellipsoid, Normal Gravity and Clairaut's Theorem](./07-gravity-geodesy/01-gravity-fundamentals/03-normal-gravity.md) | G |
+| ✓ | [Gravity Reductions: Free-Air, Bouguer, Isostatic and Terrain](./07-gravity-geodesy/01-gravity-fundamentals/04-gravity-reduction.md) | A |
+| ✓ | [Units (Gal, mGal), Absolute vs Relative Measurement](./07-gravity-geodesy/01-gravity-fundamentals/05-gravity-units-and-instruments-relative.md) | I |
+| ✓ | [Isostasy: Pratt, Airy and Flexural Models](./07-gravity-geodesy/01-gravity-fundamentals/06-isostasy.md) | G |
 
-### [ ] Gravity Instruments and Surveys (0/5)
+### [x] Gravity Instruments and Surveys (5/5)
 
 Module index: [`02-gravity-instruments-and-surveys/README.md`](./07-gravity-geodesy/02-gravity-instruments-and-surveys/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Absolute Gravimeters: Free-Fall and Interferometry](./07-gravity-geodesy/02-gravity-instruments-and-surveys/01-absolute-gravimeters.md) | G |
-| · | [Relative Gravimeters: Springs, LaCoste-Romberg, Scintrex](./07-gravity-geodesy/02-gravity-instruments-and-surveys/02-relative-gravimeters.md) | A |
-| · | [Survey Procedures: Loops, Drift, Repeatability and Ties](./07-gravity-geodesy/02-gravity-instruments-and-surveys/03-survey-procedures.md) | A |
-| · | [Practical Correction Workflow and Processing Sequence](./07-gravity-geodesy/02-gravity-instruments-and-surveys/04-corrections-workflow.md) | A |
-| · | [Airborne and Marine Gravity: Platforms and Eotvos Corrections](./07-gravity-geodesy/02-gravity-instruments-and-surveys/05-airborne-marine-gravity.md) | D |
+| ✓ | [Absolute Gravimeters: Free-Fall and Interferometry](./07-gravity-geodesy/02-gravity-instruments-and-surveys/01-absolute-gravimeters.md) | G |
+| ✓ | [Relative Gravimeters: Springs, LaCoste-Romberg, Scintrex](./07-gravity-geodesy/02-gravity-instruments-and-surveys/02-relative-gravimeters.md) | A |
+| ✓ | [Survey Procedures: Loops, Drift, Repeatability and Ties](./07-gravity-geodesy/02-gravity-instruments-and-surveys/03-survey-procedures.md) | A |
+| ✓ | [Practical Correction Workflow and Processing Sequence](./07-gravity-geodesy/02-gravity-instruments-and-surveys/04-corrections-workflow.md) | A |
+| ✓ | [Airborne and Marine Gravity: Platforms and Eotvos Corrections](./07-gravity-geodesy/02-gravity-instruments-and-surveys/05-airborne-marine-gravity.md) | D |
 
-### [ ] Gravity Anomalies and Modelling (0/7)
+### [x] Gravity Anomalies and Modelling (7/7)
 
 Module index: [`03-gravity-anomalies-and-modelling/README.md`](./07-gravity-geodesy/03-gravity-anomalies-and-modelling/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Interpreting Anomalies: Geometry, Depth and Amplitude Rules](./07-gravity-geodesy/03-gravity-anomalies-and-modelling/01-anomaly-interpretation.md) | A |
-| · | [Analytical Formulas for Sphere, Cylinder, Sheet and Dyke](./07-gravity-geodesy/03-gravity-anomalies-and-modelling/02-simple-body-formulas.md) | G |
-| · | [Forward Modelling in 2-D and 3-D](./07-gravity-geodesy/03-gravity-anomalies-and-modelling/03-forward-modelling-2d3d.md) | G |
-| · | [Gravity Inversion and Its Severe Non-Uniqueness](./07-gravity-geodesy/03-gravity-anomalies-and-modelling/04-inversion-gravity.md) | D |
-| · | [Derivatives, Upward/Downward Continuation and Euler Deconvolution](./07-gravity-geodesy/03-gravity-anomalies-and-modelling/05-derivatives-and-filters.md) | D |
-| · | [Microgravity for Cavities, Tunnels and Archaeology](./07-gravity-geodesy/03-gravity-anomalies-and-modelling/06-microgravity-applications.md) | A |
-| · | [Time-Variable Gravity: Hydrology, Ice and Mass Redistribution](./07-gravity-geodesy/03-gravity-anomalies-and-modelling/07-time-variable-gravity.md) | R |
+| ✓ | [Interpreting Anomalies: Geometry, Depth and Amplitude Rules](./07-gravity-geodesy/03-gravity-anomalies-and-modelling/01-anomaly-interpretation.md) | A |
+| ✓ | [Analytical Formulas for Sphere, Cylinder, Sheet and Dyke](./07-gravity-geodesy/03-gravity-anomalies-and-modelling/02-simple-body-formulas.md) | G |
+| ✓ | [Forward Modelling in 2-D and 3-D](./07-gravity-geodesy/03-gravity-anomalies-and-modelling/03-forward-modelling-2d3d.md) | G |
+| ✓ | [Gravity Inversion and Its Severe Non-Uniqueness](./07-gravity-geodesy/03-gravity-anomalies-and-modelling/04-inversion-gravity.md) | D |
+| ✓ | [Derivatives, Upward/Downward Continuation and Euler Deconvolution](./07-gravity-geodesy/03-gravity-anomalies-and-modelling/05-derivatives-and-filters.md) | D |
+| ✓ | [Microgravity for Cavities, Tunnels and Archaeology](./07-gravity-geodesy/03-gravity-anomalies-and-modelling/06-microgravity-applications.md) | A |
+| ✓ | [Time-Variable Gravity: Hydrology, Ice and Mass Redistribution](./07-gravity-geodesy/03-gravity-anomalies-and-modelling/07-time-variable-gravity.md) | R |
 
-### [ ] Geodesy and Reference Frames (0/5)
+### [x] Geodesy and Reference Frames (5/5)
 
 Module index: [`04-geodesy-reference-frames/README.md`](./07-gravity-geodesy/04-geodesy-reference-frames/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Geodetic Datums, Ellipsoids and Coordinate Frames](./07-gravity-geodesy/04-geodesy-reference-frames/01-geodetic-datums.md) | A |
-| · | [Height Systems: Ellipsoidal, Orthometric, Dynamic and Geoid Models](./07-gravity-geodesy/04-geodesy-reference-frames/02-height-systems.md) | G |
-| · | [GNSS Positioning: Pseudorange, Carrier Phase and Ambiguity Resolution](./07-gravity-geodesy/04-geodesy-reference-frames/03-gnss-positioning.md) | G |
-| · | [GNSS for Tectonics, Subsidence and Sea Level](./07-gravity-geodesy/04-geodesy-reference-frames/04-gnss-geodesy-applications.md) | D |
-| · | [ITRF, Plate Motion Models and Frame Transformations](./07-gravity-geodesy/04-geodesy-reference-frames/05-itrf-and-plate-models.md) | D |
+| ✓ | [Geodetic Datums, Ellipsoids and Coordinate Frames](./07-gravity-geodesy/04-geodesy-reference-frames/01-geodetic-datums.md) | A |
+| ✓ | [Height Systems: Ellipsoidal, Orthometric, Dynamic and Geoid Models](./07-gravity-geodesy/04-geodesy-reference-frames/02-height-systems.md) | G |
+| ✓ | [GNSS Positioning: Pseudorange, Carrier Phase and Ambiguity Resolution](./07-gravity-geodesy/04-geodesy-reference-frames/03-gnss-positioning.md) | G |
+| ✓ | [GNSS for Tectonics, Subsidence and Sea Level](./07-gravity-geodesy/04-geodesy-reference-frames/04-gnss-geodesy-applications.md) | D |
+| ✓ | [ITRF, Plate Motion Models and Frame Transformations](./07-gravity-geodesy/04-geodesy-reference-frames/05-itrf-and-plate-models.md) | D |
 
-### [ ] Satellite Gravimetry (0/5)
+### [x] Satellite Gravimetry (5/5)
 
 Module index: [`05-satellite-gravimetry/README.md`](./07-gravity-geodesy/05-satellite-gravimetry/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [GRACE and GRACE-FO: Mission Concept and Data Products](./07-gravity-geodesy/05-satellite-gravimetry/01-grace-gracefo.md) | G |
-| · | [GOCE, Gravity Gradients and the Static Field](./07-gravity-geodesy/05-satellite-gravimetry/02-goce.md) | G |
-| · | [Spherical Harmonic Solutions and Coefficient Interpretation](./07-gravity-geodesy/05-satellite-gravimetry/03-spherical-harmonic-solutions.md) | D |
-| · | [Mass Concentration Solutions, Leakage and Filtering](./07-gravity-geodesy/05-satellite-gravimetry/04-mascons-and-leakage.md) | R |
-| · | [Applications: Groundwater Depletion, Ice Loss, Sea Level](./07-gravity-geodesy/05-satellite-gravimetry/05-grace-applications.md) | D |
+| ✓ | [GRACE and GRACE-FO: Mission Concept and Data Products](./07-gravity-geodesy/05-satellite-gravimetry/01-grace-gracefo.md) | G |
+| ✓ | [GOCE, Gravity Gradients and the Static Field](./07-gravity-geodesy/05-satellite-gravimetry/02-goce.md) | G |
+| ✓ | [Spherical Harmonic Solutions and Coefficient Interpretation](./07-gravity-geodesy/05-satellite-gravimetry/03-spherical-harmonic-solutions.md) | D |
+| ✓ | [Mass Concentration Solutions, Leakage and Filtering](./07-gravity-geodesy/05-satellite-gravimetry/04-mascons-and-leakage.md) | R |
+| ✓ | [Applications: Groundwater Depletion, Ice Loss, Sea Level](./07-gravity-geodesy/05-satellite-gravimetry/05-grace-applications.md) | D |
 
-### [ ] Earth Tides and Rotation (0/4)
+### [x] Earth Tides and Rotation (4/4)
 
 Module index: [`06-earth-tides-and-rotation/README.md`](./07-gravity-geodesy/06-earth-tides-and-rotation/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Solid Earth Tides and Their Gravity Signature](./07-gravity-geodesy/06-earth-tides-and-rotation/01-solid-earth-tides.md) | G |
-| · | [Tidal Corrections in Precise Measurements](./07-gravity-geodesy/06-earth-tides-and-rotation/02-tidal-corrections.md) | A |
-| · | [Earth Rotation, Polar Motion, LOD and Excitation](./07-gravity-geodesy/06-earth-tides-and-rotation/03-earth-rotation.md) | D |
-| · | [Post-Glacial Rebound: Viscosity and Ice History Inference](./07-gravity-geodesy/06-earth-tides-and-rotation/04-post-glacial-rebound.md) | R |
+| ✓ | [Solid Earth Tides and Their Gravity Signature](./07-gravity-geodesy/06-earth-tides-and-rotation/01-solid-earth-tides.md) | G |
+| ✓ | [Tidal Corrections in Precise Measurements](./07-gravity-geodesy/06-earth-tides-and-rotation/02-tidal-corrections.md) | A |
+| ✓ | [Earth Rotation, Polar Motion, LOD and Excitation](./07-gravity-geodesy/06-earth-tides-and-rotation/03-earth-rotation.md) | D |
+| ✓ | [Post-Glacial Rebound: Viscosity and Ice History Inference](./07-gravity-geodesy/06-earth-tides-and-rotation/04-post-glacial-rebound.md) | R |
 
-### [ ] The Geoid and Modern Height Determination (0/3)
+### [x] The Geoid and Modern Height Determination (3/3)
 
 Module index: [`07-geoid-and-height-modern/README.md`](./07-gravity-geodesy/07-geoid-and-height-modern/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Determining the Geoid: Stokes, Remove-Restore, Kriging](./07-gravity-geodesy/07-geoid-and-height-modern/01-geoid-determination.md) | R |
-| · | [Vertical Datum Modernisation and National Height Systems](./07-gravity-geodesy/07-geoid-and-height-modern/02-vertical-datum-modernisation.md) | D |
-| · | [Sea Surface Topography and the Marine Geoid](./07-gravity-geodesy/07-geoid-and-height-modern/03-sea-surface-topography.md) | D |
+| ✓ | [Determining the Geoid: Stokes, Remove-Restore, Kriging](./07-gravity-geodesy/07-geoid-and-height-modern/01-geoid-determination.md) | R |
+| ✓ | [Vertical Datum Modernisation and National Height Systems](./07-gravity-geodesy/07-geoid-and-height-modern/02-vertical-datum-modernisation.md) | D |
+| ✓ | [Sea Surface Topography and the Marine Geoid](./07-gravity-geodesy/07-geoid-and-height-modern/03-sea-surface-topography.md) | D |
 
 ## Geomagnetism and Electromagnetic Fields
 
-`08-geomagnetism-electromagnetism` — **6 modules**, **0/34 lessons written**
+`08-geomagnetism-electromagnetism` — **6 modules**, **34/34 lessons written**
 
 [Folder index](./08-geomagnetism-electromagnetism/README.md)
 
-### [ ] The Earth's Magnetic Field (0/7)
+### [x] The Earth's Magnetic Field (7/7)
 
 Module index: [`01-earth-magnetic-field/README.md`](./08-geomagnetism-electromagnetism/01-earth-magnetic-field/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Describing the Main Field: Declination, Inclination, Intensity](./08-geomagnetism-electromagnetism/01-earth-magnetic-field/01-main-field-description.md) | I |
-| · | [The Geocentric Dipole, IGRF and WMM Models](./08-geomagnetism-electromagnetism/01-earth-magnetic-field/02-dipole-and-igrf.md) | A |
-| · | [Spherical Harmonic Analysis of the Magnetic Field](./08-geomagnetism-electromagnetism/01-earth-magnetic-field/03-spherical-harmonic-magnetic.md) | D |
-| · | [Secular Variation, Jerks and Core Dynamics](./08-geomagnetism-electromagnetism/01-earth-magnetic-field/04-secular-variation.md) | D |
-| · | [The Geodynamo: Mechanism and Evidence](./08-geomagnetism-electromagnetism/01-earth-magnetic-field/05-dynamo-theory.md) | R |
-| · | [Palaeomagnetism, Reversals and Magnetostratigraphy](./08-geomagnetism-electromagnetism/01-earth-magnetic-field/06-palaeomagnetism.md) | G |
-| · | [Rock Magnetism: Remanence, Susceptibility and Magnetic Mineralogy](./08-geomagnetism-electromagnetism/01-earth-magnetic-field/07-rock-magnetism.md) | A |
+| ✓ | [Describing the Main Field: Declination, Inclination, Intensity](./08-geomagnetism-electromagnetism/01-earth-magnetic-field/01-main-field-description.md) | I |
+| ✓ | [The Geocentric Dipole, IGRF and WMM Models](./08-geomagnetism-electromagnetism/01-earth-magnetic-field/02-dipole-and-igrf.md) | A |
+| ✓ | [Spherical Harmonic Analysis of the Magnetic Field](./08-geomagnetism-electromagnetism/01-earth-magnetic-field/03-spherical-harmonic-magnetic.md) | D |
+| ✓ | [Secular Variation, Jerks and Core Dynamics](./08-geomagnetism-electromagnetism/01-earth-magnetic-field/04-secular-variation.md) | D |
+| ✓ | [The Geodynamo: Mechanism and Evidence](./08-geomagnetism-electromagnetism/01-earth-magnetic-field/05-dynamo-theory.md) | R |
+| ✓ | [Palaeomagnetism, Reversals and Magnetostratigraphy](./08-geomagnetism-electromagnetism/01-earth-magnetic-field/06-palaeomagnetism.md) | G |
+| ✓ | [Rock Magnetism: Remanence, Susceptibility and Magnetic Mineralogy](./08-geomagnetism-electromagnetism/01-earth-magnetic-field/07-rock-magnetism.md) | A |
 
-### [ ] Magnetic Instruments and Surveys (0/6)
+### [x] Magnetic Instruments and Surveys (6/6)
 
 Module index: [`02-magnetic-instruments-and-surveys/README.md`](./08-geomagnetism-electromagnetism/02-magnetic-instruments-and-surveys/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Fluxgate Magnetometers: Principle and Use](./08-geomagnetism-electromagnetism/02-magnetic-instruments-and-surveys/01-fluxgate-magnetometers.md) | A |
-| · | [Proton Precession and Overhauser Magnetometers](./08-geomagnetism-electromagnetism/02-magnetic-instruments-and-surveys/02-proton-overhauser.md) | A |
-| · | [Optically Pumped Cesium and Potassium Magnetometers](./08-geomagnetism-electromagnetism/02-magnetic-instruments-and-surveys/03-cesium-optically-pumped.md) | G |
-| · | [Gradiometers, Arrays and Noise Rejection](./08-geomagnetism-electromagnetism/02-magnetic-instruments-and-surveys/04-gradiometers-arrays.md) | A |
-| · | [Airborne Magnetic Surveys and Compensation](./08-geomagnetism-electromagnetism/02-magnetic-instruments-and-surveys/05-airborne-magnetic-surveys.md) | G |
-| · | [Magnetic Survey Design, Diurnal Correction and Levelling](./08-geomagnetism-electromagnetism/02-magnetic-instruments-and-surveys/06-magnetic-survey-procedures.md) | A |
+| ✓ | [Fluxgate Magnetometers: Principle and Use](./08-geomagnetism-electromagnetism/02-magnetic-instruments-and-surveys/01-fluxgate-magnetometers.md) | A |
+| ✓ | [Proton Precession and Overhauser Magnetometers](./08-geomagnetism-electromagnetism/02-magnetic-instruments-and-surveys/02-proton-overhauser.md) | A |
+| ✓ | [Optically Pumped Cesium and Potassium Magnetometers](./08-geomagnetism-electromagnetism/02-magnetic-instruments-and-surveys/03-cesium-optically-pumped.md) | G |
+| ✓ | [Gradiometers, Arrays and Noise Rejection](./08-geomagnetism-electromagnetism/02-magnetic-instruments-and-surveys/04-gradiometers-arrays.md) | A |
+| ✓ | [Airborne Magnetic Surveys and Compensation](./08-geomagnetism-electromagnetism/02-magnetic-instruments-and-surveys/05-airborne-magnetic-surveys.md) | G |
+| ✓ | [Magnetic Survey Design, Diurnal Correction and Levelling](./08-geomagnetism-electromagnetism/02-magnetic-instruments-and-surveys/06-magnetic-survey-procedures.md) | A |
 
-### [ ] Magnetic Anomalies and Modelling (0/7)
+### [x] Magnetic Anomalies and Modelling (7/7)
 
 Module index: [`03-magnetic-anomalies-and-modelling/README.md`](./08-geomagnetism-electromagnetism/03-magnetic-anomalies-and-modelling/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Magnetic Anomaly Physics and Remanent vs Induced Magnetisation](./08-geomagnetism-electromagnetism/03-magnetic-anomalies-and-modelling/01-magnetic-anomaly-basics.md) | A |
-| · | [Koenigsberger Ratio and Remanence Dominance](./08-geomagnetism-electromagnetism/03-magnetic-anomalies-and-modelling/02-koenigsberger-and-remanence.md) | G |
-| · | [Reduction to the Pole and Equator; Why It Matters](./08-geomagnetism-electromagnetism/03-magnetic-anomalies-and-modelling/03-reduction-to-pole.md) | G |
-| · | [Forward Modelling Magnetic Bodies](./08-geomagnetism-electromagnetism/03-magnetic-anomalies-and-modelling/04-magnetic-forward-modelling.md) | G |
-| · | [Depth Estimation: Werner, Euler, Peters and Spectral Methods](./08-geomagnetism-electromagnetism/03-magnetic-anomalies-and-modelling/05-magnetic-depth-estimation.md) | D |
-| · | [Magnetic Inversion and Its Non-Uniqueness](./08-geomagnetism-electromagnetism/03-magnetic-anomalies-and-modelling/06-magnetic-inversion.md) | D |
-| · | [Applications: Mineral Exploration, Unexploded Ordnance, Archaeology](./08-geomagnetism-electromagnetism/03-magnetic-anomalies-and-modelling/07-magnetic-uses.md) | A |
+| ✓ | [Magnetic Anomaly Physics and Remanent vs Induced Magnetisation](./08-geomagnetism-electromagnetism/03-magnetic-anomalies-and-modelling/01-magnetic-anomaly-basics.md) | A |
+| ✓ | [Koenigsberger Ratio and Remanence Dominance](./08-geomagnetism-electromagnetism/03-magnetic-anomalies-and-modelling/02-koenigsberger-and-remanence.md) | G |
+| ✓ | [Reduction to the Pole and Equator; Why It Matters](./08-geomagnetism-electromagnetism/03-magnetic-anomalies-and-modelling/03-reduction-to-pole.md) | G |
+| ✓ | [Forward Modelling Magnetic Bodies](./08-geomagnetism-electromagnetism/03-magnetic-anomalies-and-modelling/04-magnetic-forward-modelling.md) | G |
+| ✓ | [Depth Estimation: Werner, Euler, Peters and Spectral Methods](./08-geomagnetism-electromagnetism/03-magnetic-anomalies-and-modelling/05-magnetic-depth-estimation.md) | D |
+| ✓ | [Magnetic Inversion and Its Non-Uniqueness](./08-geomagnetism-electromagnetism/03-magnetic-anomalies-and-modelling/06-magnetic-inversion.md) | D |
+| ✓ | [Applications: Mineral Exploration, Unexploded Ordnance, Archaeology](./08-geomagnetism-electromagnetism/03-magnetic-anomalies-and-modelling/07-magnetic-uses.md) | A |
 
-### [ ] Electromagnetic Induction in the Earth (0/6)
+### [x] Electromagnetic Induction in the Earth (6/6)
 
 Module index: [`04-electromagnetic-induction/README.md`](./08-geomagnetism-electromagnetism/04-electromagnetic-induction/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Induction, Skin Depth, Diffusion and Conductivity Structure](./08-geomagnetism-electromagnetism/04-electromagnetic-induction/01-em-induction-basics.md) | G |
-| · | [Magnetotellurics: Impedance Tensor, Apparent Resistivity, Phase](./08-geomagnetism-electromagnetism/04-electromagnetic-induction/02-magnetotellurics.md) | D |
-| · | [MT Processing: Robust Estimation, Remote Reference, Tipper](./08-geomagnetism-electromagnetism/04-electromagnetic-induction/03-mt-processing.md) | R |
-| · | [MT Inversion: 1-D, 2-D and 3-D Approaches](./08-geomagnetism-electromagnetism/04-electromagnetic-induction/04-mt-inversion.md) | R |
-| · | [MT Interpretation: Conductors, Fluids, Melts and Frontiers](./08-geomagnetism-electromagnetism/04-electromagnetic-induction/05-mt-interpretation.md) | R |
-| · | [Geomagnetic Depth Sounding and Long-Period Induction](./08-geomagnetism-electromagnetism/04-electromagnetic-induction/06-geomagnetic-depth-sounding.md) | D |
+| ✓ | [Induction, Skin Depth, Diffusion and Conductivity Structure](./08-geomagnetism-electromagnetism/04-electromagnetic-induction/01-em-induction-basics.md) | G |
+| ✓ | [Magnetotellurics: Impedance Tensor, Apparent Resistivity, Phase](./08-geomagnetism-electromagnetism/04-electromagnetic-induction/02-magnetotellurics.md) | D |
+| ✓ | [MT Processing: Robust Estimation, Remote Reference, Tipper](./08-geomagnetism-electromagnetism/04-electromagnetic-induction/03-mt-processing.md) | R |
+| ✓ | [MT Inversion: 1-D, 2-D and 3-D Approaches](./08-geomagnetism-electromagnetism/04-electromagnetic-induction/04-mt-inversion.md) | R |
+| ✓ | [MT Interpretation: Conductors, Fluids, Melts and Frontiers](./08-geomagnetism-electromagnetism/04-electromagnetic-induction/05-mt-interpretation.md) | R |
+| ✓ | [Geomagnetic Depth Sounding and Long-Period Induction](./08-geomagnetism-electromagnetism/04-electromagnetic-induction/06-geomagnetic-depth-sounding.md) | D |
 
-### [ ] Controlled-Source Electromagnetics (0/5)
+### [x] Controlled-Source Electromagnetics (5/5)
 
 Module index: [`05-controlled-source-em/README.md`](./08-geomagnetism-electromagnetism/05-controlled-source-em/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Frequency-Domain EM (FDEM) Systems and Responses](./08-geomagnetism-electromagnetism/05-controlled-source-em/01-frequency-domain-em.md) | G |
-| · | [Time-Domain EM (TDEM): Sounding, Transients and Decay Curves](./08-geomagnetism-electromagnetism/05-controlled-source-em/02-time-domain-em.md) | G |
-| · | [EM Forward Modelling: Integral Equation, FD, FE Methods](./08-geomagnetism-electromagnetism/05-controlled-source-em/03-em-modelling.md) | R |
-| · | [EM Inversion and Dimensionality](./08-geomagnetism-electromagnetism/05-controlled-source-em/04-em-inversion.md) | R |
-| · | [Airborne EM for Conductivity Mapping](./08-geomagnetism-electromagnetism/05-controlled-source-em/05-airborne-em.md) | D |
+| ✓ | [Frequency-Domain EM (FDEM) Systems and Responses](./08-geomagnetism-electromagnetism/05-controlled-source-em/01-frequency-domain-em.md) | G |
+| ✓ | [Time-Domain EM (TDEM): Sounding, Transients and Decay Curves](./08-geomagnetism-electromagnetism/05-controlled-source-em/02-time-domain-em.md) | G |
+| ✓ | [EM Forward Modelling: Integral Equation, FD, FE Methods](./08-geomagnetism-electromagnetism/05-controlled-source-em/03-em-modelling.md) | R |
+| ✓ | [EM Inversion and Dimensionality](./08-geomagnetism-electromagnetism/05-controlled-source-em/04-em-inversion.md) | R |
+| ✓ | [Airborne EM for Conductivity Mapping](./08-geomagnetism-electromagnetism/05-controlled-source-em/05-airborne-em.md) | D |
 
-### [ ] Applied Magnetism in Hazard and Environmental Studies (0/3)
+### [x] Applied Magnetism in Hazard and Environmental Studies (3/3)
 
 Module index: [`06-magnetic-methods-hazards/README.md`](./08-geomagnetism-electromagnetism/06-magnetic-methods-hazards/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Archaeomagnetic Dating and Secular Variation Curves](./08-geomagnetism-electromagnetism/06-magnetic-methods-hazards/01-archaeomagnetic-dating.md) | D |
-| · | [Environmental Magnetism and Pollution Mapping](./08-geomagnetism-electromagnetism/06-magnetic-methods-hazards/02-environmental-magnetics.md) | A |
-| · | [Magnetic Monitoring of Volcanoes and Faults](./08-geomagnetism-electromagnetism/06-magnetic-methods-hazards/03-magnetic-hazard-monitoring.md) | D |
+| ✓ | [Archaeomagnetic Dating and Secular Variation Curves](./08-geomagnetism-electromagnetism/06-magnetic-methods-hazards/01-archaeomagnetic-dating.md) | D |
+| ✓ | [Environmental Magnetism and Pollution Mapping](./08-geomagnetism-electromagnetism/06-magnetic-methods-hazards/02-environmental-magnetics.md) | A |
+| ✓ | [Magnetic Monitoring of Volcanoes and Faults](./08-geomagnetism-electromagnetism/06-magnetic-methods-hazards/03-magnetic-hazard-monitoring.md) | D |
 
 ## Electrical and Electromagnetic Methods
 
-`09-electrical-em-methods` — **7 modules**, **0/31 lessons written**
+`09-electrical-em-methods` — **7 modules**, **31/31 lessons written**
 
 [Folder index](./09-electrical-em-methods/README.md)
 
-### [ ] Electrical Properties of Earth Materials (0/5)
+### [x] Electrical Properties of Earth Materials (5/5)
 
 Module index: [`01-electrical-properties-of-earth/README.md`](./09-electrical-em-methods/01-electrical-properties-of-earth/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Resistivity and Conductivity: Definitions and Ranges](./09-electrical-em-methods/01-electrical-properties-of-earth/01-resistivity-conductivity.md) | I |
-| · | [Archie's Law, Porosity and Saturation](./09-electrical-em-methods/01-electrical-properties-of-earth/02-archies-law.md) | A |
-| · | [Electrolytic, Electronic and Surface Conduction](./09-electrical-em-methods/01-electrical-properties-of-earth/03-conduction-mechanisms.md) | G |
-| · | [Clay Effects, CEC and Membrane Polarisation](./09-electrical-em-methods/01-electrical-properties-of-earth/04-clay-and-surface-conduction.md) | G |
-| · | [Temperature, Pressure and Frequency Dependence](./09-electrical-em-methods/01-electrical-properties-of-earth/05-temperature-and-pressure-effects.md) | G |
+| ✓ | [Resistivity and Conductivity: Definitions and Ranges](./09-electrical-em-methods/01-electrical-properties-of-earth/01-resistivity-conductivity.md) | I |
+| ✓ | [Archie's Law, Porosity and Saturation](./09-electrical-em-methods/01-electrical-properties-of-earth/02-archies-law.md) | A |
+| ✓ | [Electrolytic, Electronic and Surface Conduction](./09-electrical-em-methods/01-electrical-properties-of-earth/03-conduction-mechanisms.md) | G |
+| ✓ | [Clay Effects, CEC and Membrane Polarisation](./09-electrical-em-methods/01-electrical-properties-of-earth/04-clay-and-surface-conduction.md) | G |
+| ✓ | [Temperature, Pressure and Frequency Dependence](./09-electrical-em-methods/01-electrical-properties-of-earth/05-temperature-and-pressure-effects.md) | G |
 
-### [ ] DC Resistivity Methods (0/8)
+### [x] DC Resistivity Methods (8/8)
 
 Module index: [`02-dc-resistivity/README.md`](./09-electrical-em-methods/02-dc-resistivity/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Resistivity Principle and the Four-Electrode Arrangement](./09-electrical-em-methods/02-dc-resistivity/01-resistivity-principle.md) | I |
-| · | [Electrode Arrays: Wenner, Schlumberger, Dipole-Dipole, Pole-Dipole](./09-electrical-em-methods/02-dc-resistivity/02-electrode-arrays.md) | A |
-| · | [Apparent Resistivity and Geometric Factors](./09-electrical-em-methods/02-dc-resistivity/03-apparent-resistivity.md) | A |
-| · | [Vertical Electrical Sounding vs Profiling](./09-electrical-em-methods/02-dc-resistivity/04-sounding-profiling.md) | A |
-| · | [Electrical Resistivity Tomography (ERT) Acquisition and Design](./09-electrical-em-methods/02-dc-resistivity/05-ert-tomography.md) | G |
-| · | [Forward Modelling Resistivity Data](./09-electrical-em-methods/02-dc-resistivity/06-resistivity-forward-modelling.md) | G |
-| · | [Resistivity Inversion: Smoothness, Robustness, Constraints](./09-electrical-em-methods/02-dc-resistivity/07-resistivity-inversion.md) | R |
-| · | [ERT Applications: Aquifers, Contamination, Landslides, Archaeology](./09-electrical-em-methods/02-dc-resistivity/08-ert-applications.md) | G |
+| ✓ | [Resistivity Principle and the Four-Electrode Arrangement](./09-electrical-em-methods/02-dc-resistivity/01-resistivity-principle.md) | I |
+| ✓ | [Electrode Arrays: Wenner, Schlumberger, Dipole-Dipole, Pole-Dipole](./09-electrical-em-methods/02-dc-resistivity/02-electrode-arrays.md) | A |
+| ✓ | [Apparent Resistivity and Geometric Factors](./09-electrical-em-methods/02-dc-resistivity/03-apparent-resistivity.md) | A |
+| ✓ | [Vertical Electrical Sounding vs Profiling](./09-electrical-em-methods/02-dc-resistivity/04-sounding-profiling.md) | A |
+| ✓ | [Electrical Resistivity Tomography (ERT) Acquisition and Design](./09-electrical-em-methods/02-dc-resistivity/05-ert-tomography.md) | G |
+| ✓ | [Forward Modelling Resistivity Data](./09-electrical-em-methods/02-dc-resistivity/06-resistivity-forward-modelling.md) | G |
+| ✓ | [Resistivity Inversion: Smoothness, Robustness, Constraints](./09-electrical-em-methods/02-dc-resistivity/07-resistivity-inversion.md) | R |
+| ✓ | [ERT Applications: Aquifers, Contamination, Landslides, Archaeology](./09-electrical-em-methods/02-dc-resistivity/08-ert-applications.md) | G |
 
-### [ ] Induced Polarisation (0/4)
+### [x] Induced Polarisation (4/4)
 
 Module index: [`03-induced-polarisation/README.md`](./09-electrical-em-methods/03-induced-polarisation/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [IP Principle: Time-Domain and Frequency-Domain Measurement](./09-electrical-em-methods/03-induced-polarisation/01-ip-principle.md) | G |
-| · | [IP Models: Cole-Cole, Debye, Constant-Phase Element](./09-electrical-em-methods/03-induced-polarisation/02-ip-models.md) | D |
-| · | [IP Acquisition, Chargeability and Phase Units](./09-electrical-em-methods/03-induced-polarisation/03-ip-acquisition.md) | G |
-| · | [IP for Sulphides, Clays, Contaminants and Permafrost](./09-electrical-em-methods/03-induced-polarisation/04-ip-applications.md) | G |
+| ✓ | [IP Principle: Time-Domain and Frequency-Domain Measurement](./09-electrical-em-methods/03-induced-polarisation/01-ip-principle.md) | G |
+| ✓ | [IP Models: Cole-Cole, Debye, Constant-Phase Element](./09-electrical-em-methods/03-induced-polarisation/02-ip-models.md) | D |
+| ✓ | [IP Acquisition, Chargeability and Phase Units](./09-electrical-em-methods/03-induced-polarisation/03-ip-acquisition.md) | G |
+| ✓ | [IP for Sulphides, Clays, Contaminants and Permafrost](./09-electrical-em-methods/03-induced-polarisation/04-ip-applications.md) | G |
 
-### [ ] Self-Potential and Related Methods (0/3)
+### [x] Self-Potential and Related Methods (3/3)
 
 Module index: [`04-self-potential-and-mise-a-la-masse/README.md`](./09-electrical-em-methods/04-self-potential-and-mise-a-la-masse/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Sources of Self-Potential: Electrokinetic, Electrochemical](./09-electrical-em-methods/04-self-potential-and-mise-a-la-masse/01-self-potential-sources.md) | G |
-| · | [SP for Seepage, Dams, Landfills and Mineralisation](./09-electrical-em-methods/04-self-potential-and-mise-a-la-masse/02-sp-applications.md) | A |
-| · | [Mise-a-la-Masse and Induced Polarisation Mapping](./09-electrical-em-methods/04-self-potential-and-mise-a-la-masse/03-mise-a-la-masse.md) | G |
+| ✓ | [Sources of Self-Potential: Electrokinetic, Electrochemical](./09-electrical-em-methods/04-self-potential-and-mise-a-la-masse/01-self-potential-sources.md) | G |
+| ✓ | [SP for Seepage, Dams, Landfills and Mineralisation](./09-electrical-em-methods/04-self-potential-and-mise-a-la-masse/02-sp-applications.md) | A |
+| ✓ | [Mise-a-la-Masse and Induced Polarisation Mapping](./09-electrical-em-methods/04-self-potential-and-mise-a-la-masse/03-mise-a-la-masse.md) | G |
 
-### [ ] Applied Electromagnetic Methods (0/5)
+### [x] Applied Electromagnetic Methods (5/5)
 
 Module index: [`05-em-methods-applications/README.md`](./09-electrical-em-methods/05-em-methods-applications/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [TEM Sounding for Aquifers and Mineral Targets](./09-electrical-em-methods/05-em-methods-applications/01-tem-sounding.md) | G |
-| · | [FEM Conductivity Mapping and Apparent Conductivity](./09-electrical-em-methods/05-em-methods-applications/02-fem-conductivity-mapping.md) | A |
-| · | [Marine CSEM for Hydrocarbon and Gas Hydrate Exploration](./09-electrical-em-methods/05-em-methods-applications/03-csem-marine.md) | R |
-| · | [EM for Geothermal Systems and Permafrost](./09-electrical-em-methods/05-em-methods-applications/04-em-geothermal-permafrost.md) | D |
-| · | [EM for Contaminant Plumes, Salinity and Leachate](./09-electrical-em-methods/05-em-methods-applications/05-em-environmental.md) | G |
+| ✓ | [TEM Sounding for Aquifers and Mineral Targets](./09-electrical-em-methods/05-em-methods-applications/01-tem-sounding.md) | G |
+| ✓ | [FEM Conductivity Mapping and Apparent Conductivity](./09-electrical-em-methods/05-em-methods-applications/02-fem-conductivity-mapping.md) | A |
+| ✓ | [Marine CSEM for Hydrocarbon and Gas Hydrate Exploration](./09-electrical-em-methods/05-em-methods-applications/03-csem-marine.md) | R |
+| ✓ | [EM for Geothermal Systems and Permafrost](./09-electrical-em-methods/05-em-methods-applications/04-em-geothermal-permafrost.md) | D |
+| ✓ | [EM for Contaminant Plumes, Salinity and Leachate](./09-electrical-em-methods/05-em-methods-applications/05-em-environmental.md) | G |
 
-### [ ] Borehole Electrical and EM Methods (0/3)
+### [x] Borehole Electrical and EM Methods (3/3)
 
 Module index: [`06-borehole-electrical/README.md`](./09-electrical-em-methods/06-borehole-electrical/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Cross-Hole and Borehole-to-Surface Tomography](./09-electrical-em-methods/06-borehole-electrical/01-cross-hole-tomography.md) | D |
-| · | [Borehole Radar and Directional Probing](./09-electrical-em-methods/06-borehole-electrical/02-borehole-radar.md) | D |
-| · | [Downhole EM Logging and Induction Tools](./09-electrical-em-methods/06-borehole-electrical/03-downhole-em-logging.md) | G |
+| ✓ | [Cross-Hole and Borehole-to-Surface Tomography](./09-electrical-em-methods/06-borehole-electrical/01-cross-hole-tomography.md) | D |
+| ✓ | [Borehole Radar and Directional Probing](./09-electrical-em-methods/06-borehole-electrical/02-borehole-radar.md) | D |
+| ✓ | [Downhole EM Logging and Induction Tools](./09-electrical-em-methods/06-borehole-electrical/03-downhole-em-logging.md) | G |
 
-### [ ] EM Data Processing, QC and Uncertainty (0/3)
+### [x] EM Data Processing, QC and Uncertainty (3/3)
 
 Module index: [`07-em-data-processing-and-qc/README.md`](./09-electrical-em-methods/07-em-data-processing-and-qc/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [EM Noise, Coupling and Cultural Effects](./09-electrical-em-methods/07-em-data-processing-and-qc/01-em-noise-and-coupling.md) | G |
-| · | [EM Processing Workflow and Data Editing](./09-electrical-em-methods/07-em-data-processing-and-qc/02-em-processing-workflow.md) | G |
-| · | [Quantifying Uncertainty in EM Interpretation](./09-electrical-em-methods/07-em-data-processing-and-qc/03-em-uncertainty.md) | R |
+| ✓ | [EM Noise, Coupling and Cultural Effects](./09-electrical-em-methods/07-em-data-processing-and-qc/01-em-noise-and-coupling.md) | G |
+| ✓ | [EM Processing Workflow and Data Editing](./09-electrical-em-methods/07-em-data-processing-and-qc/02-em-processing-workflow.md) | G |
+| ✓ | [Quantifying Uncertainty in EM Interpretation](./09-electrical-em-methods/07-em-data-processing-and-qc/03-em-uncertainty.md) | R |
 
 ## Ground-Penetrating Radar and Near-Surface Geophysics
 
-`10-gpr-near-surface` — **6 modules**, **0/26 lessons written**
+`10-gpr-near-surface` — **6 modules**, **26/26 lessons written**
 
 [Folder index](./10-gpr-near-surface/README.md)
 
-### [ ] GPR Principles (0/5)
+### [x] GPR Principles (5/5)
 
 Module index: [`01-gpr-principles/README.md`](./10-gpr-near-surface/01-gpr-principles/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [GPR Physics: EM Pulses, Dielectric Permittivity and Reflection](./10-gpr-near-surface/01-gpr-principles/01-gpr-physics.md) | I |
-| · | [Velocity Estimation and Depth Conversion in GPR](./10-gpr-near-surface/01-gpr-principles/02-gpr-velocity-and-depth.md) | A |
-| · | [Attenuation, Penetration Depth and Frequency Trade-Offs](./10-gpr-near-surface/01-gpr-principles/03-gpr-attenuation-penetration.md) | A |
-| · | [Antennas: Frequency, Shielding, Polarisation and Offsets](./10-gpr-near-surface/01-gpr-principles/04-gpr-antennas.md) | G |
-| · | [Vertical and Horizontal Resolution Limits](./10-gpr-near-surface/01-gpr-principles/05-gpr-resolution.md) | A |
+| ✓ | [GPR Physics: EM Pulses, Dielectric Permittivity and Reflection](./10-gpr-near-surface/01-gpr-principles/01-gpr-physics.md) | I |
+| ✓ | [Velocity Estimation and Depth Conversion in GPR](./10-gpr-near-surface/01-gpr-principles/02-gpr-velocity-and-depth.md) | A |
+| ✓ | [Attenuation, Penetration Depth and Frequency Trade-Offs](./10-gpr-near-surface/01-gpr-principles/03-gpr-attenuation-penetration.md) | A |
+| ✓ | [Antennas: Frequency, Shielding, Polarisation and Offsets](./10-gpr-near-surface/01-gpr-principles/04-gpr-antennas.md) | G |
+| ✓ | [Vertical and Horizontal Resolution Limits](./10-gpr-near-surface/01-gpr-principles/05-gpr-resolution.md) | A |
 
-### [ ] GPR Acquisition and Processing (0/5)
+### [x] GPR Acquisition and Processing (5/5)
 
 Module index: [`02-gpr-acquisition-and-processing/README.md`](./10-gpr-near-surface/02-gpr-acquisition-and-processing/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Survey Design: Profile, Grid, CMP and Transillumination](./10-gpr-near-surface/02-gpr-acquisition-and-processing/01-gpr-survey-design.md) | G |
-| · | [Processing Steps: Dewow, Gain, Filtering, Migration](./10-gpr-near-surface/02-gpr-acquisition-and-processing/02-gpr-processing.md) | G |
-| · | [Velocity Analysis and Common-Midpoint Sounding](./10-gpr-near-surface/02-gpr-acquisition-and-processing/03-gpr-velocity-analysis.md) | D |
-| · | [3-D GPR Imaging and Time Slices](./10-gpr-near-surface/02-gpr-acquisition-and-processing/04-gpr-3d-imaging.md) | D |
-| · | [GPR Modelling and Full-Waveform Inversion](./10-gpr-near-surface/02-gpr-acquisition-and-processing/05-gpr-modelling-and-inversion.md) | R |
+| ✓ | [Survey Design: Profile, Grid, CMP and Transillumination](./10-gpr-near-surface/02-gpr-acquisition-and-processing/01-gpr-survey-design.md) | G |
+| ✓ | [Processing Steps: Dewow, Gain, Filtering, Migration](./10-gpr-near-surface/02-gpr-acquisition-and-processing/02-gpr-processing.md) | G |
+| ✓ | [Velocity Analysis and Common-Midpoint Sounding](./10-gpr-near-surface/02-gpr-acquisition-and-processing/03-gpr-velocity-analysis.md) | D |
+| ✓ | [3-D GPR Imaging and Time Slices](./10-gpr-near-surface/02-gpr-acquisition-and-processing/04-gpr-3d-imaging.md) | D |
+| ✓ | [GPR Modelling and Full-Waveform Inversion](./10-gpr-near-surface/02-gpr-acquisition-and-processing/05-gpr-modelling-and-inversion.md) | R |
 
-### [ ] GPR Applications (0/5)
+### [x] GPR Applications (5/5)
 
 Module index: [`03-gpr-applications/README.md`](./10-gpr-near-surface/03-gpr-applications/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [GPR for Soil Moisture, Water Table and Aquifer Structure](./10-gpr-near-surface/03-gpr-applications/01-gpr-hydrogeology.md) | D |
-| · | [GPR for Glacier Thickness and Internal Stratigraphy](./10-gpr-near-surface/03-gpr-applications/02-gpr-glaciology.md) | D |
-| · | [GPR in Archaeology, Forensics and Buried Utilities](./10-gpr-near-surface/03-gpr-applications/03-gpr-archaeology-forensics.md) | A |
-| · | [GPR for Pavements, Concrete and Infrastructure Inspection](./10-gpr-near-surface/03-gpr-applications/04-gpr-roads-concrete.md) | A |
-| · | [Planetary GPR: MARSIS, SHARAD and Lunar Radar](./10-gpr-near-surface/03-gpr-applications/05-gpr-planetary.md) | R |
+| ✓ | [GPR for Soil Moisture, Water Table and Aquifer Structure](./10-gpr-near-surface/03-gpr-applications/01-gpr-hydrogeology.md) | D |
+| ✓ | [GPR for Glacier Thickness and Internal Stratigraphy](./10-gpr-near-surface/03-gpr-applications/02-gpr-glaciology.md) | D |
+| ✓ | [GPR in Archaeology, Forensics and Buried Utilities](./10-gpr-near-surface/03-gpr-applications/03-gpr-archaeology-forensics.md) | A |
+| ✓ | [GPR for Pavements, Concrete and Infrastructure Inspection](./10-gpr-near-surface/03-gpr-applications/04-gpr-roads-concrete.md) | A |
+| ✓ | [Planetary GPR: MARSIS, SHARAD and Lunar Radar](./10-gpr-near-surface/03-gpr-applications/05-gpr-planetary.md) | R |
 
-### [ ] Near-Surface Seismic and Geotechnical Methods (0/3)
+### [x] Near-Surface Seismic and Geotechnical Methods (3/3)
 
 Module index: [`04-near-surface-seismic-and-geotechnical/README.md`](./10-gpr-near-surface/04-near-surface-seismic-and-geotechnical/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Geotechnical Testing: SPT, CPT, Cross-Hole and Down-Hole](./10-gpr-near-surface/04-near-surface-seismic-and-geotechnical/01-spt-cpt-crosshole.md) | A |
-| · | [Shear-Wave Velocity Modelling and Site Classification](./10-gpr-near-surface/04-near-surface-seismic-and-geotechnical/02-shear-wave-velocity-modelling.md) | G |
-| · | [Near-Surface Refraction for Static Corrections](./10-gpr-near-surface/04-near-surface-seismic-and-geotechnical/03-refraction-static.md) | G |
+| ✓ | [Geotechnical Testing: SPT, CPT, Cross-Hole and Down-Hole](./10-gpr-near-surface/04-near-surface-seismic-and-geotechnical/01-spt-cpt-crosshole.md) | A |
+| ✓ | [Shear-Wave Velocity Modelling and Site Classification](./10-gpr-near-surface/04-near-surface-seismic-and-geotechnical/02-shear-wave-velocity-modelling.md) | G |
+| ✓ | [Near-Surface Refraction for Static Corrections](./10-gpr-near-surface/04-near-surface-seismic-and-geotechnical/03-refraction-static.md) | G |
 
-### [ ] Other Near-Surface Methods (0/5)
+### [x] Other Near-Surface Methods (5/5)
 
 Module index: [`05-other-near-surface-methods/README.md`](./10-gpr-near-surface/05-other-near-surface-methods/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [EM Induction (EMI) and Conductivity Meters](./10-gpr-near-surface/05-other-near-surface-methods/01-electromagnetic-induction-nearsurface.md) | A |
-| · | [Surface-Wave Methods for Shallow Layers](./10-gpr-near-surface/05-other-near-surface-methods/02-seismic-surface-wave-nearsurface.md) | A |
-| · | [Thermal Methods for Shallow Subsurface Investigation](./10-gpr-near-surface/05-other-near-surface-methods/03-thermal-nearsurface.md) | A |
-| · | [Nuclear and Radiometric Near-Surface Methods](./10-gpr-near-surface/05-other-near-surface-methods/04-nuclear-and-radiometric-nearsurface.md) | A |
-| · | [Integrating Near-Surface Methods](./10-gpr-near-surface/05-other-near-surface-methods/05-multi-method-nearsurface.md) | G |
+| ✓ | [EM Induction (EMI) and Conductivity Meters](./10-gpr-near-surface/05-other-near-surface-methods/01-electromagnetic-induction-nearsurface.md) | A |
+| ✓ | [Surface-Wave Methods for Shallow Layers](./10-gpr-near-surface/05-other-near-surface-methods/02-seismic-surface-wave-nearsurface.md) | A |
+| ✓ | [Thermal Methods for Shallow Subsurface Investigation](./10-gpr-near-surface/05-other-near-surface-methods/03-thermal-nearsurface.md) | A |
+| ✓ | [Nuclear and Radiometric Near-Surface Methods](./10-gpr-near-surface/05-other-near-surface-methods/04-nuclear-and-radiometric-nearsurface.md) | A |
+| ✓ | [Integrating Near-Surface Methods](./10-gpr-near-surface/05-other-near-surface-methods/05-multi-method-nearsurface.md) | G |
 
-### [ ] Near-Surface Monitoring and Time-Lapse (0/3)
+### [x] Near-Surface Monitoring and Time-Lapse (3/3)
 
 Module index: [`06-nearsurface-monitoring/README.md`](./10-gpr-near-surface/06-nearsurface-monitoring/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Time-Lapse Near-Surface Geophysics](./10-gpr-near-surface/06-nearsurface-monitoring/01-time-lapse-nearsurface.md) | D |
-| · | [Monitoring Dams, Embankments and Foundations](./10-gpr-near-surface/06-nearsurface-monitoring/02-geotechnical-monitoring.md) | D |
-| · | [Monitoring Contaminant Transport with Geophysics](./10-gpr-near-surface/06-nearsurface-monitoring/03-contaminant-monitoring.md) | D |
+| ✓ | [Time-Lapse Near-Surface Geophysics](./10-gpr-near-surface/06-nearsurface-monitoring/01-time-lapse-nearsurface.md) | D |
+| ✓ | [Monitoring Dams, Embankments and Foundations](./10-gpr-near-surface/06-nearsurface-monitoring/02-geotechnical-monitoring.md) | D |
+| ✓ | [Monitoring Contaminant Transport with Geophysics](./10-gpr-near-surface/06-nearsurface-monitoring/03-contaminant-monitoring.md) | D |
 
 ## Exploration Geophysics
 
