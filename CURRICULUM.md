@@ -11,10 +11,10 @@ Legend: **B** beginner · **I** intermediate · **A** advanced · **G** graduate
 | Folders | 27 |
 | Modules | 216 |
 | Lessons planned | 1146 |
-| Lessons written | 692 |
-| Lessons with valid frontmatter | 692 |
-| Exercise/solution companions written | 1338 / 2190 |
-| Completion | 60.4% |
+| Lessons written | 802 |
+| Lessons with valid frontmatter | 802 |
+| Exercise/solution companions written | 1558 / 2190 |
+| Completion | 70.0% |
 
 > Companion files are the conventional `exercises/<lesson>-exercises.md` and `<lesson>-solutions.md` pairs. Lessons in `00-orientation` and `26-reference-library` are process material and reference pages, so they carry no companions by design.
 
@@ -46,9 +46,9 @@ Legend: **B** beginner · **I** intermediate · **A** advanced · **G** graduate
 - [x] [Global Geophysics and the Earth's Interior](./12-global-geophysics-interior/README.md) — `12-global-geophysics-interior` · stages: advanced->research
 - [x] [Geodynamics and Tectonophysics](./13-geodynamics-tectonics/README.md) — `13-geodynamics-tectonics` · stages: advanced->research
 - [x] [Hydrology, Hydrogeophysics and Environmental Geophysics](./14-hydrology-hydrogeophysics/README.md) — `14-hydrology-hydrogeophysics` · stages: intermediate->research
-- [ ] [Oceanography and Marine Geophysics](./15-oceanography-marine/README.md) — `15-oceanography-marine` · stages: intermediate->research
-- [ ] [Atmospheric Physics, Meteorology and Climate Science](./16-atmosphere-climate/README.md) — `16-atmosphere-climate` · stages: beginner->research
-- [ ] [Remote Sensing, GIS and Satellite Geophysics](./17-remote-sensing-gis/README.md) — `17-remote-sensing-gis` · stages: beginner->research
+- [x] [Oceanography and Marine Geophysics](./15-oceanography-marine/README.md) — `15-oceanography-marine` · stages: intermediate->research
+- [x] [Atmospheric Physics, Meteorology and Climate Science](./16-atmosphere-climate/README.md) — `16-atmosphere-climate` · stages: beginner->research
+- [x] [Remote Sensing, GIS and Satellite Geophysics](./17-remote-sensing-gis/README.md) — `17-remote-sensing-gis` · stages: beginner->research
 - [ ] [Inverse Problems, Optimization and Uncertainty Quantification](./18-inverse-problems/README.md) — `18-inverse-problems` · stages: advanced->research
 - [ ] [Numerical Modeling and High-Performance Computing](./19-numerical-modeling-hpc/README.md) — `19-numerical-modeling-hpc` · stages: advanced->research
 - [ ] [Signal Processing and Time-Series Analysis](./20-signal-processing/README.md) — `20-signal-processing` · stages: intermediate->research
@@ -1730,292 +1730,292 @@ Module index: [`06-integrated-catchment-studies/README.md`](./14-hydrology-hydro
 
 ## Oceanography and Marine Geophysics
 
-`15-oceanography-marine` — **6 modules**, **0/26 lessons written**
+`15-oceanography-marine` — **6 modules**, **26/26 lessons written**
 
 [Folder index](./15-oceanography-marine/README.md)
 
-### [ ] Physical Oceanography (0/6)
+### [x] Physical Oceanography (6/6)
 
 Module index: [`01-physical-oceanography/README.md`](./15-oceanography-marine/01-physical-oceanography/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Seawater Properties: Temperature, Salinity, Density](./15-oceanography-marine/01-physical-oceanography/01-seawater-properties.md) | I |
-| · | [Wind-Driven Circulation, Ekman Transport and Gyres](./15-oceanography-marine/01-physical-oceanography/02-wind-driven-circulation.md) | A |
-| · | [Thermohaline Circulation and Deep Water Formation](./15-oceanography-marine/01-physical-oceanography/03-thermohaline-circulation.md) | D |
-| · | [Internal Waves, Tides and Mixing](./15-oceanography-marine/01-physical-oceanography/04-internal-waves-and-tides.md) | D |
-| · | [Sea Level, Tides and Harmonic Analysis](./15-oceanography-marine/01-physical-oceanography/05-sea-level-and-tides.md) | A |
-| · | [Ocean-Atmosphere Coupling and ENSO](./15-oceanography-marine/01-physical-oceanography/06-ocean-atmosphere-coupling.md) | D |
+| ✓ | [Seawater Properties: Temperature, Salinity, Density](./15-oceanography-marine/01-physical-oceanography/01-seawater-properties.md) | I |
+| ✓ | [Wind-Driven Circulation, Ekman Transport and Gyres](./15-oceanography-marine/01-physical-oceanography/02-wind-driven-circulation.md) | A |
+| ✓ | [Thermohaline Circulation and Deep Water Formation](./15-oceanography-marine/01-physical-oceanography/03-thermohaline-circulation.md) | D |
+| ✓ | [Internal Waves, Tides and Mixing](./15-oceanography-marine/01-physical-oceanography/04-internal-waves-and-tides.md) | D |
+| ✓ | [Sea Level, Tides and Harmonic Analysis](./15-oceanography-marine/01-physical-oceanography/05-sea-level-and-tides.md) | A |
+| ✓ | [Ocean-Atmosphere Coupling and ENSO](./15-oceanography-marine/01-physical-oceanography/06-ocean-atmosphere-coupling.md) | D |
 
-### [ ] Marine Geophysical Methods (0/7)
+### [x] Marine Geophysical Methods (7/7)
 
 Module index: [`02-marine-geophysics-methods/README.md`](./15-oceanography-marine/02-marine-geophysics-methods/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Marine Seismic Reflection: Airguns, Streamers, Processing](./15-oceanography-marine/02-marine-geophysics-methods/01-marine-seismic-reflection.md) | G |
-| · | [Multibeam Bathymetry and Swath Mapping](./15-oceanography-marine/02-marine-geophysics-methods/02-multibeam-bathymetry.md) | A |
-| · | [Side-Scan Sonar and Seafloor Imaging](./15-oceanography-marine/02-marine-geophysics-methods/03-side-scan-sonar.md) | A |
-| · | [Sub-Bottom Profiling and Chirp Systems](./15-oceanography-marine/02-marine-geophysics-methods/04-sub-bottom-profiling.md) | G |
-| · | [Marine Gravity and Magnetic Surveys](./15-oceanography-marine/02-marine-geophysics-methods/05-marine-gravity-magnetics.md) | G |
-| · | [Ocean-Bottom Seismology and OBS Networks](./15-oceanography-marine/02-marine-geophysics-methods/06-obn-ocean-bottom-seismology.md) | D |
-| · | [Marine CSEM and EM for Gas Hydrates](./15-oceanography-marine/02-marine-geophysics-methods/07-marine-csem-em.md) | R |
+| ✓ | [Marine Seismic Reflection: Airguns, Streamers, Processing](./15-oceanography-marine/02-marine-geophysics-methods/01-marine-seismic-reflection.md) | G |
+| ✓ | [Multibeam Bathymetry and Swath Mapping](./15-oceanography-marine/02-marine-geophysics-methods/02-multibeam-bathymetry.md) | A |
+| ✓ | [Side-Scan Sonar and Seafloor Imaging](./15-oceanography-marine/02-marine-geophysics-methods/03-side-scan-sonar.md) | A |
+| ✓ | [Sub-Bottom Profiling and Chirp Systems](./15-oceanography-marine/02-marine-geophysics-methods/04-sub-bottom-profiling.md) | G |
+| ✓ | [Marine Gravity and Magnetic Surveys](./15-oceanography-marine/02-marine-geophysics-methods/05-marine-gravity-magnetics.md) | G |
+| ✓ | [Ocean-Bottom Seismology and OBS Networks](./15-oceanography-marine/02-marine-geophysics-methods/06-obn-ocean-bottom-seismology.md) | D |
+| ✓ | [Marine CSEM and EM for Gas Hydrates](./15-oceanography-marine/02-marine-geophysics-methods/07-marine-csem-em.md) | R |
 
-### [ ] Seafloor Tectonics and Structure (0/4)
+### [x] Seafloor Tectonics and Structure (4/4)
 
 Module index: [`03-seafloor-tectonics/README.md`](./15-oceanography-marine/03-seafloor-tectonics/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Mid-Ocean Ridges, Spreading Centres and Hydrothermal Systems](./15-oceanography-marine/03-seafloor-tectonics/01-mid-ocean-ridges.md) | D |
-| · | [Oceanic Crust Structure and Ophiolites](./15-oceanography-marine/03-seafloor-tectonics/02-oceanic-crust-structure.md) | D |
-| · | [Marine Subduction Zones, Trenches and Accretionary Prisms](./15-oceanography-marine/03-seafloor-tectonics/03-subduction-zones-marine.md) | R |
-| · | [Fracture Zones, Transform Faults and Oceanic Anomalies](./15-oceanography-marine/03-seafloor-tectonics/04-fracture-zones.md) | D |
+| ✓ | [Mid-Ocean Ridges, Spreading Centres and Hydrothermal Systems](./15-oceanography-marine/03-seafloor-tectonics/01-mid-ocean-ridges.md) | D |
+| ✓ | [Oceanic Crust Structure and Ophiolites](./15-oceanography-marine/03-seafloor-tectonics/02-oceanic-crust-structure.md) | D |
+| ✓ | [Marine Subduction Zones, Trenches and Accretionary Prisms](./15-oceanography-marine/03-seafloor-tectonics/03-subduction-zones-marine.md) | R |
+| ✓ | [Fracture Zones, Transform Faults and Oceanic Anomalies](./15-oceanography-marine/03-seafloor-tectonics/04-fracture-zones.md) | D |
 
-### [ ] Seafloor Mapping and Habitat Characterisation (0/3)
+### [x] Seafloor Mapping and Habitat Characterisation (3/3)
 
 Module index: [`04-seafloor-mapping-and-habitats/README.md`](./15-oceanography-marine/04-seafloor-mapping-and-habitats/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Benthic Habitat Mapping and Classification](./15-oceanography-marine/04-seafloor-mapping-and-habitats/01-habitat-mapping.md) | D |
-| · | [Gas Hydrates: Occurrence, Geophysics and Resource Potential](./15-oceanography-marine/04-seafloor-mapping-and-habitats/02-gas-hydrates.md) | R |
-| · | [Marine Minerals and Deep-Sea Mining Geophysics](./15-oceanography-marine/04-seafloor-mapping-and-habitats/03-marine-minerals.md) | D |
+| ✓ | [Benthic Habitat Mapping and Classification](./15-oceanography-marine/04-seafloor-mapping-and-habitats/01-habitat-mapping.md) | D |
+| ✓ | [Gas Hydrates: Occurrence, Geophysics and Resource Potential](./15-oceanography-marine/04-seafloor-mapping-and-habitats/02-gas-hydrates.md) | R |
+| ✓ | [Marine Minerals and Deep-Sea Mining Geophysics](./15-oceanography-marine/04-seafloor-mapping-and-habitats/03-marine-minerals.md) | D |
 
-### [ ] Coastal and Estuarine Geophysics (0/3)
+### [x] Coastal and Estuarine Geophysics (3/3)
 
 Module index: [`05-coastal-and-estuarine/README.md`](./15-oceanography-marine/05-coastal-and-estuarine/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Coastal Processes, Sediment Transport and Shoreline Change](./15-oceanography-marine/05-coastal-and-estuarine/01-coastal-processes.md) | A |
-| · | [Estuarine and Delta Geophysics](./15-oceanography-marine/05-coastal-and-estuarine/02-estuarine-geophysics.md) | D |
-| · | [Coastal Aquifers and Submarine Groundwater Discharge](./15-oceanography-marine/05-coastal-and-estuarine/03-coastal-aquifers-marine.md) | D |
+| ✓ | [Coastal Processes, Sediment Transport and Shoreline Change](./15-oceanography-marine/05-coastal-and-estuarine/01-coastal-processes.md) | A |
+| ✓ | [Estuarine and Delta Geophysics](./15-oceanography-marine/05-coastal-and-estuarine/02-estuarine-geophysics.md) | D |
+| ✓ | [Coastal Aquifers and Submarine Groundwater Discharge](./15-oceanography-marine/05-coastal-and-estuarine/03-coastal-aquifers-marine.md) | D |
 
-### [ ] Sea Level Change and Marine Records (0/3)
+### [x] Sea Level Change and Marine Records (3/3)
 
 Module index: [`06-sea-level-change-marine/README.md`](./15-oceanography-marine/06-sea-level-change-marine/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Palaeo Sea Level Reconstruction from Marine Records](./15-oceanography-marine/06-sea-level-change-marine/01-paleo-sea-level.md) | R |
-| · | [Observing Modern Sea Level Rise: Altimetry, Tide Gauges, GRACE](./15-oceanography-marine/06-sea-level-change-marine/02-sea-level-rise-observation.md) | D |
-| · | [Ice Sheet Marine Margins and Stability](./15-oceanography-marine/06-sea-level-change-marine/03-ice-sheet-marine-margins.md) | R |
+| ✓ | [Palaeo Sea Level Reconstruction from Marine Records](./15-oceanography-marine/06-sea-level-change-marine/01-paleo-sea-level.md) | R |
+| ✓ | [Observing Modern Sea Level Rise: Altimetry, Tide Gauges, GRACE](./15-oceanography-marine/06-sea-level-change-marine/02-sea-level-rise-observation.md) | D |
+| ✓ | [Ice Sheet Marine Margins and Stability](./15-oceanography-marine/06-sea-level-change-marine/03-ice-sheet-marine-margins.md) | R |
 
 ## Atmospheric Physics, Meteorology and Climate Science
 
-`16-atmosphere-climate` — **9 modules**, **0/43 lessons written**
+`16-atmosphere-climate` — **9 modules**, **43/43 lessons written**
 
 [Folder index](./16-atmosphere-climate/README.md)
 
-### [ ] Atmospheric Structure and Thermodynamics (0/5)
+### [x] Atmospheric Structure and Thermodynamics (5/5)
 
 Module index: [`01-atmospheric-structure-and-thermodynamics/README.md`](./16-atmosphere-climate/01-atmospheric-structure-and-thermodynamics/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Atmospheric Composition and Vertical Structure](./16-atmosphere-climate/01-atmospheric-structure-and-thermodynamics/01-atmospheric-composition.md) | B |
-| · | [Hydrostatic Balance and Pressure-Height Relations](./16-atmosphere-climate/01-atmospheric-structure-and-thermodynamics/02-hydrostatic-balance.md) | I |
-| · | [Adiabatic Processes, Lapse Rates and Stability](./16-atmosphere-climate/01-atmospheric-structure-and-thermodynamics/03-thermodynamic-processes.md) | A |
-| · | [Moisture, Humidity Variables and Cloud Formation](./16-atmosphere-climate/01-atmospheric-structure-and-thermodynamics/04-moisture-and-clouds.md) | A |
-| · | [Atmospheric Dynamics: Coriolis, Geostrophic and Thermal Wind](./16-atmosphere-climate/01-atmospheric-structure-and-thermodynamics/05-atmospheric-dynamics-basics.md) | A |
+| ✓ | [Atmospheric Composition and Vertical Structure](./16-atmosphere-climate/01-atmospheric-structure-and-thermodynamics/01-atmospheric-composition.md) | B |
+| ✓ | [Hydrostatic Balance and Pressure-Height Relations](./16-atmosphere-climate/01-atmospheric-structure-and-thermodynamics/02-hydrostatic-balance.md) | I |
+| ✓ | [Adiabatic Processes, Lapse Rates and Stability](./16-atmosphere-climate/01-atmospheric-structure-and-thermodynamics/03-thermodynamic-processes.md) | A |
+| ✓ | [Moisture, Humidity Variables and Cloud Formation](./16-atmosphere-climate/01-atmospheric-structure-and-thermodynamics/04-moisture-and-clouds.md) | A |
+| ✓ | [Atmospheric Dynamics: Coriolis, Geostrophic and Thermal Wind](./16-atmosphere-climate/01-atmospheric-structure-and-thermodynamics/05-atmospheric-dynamics-basics.md) | A |
 
-### [ ] Radiation and Energy Balance (0/6)
+### [x] Radiation and Energy Balance (6/6)
 
 Module index: [`02-radiation-and-energy-balance/README.md`](./16-atmosphere-climate/02-radiation-and-energy-balance/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Solar and Terrestrial Radiation, Blackbody Laws](./16-atmosphere-climate/02-radiation-and-energy-balance/01-solar-and-terrestrial-radiation.md) | I |
-| · | [Radiative Transfer in the Atmosphere](./16-atmosphere-climate/02-radiation-and-energy-balance/02-radiative-transfer-atmosphere.md) | G |
-| · | [The Greenhouse Effect: Physics, Not Rhetoric](./16-atmosphere-climate/02-radiation-and-energy-balance/03-greenhouse-effect.md) | I |
-| · | [Earth Energy Balance and Global Mean Temperature](./16-atmosphere-climate/02-radiation-and-energy-balance/04-earth-energy-balance.md) | A |
-| · | [Zero- and One-Dimensional Energy Balance Models](./16-atmosphere-climate/02-radiation-and-energy-balance/05-energy-balance-models.md) | G |
-| · | [Aerosols, Clouds and Their Radiative Effects](./16-atmosphere-climate/02-radiation-and-energy-balance/06-aerosols-and-clouds-radiation.md) | D |
+| ✓ | [Solar and Terrestrial Radiation, Blackbody Laws](./16-atmosphere-climate/02-radiation-and-energy-balance/01-solar-and-terrestrial-radiation.md) | I |
+| ✓ | [Radiative Transfer in the Atmosphere](./16-atmosphere-climate/02-radiation-and-energy-balance/02-radiative-transfer-atmosphere.md) | G |
+| ✓ | [The Greenhouse Effect: Physics, Not Rhetoric](./16-atmosphere-climate/02-radiation-and-energy-balance/03-greenhouse-effect.md) | I |
+| ✓ | [Earth Energy Balance and Global Mean Temperature](./16-atmosphere-climate/02-radiation-and-energy-balance/04-earth-energy-balance.md) | A |
+| ✓ | [Zero- and One-Dimensional Energy Balance Models](./16-atmosphere-climate/02-radiation-and-energy-balance/05-energy-balance-models.md) | G |
+| ✓ | [Aerosols, Clouds and Their Radiative Effects](./16-atmosphere-climate/02-radiation-and-energy-balance/06-aerosols-and-clouds-radiation.md) | D |
 
-### [ ] Atmospheric Circulation (0/4)
+### [x] Atmospheric Circulation (4/4)
 
 Module index: [`03-atmospheric-circulation/README.md`](./16-atmosphere-climate/03-atmospheric-circulation/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Global Circulation: Hadley, Ferrel, Polar Cells, Jets](./16-atmosphere-climate/03-atmospheric-circulation/01-global-circulation.md) | A |
-| · | [Monsoons, Regional Circulation and Teleconnections](./16-atmosphere-climate/03-atmospheric-circulation/02-monsoons-and-regional.md) | D |
-| · | [Cyclones, Fronts and Severe Weather Dynamics](./16-atmosphere-climate/03-atmospheric-circulation/03-storms-and-fronts.md) | D |
-| · | [Atmospheric Waves: Rossby, Kelvin, Gravity Waves](./16-atmosphere-climate/03-atmospheric-circulation/04-atmospheric-waves.md) | R |
+| ✓ | [Global Circulation: Hadley, Ferrel, Polar Cells, Jets](./16-atmosphere-climate/03-atmospheric-circulation/01-global-circulation.md) | A |
+| ✓ | [Monsoons, Regional Circulation and Teleconnections](./16-atmosphere-climate/03-atmospheric-circulation/02-monsoons-and-regional.md) | D |
+| ✓ | [Cyclones, Fronts and Severe Weather Dynamics](./16-atmosphere-climate/03-atmospheric-circulation/03-storms-and-fronts.md) | D |
+| ✓ | [Atmospheric Waves: Rossby, Kelvin, Gravity Waves](./16-atmosphere-climate/03-atmospheric-circulation/04-atmospheric-waves.md) | R |
 
-### [ ] The Climate System and Feedbacks (0/5)
+### [x] The Climate System and Feedbacks (5/5)
 
 Module index: [`04-climate-system-and-feedbacks/README.md`](./16-atmosphere-climate/04-climate-system-and-feedbacks/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Components of the Climate System and Their Timescales](./16-atmosphere-climate/04-climate-system-and-feedbacks/01-climate-system-components.md) | B |
-| · | [Feedbacks: Water Vapour, Ice-Albedo, Cloud, Carbon](./16-atmosphere-climate/04-climate-system-and-feedbacks/02-climate-feedbacks.md) | D |
-| · | [Climate Sensitivity: Definitions and Estimation](./16-atmosphere-climate/04-climate-system-and-feedbacks/03-climate-sensitivity.md) | R |
-| · | [Natural Variability: ENSO, NAO, PDO, Solar and Volcanic](./16-atmosphere-climate/04-climate-system-and-feedbacks/04-natural-variability.md) | D |
-| · | [The Carbon Cycle: Reservoirs, Fluxes and Perturbations](./16-atmosphere-climate/04-climate-system-and-feedbacks/05-carbon-cycle.md) | D |
+| ✓ | [Components of the Climate System and Their Timescales](./16-atmosphere-climate/04-climate-system-and-feedbacks/01-climate-system-components.md) | B |
+| ✓ | [Feedbacks: Water Vapour, Ice-Albedo, Cloud, Carbon](./16-atmosphere-climate/04-climate-system-and-feedbacks/02-climate-feedbacks.md) | D |
+| ✓ | [Climate Sensitivity: Definitions and Estimation](./16-atmosphere-climate/04-climate-system-and-feedbacks/03-climate-sensitivity.md) | R |
+| ✓ | [Natural Variability: ENSO, NAO, PDO, Solar and Volcanic](./16-atmosphere-climate/04-climate-system-and-feedbacks/04-natural-variability.md) | D |
+| ✓ | [The Carbon Cycle: Reservoirs, Fluxes and Perturbations](./16-atmosphere-climate/04-climate-system-and-feedbacks/05-carbon-cycle.md) | D |
 
-### [ ] Climate Models and Simulation (0/6)
+### [x] Climate Models and Simulation (6/6)
 
 Module index: [`05-climate-models/README.md`](./16-atmosphere-climate/05-climate-models/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Model Hierarchy: EBMs, EMICs, GCMs, ESMs](./16-atmosphere-climate/05-climate-models/01-climate-model-hierarchy.md) | G |
-| · | [GCMs, Resolution and Parameterisation](./16-atmosphere-climate/05-climate-models/02-gcms-and-parameterisation.md) | R |
-| · | [Model Evaluation, Skill and Benchmarking](./16-atmosphere-climate/05-climate-models/03-model-evaluation.md) | R |
-| · | [Downscaling: Statistical and Dynamical](./16-atmosphere-climate/05-climate-models/04-downscaling.md) | R |
-| · | [CMIP, Model Intercomparison and Ensemble Design](./16-atmosphere-climate/05-climate-models/05-coupled-model-intercomparison.md) | R |
-| · | [Emulators and Surrogate Models for Climate](./16-atmosphere-climate/05-climate-models/06-emulation-and-surrogates.md) | R |
+| ✓ | [Model Hierarchy: EBMs, EMICs, GCMs, ESMs](./16-atmosphere-climate/05-climate-models/01-climate-model-hierarchy.md) | G |
+| ✓ | [GCMs, Resolution and Parameterisation](./16-atmosphere-climate/05-climate-models/02-gcms-and-parameterisation.md) | R |
+| ✓ | [Model Evaluation, Skill and Benchmarking](./16-atmosphere-climate/05-climate-models/03-model-evaluation.md) | R |
+| ✓ | [Downscaling: Statistical and Dynamical](./16-atmosphere-climate/05-climate-models/04-downscaling.md) | R |
+| ✓ | [CMIP, Model Intercomparison and Ensemble Design](./16-atmosphere-climate/05-climate-models/05-coupled-model-intercomparison.md) | R |
+| ✓ | [Emulators and Surrogate Models for Climate](./16-atmosphere-climate/05-climate-models/06-emulation-and-surrogates.md) | R |
 
-### [ ] Palaeoclimate (0/4)
+### [x] Palaeoclimate (4/4)
 
 Module index: [`06-palaeoclimate/README.md`](./16-atmosphere-climate/06-palaeoclimate/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Palaeoclimate Proxies: Ice Cores, Sediments, Isotopes](./16-atmosphere-climate/06-palaeoclimate/01-paleoclimate-proxies.md) | D |
-| · | [Model-Data Comparison in Palaeoclimate](./16-atmosphere-climate/06-palaeoclimate/02-paleoclimate-model-data.md) | R |
-| · | [Abrupt Climate Change and Tipping Elements](./16-atmosphere-climate/06-palaeoclimate/03-abrupt-climate-change.md) | R |
-| · | [Pleistocene Glacial Cycles and Orbital Forcing](./16-atmosphere-climate/06-palaeoclimate/04-pleistocene-cycles.md) | D |
+| ✓ | [Palaeoclimate Proxies: Ice Cores, Sediments, Isotopes](./16-atmosphere-climate/06-palaeoclimate/01-paleoclimate-proxies.md) | D |
+| ✓ | [Model-Data Comparison in Palaeoclimate](./16-atmosphere-climate/06-palaeoclimate/02-paleoclimate-model-data.md) | R |
+| ✓ | [Abrupt Climate Change and Tipping Elements](./16-atmosphere-climate/06-palaeoclimate/03-abrupt-climate-change.md) | R |
+| ✓ | [Pleistocene Glacial Cycles and Orbital Forcing](./16-atmosphere-climate/06-palaeoclimate/04-pleistocene-cycles.md) | D |
 
-### [ ] Extremes, Impacts and Attribution (0/4)
+### [x] Extremes, Impacts and Attribution (4/4)
 
 Module index: [`07-climate-extremes-and-attribution/README.md`](./16-atmosphere-climate/07-climate-extremes-and-attribution/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Extreme Events: Statistics and Physical Drivers](./16-atmosphere-climate/07-climate-extremes-and-attribution/01-climate-extremes.md) | D |
-| · | [Detection and Attribution of Climate Change](./16-atmosphere-climate/07-climate-extremes-and-attribution/02-detection-attribution.md) | R |
-| · | [Event Attribution Methodology and Its Limits](./16-atmosphere-climate/07-climate-extremes-and-attribution/03-event-attribution.md) | R |
-| · | [Impacts, Vulnerability and Risk Assessment](./16-atmosphere-climate/07-climate-extremes-and-attribution/04-impacts-and-risk.md) | D |
+| ✓ | [Extreme Events: Statistics and Physical Drivers](./16-atmosphere-climate/07-climate-extremes-and-attribution/01-climate-extremes.md) | D |
+| ✓ | [Detection and Attribution of Climate Change](./16-atmosphere-climate/07-climate-extremes-and-attribution/02-detection-attribution.md) | R |
+| ✓ | [Event Attribution Methodology and Its Limits](./16-atmosphere-climate/07-climate-extremes-and-attribution/03-event-attribution.md) | R |
+| ✓ | [Impacts, Vulnerability and Risk Assessment](./16-atmosphere-climate/07-climate-extremes-and-attribution/04-impacts-and-risk.md) | D |
 
-### [ ] Climate Observations and Data Products (0/4)
+### [x] Climate Observations and Data Products (4/4)
 
 Module index: [`08-climate-observation-and-data/README.md`](./16-atmosphere-climate/08-climate-observation-and-data/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Surface, Radiosonde and Satellite Climate Records](./16-atmosphere-climate/08-climate-observation-and-data/01-surface-and-satellite-records.md) | A |
-| · | [Reanalysis: ERA5, MERRA, JRA and Their Caveats](./16-atmosphere-climate/08-climate-observation-and-data/02-reanalysis-products.md) | D |
-| · | [Homogenisation, Bias Adjustment and Uncertainty](./16-atmosphere-climate/08-climate-observation-and-data/03-climate-data-homogenisation.md) | R |
-| · | [Analysing Climate Data in Python: xarray and CDO](./16-atmosphere-climate/08-climate-observation-and-data/04-climate-data-analysis-python.md) | G |
+| ✓ | [Surface, Radiosonde and Satellite Climate Records](./16-atmosphere-climate/08-climate-observation-and-data/01-surface-and-satellite-records.md) | A |
+| ✓ | [Reanalysis: ERA5, MERRA, JRA and Their Caveats](./16-atmosphere-climate/08-climate-observation-and-data/02-reanalysis-products.md) | D |
+| ✓ | [Homogenisation, Bias Adjustment and Uncertainty](./16-atmosphere-climate/08-climate-observation-and-data/03-climate-data-homogenisation.md) | R |
+| ✓ | [Analysing Climate Data in Python: xarray and CDO](./16-atmosphere-climate/08-climate-observation-and-data/04-climate-data-analysis-python.md) | G |
 
-### [ ] Geophysics Applied to Climate Science (0/5)
+### [x] Geophysics Applied to Climate Science (5/5)
 
 Module index: [`09-geophysics-and-climate/README.md`](./16-atmosphere-climate/09-geophysics-and-climate/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Seismic and Geodetic Monitoring of Cryosphere Change](./16-atmosphere-climate/09-geophysics-and-climate/01-seismic-monitoring-climate.md) | R |
-| · | [Geodesy for Sea Level, Ice Mass and Water Storage](./16-atmosphere-climate/09-geophysics-and-climate/02-geodesy-climate.md) | R |
-| · | [Borehole Temperature Records of Past Climate](./16-atmosphere-climate/09-geophysics-and-climate/03-geothermal-climate-records.md) | D |
-| · | [Geophysics for Carbon Capture and Storage Monitoring](./16-atmosphere-climate/09-geophysics-and-climate/04-geophysics-carbon-storage.md) | R |
-| · | [Climate-Geohazard Interactions (Sea Level, Permafrost, Slopes)](./16-atmosphere-climate/09-geophysics-and-climate/05-climate-geohazards.md) | R |
+| ✓ | [Seismic and Geodetic Monitoring of Cryosphere Change](./16-atmosphere-climate/09-geophysics-and-climate/01-seismic-monitoring-climate.md) | R |
+| ✓ | [Geodesy for Sea Level, Ice Mass and Water Storage](./16-atmosphere-climate/09-geophysics-and-climate/02-geodesy-climate.md) | R |
+| ✓ | [Borehole Temperature Records of Past Climate](./16-atmosphere-climate/09-geophysics-and-climate/03-geothermal-climate-records.md) | D |
+| ✓ | [Geophysics for Carbon Capture and Storage Monitoring](./16-atmosphere-climate/09-geophysics-and-climate/04-geophysics-carbon-storage.md) | R |
+| ✓ | [Climate-Geohazard Interactions (Sea Level, Permafrost, Slopes)](./16-atmosphere-climate/09-geophysics-and-climate/05-climate-geohazards.md) | R |
 
 ## Remote Sensing, GIS and Satellite Geophysics
 
-`17-remote-sensing-gis` — **8 modules**, **0/41 lessons written**
+`17-remote-sensing-gis` — **8 modules**, **41/41 lessons written**
 
 [Folder index](./17-remote-sensing-gis/README.md)
 
-### [ ] Remote Sensing Physics (0/4)
+### [x] Remote Sensing Physics (4/4)
 
 Module index: [`01-remote-sensing-physics/README.md`](./17-remote-sensing-gis/01-remote-sensing-physics/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [The Electromagnetic Spectrum and Sensing Windows](./17-remote-sensing-gis/01-remote-sensing-physics/01-em-spectrum-remote-sensing.md) | B |
-| · | [Reflectance, Emissivity and Spectral Signatures](./17-remote-sensing-gis/01-remote-sensing-physics/02-reflectance-and-emissivity.md) | A |
-| · | [Atmospheric Attenuation, Scattering and Correction](./17-remote-sensing-gis/01-remote-sensing-physics/03-atmospheric-effects.md) | G |
-| · | [Spatial, Spectral, Temporal and Radiometric Resolution](./17-remote-sensing-gis/01-remote-sensing-physics/04-resolution-concepts.md) | I |
+| ✓ | [The Electromagnetic Spectrum and Sensing Windows](./17-remote-sensing-gis/01-remote-sensing-physics/01-em-spectrum-remote-sensing.md) | B |
+| ✓ | [Reflectance, Emissivity and Spectral Signatures](./17-remote-sensing-gis/01-remote-sensing-physics/02-reflectance-and-emissivity.md) | A |
+| ✓ | [Atmospheric Attenuation, Scattering and Correction](./17-remote-sensing-gis/01-remote-sensing-physics/03-atmospheric-effects.md) | G |
+| ✓ | [Spatial, Spectral, Temporal and Radiometric Resolution](./17-remote-sensing-gis/01-remote-sensing-physics/04-resolution-concepts.md) | I |
 
-### [ ] Optical and Thermal Remote Sensing (0/6)
+### [x] Optical and Thermal Remote Sensing (6/6)
 
 Module index: [`02-optical-and-thermal-remote-sensing/README.md`](./17-remote-sensing-gis/02-optical-and-thermal-remote-sensing/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Multispectral Imaging, Band Ratios and Indices](./17-remote-sensing-gis/02-optical-and-thermal-remote-sensing/01-multispectral-imaging.md) | A |
-| · | [Hyperspectral Sensing and Spectral Unmixing](./17-remote-sensing-gis/02-optical-and-thermal-remote-sensing/02-hyperspectral.md) | D |
-| · | [Thermal Infrared: Land Surface Temperature and Heat Flow](./17-remote-sensing-gis/02-optical-and-thermal-remote-sensing/03-thermal-infrared.md) | G |
-| · | [Land Cover Classification: Supervised and Unsupervised](./17-remote-sensing-gis/02-optical-and-thermal-remote-sensing/04-land-cover-classification.md) | A |
-| · | [Change Detection and Time-Series Analysis](./17-remote-sensing-gis/02-optical-and-thermal-remote-sensing/05-change-detection.md) | G |
-| · | [Vegetation Indices, Geobotany and Mineral Alteration Mapping](./17-remote-sensing-gis/02-optical-and-thermal-remote-sensing/06-vegetation-and-geobotany.md) | D |
+| ✓ | [Multispectral Imaging, Band Ratios and Indices](./17-remote-sensing-gis/02-optical-and-thermal-remote-sensing/01-multispectral-imaging.md) | A |
+| ✓ | [Hyperspectral Sensing and Spectral Unmixing](./17-remote-sensing-gis/02-optical-and-thermal-remote-sensing/02-hyperspectral.md) | D |
+| ✓ | [Thermal Infrared: Land Surface Temperature and Heat Flow](./17-remote-sensing-gis/02-optical-and-thermal-remote-sensing/03-thermal-infrared.md) | G |
+| ✓ | [Land Cover Classification: Supervised and Unsupervised](./17-remote-sensing-gis/02-optical-and-thermal-remote-sensing/04-land-cover-classification.md) | A |
+| ✓ | [Change Detection and Time-Series Analysis](./17-remote-sensing-gis/02-optical-and-thermal-remote-sensing/05-change-detection.md) | G |
+| ✓ | [Vegetation Indices, Geobotany and Mineral Alteration Mapping](./17-remote-sensing-gis/02-optical-and-thermal-remote-sensing/06-vegetation-and-geobotany.md) | D |
 
-### [ ] Radar Remote Sensing (0/7)
+### [x] Radar Remote Sensing (7/7)
 
 Module index: [`03-radar-remote-sensing/README.md`](./17-remote-sensing-gis/03-radar-remote-sensing/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [SAR Principles: Geometry, Polarisation, Backscatter](./17-remote-sensing-gis/03-radar-remote-sensing/01-sar-principles.md) | G |
-| · | [InSAR: Interferometric Phase and Deformation Measurement](./17-remote-sensing-gis/03-radar-remote-sensing/02-insar.md) | R |
-| · | [InSAR Time Series: PS-InSAR and SBAS](./17-remote-sensing-gis/03-radar-remote-sensing/03-insar-time-series.md) | R |
-| · | [Atmospheric and Orbital Error Correction in InSAR](./17-remote-sensing-gis/03-radar-remote-sensing/04-insar-atmospheric-correction.md) | R |
-| · | [InSAR for Earthquakes, Volcanoes, Subsidence and Landslides](./17-remote-sensing-gis/03-radar-remote-sensing/05-insar-applications.md) | R |
-| · | [SAR Polarimetry and Polarimetric Decomposition](./17-remote-sensing-gis/03-radar-remote-sensing/06-polarimetry.md) | R |
-| · | [Radar Altimetry and Sea/Ice Surface Height](./17-remote-sensing-gis/03-radar-remote-sensing/07-radar-altimetry.md) | D |
+| ✓ | [SAR Principles: Geometry, Polarisation, Backscatter](./17-remote-sensing-gis/03-radar-remote-sensing/01-sar-principles.md) | G |
+| ✓ | [InSAR: Interferometric Phase and Deformation Measurement](./17-remote-sensing-gis/03-radar-remote-sensing/02-insar.md) | R |
+| ✓ | [InSAR Time Series: PS-InSAR and SBAS](./17-remote-sensing-gis/03-radar-remote-sensing/03-insar-time-series.md) | R |
+| ✓ | [Atmospheric and Orbital Error Correction in InSAR](./17-remote-sensing-gis/03-radar-remote-sensing/04-insar-atmospheric-correction.md) | R |
+| ✓ | [InSAR for Earthquakes, Volcanoes, Subsidence and Landslides](./17-remote-sensing-gis/03-radar-remote-sensing/05-insar-applications.md) | R |
+| ✓ | [SAR Polarimetry and Polarimetric Decomposition](./17-remote-sensing-gis/03-radar-remote-sensing/06-polarimetry.md) | R |
+| ✓ | [Radar Altimetry and Sea/Ice Surface Height](./17-remote-sensing-gis/03-radar-remote-sensing/07-radar-altimetry.md) | D |
 
-### [ ] Satellite Geodesy Techniques (0/4)
+### [x] Satellite Geodesy Techniques (4/4)
 
 Module index: [`04-satellite-geodesy-techniques/README.md`](./17-remote-sensing-gis/04-satellite-geodesy-techniques/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [GNSS Principles and Signal Structure](./17-remote-sensing-gis/04-satellite-geodesy-techniques/01-gnss-principles.md) | A |
-| · | [GNSS Processing: Networks, PPP and Error Sources](./17-remote-sensing-gis/04-satellite-geodesy-techniques/02-gnss-processing.md) | G |
-| · | [Satellite Gravimetry as an Observation System](./17-remote-sensing-gis/04-satellite-geodesy-techniques/03-satellite-gravimetry-observation.md) | G |
-| · | [Satellite Laser Ranging, DORIS and VLBI](./17-remote-sensing-gis/04-satellite-geodesy-techniques/04-satellite-laser-ranging.md) | D |
+| ✓ | [GNSS Principles and Signal Structure](./17-remote-sensing-gis/04-satellite-geodesy-techniques/01-gnss-principles.md) | A |
+| ✓ | [GNSS Processing: Networks, PPP and Error Sources](./17-remote-sensing-gis/04-satellite-geodesy-techniques/02-gnss-processing.md) | G |
+| ✓ | [Satellite Gravimetry as an Observation System](./17-remote-sensing-gis/04-satellite-geodesy-techniques/03-satellite-gravimetry-observation.md) | G |
+| ✓ | [Satellite Laser Ranging, DORIS and VLBI](./17-remote-sensing-gis/04-satellite-geodesy-techniques/04-satellite-laser-ranging.md) | D |
 
-### [ ] Geographic Information Systems (0/6)
+### [x] Geographic Information Systems (6/6)
 
 Module index: [`05-gis-fundamentals/README.md`](./17-remote-sensing-gis/05-gis-fundamentals/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [GIS Concepts: Layers, Attributes and Topology](./17-remote-sensing-gis/05-gis-fundamentals/01-gis-concepts.md) | B |
-| · | [Vector Data Model and Attribute Operations](./17-remote-sensing-gis/05-gis-fundamentals/02-vector-data-model.md) | I |
-| · | [Raster Data Model, Resolution and Resampling](./17-remote-sensing-gis/05-gis-fundamentals/03-raster-data-model.md) | I |
-| · | [Map Algebra and Raster Analysis](./17-remote-sensing-gis/05-gis-fundamentals/04-map-algebra.md) | A |
-| · | [Spatial Interpolation: IDW, Kriging, Splines](./17-remote-sensing-gis/05-gis-fundamentals/05-spatial-interpolation-gis.md) | G |
-| · | [Reproducible Geospatial Workflows (QGIS, Python)](./17-remote-sensing-gis/05-gis-fundamentals/06-geospatial-workflows.md) | G |
+| ✓ | [GIS Concepts: Layers, Attributes and Topology](./17-remote-sensing-gis/05-gis-fundamentals/01-gis-concepts.md) | B |
+| ✓ | [Vector Data Model and Attribute Operations](./17-remote-sensing-gis/05-gis-fundamentals/02-vector-data-model.md) | I |
+| ✓ | [Raster Data Model, Resolution and Resampling](./17-remote-sensing-gis/05-gis-fundamentals/03-raster-data-model.md) | I |
+| ✓ | [Map Algebra and Raster Analysis](./17-remote-sensing-gis/05-gis-fundamentals/04-map-algebra.md) | A |
+| ✓ | [Spatial Interpolation: IDW, Kriging, Splines](./17-remote-sensing-gis/05-gis-fundamentals/05-spatial-interpolation-gis.md) | G |
+| ✓ | [Reproducible Geospatial Workflows (QGIS, Python)](./17-remote-sensing-gis/05-gis-fundamentals/06-geospatial-workflows.md) | G |
 
-### [ ] Advanced Geospatial Analysis (0/5)
+### [x] Advanced Geospatial Analysis (5/5)
 
 Module index: [`06-geospatial-analysis-advanced/README.md`](./17-remote-sensing-gis/06-geospatial-analysis-advanced/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Terrain Analysis: Slope, Aspect, Curvature, Flow Accumulation](./17-remote-sensing-gis/06-geospatial-analysis-advanced/01-terrain-analysis.md) | G |
-| · | [Hydrological and Watershed Analysis in GIS](./17-remote-sensing-gis/06-geospatial-analysis-advanced/02-hydrological-gis.md) | D |
-| · | [Network Analysis and Least-Cost Paths](./17-remote-sensing-gis/06-geospatial-analysis-advanced/03-network-analysis.md) | A |
-| · | [Spatial Statistics, Autocorrelation and Hotspot Analysis](./17-remote-sensing-gis/06-geospatial-analysis-advanced/04-spatial-statistics.md) | D |
-| · | [Multi-Criteria Decision Analysis for Suitability Mapping](./17-remote-sensing-gis/06-geospatial-analysis-advanced/05-multicriteria-decision.md) | D |
+| ✓ | [Terrain Analysis: Slope, Aspect, Curvature, Flow Accumulation](./17-remote-sensing-gis/06-geospatial-analysis-advanced/01-terrain-analysis.md) | G |
+| ✓ | [Hydrological and Watershed Analysis in GIS](./17-remote-sensing-gis/06-geospatial-analysis-advanced/02-hydrological-gis.md) | D |
+| ✓ | [Network Analysis and Least-Cost Paths](./17-remote-sensing-gis/06-geospatial-analysis-advanced/03-network-analysis.md) | A |
+| ✓ | [Spatial Statistics, Autocorrelation and Hotspot Analysis](./17-remote-sensing-gis/06-geospatial-analysis-advanced/04-spatial-statistics.md) | D |
+| ✓ | [Multi-Criteria Decision Analysis for Suitability Mapping](./17-remote-sensing-gis/06-geospatial-analysis-advanced/05-multicriteria-decision.md) | D |
 
-### [ ] Earth Observation Data and Platforms (0/4)
+### [x] Earth Observation Data and Platforms (4/4)
 
 Module index: [`07-earth-observation-data/README.md`](./17-remote-sensing-gis/07-earth-observation-data/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Landsat, Sentinel and MODIS Data Products](./17-remote-sensing-gis/07-earth-observation-data/01-landsat-sentinel.md) | I |
-| · | [Cloud Platforms: GEE, Copernicus, NASA Earthdata](./17-remote-sensing-gis/07-earth-observation-data/02-cloud-platforms.md) | A |
-| · | [Data Discovery, Access and Licensing](./17-remote-sensing-gis/07-earth-observation-data/03-data-discovery.md) | I |
-| · | [Satellite Time Series and Trend Analysis](./17-remote-sensing-gis/07-earth-observation-data/04-time-series-satellite.md) | D |
+| ✓ | [Landsat, Sentinel and MODIS Data Products](./17-remote-sensing-gis/07-earth-observation-data/01-landsat-sentinel.md) | I |
+| ✓ | [Cloud Platforms: GEE, Copernicus, NASA Earthdata](./17-remote-sensing-gis/07-earth-observation-data/02-cloud-platforms.md) | A |
+| ✓ | [Data Discovery, Access and Licensing](./17-remote-sensing-gis/07-earth-observation-data/03-data-discovery.md) | I |
+| ✓ | [Satellite Time Series and Trend Analysis](./17-remote-sensing-gis/07-earth-observation-data/04-time-series-satellite.md) | D |
 
-### [ ] Remote Sensing Applications in Geophysics (0/5)
+### [x] Remote Sensing Applications in Geophysics (5/5)
 
 Module index: [`08-remote-sensing-applications-geophysics/README.md`](./17-remote-sensing-gis/08-remote-sensing-applications-geophysics/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Mineral and Alteration Mapping from Space](./17-remote-sensing-gis/08-remote-sensing-applications-geophysics/01-mineral-mapping-rs.md) | D |
-| · | [Thermal Remote Sensing for Geothermal Systems](./17-remote-sensing-gis/08-remote-sensing-applications-geophysics/02-geothermal-rs.md) | D |
-| · | [Soil Moisture Remote Sensing and Its Validation](./17-remote-sensing-gis/08-remote-sensing-applications-geophysics/03-soil-moisture-rs.md) | D |
-| · | [Cryosphere Remote Sensing: Ice, Snow and Permafrost](./17-remote-sensing-gis/08-remote-sensing-applications-geophysics/04-cryosphere-rs.md) | R |
-| · | [Remote Sensing for Disaster Response](./17-remote-sensing-gis/08-remote-sensing-applications-geophysics/05-disaster-response-rs.md) | D |
+| ✓ | [Mineral and Alteration Mapping from Space](./17-remote-sensing-gis/08-remote-sensing-applications-geophysics/01-mineral-mapping-rs.md) | D |
+| ✓ | [Thermal Remote Sensing for Geothermal Systems](./17-remote-sensing-gis/08-remote-sensing-applications-geophysics/02-geothermal-rs.md) | D |
+| ✓ | [Soil Moisture Remote Sensing and Its Validation](./17-remote-sensing-gis/08-remote-sensing-applications-geophysics/03-soil-moisture-rs.md) | D |
+| ✓ | [Cryosphere Remote Sensing: Ice, Snow and Permafrost](./17-remote-sensing-gis/08-remote-sensing-applications-geophysics/04-cryosphere-rs.md) | R |
+| ✓ | [Remote Sensing for Disaster Response](./17-remote-sensing-gis/08-remote-sensing-applications-geophysics/05-disaster-response-rs.md) | D |
 
 ## Inverse Problems, Optimization and Uncertainty Quantification
 
