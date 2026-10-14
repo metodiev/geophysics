@@ -11,10 +11,10 @@ Legend: **B** beginner · **I** intermediate · **A** advanced · **G** graduate
 | Folders | 27 |
 | Modules | 216 |
 | Lessons planned | 1146 |
-| Lessons written | 377 |
-| Lessons with valid frontmatter | 377 |
-| Exercise/solution companions written | 708 / 2190 |
-| Completion | 32.9% |
+| Lessons written | 456 |
+| Lessons with valid frontmatter | 456 |
+| Exercise/solution companions written | 866 / 2190 |
+| Completion | 39.8% |
 
 > Companion files are the conventional `exercises/<lesson>-exercises.md` and `<lesson>-solutions.md` pairs. Lessons in `00-orientation` and `26-reference-library` are process material and reference pages, so they carry no companions by design.
 
@@ -36,8 +36,8 @@ Legend: **B** beginner · **I** intermediate · **A** advanced · **G** graduate
 - [x] [Physics for Geophysics](./02-physics/README.md) — `02-physics` · stages: beginner->graduate
 - [x] [Scientific Computing and Python](./03-scientific-computing/README.md) — `03-scientific-computing` · stages: beginner->graduate
 - [x] [Earth Science, Geology and Planetary Context](./04-earth-science-geology/README.md) — `04-earth-science-geology` · stages: beginner->advanced
-- [ ] [Core Geophysics: Principles and Methods](./05-core-geophysics/README.md) — `05-core-geophysics` · stages: intermediate->graduate
-- [ ] [Seismology](./06-seismology/README.md) — `06-seismology` · stages: intermediate->research
+- [x] [Core Geophysics: Principles and Methods](./05-core-geophysics/README.md) — `05-core-geophysics` · stages: intermediate->graduate
+- [x] [Seismology](./06-seismology/README.md) — `06-seismology` · stages: intermediate->research
 - [ ] [Gravity, Geodesy and the Shape of the Earth](./07-gravity-geodesy/README.md) — `07-gravity-geodesy` · stages: intermediate->research
 - [ ] [Geomagnetism and Electromagnetic Fields](./08-geomagnetism-electromagnetism/README.md) — `08-geomagnetism-electromagnetism` · stages: intermediate->research
 - [ ] [Electrical and Electromagnetic Methods](./09-electrical-em-methods/README.md) — `09-electrical-em-methods` · stages: intermediate->research
@@ -899,179 +899,179 @@ Module index: [`09-geothermal-and-heat-flow-methods/README.md`](./05-core-geophy
 
 ## Seismology
 
-`06-seismology` — **13 modules**, **0/79 lessons written**
+`06-seismology` — **13 modules**, **79/79 lessons written**
 
 [Folder index](./06-seismology/README.md)
 
-### [ ] Elastic Wave Propagation (0/8)
+### [x] Elastic Wave Propagation (8/8)
 
 Module index: [`01-elastic-wave-propagation/README.md`](./06-seismology/01-elastic-wave-propagation/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [From Hooke's Law and Newton to the Elastodynamic Equation](./06-seismology/01-elastic-wave-propagation/01-wave-equation-elastic.md) | G |
-| · | [P and S Waves: Particle Motion, Speeds and Polarisation](./06-seismology/01-elastic-wave-propagation/02-p-and-s-waves.md) | A |
-| · | [Rayleigh and Love Waves: Dispersion and Depth Sensitivity](./06-seismology/01-elastic-wave-propagation/03-surface-waves.md) | G |
-| · | [Reflected, Refracted and Converted Body Waves](./06-seismology/01-elastic-wave-propagation/04-body-wave-arrivals.md) | A |
-| · | [Helmholtz Decomposition and Wavefield Potentials](./06-seismology/01-elastic-wave-propagation/05-wavefield-potentials.md) | G |
-| · | [Interface Waves, Head Waves and the Total Wavefield](./06-seismology/01-elastic-wave-propagation/06-interface-waves.md) | D |
-| · | [Scattering, Coda and Random Media](./06-seismology/01-elastic-wave-propagation/07-scattering-and-heterogeneity.md) | D |
-| · | [Wave Propagation in Anisotropic Media](./06-seismology/01-elastic-wave-propagation/08-anisotropic-propagation.md) | D |
+| ✓ | [From Hooke's Law and Newton to the Elastodynamic Equation](./06-seismology/01-elastic-wave-propagation/01-wave-equation-elastic.md) | G |
+| ✓ | [P and S Waves: Particle Motion, Speeds and Polarisation](./06-seismology/01-elastic-wave-propagation/02-p-and-s-waves.md) | A |
+| ✓ | [Rayleigh and Love Waves: Dispersion and Depth Sensitivity](./06-seismology/01-elastic-wave-propagation/03-surface-waves.md) | G |
+| ✓ | [Reflected, Refracted and Converted Body Waves](./06-seismology/01-elastic-wave-propagation/04-body-wave-arrivals.md) | A |
+| ✓ | [Helmholtz Decomposition and Wavefield Potentials](./06-seismology/01-elastic-wave-propagation/05-wavefield-potentials.md) | G |
+| ✓ | [Interface Waves, Head Waves and the Total Wavefield](./06-seismology/01-elastic-wave-propagation/06-interface-waves.md) | D |
+| ✓ | [Scattering, Coda and Random Media](./06-seismology/01-elastic-wave-propagation/07-scattering-and-heterogeneity.md) | D |
+| ✓ | [Wave Propagation in Anisotropic Media](./06-seismology/01-elastic-wave-propagation/08-anisotropic-propagation.md) | D |
 
-### [ ] Ray Theory and Travel Times (0/6)
+### [x] Ray Theory and Travel Times (6/6)
 
 Module index: [`02-ray-theory-and-travel-times/README.md`](./06-seismology/02-ray-theory-and-travel-times/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Eikonal Equation, Rays and Fermat's Principle](./06-seismology/02-ray-theory-and-travel-times/01-eikonal-and-rays.md) | G |
-| · | [Snell's Law, Layered Media and the Travel-Time Curve](./06-seismology/02-ray-theory-and-travel-times/02-snell-and-layering.md) | A |
-| · | [The tau-p Transform and Intercept Time](./06-seismology/02-ray-theory-and-travel-times/03-tau-p.md) | G |
-| · | [Ray Tracing in Laterally Varying Media](./06-seismology/02-ray-theory-and-travel-times/04-ray-tracing.md) | G |
-| · | [Shadow Zones, Triplications and the Low-Velocity Zone](./06-seismology/02-ray-theory-and-travel-times/05-shadow-zones.md) | G |
-| · | [Wavefront Tracking and the Fast Marching Method](./06-seismology/02-ray-theory-and-travel-times/06-wavefront-tracking.md) | D |
+| ✓ | [Eikonal Equation, Rays and Fermat's Principle](./06-seismology/02-ray-theory-and-travel-times/01-eikonal-and-rays.md) | G |
+| ✓ | [Snell's Law, Layered Media and the Travel-Time Curve](./06-seismology/02-ray-theory-and-travel-times/02-snell-and-layering.md) | A |
+| ✓ | [The tau-p Transform and Intercept Time](./06-seismology/02-ray-theory-and-travel-times/03-tau-p.md) | G |
+| ✓ | [Ray Tracing in Laterally Varying Media](./06-seismology/02-ray-theory-and-travel-times/04-ray-tracing.md) | G |
+| ✓ | [Shadow Zones, Triplications and the Low-Velocity Zone](./06-seismology/02-ray-theory-and-travel-times/05-shadow-zones.md) | G |
+| ✓ | [Wavefront Tracking and the Fast Marching Method](./06-seismology/02-ray-theory-and-travel-times/06-wavefront-tracking.md) | D |
 
-### [ ] Earthquake Sources (0/7)
+### [x] Earthquake Sources (7/7)
 
 Module index: [`03-earthquake-sources/README.md`](./06-seismology/03-earthquake-sources/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Faulting, Slip and the Elastic Rebound Cycle](./06-seismology/03-earthquake-sources/01-faulting-and-slip.md) | A |
-| · | [The Double-Couple Source and Radiation Patterns](./06-seismology/03-earthquake-sources/02-double-couple.md) | G |
-| · | [Moment Tensors, Decomposition and Physical Meaning](./06-seismology/03-earthquake-sources/03-moment-tensors.md) | D |
-| · | [Source Time Functions, Rupture Kinematics and Directivity](./06-seismology/03-earthquake-sources/04-source-time-function.md) | D |
-| · | [Source Spectra, Corner Frequency and Stress Drop](./06-seismology/03-earthquake-sources/05-source-spectra.md) | G |
-| · | [Rupture Dynamics, Fracture Energy and Scaling Laws](./06-seismology/03-earthquake-sources/06-rupture-dynamics.md) | D |
-| · | [Discriminating Explosions from Earthquakes](./06-seismology/03-earthquake-sources/07-nuclear-explosion-sources.md) | G |
+| ✓ | [Faulting, Slip and the Elastic Rebound Cycle](./06-seismology/03-earthquake-sources/01-faulting-and-slip.md) | A |
+| ✓ | [The Double-Couple Source and Radiation Patterns](./06-seismology/03-earthquake-sources/02-double-couple.md) | G |
+| ✓ | [Moment Tensors, Decomposition and Physical Meaning](./06-seismology/03-earthquake-sources/03-moment-tensors.md) | D |
+| ✓ | [Source Time Functions, Rupture Kinematics and Directivity](./06-seismology/03-earthquake-sources/04-source-time-function.md) | D |
+| ✓ | [Source Spectra, Corner Frequency and Stress Drop](./06-seismology/03-earthquake-sources/05-source-spectra.md) | G |
+| ✓ | [Rupture Dynamics, Fracture Energy and Scaling Laws](./06-seismology/03-earthquake-sources/06-rupture-dynamics.md) | D |
+| ✓ | [Discriminating Explosions from Earthquakes](./06-seismology/03-earthquake-sources/07-nuclear-explosion-sources.md) | G |
 
-### [ ] Earthquake Location and Magnitude (0/7)
+### [x] Earthquake Location and Magnitude (7/7)
 
 Module index: [`04-earthquake-location-and-magnitude/README.md`](./06-seismology/04-earthquake-location-and-magnitude/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Hypocentre Location: Arrival Times, Inversions and Error Ellipses](./06-seismology/04-earthquake-location-and-magnitude/01-hypocentre-location.md) | A |
-| · | [Dependence on the Velocity Model and Joint Inversion](./06-seismology/04-earthquake-location-and-magnitude/02-velocity-model-dependence.md) | G |
-| · | [Relative Location: Master-Event, Double-Difference, HypoDD](./06-seismology/04-earthquake-location-and-magnitude/03-relative-location.md) | G |
-| · | [Magnitude Scales: Local, Body, Surface, Duration, Moment](./06-seismology/04-earthquake-location-and-magnitude/04-magnitude-scales.md) | A |
-| · | [Magnitude Saturation and Why Moment Magnitude Is Preferred](./06-seismology/04-earthquake-location-and-magnitude/05-magnitude-saturation.md) | G |
-| · | [Energy Release, Moment Calculations and Scaling](./06-seismology/04-earthquake-location-and-magnitude/06-energy-moment-calculations.md) | G |
-| · | [Focal Mechanisms from First Motions and Waveform Inversion](./06-seismology/04-earthquake-location-and-magnitude/07-focal-mechanisms.md) | G |
+| ✓ | [Hypocentre Location: Arrival Times, Inversions and Error Ellipses](./06-seismology/04-earthquake-location-and-magnitude/01-hypocentre-location.md) | A |
+| ✓ | [Dependence on the Velocity Model and Joint Inversion](./06-seismology/04-earthquake-location-and-magnitude/02-velocity-model-dependence.md) | G |
+| ✓ | [Relative Location: Master-Event, Double-Difference, HypoDD](./06-seismology/04-earthquake-location-and-magnitude/03-relative-location.md) | G |
+| ✓ | [Magnitude Scales: Local, Body, Surface, Duration, Moment](./06-seismology/04-earthquake-location-and-magnitude/04-magnitude-scales.md) | A |
+| ✓ | [Magnitude Saturation and Why Moment Magnitude Is Preferred](./06-seismology/04-earthquake-location-and-magnitude/05-magnitude-saturation.md) | G |
+| ✓ | [Energy Release, Moment Calculations and Scaling](./06-seismology/04-earthquake-location-and-magnitude/06-energy-moment-calculations.md) | G |
+| ✓ | [Focal Mechanisms from First Motions and Waveform Inversion](./06-seismology/04-earthquake-location-and-magnitude/07-focal-mechanisms.md) | G |
 
-### [ ] Attenuation and Anelasticity (0/3)
+### [x] Attenuation and Anelasticity (3/3)
 
 Module index: [`05-attenuation-and-anelasticity/README.md`](./06-seismology/05-attenuation-and-anelasticity/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Measuring Q: Spectral Ratio, Rise Time, Multiple Methods](./06-seismology/05-attenuation-and-anelasticity/01-attenuation-measurement.md) | G |
-| · | [Separating Scattering from Intrinsic Attenuation](./06-seismology/05-attenuation-and-anelasticity/02-scattering-vs-intrinsic.md) | D |
-| · | [Attenuation Tomography and Temperature Interpretation](./06-seismology/05-attenuation-and-anelasticity/03-attenuation-tomography.md) | D |
+| ✓ | [Measuring Q: Spectral Ratio, Rise Time, Multiple Methods](./06-seismology/05-attenuation-and-anelasticity/01-attenuation-measurement.md) | G |
+| ✓ | [Separating Scattering from Intrinsic Attenuation](./06-seismology/05-attenuation-and-anelasticity/02-scattering-vs-intrinsic.md) | D |
+| ✓ | [Attenuation Tomography and Temperature Interpretation](./06-seismology/05-attenuation-and-anelasticity/03-attenuation-tomography.md) | D |
 
-### [ ] Seismic Tomography (0/7)
+### [x] Seismic Tomography (7/7)
 
 Module index: [`06-seismic-tomography/README.md`](./06-seismology/06-seismic-tomography/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [The Tomography Principle: Data as Path Integrals](./06-seismology/06-seismic-tomography/01-tomography-principle.md) | G |
-| · | [Travel-Time Tomography: Parametrisation and Inversion](./06-seismology/06-seismic-tomography/02-travel-time-tomography.md) | D |
-| · | [Resolution, Null Space and Model Covariance](./06-seismology/06-seismic-tomography/03-resolution-and-nullspace.md) | D |
-| · | [Full-Waveform Inversion: Objective Functions and Reliability](./06-seismology/06-seismic-tomography/04-full-waveform-inversion.md) | R |
-| · | [The Adjoint Method for Efficient Sensitivity Computation](./06-seismology/06-seismic-tomography/05-adjoint-methods.md) | R |
-| · | [Global Mantle Tomography and Its Geodynamic Interpretation](./06-seismology/06-seismic-tomography/06-global-mantle-tomography.md) | D |
-| · | [Resolving Discrepancies Between Tomographic Models](./06-seismology/06-seismic-tomography/07-tomography-controversies.md) | R |
+| ✓ | [The Tomography Principle: Data as Path Integrals](./06-seismology/06-seismic-tomography/01-tomography-principle.md) | G |
+| ✓ | [Travel-Time Tomography: Parametrisation and Inversion](./06-seismology/06-seismic-tomography/02-travel-time-tomography.md) | D |
+| ✓ | [Resolution, Null Space and Model Covariance](./06-seismology/06-seismic-tomography/03-resolution-and-nullspace.md) | D |
+| ✓ | [Full-Waveform Inversion: Objective Functions and Reliability](./06-seismology/06-seismic-tomography/04-full-waveform-inversion.md) | R |
+| ✓ | [The Adjoint Method for Efficient Sensitivity Computation](./06-seismology/06-seismic-tomography/05-adjoint-methods.md) | R |
+| ✓ | [Global Mantle Tomography and Its Geodynamic Interpretation](./06-seismology/06-seismic-tomography/06-global-mantle-tomography.md) | D |
+| ✓ | [Resolving Discrepancies Between Tomographic Models](./06-seismology/06-seismic-tomography/07-tomography-controversies.md) | R |
 
-### [ ] Ambient Noise and Seismic Interferometry (0/5)
+### [x] Ambient Noise and Seismic Interferometry (5/5)
 
 Module index: [`07-ambient-noise-and-interferometry/README.md`](./06-seismology/07-ambient-noise-and-interferometry/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Sources of Ambient Seismic Noise](./06-seismology/07-ambient-noise-and-interferometry/01-noise-sources.md) | A |
-| · | [Retrieving the Green's Function by Cross-Correlation](./06-seismology/07-ambient-noise-and-interferometry/02-cross-correlation-green.md) | D |
-| · | [Ambient-Noise Tomography and Monitoring](./06-seismology/07-ambient-noise-and-interferometry/03-noise-tomography.md) | D |
-| · | [Autocorrelation and Body-Wave Microseismics](./06-seismology/07-ambient-noise-and-interferometry/04-autocorrelation.md) | D |
-| · | [Monitoring Velocity Changes with Coda-Wave Interferometry](./06-seismology/07-ambient-noise-and-interferometry/05-velocity-change-monitoring.md) | R |
+| ✓ | [Sources of Ambient Seismic Noise](./06-seismology/07-ambient-noise-and-interferometry/01-noise-sources.md) | A |
+| ✓ | [Retrieving the Green's Function by Cross-Correlation](./06-seismology/07-ambient-noise-and-interferometry/02-cross-correlation-green.md) | D |
+| ✓ | [Ambient-Noise Tomography and Monitoring](./06-seismology/07-ambient-noise-and-interferometry/03-noise-tomography.md) | D |
+| ✓ | [Autocorrelation and Body-Wave Microseismics](./06-seismology/07-ambient-noise-and-interferometry/04-autocorrelation.md) | D |
+| ✓ | [Monitoring Velocity Changes with Coda-Wave Interferometry](./06-seismology/07-ambient-noise-and-interferometry/05-velocity-change-monitoring.md) | R |
 
-### [ ] Receiver Functions and Crustal Structure (0/5)
+### [x] Receiver Functions and Crustal Structure (5/5)
 
 Module index: [`08-receiver-functions-and-crustal-structure/README.md`](./06-seismology/08-receiver-functions-and-crustal-structure/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Receiver Functions: Deconvolution and Ps Conversions](./06-seismology/08-receiver-functions-and-crustal-structure/01-receiver-function-principle.md) | D |
-| · | [H-K Stacking and Crustal Thickness Estimation](./06-seismology/08-receiver-functions-and-crustal-structure/02-h-k-stacking.md) | G |
-| · | [Moho Discontinuity Depth and Sharpness](./06-seismology/08-receiver-functions-and-crustal-structure/03-moho-interface.md) | A |
-| · | [Anisotropy from Receiver Functions and Shear-Wave Splitting](./06-seismology/08-receiver-functions-and-crustal-structure/04-anisotropy-receiver-functions.md) | D |
-| · | [Joint Inversion of Receiver Functions and Surface Waves](./06-seismology/08-receiver-functions-and-crustal-structure/05-joint-inversion-rf.md) | R |
+| ✓ | [Receiver Functions: Deconvolution and Ps Conversions](./06-seismology/08-receiver-functions-and-crustal-structure/01-receiver-function-principle.md) | D |
+| ✓ | [H-K Stacking and Crustal Thickness Estimation](./06-seismology/08-receiver-functions-and-crustal-structure/02-h-k-stacking.md) | G |
+| ✓ | [Moho Discontinuity Depth and Sharpness](./06-seismology/08-receiver-functions-and-crustal-structure/03-moho-interface.md) | A |
+| ✓ | [Anisotropy from Receiver Functions and Shear-Wave Splitting](./06-seismology/08-receiver-functions-and-crustal-structure/04-anisotropy-receiver-functions.md) | D |
+| ✓ | [Joint Inversion of Receiver Functions and Surface Waves](./06-seismology/08-receiver-functions-and-crustal-structure/05-joint-inversion-rf.md) | R |
 
-### [ ] Reflection Seismology (0/9)
+### [x] Reflection Seismology (9/9)
 
 Module index: [`09-reflection-seismology/README.md`](./06-seismology/09-reflection-seismology/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Acoustic Impedance, Reflection Coefficients and the Convolution Model](./06-seismology/09-reflection-seismology/01-reflection-principle.md) | A |
-| · | [Reflection Processing Flow: Deconvolution, NMO, Stack, Migration](./06-seismology/09-reflection-seismology/02-processing-flow.md) | G |
-| · | [Velocity Analysis and Moveout Interpretation](./06-seismology/09-reflection-seismology/03-velocity-analysis.md) | G |
-| · | [Migration and Imaging: Time vs Depth, Kirchhoff and RTM](./06-seismology/09-reflection-seismology/04-migration-imaging.md) | R |
-| · | [AVO/AVA Analysis and Its Assumptions](./06-seismology/09-reflection-seismology/05-amplitude-vs-offset.md) | D |
-| · | [Multiple Attenuation: SRME, Radon and Deconvolution](./06-seismology/09-reflection-seismology/06-multiple-elimination.md) | D |
-| · | [Seismic Attributes and Quantitative Interpretation](./06-seismology/09-reflection-seismology/07-seismic-attributes.md) | G |
-| · | [Time-Lapse (4-D) Seismic and Reservoir Monitoring](./06-seismology/09-reflection-seismology/08-4d-seismic.md) | D |
-| · | [Structural and Stratigraphic Interpretation](./06-seismology/09-reflection-seismology/09-interpretation-reflection.md) | G |
+| ✓ | [Acoustic Impedance, Reflection Coefficients and the Convolution Model](./06-seismology/09-reflection-seismology/01-reflection-principle.md) | A |
+| ✓ | [Reflection Processing Flow: Deconvolution, NMO, Stack, Migration](./06-seismology/09-reflection-seismology/02-processing-flow.md) | G |
+| ✓ | [Velocity Analysis and Moveout Interpretation](./06-seismology/09-reflection-seismology/03-velocity-analysis.md) | G |
+| ✓ | [Migration and Imaging: Time vs Depth, Kirchhoff and RTM](./06-seismology/09-reflection-seismology/04-migration-imaging.md) | R |
+| ✓ | [AVO/AVA Analysis and Its Assumptions](./06-seismology/09-reflection-seismology/05-amplitude-vs-offset.md) | D |
+| ✓ | [Multiple Attenuation: SRME, Radon and Deconvolution](./06-seismology/09-reflection-seismology/06-multiple-elimination.md) | D |
+| ✓ | [Seismic Attributes and Quantitative Interpretation](./06-seismology/09-reflection-seismology/07-seismic-attributes.md) | G |
+| ✓ | [Time-Lapse (4-D) Seismic and Reservoir Monitoring](./06-seismology/09-reflection-seismology/08-4d-seismic.md) | D |
+| ✓ | [Structural and Stratigraphic Interpretation](./06-seismology/09-reflection-seismology/09-interpretation-reflection.md) | G |
 
-### [ ] Refraction and Near-Surface Seismology (0/6)
+### [x] Refraction and Near-Surface Seismology (6/6)
 
 Module index: [`10-refraction-and-near-surface-seismology/README.md`](./06-seismology/10-refraction-and-near-surface-seismology/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Refraction Survey Geometry and Travel-Time Interpretation](./06-seismology/10-refraction-and-near-surface-seismology/01-refraction-basics.md) | I |
-| · | [Delay-Time (Plus-Minus) Methods and Depth Estimation](./06-seismology/10-refraction-and-near-surface-seismology/02-plus-minus-method.md) | A |
-| · | [Refraction Tomography and First-Arrival Inversion](./06-seismology/10-refraction-and-near-surface-seismology/03-tomography-refraction.md) | G |
-| · | [MASW/SASW: Surface-Wave Dispersion and Vs Profiles](./06-seismology/10-refraction-and-near-surface-seismology/04-masw-sasw.md) | A |
-| · | [Site Characterisation: Vs30 and Site Response](./06-seismology/10-refraction-and-near-surface-seismology/05-seismic-hazards-site.md) | A |
-| · | [Engineering Seismology Applications](./06-seismology/10-refraction-and-near-surface-seismology/06-engineering-seismics.md) | A |
+| ✓ | [Refraction Survey Geometry and Travel-Time Interpretation](./06-seismology/10-refraction-and-near-surface-seismology/01-refraction-basics.md) | I |
+| ✓ | [Delay-Time (Plus-Minus) Methods and Depth Estimation](./06-seismology/10-refraction-and-near-surface-seismology/02-plus-minus-method.md) | A |
+| ✓ | [Refraction Tomography and First-Arrival Inversion](./06-seismology/10-refraction-and-near-surface-seismology/03-tomography-refraction.md) | G |
+| ✓ | [MASW/SASW: Surface-Wave Dispersion and Vs Profiles](./06-seismology/10-refraction-and-near-surface-seismology/04-masw-sasw.md) | A |
+| ✓ | [Site Characterisation: Vs30 and Site Response](./06-seismology/10-refraction-and-near-surface-seismology/05-seismic-hazards-site.md) | A |
+| ✓ | [Engineering Seismology Applications](./06-seismology/10-refraction-and-near-surface-seismology/06-engineering-seismics.md) | A |
 
-### [ ] Earthquake Statistics and Hazard (0/7)
+### [x] Earthquake Statistics and Hazard (7/7)
 
 Module index: [`11-earthquake-statistics-and-hazard/README.md`](./06-seismology/11-earthquake-statistics-and-hazard/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Gutenberg-Richter, b-Value and Magnitude of Completeness](./06-seismology/11-earthquake-statistics-and-hazard/01-gutenberg-richter.md) | A |
-| · | [Aftershock Sequences: Omori, ETAS and Triggering](./06-seismology/11-earthquake-statistics-and-hazard/02-aftershocks.md) | D |
-| · | [Why Deterministic Prediction Is Considered Unattainable](./06-seismology/11-earthquake-statistics-and-hazard/03-earthquake-prediction-limits.md) | G |
-| · | [Probabilistic Seismic Hazard Analysis (PSHA) and Its Logic](./06-seismology/11-earthquake-statistics-and-hazard/04-psha.md) | D |
-| · | [Ground-Motion Prediction Equations and Their Uncertainty](./06-seismology/11-earthquake-statistics-and-hazard/05-ground-motion-models.md) | D |
-| · | [Hazard Maps, Site Amplification and Design Codes](./06-seismology/11-earthquake-statistics-and-hazard/06-hazard-mapping.md) | G |
-| · | [Declustering, Completeness and Catalogue Physics](./06-seismology/11-earthquake-statistics-and-hazard/07-catalog-declustering.md) | G |
+| ✓ | [Gutenberg-Richter, b-Value and Magnitude of Completeness](./06-seismology/11-earthquake-statistics-and-hazard/01-gutenberg-richter.md) | A |
+| ✓ | [Aftershock Sequences: Omori, ETAS and Triggering](./06-seismology/11-earthquake-statistics-and-hazard/02-aftershocks.md) | D |
+| ✓ | [Why Deterministic Prediction Is Considered Unattainable](./06-seismology/11-earthquake-statistics-and-hazard/03-earthquake-prediction-limits.md) | G |
+| ✓ | [Probabilistic Seismic Hazard Analysis (PSHA) and Its Logic](./06-seismology/11-earthquake-statistics-and-hazard/04-psha.md) | D |
+| ✓ | [Ground-Motion Prediction Equations and Their Uncertainty](./06-seismology/11-earthquake-statistics-and-hazard/05-ground-motion-models.md) | D |
+| ✓ | [Hazard Maps, Site Amplification and Design Codes](./06-seismology/11-earthquake-statistics-and-hazard/06-hazard-mapping.md) | G |
+| ✓ | [Declustering, Completeness and Catalogue Physics](./06-seismology/11-earthquake-statistics-and-hazard/07-catalog-declustering.md) | G |
 
-### [ ] Induced and Triggered Seismicity (0/5)
+### [x] Induced and Triggered Seismicity (5/5)
 
 Module index: [`12-induced-and-triggered-seismicity/README.md`](./06-seismology/12-induced-and-triggered-seismicity/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Causes of Induced Seismicity: Injection, Extraction, Reservoirs](./06-seismology/12-induced-and-triggered-seismicity/01-induced-seismicity-causes.md) | D |
-| · | [Pore-Pressure Diffusion and Triggering Mechanisms](./06-seismology/12-induced-and-triggered-seismicity/02-pore-pressure-triggering.md) | D |
-| · | [Rate-and-State Friction and Dieterich Seismicity Model](./06-seismology/12-induced-and-triggered-seismicity/03-rate-state-triggering.md) | R |
-| · | [Traffic-Light Protocols, Monitoring and Mitigation](./06-seismology/12-induced-and-triggered-seismicity/04-monitoring-and-mitigation.md) | G |
-| · | [Documented Case Studies: Basel, Oklahoma, Groningen, Pohang](./06-seismology/12-induced-and-triggered-seismicity/05-case-studies-induced.md) | G |
+| ✓ | [Causes of Induced Seismicity: Injection, Extraction, Reservoirs](./06-seismology/12-induced-and-triggered-seismicity/01-induced-seismicity-causes.md) | D |
+| ✓ | [Pore-Pressure Diffusion and Triggering Mechanisms](./06-seismology/12-induced-and-triggered-seismicity/02-pore-pressure-triggering.md) | D |
+| ✓ | [Rate-and-State Friction and Dieterich Seismicity Model](./06-seismology/12-induced-and-triggered-seismicity/03-rate-state-triggering.md) | R |
+| ✓ | [Traffic-Light Protocols, Monitoring and Mitigation](./06-seismology/12-induced-and-triggered-seismicity/04-monitoring-and-mitigation.md) | G |
+| ✓ | [Documented Case Studies: Basel, Oklahoma, Groningen, Pohang](./06-seismology/12-induced-and-triggered-seismicity/05-case-studies-induced.md) | G |
 
-### [ ] Planetary and Applied Seismology Frontiers (0/4)
+### [x] Planetary and Applied Seismology Frontiers (4/4)
 
 Module index: [`13-planetary-and-exploration-seismology/README.md`](./06-seismology/13-planetary-and-exploration-seismology/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Planetary Seismology: InSight and Lunar Seismic Experiments](./06-seismology/13-planetary-and-exploration-seismology/01-planetary-seismology.md) | D |
-| · | [Glacial and Cryoseismology: Icequakes and Calving](./06-seismology/13-planetary-and-exploration-seismology/02-glacial-seismology.md) | D |
-| · | [Volcano Seismology: LP Events, Tremor and Eruption Forecasting](./06-seismology/13-planetary-and-exploration-seismology/03-volcano-seismology.md) | D |
-| · | [Distributed Acoustic Sensing: A New Observational Regime](./06-seismology/13-planetary-and-exploration-seismology/04-distributed-acoustic-sensing.md) | R |
+| ✓ | [Planetary Seismology: InSight and Lunar Seismic Experiments](./06-seismology/13-planetary-and-exploration-seismology/01-planetary-seismology.md) | D |
+| ✓ | [Glacial and Cryoseismology: Icequakes and Calving](./06-seismology/13-planetary-and-exploration-seismology/02-glacial-seismology.md) | D |
+| ✓ | [Volcano Seismology: LP Events, Tremor and Eruption Forecasting](./06-seismology/13-planetary-and-exploration-seismology/03-volcano-seismology.md) | D |
+| ✓ | [Distributed Acoustic Sensing: A New Observational Regime](./06-seismology/13-planetary-and-exploration-seismology/04-distributed-acoustic-sensing.md) | R |
 
 ## Gravity, Geodesy and the Shape of the Earth
 
