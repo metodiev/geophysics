@@ -11,10 +11,10 @@ Legend: **B** beginner · **I** intermediate · **A** advanced · **G** graduate
 | Folders | 27 |
 | Modules | 216 |
 | Lessons planned | 1146 |
-| Lessons written | 57 |
-| Lessons with valid frontmatter | 57 |
-| Exercise/solution companions written | 68 / 2190 |
-| Completion | 5.0% |
+| Lessons written | 156 |
+| Lessons with valid frontmatter | 156 |
+| Exercise/solution companions written | 244 / 2190 |
+| Completion | 13.6% |
 
 > Companion files are the conventional `exercises/<lesson>-exercises.md` and `<lesson>-solutions.md` pairs. Lessons in `00-orientation` and `26-reference-library` are process material and reference pages, so they carry no companions by design.
 
@@ -115,7 +115,7 @@ Module index: [`04-orientation-geophysics/README.md`](./00-orientation/04-orient
 
 ## Mathematics for Geophysics
 
-`01-mathematics` — **16 modules**, **35/111 lessons written**
+`01-mathematics` — **16 modules**, **104/111 lessons written**
 
 [Folder index](./01-mathematics/README.md)
 
@@ -196,137 +196,137 @@ Module index: [`06-multivariable-calculus/README.md`](./01-mathematics/06-multiv
 | ✓ | [Vector Identities and Their Role in Geophysics](./01-mathematics/06-multivariable-calculus/07-vector-identities.md) | A |
 | ✓ | [Potential Fields, Laplace and Poisson Equations](./01-mathematics/06-multivariable-calculus/08-potential-theory.md) | A |
 
-### [ ] Linear Algebra (0/10)
+### [x] Linear Algebra (10/10)
 
 Module index: [`07-linear-algebra/README.md`](./01-mathematics/07-linear-algebra/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Vectors, Vector Spaces and Basis](./01-mathematics/07-linear-algebra/01-vectors-and-spaces.md) | I |
-| · | [Matrices, Matrix Multiplication and Linear Maps](./01-mathematics/07-linear-algebra/02-matrices-and-operations.md) | I |
-| · | [Linear Systems, Gaussian Elimination and LU Factorisation](./01-mathematics/07-linear-algebra/03-systems-and-elimination.md) | I |
-| · | [Rank, Null Space and Solvability (Existence and Uniqueness)](./01-mathematics/07-linear-algebra/04-rank-and-nullspace.md) | A |
-| · | [Determinants, Inverses and Matrix Conditioning](./01-mathematics/07-linear-algebra/05-determinants-inverses.md) | A |
-| · | [Eigenvalues, Eigenvectors and Diagonalisation](./01-mathematics/07-linear-algebra/06-eigenvalues.md) | A |
-| · | [Orthogonality, Projections and Least Squares](./01-mathematics/07-linear-algebra/07-orthogonality.md) | A |
-| · | [Singular Value Decomposition and Rank Truncation](./01-mathematics/07-linear-algebra/08-svd.md) | G |
-| · | [Sparse Matrices and Structured Systems in Geophysics](./01-mathematics/07-linear-algebra/09-sparse-matrices.md) | G |
-| · | [Matrix Calculus and Sensitivity Derivatives](./01-mathematics/07-linear-algebra/10-matrix-calculus.md) | G |
+| ✓ | [Vectors, Vector Spaces and Basis](./01-mathematics/07-linear-algebra/01-vectors-and-spaces.md) | I |
+| ✓ | [Matrices, Matrix Multiplication and Linear Maps](./01-mathematics/07-linear-algebra/02-matrices-and-operations.md) | I |
+| ✓ | [Linear Systems, Gaussian Elimination and LU Factorisation](./01-mathematics/07-linear-algebra/03-systems-and-elimination.md) | I |
+| ✓ | [Rank, Null Space and Solvability (Existence and Uniqueness)](./01-mathematics/07-linear-algebra/04-rank-and-nullspace.md) | A |
+| ✓ | [Determinants, Inverses and Matrix Conditioning](./01-mathematics/07-linear-algebra/05-determinants-inverses.md) | A |
+| ✓ | [Eigenvalues, Eigenvectors and Diagonalisation](./01-mathematics/07-linear-algebra/06-eigenvalues.md) | A |
+| ✓ | [Orthogonality, Projections and Least Squares](./01-mathematics/07-linear-algebra/07-orthogonality.md) | A |
+| ✓ | [Singular Value Decomposition and Rank Truncation](./01-mathematics/07-linear-algebra/08-svd.md) | G |
+| ✓ | [Sparse Matrices and Structured Systems in Geophysics](./01-mathematics/07-linear-algebra/09-sparse-matrices.md) | G |
+| ✓ | [Matrix Calculus and Sensitivity Derivatives](./01-mathematics/07-linear-algebra/10-matrix-calculus.md) | G |
 
-### [ ] Ordinary Differential Equations (0/7)
+### [x] Ordinary Differential Equations (7/7)
 
 Module index: [`08-ordinary-differential-equations/README.md`](./01-mathematics/08-ordinary-differential-equations/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [First-Order ODEs: Separation of Variables and Integrating Factors](./01-mathematics/08-ordinary-differential-equations/01-first-order-odes.md) | I |
-| · | [Second-Order Linear ODEs and Characteristic Equations](./01-mathematics/08-ordinary-differential-equations/02-second-order-linear.md) | I |
-| · | [Damped and Driven Oscillators as Physical Models](./01-mathematics/08-ordinary-differential-equations/03-oscillators.md) | I |
-| · | [Systems of ODEs, Phase Portraits and Stability](./01-mathematics/08-ordinary-differential-equations/04-systems-of-odes.md) | A |
-| · | [Sturm-Liouville Theory and Eigenfunction Expansions](./01-mathematics/08-ordinary-differential-equations/05-sturm-liouville.md) | G |
-| · | [Green's Functions and Impulse Response](./01-mathematics/08-ordinary-differential-equations/06-green-functions.md) | G |
-| · | [Stiff Systems and Numerical Stability Challenges](./01-mathematics/08-ordinary-differential-equations/07-stiff-systems.md) | A |
+| ✓ | [First-Order ODEs: Separation of Variables and Integrating Factors](./01-mathematics/08-ordinary-differential-equations/01-first-order-odes.md) | I |
+| ✓ | [Second-Order Linear ODEs and Characteristic Equations](./01-mathematics/08-ordinary-differential-equations/02-second-order-linear.md) | I |
+| ✓ | [Damped and Driven Oscillators as Physical Models](./01-mathematics/08-ordinary-differential-equations/03-oscillators.md) | I |
+| ✓ | [Systems of ODEs, Phase Portraits and Stability](./01-mathematics/08-ordinary-differential-equations/04-systems-of-odes.md) | A |
+| ✓ | [Sturm-Liouville Theory and Eigenfunction Expansions](./01-mathematics/08-ordinary-differential-equations/05-sturm-liouville.md) | G |
+| ✓ | [Green's Functions and Impulse Response](./01-mathematics/08-ordinary-differential-equations/06-green-functions.md) | G |
+| ✓ | [Stiff Systems and Numerical Stability Challenges](./01-mathematics/08-ordinary-differential-equations/07-stiff-systems.md) | A |
 
-### [ ] Partial Differential Equations (0/8)
+### [x] Partial Differential Equations (8/8)
 
 Module index: [`09-partial-differential-equations/README.md`](./01-mathematics/09-partial-differential-equations/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Classification of PDEs: Elliptic, Parabolic, Hyperbolic](./01-mathematics/09-partial-differential-equations/01-classification.md) | A |
-| · | [The Diffusion/Heat Equation and Diffusive Timescales](./01-mathematics/09-partial-differential-equations/02-heat-equation.md) | A |
-| · | [The Wave Equation and Its Physical Content](./01-mathematics/09-partial-differential-equations/03-wave-equation.md) | A |
-| · | [Laplace and Poisson Equations in Earth Systems](./01-mathematics/09-partial-differential-equations/04-laplace-poisson.md) | A |
-| · | [Separation of Variables and Boundary Conditions](./01-mathematics/09-partial-differential-equations/05-separation-of-variables.md) | A |
-| · | [Method of Characteristics and First-Order PDEs](./01-mathematics/09-partial-differential-equations/06-characteristics.md) | G |
-| · | [Boundary and Initial-Boundary Value Problems](./01-mathematics/09-partial-differential-equations/07-boundary-value-problems.md) | G |
-| · | [Weak Solutions, Variational Forms and Well-Posedness](./01-mathematics/09-partial-differential-equations/08-weak-solutions.md) | D |
+| ✓ | [Classification of PDEs: Elliptic, Parabolic, Hyperbolic](./01-mathematics/09-partial-differential-equations/01-classification.md) | A |
+| ✓ | [The Diffusion/Heat Equation and Diffusive Timescales](./01-mathematics/09-partial-differential-equations/02-heat-equation.md) | A |
+| ✓ | [The Wave Equation and Its Physical Content](./01-mathematics/09-partial-differential-equations/03-wave-equation.md) | A |
+| ✓ | [Laplace and Poisson Equations in Earth Systems](./01-mathematics/09-partial-differential-equations/04-laplace-poisson.md) | A |
+| ✓ | [Separation of Variables and Boundary Conditions](./01-mathematics/09-partial-differential-equations/05-separation-of-variables.md) | A |
+| ✓ | [Method of Characteristics and First-Order PDEs](./01-mathematics/09-partial-differential-equations/06-characteristics.md) | G |
+| ✓ | [Boundary and Initial-Boundary Value Problems](./01-mathematics/09-partial-differential-equations/07-boundary-value-problems.md) | G |
+| ✓ | [Weak Solutions, Variational Forms and Well-Posedness](./01-mathematics/09-partial-differential-equations/08-weak-solutions.md) | D |
 
-### [ ] Fourier Analysis and Spectral Methods (0/8)
+### [x] Fourier Analysis and Spectral Methods (8/8)
 
 Module index: [`10-fourier-analysis/README.md`](./01-mathematics/10-fourier-analysis/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Fourier Series and Periodic Decomposition](./01-mathematics/10-fourier-analysis/01-fourier-series.md) | I |
-| · | [The Fourier Transform and Its Properties](./01-mathematics/10-fourier-analysis/02-fourier-transform.md) | A |
-| · | [Convolution, Filtering and the Convolution Theorem](./01-mathematics/10-fourier-analysis/03-convolution.md) | A |
-| · | [Discrete Fourier Transform and the FFT](./01-mathematics/10-fourier-analysis/04-discrete-fourier.md) | A |
-| · | [Sampling, Aliasing, Leakage and Windowing](./01-mathematics/10-fourier-analysis/05-windowing-aliasing.md) | A |
-| · | [Hilbert Transform, Analytic Signal and Instantaneous Phase](./01-mathematics/10-fourier-analysis/06-hilbert-transform.md) | G |
-| · | [Two-Dimensional Fourier Analysis and Wavenumber Filtering](./01-mathematics/10-fourier-analysis/07-2d-fourier.md) | G |
-| · | [Power Spectra, Admittance and Coherence of Geophysical Fields](./01-mathematics/10-fourier-analysis/08-spatial-spectra.md) | G |
+| ✓ | [Fourier Series and Periodic Decomposition](./01-mathematics/10-fourier-analysis/01-fourier-series.md) | I |
+| ✓ | [The Fourier Transform and Its Properties](./01-mathematics/10-fourier-analysis/02-fourier-transform.md) | A |
+| ✓ | [Convolution, Filtering and the Convolution Theorem](./01-mathematics/10-fourier-analysis/03-convolution.md) | A |
+| ✓ | [Discrete Fourier Transform and the FFT](./01-mathematics/10-fourier-analysis/04-discrete-fourier.md) | A |
+| ✓ | [Sampling, Aliasing, Leakage and Windowing](./01-mathematics/10-fourier-analysis/05-windowing-aliasing.md) | A |
+| ✓ | [Hilbert Transform, Analytic Signal and Instantaneous Phase](./01-mathematics/10-fourier-analysis/06-hilbert-transform.md) | G |
+| ✓ | [Two-Dimensional Fourier Analysis and Wavenumber Filtering](./01-mathematics/10-fourier-analysis/07-2d-fourier.md) | G |
+| ✓ | [Power Spectra, Admittance and Coherence of Geophysical Fields](./01-mathematics/10-fourier-analysis/08-spatial-spectra.md) | G |
 
-### [ ] Complex Numbers and Analysis (0/6)
+### [x] Complex Numbers and Analysis (6/6)
 
 Module index: [`11-complex-analysis/README.md`](./01-mathematics/11-complex-analysis/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Complex Numbers, Polar Form and Argand Diagrams](./01-mathematics/11-complex-analysis/01-complex-arithmetic.md) | I |
-| · | [Holomorphic Functions and Cauchy-Riemann Equations](./01-mathematics/11-complex-analysis/02-complex-functions.md) | G |
-| · | [Contour Integration, Residues and Real Integrals](./01-mathematics/11-complex-analysis/03-contour-integration.md) | G |
-| · | [The Laplace Transform and Transient Problems](./01-mathematics/11-complex-analysis/04-laplace-transform.md) | G |
-| · | [The z-Transform and Discrete Linear Systems](./01-mathematics/11-complex-analysis/05-z-transform.md) | G |
-| · | [Dispersion Relations and Causality in Wave Physics](./01-mathematics/11-complex-analysis/06-dispersion-relations.md) | D |
+| ✓ | [Complex Numbers, Polar Form and Argand Diagrams](./01-mathematics/11-complex-analysis/01-complex-arithmetic.md) | I |
+| ✓ | [Holomorphic Functions and Cauchy-Riemann Equations](./01-mathematics/11-complex-analysis/02-complex-functions.md) | G |
+| ✓ | [Contour Integration, Residues and Real Integrals](./01-mathematics/11-complex-analysis/03-contour-integration.md) | G |
+| ✓ | [The Laplace Transform and Transient Problems](./01-mathematics/11-complex-analysis/04-laplace-transform.md) | G |
+| ✓ | [The z-Transform and Discrete Linear Systems](./01-mathematics/11-complex-analysis/05-z-transform.md) | G |
+| ✓ | [Dispersion Relations and Causality in Wave Physics](./01-mathematics/11-complex-analysis/06-dispersion-relations.md) | D |
 
-### [ ] Numerical Methods for Mathematical Problems (0/8)
+### [x] Numerical Methods for Mathematical Problems (8/8)
 
 Module index: [`12-numerical-methods/README.md`](./01-mathematics/12-numerical-methods/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Root Finding: Bisection, Newton, Secant and Robust Hybrids](./01-mathematics/12-numerical-methods/01-root-finding.md) | I |
-| · | [Interpolation, Splines and Approximation Theory](./01-mathematics/12-numerical-methods/02-interpolation.md) | I |
-| · | [Numerical Differentiation and Finite-Difference Stencils](./01-mathematics/12-numerical-methods/03-numerical-differentiation.md) | A |
-| · | [Numerical Integration: Trapezoid, Simpson, Gauss Quadrature](./01-mathematics/12-numerical-methods/04-numerical-integration.md) | A |
-| · | [Direct vs Iterative Linear Solvers and Convergence](./01-mathematics/12-numerical-methods/05-linear-solvers.md) | G |
-| · | [Numerical ODE Solvers: Euler, Runge-Kutta, Implicit and Adaptive](./01-mathematics/12-numerical-methods/06-ode-solvers.md) | G |
-| · | [Discretising PDEs: Consistency, Stability, Convergence](./01-mathematics/12-numerical-methods/07-pde-discretisation.md) | G |
-| · | [Numerical Eigenvalue Problems (Power, Lanczos, Arnoldi)](./01-mathematics/12-numerical-methods/08-matrix-eigen-solvers.md) | G |
+| ✓ | [Root Finding: Bisection, Newton, Secant and Robust Hybrids](./01-mathematics/12-numerical-methods/01-root-finding.md) | I |
+| ✓ | [Interpolation, Splines and Approximation Theory](./01-mathematics/12-numerical-methods/02-interpolation.md) | I |
+| ✓ | [Numerical Differentiation and Finite-Difference Stencils](./01-mathematics/12-numerical-methods/03-numerical-differentiation.md) | A |
+| ✓ | [Numerical Integration: Trapezoid, Simpson, Gauss Quadrature](./01-mathematics/12-numerical-methods/04-numerical-integration.md) | A |
+| ✓ | [Direct vs Iterative Linear Solvers and Convergence](./01-mathematics/12-numerical-methods/05-linear-solvers.md) | G |
+| ✓ | [Numerical ODE Solvers: Euler, Runge-Kutta, Implicit and Adaptive](./01-mathematics/12-numerical-methods/06-ode-solvers.md) | G |
+| ✓ | [Discretising PDEs: Consistency, Stability, Convergence](./01-mathematics/12-numerical-methods/07-pde-discretisation.md) | G |
+| ✓ | [Numerical Eigenvalue Problems (Power, Lanczos, Arnoldi)](./01-mathematics/12-numerical-methods/08-matrix-eigen-solvers.md) | G |
 
-### [ ] Probability and Statistics Foundations (0/9)
+### [x] Probability and Statistics Foundations (9/9)
 
 Module index: [`13-probability-and-statistics-foundations/README.md`](./01-mathematics/13-probability-and-statistics-foundations/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Probability Axioms, Conditional Probability and Bayes' Rule](./01-mathematics/13-probability-and-statistics-foundations/01-probability-axioms.md) | I |
-| · | [Random Variables, PMFs, PDFs and CDFs](./01-mathematics/13-probability-and-statistics-foundations/02-random-variables.md) | I |
-| · | [Expectation, Variance and Moments](./01-mathematics/13-probability-and-statistics-foundations/03-expectation-variance.md) | I |
-| · | [Common Distributions and Their Earth-Science Roles](./01-mathematics/13-probability-and-statistics-foundations/04-distributions.md) | I |
-| · | [Sampling Distributions, Law of Large Numbers and CLT](./01-mathematics/13-probability-and-statistics-foundations/05-sampling-and-clt.md) | I |
-| · | [Point Estimation, Bias, Consistency and Efficiency](./01-mathematics/13-probability-and-statistics-foundations/06-estimation-theory.md) | A |
-| · | [Confidence Intervals and Their Correct Interpretation](./01-mathematics/13-probability-and-statistics-foundations/07-confidence-intervals.md) | A |
-| · | [Hypothesis Testing, p-Values and Power](./01-mathematics/13-probability-and-statistics-foundations/08-hypothesis-testing.md) | A |
-| · | [Error and Uncertainty Propagation (Analytic and Monte Carlo)](./01-mathematics/13-probability-and-statistics-foundations/09-error-propagation.md) | A |
+| ✓ | [Probability Axioms, Conditional Probability and Bayes' Rule](./01-mathematics/13-probability-and-statistics-foundations/01-probability-axioms.md) | I |
+| ✓ | [Random Variables, PMFs, PDFs and CDFs](./01-mathematics/13-probability-and-statistics-foundations/02-random-variables.md) | I |
+| ✓ | [Expectation, Variance and Moments](./01-mathematics/13-probability-and-statistics-foundations/03-expectation-variance.md) | I |
+| ✓ | [Common Distributions and Their Earth-Science Roles](./01-mathematics/13-probability-and-statistics-foundations/04-distributions.md) | I |
+| ✓ | [Sampling Distributions, Law of Large Numbers and CLT](./01-mathematics/13-probability-and-statistics-foundations/05-sampling-and-clt.md) | I |
+| ✓ | [Point Estimation, Bias, Consistency and Efficiency](./01-mathematics/13-probability-and-statistics-foundations/06-estimation-theory.md) | A |
+| ✓ | [Confidence Intervals and Their Correct Interpretation](./01-mathematics/13-probability-and-statistics-foundations/07-confidence-intervals.md) | A |
+| ✓ | [Hypothesis Testing, p-Values and Power](./01-mathematics/13-probability-and-statistics-foundations/08-hypothesis-testing.md) | A |
+| ✓ | [Error and Uncertainty Propagation (Analytic and Monte Carlo)](./01-mathematics/13-probability-and-statistics-foundations/09-error-propagation.md) | A |
 
-### [ ] Optimization and Variational Methods (0/7)
+### [ ] Optimization and Variational Methods (7/7)
 
 Module index: [`14-optimization/README.md`](./01-mathematics/14-optimization/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Convexity, Stationarity and Optimality Conditions](./01-mathematics/14-optimization/01-convexity.md) | A |
-| · | [Unconstrained Minimisation: Gradient, Newton, Quasi-Newton](./01-mathematics/14-optimization/02-unconstrained.md) | A |
-| · | [Constrained Optimisation and Lagrange Multipliers](./01-mathematics/14-optimization/03-constrained.md) | A |
-| · | [Linear and Nonlinear Least Squares](./01-mathematics/14-optimization/04-least-squares.md) | A |
-| · | [Global Optimisation: Simulated Annealing, Genetic Algorithms](./01-mathematics/14-optimization/05-global-optimization.md) | G |
-| · | [Calculus of Variations and Its Geophysical Uses](./01-mathematics/14-optimization/06-variational-calculus.md) | G |
-| · | [Linear Programming and Geophysical Applications](./01-mathematics/14-optimization/07-linear-programming.md) | G |
+| ✓ | [Convexity, Stationarity and Optimality Conditions](./01-mathematics/14-optimization/01-convexity.md) | A |
+| ✓ | [Unconstrained Minimisation: Gradient, Newton, Quasi-Newton](./01-mathematics/14-optimization/02-unconstrained.md) | A |
+| ✓ | [Constrained Optimisation and Lagrange Multipliers](./01-mathematics/14-optimization/03-constrained.md) | A |
+| ✓ | [Linear and Nonlinear Least Squares](./01-mathematics/14-optimization/04-least-squares.md) | A |
+| ✓ | [Global Optimisation: Simulated Annealing, Genetic Algorithms](./01-mathematics/14-optimization/05-global-optimization.md) | G |
+| ✓ | [Calculus of Variations and Its Geophysical Uses](./01-mathematics/14-optimization/06-variational-calculus.md) | G |
+| ✓ | [Linear Programming and Geophysical Applications](./01-mathematics/14-optimization/07-linear-programming.md) | G |
 
-### [ ] Tensors and Mathematical Foundations for Continuum Physics (0/6)
+### [ ] Tensors and Mathematical Foundations for Continuum Physics (6/6)
 
 Module index: [`15-tensors-and-differential-geometry/README.md`](./01-mathematics/15-tensors-and-differential-geometry/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Index Notation, Einstein Summation and Kronecker Delta](./01-mathematics/15-tensors-and-differential-geometry/01-index-notation.md) | A |
-| · | [Tensor Algebra, Transformation Laws and Invariants](./01-mathematics/15-tensors-and-differential-geometry/02-tensor-algebra.md) | G |
-| · | [Strain and Stress Tensors as Physical Tensors](./01-mathematics/15-tensors-and-differential-geometry/03-strain-and-stress-tensors.md) | G |
-| · | [Differential Operators in Curvilinear Coordinates](./01-mathematics/15-tensors-and-differential-geometry/04-curvilinear-coordinates.md) | G |
-| · | [Representing Anisotropy: Voigt Notation and Symmetry Classes](./01-mathematics/15-tensors-and-differential-geometry/05-anisotropy-representation.md) | G |
-| · | [Differential Geometry of the Earth's Surface and Sphere](./01-mathematics/15-tensors-and-differential-geometry/06-differential-geometry-earth.md) | D |
+| ✓ | [Index Notation, Einstein Summation and Kronecker Delta](./01-mathematics/15-tensors-and-differential-geometry/01-index-notation.md) | A |
+| ✓ | [Tensor Algebra, Transformation Laws and Invariants](./01-mathematics/15-tensors-and-differential-geometry/02-tensor-algebra.md) | G |
+| ✓ | [Strain and Stress Tensors as Physical Tensors](./01-mathematics/15-tensors-and-differential-geometry/03-strain-and-stress-tensors.md) | G |
+| ✓ | [Differential Operators in Curvilinear Coordinates](./01-mathematics/15-tensors-and-differential-geometry/04-curvilinear-coordinates.md) | G |
+| ✓ | [Representing Anisotropy: Voigt Notation and Symmetry Classes](./01-mathematics/15-tensors-and-differential-geometry/05-anisotropy-representation.md) | G |
+| ✓ | [Differential Geometry of the Earth's Surface and Sphere](./01-mathematics/15-tensors-and-differential-geometry/06-differential-geometry-earth.md) | D |
 
 ### [ ] Functional Analysis for Inverse Problems (0/7)
 
@@ -344,67 +344,67 @@ Module index: [`16-functional-analysis/README.md`](./01-mathematics/16-functiona
 
 ## Physics for Geophysics
 
-`02-physics` — **11 modules**, **0/73 lessons written**
+`02-physics` — **11 modules**, **30/73 lessons written**
 
 [Folder index](./02-physics/README.md)
 
-### [ ] Measurement, Units and Physical Reasoning (0/4)
+### [x] Measurement, Units and Physical Reasoning (4/4)
 
 Module index: [`01-measurement-and-physical-reasoning/README.md`](./02-physics/01-measurement-and-physical-reasoning/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Physical Quantities, SI Units and Dimensional Homogeneity](./02-physics/01-measurement-and-physical-reasoning/01-physical-quantities.md) | B |
-| · | [Measurement Uncertainty, Significant Figures and Error Bars](./02-physics/01-measurement-and-physical-reasoning/02-measurement-uncertainty.md) | B |
-| · | [Scaling Laws, Similarity and Dimensional Reasoning](./02-physics/01-measurement-and-physical-reasoning/03-scaling-laws.md) | I |
-| · | [Conservation Laws as the Engine of Physical Modelling](./02-physics/01-measurement-and-physical-reasoning/04-conservation-laws.md) | I |
+| ✓ | [Physical Quantities, SI Units and Dimensional Homogeneity](./02-physics/01-measurement-and-physical-reasoning/01-physical-quantities.md) | B |
+| ✓ | [Measurement Uncertainty, Significant Figures and Error Bars](./02-physics/01-measurement-and-physical-reasoning/02-measurement-uncertainty.md) | B |
+| ✓ | [Scaling Laws, Similarity and Dimensional Reasoning](./02-physics/01-measurement-and-physical-reasoning/03-scaling-laws.md) | I |
+| ✓ | [Conservation Laws as the Engine of Physical Modelling](./02-physics/01-measurement-and-physical-reasoning/04-conservation-laws.md) | I |
 
-### [ ] Classical Mechanics (0/8)
+### [x] Classical Mechanics (8/8)
 
 Module index: [`02-classical-mechanics/README.md`](./02-physics/02-classical-mechanics/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Kinematics in One and Two Dimensions](./02-physics/02-classical-mechanics/01-kinematics.md) | B |
-| · | [Newton's Laws and Free-Body Analysis](./02-physics/02-classical-mechanics/02-newtons-laws.md) | B |
-| · | [Work, Energy, Power and Conservative Forces](./02-physics/02-classical-mechanics/03-work-energy.md) | I |
-| · | [Momentum, Impulse and Collisions](./02-physics/02-classical-mechanics/04-momentum.md) | I |
-| · | [Rotational Motion, Moment of Inertia and Angular Momentum](./02-physics/02-classical-mechanics/05-rotation.md) | I |
-| · | [Lagrangian and Hamiltonian Formulations](./02-physics/02-classical-mechanics/06-lagrangian.md) | G |
-| · | [Central Forces, Orbits and the Earth-Moon-Sun System](./02-physics/02-classical-mechanics/07-central-forces.md) | A |
-| · | [Rigid-Body Dynamics, Precession and the Earth's Rotation](./02-physics/02-classical-mechanics/08-rigid-body.md) | G |
+| ✓ | [Kinematics in One and Two Dimensions](./02-physics/02-classical-mechanics/01-kinematics.md) | B |
+| ✓ | [Newton's Laws and Free-Body Analysis](./02-physics/02-classical-mechanics/02-newtons-laws.md) | B |
+| ✓ | [Work, Energy, Power and Conservative Forces](./02-physics/02-classical-mechanics/03-work-energy.md) | I |
+| ✓ | [Momentum, Impulse and Collisions](./02-physics/02-classical-mechanics/04-momentum.md) | I |
+| ✓ | [Rotational Motion, Moment of Inertia and Angular Momentum](./02-physics/02-classical-mechanics/05-rotation.md) | I |
+| ✓ | [Lagrangian and Hamiltonian Formulations](./02-physics/02-classical-mechanics/06-lagrangian.md) | G |
+| ✓ | [Central Forces, Orbits and the Earth-Moon-Sun System](./02-physics/02-classical-mechanics/07-central-forces.md) | A |
+| ✓ | [Rigid-Body Dynamics, Precession and the Earth's Rotation](./02-physics/02-classical-mechanics/08-rigid-body.md) | G |
 
-### [ ] Oscillations and Waves (0/10)
+### [x] Oscillations and Waves (10/10)
 
 Module index: [`03-oscillations-and-waves/README.md`](./02-physics/03-oscillations-and-waves/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Simple Harmonic Motion and Small-Oscillation Approximation](./02-physics/03-oscillations-and-waves/01-simple-harmonic-motion.md) | B |
-| · | [Damped and Driven Oscillations, Resonance and Quality Factor](./02-physics/03-oscillations-and-waves/02-damped-driven.md) | I |
-| · | [Coupled Oscillators and Normal Modes](./02-physics/03-oscillations-and-waves/03-coupled-oscillators.md) | A |
-| · | [Wave Description: Amplitude, Frequency, Wavelength, Phase Velocity](./02-physics/03-oscillations-and-waves/04-wave-basics.md) | B |
-| · | [Deriving the Wave Equation from Continuum Physics](./02-physics/03-oscillations-and-waves/05-wave-equation-derivation.md) | A |
-| · | [Superposition, Interference and Standing Waves](./02-physics/03-oscillations-and-waves/06-superposition-interference.md) | I |
-| · | [Dispersion, Group Velocity and Phase vs Group Speed](./02-physics/03-oscillations-and-waves/07-dispersion.md) | A |
-| · | [Reflection, Refraction and Snell's Law for Waves](./02-physics/03-oscillations-and-waves/08-reflection-refraction.md) | I |
-| · | [Diffraction, Scattering and Resolution Limits](./02-physics/03-oscillations-and-waves/09-diffraction.md) | A |
-| · | [Attenuation, Absorption and the Quality Factor Q](./02-physics/03-oscillations-and-waves/10-attenuation.md) | A |
+| ✓ | [Simple Harmonic Motion and Small-Oscillation Approximation](./02-physics/03-oscillations-and-waves/01-simple-harmonic-motion.md) | B |
+| ✓ | [Damped and Driven Oscillations, Resonance and Quality Factor](./02-physics/03-oscillations-and-waves/02-damped-driven.md) | I |
+| ✓ | [Coupled Oscillators and Normal Modes](./02-physics/03-oscillations-and-waves/03-coupled-oscillators.md) | A |
+| ✓ | [Wave Description: Amplitude, Frequency, Wavelength, Phase Velocity](./02-physics/03-oscillations-and-waves/04-wave-basics.md) | B |
+| ✓ | [Deriving the Wave Equation from Continuum Physics](./02-physics/03-oscillations-and-waves/05-wave-equation-derivation.md) | A |
+| ✓ | [Superposition, Interference and Standing Waves](./02-physics/03-oscillations-and-waves/06-superposition-interference.md) | I |
+| ✓ | [Dispersion, Group Velocity and Phase vs Group Speed](./02-physics/03-oscillations-and-waves/07-dispersion.md) | A |
+| ✓ | [Reflection, Refraction and Snell's Law for Waves](./02-physics/03-oscillations-and-waves/08-reflection-refraction.md) | I |
+| ✓ | [Diffraction, Scattering and Resolution Limits](./02-physics/03-oscillations-and-waves/09-diffraction.md) | A |
+| ✓ | [Attenuation, Absorption and the Quality Factor Q](./02-physics/03-oscillations-and-waves/10-attenuation.md) | A |
 
-### [ ] Elasticity and Continuum Mechanics (0/8)
+### [x] Elasticity and Continuum Mechanics (8/8)
 
 Module index: [`04-elasticity-and-continuum-mechanics/README.md`](./02-physics/04-elasticity-and-continuum-mechanics/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Stress: Traction, Cauchy Stress Tensor and Equilibrium](./02-physics/04-elasticity-and-continuum-mechanics/01-stress.md) | A |
-| · | [Strain: Infinitesimal Strain Tensor and Compatibility](./02-physics/04-elasticity-and-continuum-mechanics/02-strain.md) | A |
-| · | [Constitutive Laws and Generalised Hooke's Law](./02-physics/04-elasticity-and-continuum-mechanics/03-constitutive-laws.md) | A |
-| · | [Young's Modulus, Poisson's Ratio and the Elastic Constants](./02-physics/04-elasticity-and-continuum-mechanics/04-elastic-moduli.md) | A |
-| · | [Elastodynamic Equation of Motion and Wave Speeds](./02-physics/04-elasticity-and-continuum-mechanics/05-elastodynamics.md) | G |
-| · | [Anisotropic Elasticity (VTI, HTI, Orthorhombic)](./02-physics/04-elasticity-and-continuum-mechanics/06-anisotropic-elasticity.md) | D |
-| · | [Viscoelasticity, Creep and Anelastic Relaxation](./02-physics/04-elasticity-and-continuum-mechanics/07-viscoelasticity.md) | D |
-| · | [Rock Failure, Fracture and Rate-State Friction](./02-physics/04-elasticity-and-continuum-mechanics/08-failure-and-friction.md) | G |
+| ✓ | [Stress: Traction, Cauchy Stress Tensor and Equilibrium](./02-physics/04-elasticity-and-continuum-mechanics/01-stress.md) | A |
+| ✓ | [Strain: Infinitesimal Strain Tensor and Compatibility](./02-physics/04-elasticity-and-continuum-mechanics/02-strain.md) | A |
+| ✓ | [Constitutive Laws and Generalised Hooke's Law](./02-physics/04-elasticity-and-continuum-mechanics/03-constitutive-laws.md) | A |
+| ✓ | [Young's Modulus, Poisson's Ratio and the Elastic Constants](./02-physics/04-elasticity-and-continuum-mechanics/04-elastic-moduli.md) | A |
+| ✓ | [Elastodynamic Equation of Motion and Wave Speeds](./02-physics/04-elasticity-and-continuum-mechanics/05-elastodynamics.md) | G |
+| ✓ | [Anisotropic Elasticity (VTI, HTI, Orthorhombic)](./02-physics/04-elasticity-and-continuum-mechanics/06-anisotropic-elasticity.md) | D |
+| ✓ | [Viscoelasticity, Creep and Anelastic Relaxation](./02-physics/04-elasticity-and-continuum-mechanics/07-viscoelasticity.md) | D |
+| ✓ | [Rock Failure, Fracture and Rate-State Friction](./02-physics/04-elasticity-and-continuum-mechanics/08-failure-and-friction.md) | G |
 
 ### [ ] Thermodynamics and Heat Transfer (0/7)
 
