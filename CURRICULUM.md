@@ -11,10 +11,10 @@ Legend: **B** beginner · **I** intermediate · **A** advanced · **G** graduate
 | Folders | 27 |
 | Modules | 216 |
 | Lessons planned | 1146 |
-| Lessons written | 275 |
-| Lessons with valid frontmatter | 275 |
-| Exercise/solution companions written | 504 / 2190 |
-| Completion | 24.0% |
+| Lessons written | 284 |
+| Lessons with valid frontmatter | 284 |
+| Exercise/solution companions written | 522 / 2190 |
+| Completion | 24.8% |
 
 > Companion files are the conventional `exercises/<lesson>-exercises.md` and `<lesson>-solutions.md` pairs. Lessons in `00-orientation` and `26-reference-library` are process material and reference pages, so they carry no companions by design.
 
@@ -683,7 +683,7 @@ Module index: [`13-testing-profiling-packaging/README.md`](./03-scientific-compu
 
 ## Earth Science, Geology and Planetary Context
 
-`04-earth-science-geology` — **8 modules**, **28/37 lessons written**
+`04-earth-science-geology` — **8 modules**, **37/37 lessons written**
 
 [Folder index](./04-earth-science-geology/README.md)
 
@@ -757,28 +757,28 @@ Module index: [`06-petroleum-and-mineral-systems/README.md`](./04-earth-science-
 | ✓ | [Aquifer Types and Groundwater Occurrence](./04-earth-science-geology/06-petroleum-and-mineral-systems/04-groundwater-aquifers.md) | I |
 | ✓ | [Unconventional Resources: Shale, Tight Gas, Hydrates](./04-earth-science-geology/06-petroleum-and-mineral-systems/05-unconventional-resources.md) | A |
 
-### [ ] Geologic and Geophysical Hazards (0/5)
+### [x] Geologic and Geophysical Hazards (5/5)
 
 Module index: [`07-geologic-hazards/README.md`](./04-earth-science-geology/07-geologic-hazards/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Earthquake Hazard and Ground Motion](./04-earth-science-geology/07-geologic-hazards/01-earthquake-hazard.md) | A |
-| · | [Volcanic Hazards, Monitoring and Precursors](./04-earth-science-geology/07-geologic-hazards/02-volcanic-hazards.md) | I |
-| · | [Landslides, Slope Stability and Geotechnical Geophysics](./04-earth-science-geology/07-geologic-hazards/03-landslides.md) | A |
-| · | [Subsidence, Sinkholes and Karst](./04-earth-science-geology/07-geologic-hazards/04-subsidence-sinkholes.md) | I |
-| · | [Tsunami Generation, Propagation and Warning](./04-earth-science-geology/07-geologic-hazards/05-tsunami.md) | A |
+| ✓ | [Earthquake Hazard and Ground Motion](./04-earth-science-geology/07-geologic-hazards/01-earthquake-hazard.md) | A |
+| ✓ | [Volcanic Hazards, Monitoring and Precursors](./04-earth-science-geology/07-geologic-hazards/02-volcanic-hazards.md) | I |
+| ✓ | [Landslides, Slope Stability and Geotechnical Geophysics](./04-earth-science-geology/07-geologic-hazards/03-landslides.md) | A |
+| ✓ | [Subsidence, Sinkholes and Karst](./04-earth-science-geology/07-geologic-hazards/04-subsidence-sinkholes.md) | I |
+| ✓ | [Tsunami Generation, Propagation and Warning](./04-earth-science-geology/07-geologic-hazards/05-tsunami.md) | A |
 
-### [ ] Planetary Science and Comparative Planetology (0/4)
+### [x] Planetary Science and Comparative Planetology (4/4)
 
 Module index: [`08-planetary-science/README.md`](./04-earth-science-geology/08-planetary-science/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Solar System Architecture and Formation](./04-earth-science-geology/08-planetary-science/01-solar-system.md) | B |
-| · | [Planetary Interiors and Magnetic Fields](./04-earth-science-geology/08-planetary-science/02-planetary-interiors.md) | A |
-| · | [Planetary Geophysics from Orbiters and Landers](./04-earth-science-geology/08-planetary-science/03-planetary-geophysics-missions.md) | A |
-| · | [Exoplanets, Habitability and Observational Constraints](./04-earth-science-geology/08-planetary-science/04-exoplanets-habitability.md) | G |
+| ✓ | [Solar System Architecture and Formation](./04-earth-science-geology/08-planetary-science/01-solar-system.md) | B |
+| ✓ | [Planetary Interiors and Magnetic Fields](./04-earth-science-geology/08-planetary-science/02-planetary-interiors.md) | A |
+| ✓ | [Planetary Geophysics from Orbiters and Landers](./04-earth-science-geology/08-planetary-science/03-planetary-geophysics-missions.md) | A |
+| ✓ | [Exoplanets, Habitability and Observational Constraints](./04-earth-science-geology/08-planetary-science/04-exoplanets-habitability.md) | G |
 
 ## Core Geophysics: Principles and Methods
 
