@@ -11,10 +11,10 @@ Legend: **B** beginner · **I** intermediate · **A** advanced · **G** graduate
 | Folders | 27 |
 | Modules | 216 |
 | Lessons planned | 1146 |
-| Lessons written | 156 |
-| Lessons with valid frontmatter | 156 |
-| Exercise/solution companions written | 244 / 2190 |
-| Completion | 13.6% |
+| Lessons written | 247 |
+| Lessons with valid frontmatter | 247 |
+| Exercise/solution companions written | 448 / 2190 |
+| Completion | 21.6% |
 
 > Companion files are the conventional `exercises/<lesson>-exercises.md` and `<lesson>-solutions.md` pairs. Lessons in `00-orientation` and `26-reference-library` are process material and reference pages, so they carry no companions by design.
 
@@ -34,7 +34,7 @@ Legend: **B** beginner · **I** intermediate · **A** advanced · **G** graduate
 - [x] [Orientation and Study Roadmap](./00-orientation/README.md) — `00-orientation` · stages: beginner
 - [x] [Mathematics for Geophysics](./01-mathematics/README.md) — `01-mathematics` · stages: beginner->advanced
 - [x] [Physics for Geophysics](./02-physics/README.md) — `02-physics` · stages: beginner->graduate
-- [ ] [Scientific Computing and Python](./03-scientific-computing/README.md) — `03-scientific-computing` · stages: beginner->graduate
+- [x] [Scientific Computing and Python](./03-scientific-computing/README.md) — `03-scientific-computing` · stages: beginner->graduate
 - [ ] [Earth Science, Geology and Planetary Context](./04-earth-science-geology/README.md) — `04-earth-science-geology` · stages: beginner->advanced
 - [ ] [Core Geophysics: Principles and Methods](./05-core-geophysics/README.md) — `05-core-geophysics` · stages: intermediate->graduate
 - [ ] [Seismology](./06-seismology/README.md) — `06-seismology` · stages: intermediate->research
@@ -115,7 +115,7 @@ Module index: [`04-orientation-geophysics/README.md`](./00-orientation/04-orient
 
 ## Mathematics for Geophysics
 
-`01-mathematics` — **16 modules**, **104/111 lessons written**
+`01-mathematics` — **16 modules**, **111/111 lessons written**
 
 [Folder index](./01-mathematics/README.md)
 
@@ -301,7 +301,7 @@ Module index: [`13-probability-and-statistics-foundations/README.md`](./01-mathe
 | ✓ | [Hypothesis Testing, p-Values and Power](./01-mathematics/13-probability-and-statistics-foundations/08-hypothesis-testing.md) | A |
 | ✓ | [Error and Uncertainty Propagation (Analytic and Monte Carlo)](./01-mathematics/13-probability-and-statistics-foundations/09-error-propagation.md) | A |
 
-### [ ] Optimization and Variational Methods (7/7)
+### [x] Optimization and Variational Methods (7/7)
 
 Module index: [`14-optimization/README.md`](./01-mathematics/14-optimization/README.md)
 
@@ -315,7 +315,7 @@ Module index: [`14-optimization/README.md`](./01-mathematics/14-optimization/REA
 | ✓ | [Calculus of Variations and Its Geophysical Uses](./01-mathematics/14-optimization/06-variational-calculus.md) | G |
 | ✓ | [Linear Programming and Geophysical Applications](./01-mathematics/14-optimization/07-linear-programming.md) | G |
 
-### [ ] Tensors and Mathematical Foundations for Continuum Physics (6/6)
+### [x] Tensors and Mathematical Foundations for Continuum Physics (6/6)
 
 Module index: [`15-tensors-and-differential-geometry/README.md`](./01-mathematics/15-tensors-and-differential-geometry/README.md)
 
@@ -328,23 +328,23 @@ Module index: [`15-tensors-and-differential-geometry/README.md`](./01-mathematic
 | ✓ | [Representing Anisotropy: Voigt Notation and Symmetry Classes](./01-mathematics/15-tensors-and-differential-geometry/05-anisotropy-representation.md) | G |
 | ✓ | [Differential Geometry of the Earth's Surface and Sphere](./01-mathematics/15-tensors-and-differential-geometry/06-differential-geometry-earth.md) | D |
 
-### [ ] Functional Analysis for Inverse Problems (0/7)
+### [x] Functional Analysis for Inverse Problems (7/7)
 
 Module index: [`16-functional-analysis/README.md`](./01-mathematics/16-functional-analysis/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Vector Spaces of Functions, Norms and Inner Products](./01-mathematics/16-functional-analysis/01-function-spaces.md) | G |
-| · | [Hilbert Spaces and Orthogonal Expansions](./01-mathematics/16-functional-analysis/02-hilbert-spaces.md) | G |
-| · | [Linear Operators, Adjoints and Compactness](./01-mathematics/16-functional-analysis/03-operators.md) | D |
-| · | [Spectral Theory of Operators and Eigenfunction Bases](./01-mathematics/16-functional-analysis/04-spectral-theory.md) | D |
-| · | [Ill-Posedness in the Sense of Hadamard](./01-mathematics/16-functional-analysis/05-ill-posedness.md) | G |
-| · | [Tikhonov Regularisation and the L-Curve](./01-mathematics/16-functional-analysis/06-regularization-theory.md) | G |
-| · | [Discretisation, Convergence and Regularisation Discrepancy](./01-mathematics/16-functional-analysis/07-discretization-convergence.md) | D |
+| ✓ | [Vector Spaces of Functions, Norms and Inner Products](./01-mathematics/16-functional-analysis/01-function-spaces.md) | G |
+| ✓ | [Hilbert Spaces and Orthogonal Expansions](./01-mathematics/16-functional-analysis/02-hilbert-spaces.md) | G |
+| ✓ | [Linear Operators, Adjoints and Compactness](./01-mathematics/16-functional-analysis/03-operators.md) | D |
+| ✓ | [Spectral Theory of Operators and Eigenfunction Bases](./01-mathematics/16-functional-analysis/04-spectral-theory.md) | D |
+| ✓ | [Ill-Posedness in the Sense of Hadamard](./01-mathematics/16-functional-analysis/05-ill-posedness.md) | G |
+| ✓ | [Tikhonov Regularisation and the L-Curve](./01-mathematics/16-functional-analysis/06-regularization-theory.md) | G |
+| ✓ | [Discretisation, Convergence and Regularisation Discrepancy](./01-mathematics/16-functional-analysis/07-discretization-convergence.md) | D |
 
 ## Physics for Geophysics
 
-`02-physics` — **11 modules**, **30/73 lessons written**
+`02-physics` — **11 modules**, **73/73 lessons written**
 
 [Folder index](./02-physics/README.md)
 
@@ -406,179 +406,179 @@ Module index: [`04-elasticity-and-continuum-mechanics/README.md`](./02-physics/0
 | ✓ | [Viscoelasticity, Creep and Anelastic Relaxation](./02-physics/04-elasticity-and-continuum-mechanics/07-viscoelasticity.md) | D |
 | ✓ | [Rock Failure, Fracture and Rate-State Friction](./02-physics/04-elasticity-and-continuum-mechanics/08-failure-and-friction.md) | G |
 
-### [ ] Thermodynamics and Heat Transfer (0/7)
+### [x] Thermodynamics and Heat Transfer (7/7)
 
 Module index: [`05-thermodynamics/README.md`](./02-physics/05-thermodynamics/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Temperature, Heat, Internal Energy and Specific Heat](./02-physics/05-thermodynamics/01-temperature-and-heat.md) | B |
-| · | [First Law, Work and Energy Balances](./02-physics/05-thermodynamics/02-first-law.md) | I |
-| · | [Second Law, Entropy and Irreversibility](./02-physics/05-thermodynamics/03-second-law.md) | A |
-| · | [Heat Conduction, Fourier's Law and Thermal Diffusivity](./02-physics/05-thermodynamics/04-heat-conduction.md) | A |
-| · | [Convection, Radiation and Combined Heat Transfer](./02-physics/05-thermodynamics/05-convection-radiation.md) | A |
-| · | [Geotherms, Heat Flow and the Earth's Thermal Budget](./02-physics/05-thermodynamics/06-geotherms.md) | G |
-| · | [Thermodynamic Phase Equilibria and Mantle Mineralogy](./02-physics/05-thermodynamics/07-phase-equilibria.md) | D |
+| ✓ | [Temperature, Heat, Internal Energy and Specific Heat](./02-physics/05-thermodynamics/01-temperature-and-heat.md) | B |
+| ✓ | [First Law, Work and Energy Balances](./02-physics/05-thermodynamics/02-first-law.md) | I |
+| ✓ | [Second Law, Entropy and Irreversibility](./02-physics/05-thermodynamics/03-second-law.md) | A |
+| ✓ | [Heat Conduction, Fourier's Law and Thermal Diffusivity](./02-physics/05-thermodynamics/04-heat-conduction.md) | A |
+| ✓ | [Convection, Radiation and Combined Heat Transfer](./02-physics/05-thermodynamics/05-convection-radiation.md) | A |
+| ✓ | [Geotherms, Heat Flow and the Earth's Thermal Budget](./02-physics/05-thermodynamics/06-geotherms.md) | G |
+| ✓ | [Thermodynamic Phase Equilibria and Mantle Mineralogy](./02-physics/05-thermodynamics/07-phase-equilibria.md) | D |
 
-### [ ] Fluid Mechanics (0/7)
+### [x] Fluid Mechanics (7/7)
 
 Module index: [`06-fluid-mechanics/README.md`](./02-physics/06-fluid-mechanics/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Fluid Statics, Pressure and Buoyancy](./02-physics/06-fluid-mechanics/01-fluid-statics.md) | I |
-| · | [Continuity and Momentum Equations; Navier-Stokes](./02-physics/06-fluid-mechanics/02-conservation-fluid.md) | A |
-| · | [Viscous Flow, Reynolds Number and Boundary Layers](./02-physics/06-fluid-mechanics/03-viscous-flow.md) | A |
-| · | [Turbulence, Mixing and Eddy Diffusivity](./02-physics/06-fluid-mechanics/04-turbulence.md) | G |
-| · | [Flow in Porous Media: Darcy's Law and Permeability](./02-physics/06-fluid-mechanics/05-porous-media-flow.md) | A |
-| · | [Mantle Convection and Rayleigh-Benard Instability](./02-physics/06-fluid-mechanics/06-mantle-convection.md) | D |
-| · | [Rotating Fluids, Coriolis Effect and Geostrophic Balance](./02-physics/06-fluid-mechanics/07-geophysical-fluids.md) | D |
+| ✓ | [Fluid Statics, Pressure and Buoyancy](./02-physics/06-fluid-mechanics/01-fluid-statics.md) | I |
+| ✓ | [Continuity and Momentum Equations; Navier-Stokes](./02-physics/06-fluid-mechanics/02-conservation-fluid.md) | A |
+| ✓ | [Viscous Flow, Reynolds Number and Boundary Layers](./02-physics/06-fluid-mechanics/03-viscous-flow.md) | A |
+| ✓ | [Turbulence, Mixing and Eddy Diffusivity](./02-physics/06-fluid-mechanics/04-turbulence.md) | G |
+| ✓ | [Flow in Porous Media: Darcy's Law and Permeability](./02-physics/06-fluid-mechanics/05-porous-media-flow.md) | A |
+| ✓ | [Mantle Convection and Rayleigh-Benard Instability](./02-physics/06-fluid-mechanics/06-mantle-convection.md) | D |
+| ✓ | [Rotating Fluids, Coriolis Effect and Geostrophic Balance](./02-physics/06-fluid-mechanics/07-geophysical-fluids.md) | D |
 
-### [ ] Electromagnetism and Electromagnetic Induction (0/7)
+### [x] Electromagnetism and Electromagnetic Induction (7/7)
 
 Module index: [`07-electromagnetism/README.md`](./02-physics/07-electromagnetism/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Electrostatics, Coulomb's Law and Electric Potential](./02-physics/07-electromagnetism/01-electrostatics.md) | I |
-| · | [Magnetostatics, Biot-Savart and Ampere's Law](./02-physics/07-electromagnetism/02-magnetostatics.md) | I |
-| · | [Maxwell's Equations and Their Physical Meaning](./02-physics/07-electromagnetism/03-maxwell-equations.md) | A |
-| · | [Faraday's Law, Induction and Eddy Currents](./02-physics/07-electromagnetism/04-em-induction.md) | A |
-| · | [Electromagnetic Waves, Impedance and Polarisation](./02-physics/07-electromagnetism/05-em-waves.md) | A |
-| · | [EM Fields in Conductors: Skin Depth and Diffusion](./02-physics/07-electromagnetism/06-em-in-conductors.md) | G |
-| · | [Magnetisation, Susceptibility and Magnetic Materials](./02-physics/07-electromagnetism/07-magnetisation-materials.md) | G |
+| ✓ | [Electrostatics, Coulomb's Law and Electric Potential](./02-physics/07-electromagnetism/01-electrostatics.md) | I |
+| ✓ | [Magnetostatics, Biot-Savart and Ampere's Law](./02-physics/07-electromagnetism/02-magnetostatics.md) | I |
+| ✓ | [Maxwell's Equations and Their Physical Meaning](./02-physics/07-electromagnetism/03-maxwell-equations.md) | A |
+| ✓ | [Faraday's Law, Induction and Eddy Currents](./02-physics/07-electromagnetism/04-em-induction.md) | A |
+| ✓ | [Electromagnetic Waves, Impedance and Polarisation](./02-physics/07-electromagnetism/05-em-waves.md) | A |
+| ✓ | [EM Fields in Conductors: Skin Depth and Diffusion](./02-physics/07-electromagnetism/06-em-in-conductors.md) | G |
+| ✓ | [Magnetisation, Susceptibility and Magnetic Materials](./02-physics/07-electromagnetism/07-magnetisation-materials.md) | G |
 
-### [ ] Potential Theory (0/6)
+### [x] Potential Theory (6/6)
 
 Module index: [`08-potential-theory/README.md`](./02-physics/08-potential-theory/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Newtonian Gravitational Potential and Field](./02-physics/08-potential-theory/01-gravitational-potential.md) | A |
-| · | [Laplace's Equation and Harmonic Functions](./02-physics/08-potential-theory/02-laplace-equation.md) | A |
-| · | [Spherical Harmonics and Multipole Expansions](./02-physics/08-potential-theory/03-spherical-harmonics.md) | G |
-| · | [Poisson's Equation and Source Distributions](./02-physics/08-potential-theory/04-poisson-equation.md) | A |
-| · | [Equipotential Surfaces, Geoid and Level Surfaces](./02-physics/08-potential-theory/05-equipotentials.md) | G |
-| · | [Uniqueness Theorems and Boundary Conditions](./02-physics/08-potential-theory/06-uniqueness-theorems.md) | G |
+| ✓ | [Newtonian Gravitational Potential and Field](./02-physics/08-potential-theory/01-gravitational-potential.md) | A |
+| ✓ | [Laplace's Equation and Harmonic Functions](./02-physics/08-potential-theory/02-laplace-equation.md) | A |
+| ✓ | [Spherical Harmonics and Multipole Expansions](./02-physics/08-potential-theory/03-spherical-harmonics.md) | G |
+| ✓ | [Poisson's Equation and Source Distributions](./02-physics/08-potential-theory/04-poisson-equation.md) | A |
+| ✓ | [Equipotential Surfaces, Geoid and Level Surfaces](./02-physics/08-potential-theory/05-equipotentials.md) | G |
+| ✓ | [Uniqueness Theorems and Boundary Conditions](./02-physics/08-potential-theory/06-uniqueness-theorems.md) | G |
 
-### [ ] Radiation, Atomic Physics and Radioactivity (0/6)
+### [x] Radiation, Atomic Physics and Radioactivity (6/6)
 
 Module index: [`09-radiation-and-atomic-physics/README.md`](./02-physics/09-radiation-and-atomic-physics/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Atomic Structure and Energy Levels](./02-physics/09-radiation-and-atomic-physics/01-atomic-structure.md) | I |
-| · | [Radioactive Decay, Half-Life and Dating](./02-physics/09-radiation-and-atomic-physics/02-radioactive-decay.md) | I |
-| · | [Interaction of Radiation with Matter (Alpha, Beta, Gamma)](./02-physics/09-radiation-and-atomic-physics/03-radiation-interaction.md) | A |
-| · | [Gamma-Ray Spectrometry and Natural Radioelements](./02-physics/09-radiation-and-atomic-physics/04-gamma-spectrometry.md) | A |
-| · | [Neutron Interactions and Borehole Nuclear Measurements](./02-physics/09-radiation-and-atomic-physics/05-neutron-interaction.md) | G |
-| · | [Dosimetry, Radiation Safety and Regulatory Limits](./02-physics/09-radiation-and-atomic-physics/06-dosimetry.md) | I |
+| ✓ | [Atomic Structure and Energy Levels](./02-physics/09-radiation-and-atomic-physics/01-atomic-structure.md) | I |
+| ✓ | [Radioactive Decay, Half-Life and Dating](./02-physics/09-radiation-and-atomic-physics/02-radioactive-decay.md) | I |
+| ✓ | [Interaction of Radiation with Matter (Alpha, Beta, Gamma)](./02-physics/09-radiation-and-atomic-physics/03-radiation-interaction.md) | A |
+| ✓ | [Gamma-Ray Spectrometry and Natural Radioelements](./02-physics/09-radiation-and-atomic-physics/04-gamma-spectrometry.md) | A |
+| ✓ | [Neutron Interactions and Borehole Nuclear Measurements](./02-physics/09-radiation-and-atomic-physics/05-neutron-interaction.md) | G |
+| ✓ | [Dosimetry, Radiation Safety and Regulatory Limits](./02-physics/09-radiation-and-atomic-physics/06-dosimetry.md) | I |
 
-### [ ] Optics and Photometry for Geophysical Sensing (0/5)
+### [x] Optics and Photometry for Geophysical Sensing (5/5)
 
 Module index: [`10-optics-and-photometry/README.md`](./02-physics/10-optics-and-photometry/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Geometrical Optics, Refraction and Lenses](./02-physics/10-optics-and-photometry/01-geometrical-optics.md) | I |
-| · | [Interference and Diffraction in Optical Instruments](./02-physics/10-optics-and-photometry/02-interference-diffraction-optics.md) | A |
-| · | [Radiative Transfer, Blackbody Radiation and Kirchhoff's Law](./02-physics/10-optics-and-photometry/03-radiative-transfer.md) | G |
-| · | [Spectroscopy Principles for Remote Sensing](./02-physics/10-optics-and-photometry/04-spectroscopy.md) | G |
-| · | [Fibre-Optic Sensing and Distributed Acoustic Sensing](./02-physics/10-optics-and-photometry/05-fiber-optics-sensing.md) | G |
+| ✓ | [Geometrical Optics, Refraction and Lenses](./02-physics/10-optics-and-photometry/01-geometrical-optics.md) | I |
+| ✓ | [Interference and Diffraction in Optical Instruments](./02-physics/10-optics-and-photometry/02-interference-diffraction-optics.md) | A |
+| ✓ | [Radiative Transfer, Blackbody Radiation and Kirchhoff's Law](./02-physics/10-optics-and-photometry/03-radiative-transfer.md) | G |
+| ✓ | [Spectroscopy Principles for Remote Sensing](./02-physics/10-optics-and-photometry/04-spectroscopy.md) | G |
+| ✓ | [Fibre-Optic Sensing and Distributed Acoustic Sensing](./02-physics/10-optics-and-photometry/05-fiber-optics-sensing.md) | G |
 
-### [ ] Physics of the Earth's Interior and Atmosphere (0/5)
+### [x] Physics of the Earth's Interior and Atmosphere (5/5)
 
 Module index: [`11-physics-of-earths-interior-and-atmosphere/README.md`](./02-physics/11-physics-of-earths-interior-and-atmosphere/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Pressure, Density and Gravity Inside the Earth](./02-physics/11-physics-of-earths-interior-and-atmosphere/01-pressure-density-depth.md) | A |
-| · | [Equations of State and High-Pressure Mineral Physics](./02-physics/11-physics-of-earths-interior-and-atmosphere/02-equations-of-state.md) | D |
-| · | [Seismic Velocities, Elastic Moduli and Mineralogy](./02-physics/11-physics-of-earths-interior-and-atmosphere/03-seismic-parameter-relations.md) | G |
-| · | [Atmospheric Structure, Hydrostatic Balance and Lapse Rates](./02-physics/11-physics-of-earths-interior-and-atmosphere/04-atmospheric-structure.md) | A |
-| · | [Comparative Planetary Physics and Interiors](./02-physics/11-physics-of-earths-interior-and-atmosphere/05-planetary-physics.md) | D |
+| ✓ | [Pressure, Density and Gravity Inside the Earth](./02-physics/11-physics-of-earths-interior-and-atmosphere/01-pressure-density-depth.md) | A |
+| ✓ | [Equations of State and High-Pressure Mineral Physics](./02-physics/11-physics-of-earths-interior-and-atmosphere/02-equations-of-state.md) | D |
+| ✓ | [Seismic Velocities, Elastic Moduli and Mineralogy](./02-physics/11-physics-of-earths-interior-and-atmosphere/03-seismic-parameter-relations.md) | G |
+| ✓ | [Atmospheric Structure, Hydrostatic Balance and Lapse Rates](./02-physics/11-physics-of-earths-interior-and-atmosphere/04-atmospheric-structure.md) | A |
+| ✓ | [Comparative Planetary Physics and Interiors](./02-physics/11-physics-of-earths-interior-and-atmosphere/05-planetary-physics.md) | D |
 
 ## Scientific Computing and Python
 
-`03-scientific-computing` — **13 modules**, **0/86 lessons written**
+`03-scientific-computing` — **13 modules**, **41/86 lessons written**
 
 [Folder index](./03-scientific-computing/README.md)
 
-### [ ] Python Programming Fundamentals (0/10)
+### [x] Python Programming Fundamentals (10/10)
 
 Module index: [`01-python-fundamentals/README.md`](./03-scientific-computing/01-python-fundamentals/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Why Python for Geophysics: The Scientific Ecosystem](./03-scientific-computing/01-python-fundamentals/01-why-python.md) | B |
-| · | [Types, Variables, Expressions and Operator Semantics](./03-scientific-computing/01-python-fundamentals/02-types-and-variables.md) | B |
-| · | [Conditionals, Loops and Loop-Invariant Reasoning](./03-scientific-computing/01-python-fundamentals/03-control-flow.md) | B |
-| · | [Functions, Scope, Modules and Packages](./03-scientific-computing/01-python-fundamentals/04-functions-modules.md) | B |
-| · | [Lists, Tuples, Dictionaries, Sets and Complexity](./03-scientific-computing/01-python-fundamentals/05-data-structures.md) | B |
-| · | [Files, Text I/O and Data Encodings](./03-scientific-computing/01-python-fundamentals/06-files-and-io.md) | B |
-| · | [Exceptions, Assertions and Systematic Debugging](./03-scientific-computing/01-python-fundamentals/07-errors-and-debugging.md) | I |
-| · | [Classes, Objects and When Not to Use OOP](./03-scientific-computing/01-python-fundamentals/08-classes-and-oop.md) | I |
-| · | [Iterators, Generators and Lazy Evaluation for Large Data](./03-scientific-computing/01-python-fundamentals/09-iterators-generators.md) | I |
-| · | [Context Managers, Decorators and Functional Idioms](./03-scientific-computing/01-python-fundamentals/10-context-managers-decorators.md) | A |
+| ✓ | [Why Python for Geophysics: The Scientific Ecosystem](./03-scientific-computing/01-python-fundamentals/01-why-python.md) | B |
+| ✓ | [Types, Variables, Expressions and Operator Semantics](./03-scientific-computing/01-python-fundamentals/02-types-and-variables.md) | B |
+| ✓ | [Conditionals, Loops and Loop-Invariant Reasoning](./03-scientific-computing/01-python-fundamentals/03-control-flow.md) | B |
+| ✓ | [Functions, Scope, Modules and Packages](./03-scientific-computing/01-python-fundamentals/04-functions-modules.md) | B |
+| ✓ | [Lists, Tuples, Dictionaries, Sets and Complexity](./03-scientific-computing/01-python-fundamentals/05-data-structures.md) | B |
+| ✓ | [Files, Text I/O and Data Encodings](./03-scientific-computing/01-python-fundamentals/06-files-and-io.md) | B |
+| ✓ | [Exceptions, Assertions and Systematic Debugging](./03-scientific-computing/01-python-fundamentals/07-errors-and-debugging.md) | I |
+| ✓ | [Classes, Objects and When Not to Use OOP](./03-scientific-computing/01-python-fundamentals/08-classes-and-oop.md) | I |
+| ✓ | [Iterators, Generators and Lazy Evaluation for Large Data](./03-scientific-computing/01-python-fundamentals/09-iterators-generators.md) | I |
+| ✓ | [Context Managers, Decorators and Functional Idioms](./03-scientific-computing/01-python-fundamentals/10-context-managers-decorators.md) | A |
 
-### [ ] NumPy and Array Computing (0/8)
+### [x] NumPy and Array Computing (8/8)
 
 Module index: [`02-numpy/README.md`](./03-scientific-computing/02-numpy/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [ndarray Creation, dtypes, Shapes and Strides](./03-scientific-computing/02-numpy/01-ndarray-basics.md) | B |
-| · | [Indexing, Slicing, Views vs Copies and Fancy Indexing](./03-scientific-computing/02-numpy/02-indexing-slicing.md) | B |
-| · | [Broadcasting Rules and Vectorised Thinking](./03-scientific-computing/02-numpy/03-broadcasting.md) | I |
-| · | [Universal Functions, Reductions and Axis Semantics](./03-scientific-computing/02-numpy/04-ufuncs-reductions.md) | I |
-| · | [Linear Algebra with numpy.linalg](./03-scientific-computing/02-numpy/05-linear-algebra-numpy.md) | I |
-| · | [Random Number Generation and Reproducible Seeds](./03-scientific-computing/02-numpy/06-random-module.md) | I |
-| · | [Memory Layout, Strides and Cache-Aware Performance](./03-scientific-computing/02-numpy/07-memory-performance.md) | A |
-| · | [Replacing Loops: Vectorisation Patterns and Traps](./03-scientific-computing/02-numpy/08-vectorisation-patterns.md) | A |
+| ✓ | [ndarray Creation, dtypes, Shapes and Strides](./03-scientific-computing/02-numpy/01-ndarray-basics.md) | B |
+| ✓ | [Indexing, Slicing, Views vs Copies and Fancy Indexing](./03-scientific-computing/02-numpy/02-indexing-slicing.md) | B |
+| ✓ | [Broadcasting Rules and Vectorised Thinking](./03-scientific-computing/02-numpy/03-broadcasting.md) | I |
+| ✓ | [Universal Functions, Reductions and Axis Semantics](./03-scientific-computing/02-numpy/04-ufuncs-reductions.md) | I |
+| ✓ | [Linear Algebra with numpy.linalg](./03-scientific-computing/02-numpy/05-linear-algebra-numpy.md) | I |
+| ✓ | [Random Number Generation and Reproducible Seeds](./03-scientific-computing/02-numpy/06-random-module.md) | I |
+| ✓ | [Memory Layout, Strides and Cache-Aware Performance](./03-scientific-computing/02-numpy/07-memory-performance.md) | A |
+| ✓ | [Replacing Loops: Vectorisation Patterns and Traps](./03-scientific-computing/02-numpy/08-vectorisation-patterns.md) | A |
 
-### [ ] SciPy for Scientific Computing (0/8)
+### [x] SciPy for Scientific Computing (8/8)
 
 Module index: [`03-scipy/README.md`](./03-scientific-computing/03-scipy/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [SciPy Organisation and When to Use Which Subpackage](./03-scientific-computing/03-scipy/01-scipy-overview.md) | I |
-| · | [scipy.integrate: Quadrature and ODE Integration](./03-scientific-computing/03-scipy/02-integrate.md) | I |
-| · | [scipy.optimize: Root Finding, Minimisation and Curve Fitting](./03-scientific-computing/03-scipy/03-optimize.md) | I |
-| · | [scipy.interpolate: Splines, Griddata and RegularGrid](./03-scientific-computing/03-scipy/04-interpolate.md) | I |
-| · | [scipy.signal: Filters, Windows and Spectral Estimation](./03-scientific-computing/03-scipy/05-signal.md) | A |
-| · | [scipy.sparse: Storage Formats and Sparse Solvers](./03-scientific-computing/03-scipy/06-sparse.md) | A |
-| · | [scipy.ndimage and scipy.linalg for Field Data](./03-scientific-computing/03-scipy/07-ndimage-linalg.md) | A |
-| · | [scipy.special and scipy.stats in Practice](./03-scientific-computing/03-scipy/08-special-stats.md) | A |
+| ✓ | [SciPy Organisation and When to Use Which Subpackage](./03-scientific-computing/03-scipy/01-scipy-overview.md) | I |
+| ✓ | [scipy.integrate: Quadrature and ODE Integration](./03-scientific-computing/03-scipy/02-integrate.md) | I |
+| ✓ | [scipy.optimize: Root Finding, Minimisation and Curve Fitting](./03-scientific-computing/03-scipy/03-optimize.md) | I |
+| ✓ | [scipy.interpolate: Splines, Griddata and RegularGrid](./03-scientific-computing/03-scipy/04-interpolate.md) | I |
+| ✓ | [scipy.signal: Filters, Windows and Spectral Estimation](./03-scientific-computing/03-scipy/05-signal.md) | A |
+| ✓ | [scipy.sparse: Storage Formats and Sparse Solvers](./03-scientific-computing/03-scipy/06-sparse.md) | A |
+| ✓ | [scipy.ndimage and scipy.linalg for Field Data](./03-scientific-computing/03-scipy/07-ndimage-linalg.md) | A |
+| ✓ | [scipy.special and scipy.stats in Practice](./03-scientific-computing/03-scipy/08-special-stats.md) | A |
 
-### [ ] Pandas and Tabular Geophysical Data (0/7)
+### [x] Pandas and Tabular Geophysical Data (7/7)
 
 Module index: [`04-pandas/README.md`](./03-scientific-computing/04-pandas/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Series, DataFrame and the Labeled-Data Model](./03-scientific-computing/04-pandas/01-series-dataframe.md) | B |
-| · | [Indexing, Selection, loc/iloc and Boolean Masks](./03-scientific-computing/04-pandas/02-indexing-selection.md) | B |
-| · | [Cleaning: Missing Values, Duplicates and Outliers](./03-scientific-computing/04-pandas/03-cleaning-data.md) | I |
-| · | [Group-By, Aggregation and Reshaping](./03-scientific-computing/04-pandas/04-groupby-aggregation.md) | I |
-| · | [Merging, Joining and Aligning Irregular Time Series](./03-scientific-computing/04-pandas/05-merging-time-series.md) | I |
-| · | [Case Study: Earthquake Catalogue Wrangling](./03-scientific-computing/04-pandas/06-earthquake-catalog-pandas.md) | I |
-| · | [Performance, dtypes and When to Leave Pandas](./03-scientific-computing/04-pandas/07-performance-pandas.md) | A |
+| ✓ | [Series, DataFrame and the Labeled-Data Model](./03-scientific-computing/04-pandas/01-series-dataframe.md) | B |
+| ✓ | [Indexing, Selection, loc/iloc and Boolean Masks](./03-scientific-computing/04-pandas/02-indexing-selection.md) | B |
+| ✓ | [Cleaning: Missing Values, Duplicates and Outliers](./03-scientific-computing/04-pandas/03-cleaning-data.md) | I |
+| ✓ | [Group-By, Aggregation and Reshaping](./03-scientific-computing/04-pandas/04-groupby-aggregation.md) | I |
+| ✓ | [Merging, Joining and Aligning Irregular Time Series](./03-scientific-computing/04-pandas/05-merging-time-series.md) | I |
+| ✓ | [Case Study: Earthquake Catalogue Wrangling](./03-scientific-computing/04-pandas/06-earthquake-catalog-pandas.md) | I |
+| ✓ | [Performance, dtypes and When to Leave Pandas](./03-scientific-computing/04-pandas/07-performance-pandas.md) | A |
 
-### [ ] Plotting, Visualisation and Scientific Figures (0/8)
+### [x] Plotting, Visualisation and Scientific Figures (8/8)
 
 Module index: [`05-plotting-and-visualisation/README.md`](./03-scientific-computing/05-plotting-and-visualisation/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Matplotlib Figure/Axes Model and Anatomy of a Plot](./03-scientific-computing/05-plotting-and-visualisation/01-matplotlib-basics.md) | B |
-| · | [Line, Scatter and Error-Bar Plots with Correct Uncertainty](./03-scientific-computing/05-plotting-and-visualisation/02-line-scatter-plots.md) | B |
-| · | [Maps, Cross-Sections and Geological Symbology](./03-scientific-computing/05-plotting-and-visualisation/03-maps-and-cross-sections.md) | I |
-| · | [3-D Plots, Surfaces and Voxel Rendering](./03-scientific-computing/05-plotting-and-visualisation/04-3d-and-surfaces.md) | I |
-| · | [Seismic Displays: Wiggle, Variable-Density and Colormaps](./03-scientific-computing/05-plotting-and-visualisation/05-seismic-displays.md) | A |
-| · | [Colour Perception, Sequential vs Diverging Colormaps](./03-scientific-computing/05-plotting-and-visualisation/06-colormaps-perception.md) | I |
-| · | [Publication-Quality Figures, Fonts, DPI and Accessibility](./03-scientific-computing/05-plotting-and-visualisation/07-publication-figures.md) | A |
-| · | [Interactive Exploration: Plotly and HoloViews](./03-scientific-computing/05-plotting-and-visualisation/08-interactive-viz.md) | I |
+| ✓ | [Matplotlib Figure/Axes Model and Anatomy of a Plot](./03-scientific-computing/05-plotting-and-visualisation/01-matplotlib-basics.md) | B |
+| ✓ | [Line, Scatter and Error-Bar Plots with Correct Uncertainty](./03-scientific-computing/05-plotting-and-visualisation/02-line-scatter-plots.md) | B |
+| ✓ | [Maps, Cross-Sections and Geological Symbology](./03-scientific-computing/05-plotting-and-visualisation/03-maps-and-cross-sections.md) | I |
+| ✓ | [3-D Plots, Surfaces and Voxel Rendering](./03-scientific-computing/05-plotting-and-visualisation/04-3d-and-surfaces.md) | I |
+| ✓ | [Seismic Displays: Wiggle, Variable-Density and Colormaps](./03-scientific-computing/05-plotting-and-visualisation/05-seismic-displays.md) | A |
+| ✓ | [Colour Perception, Sequential vs Diverging Colormaps](./03-scientific-computing/05-plotting-and-visualisation/06-colormaps-perception.md) | I |
+| ✓ | [Publication-Quality Figures, Fonts, DPI and Accessibility](./03-scientific-computing/05-plotting-and-visualisation/07-publication-figures.md) | A |
+| ✓ | [Interactive Exploration: Plotly and HoloViews](./03-scientific-computing/05-plotting-and-visualisation/08-interactive-viz.md) | I |
 
 ### [ ] Jupyter, Notebooks and Literate Computing (0/4)
 
