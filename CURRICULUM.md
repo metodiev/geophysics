@@ -11,10 +11,10 @@ Legend: **B** beginner · **I** intermediate · **A** advanced · **G** graduate
 | Folders | 27 |
 | Modules | 216 |
 | Lessons planned | 1146 |
-| Lessons written | 256 |
-| Lessons with valid frontmatter | 256 |
-| Exercise/solution companions written | 466 / 2190 |
-| Completion | 22.3% |
+| Lessons written | 275 |
+| Lessons with valid frontmatter | 275 |
+| Exercise/solution companions written | 504 / 2190 |
+| Completion | 24.0% |
 
 > Companion files are the conventional `exercises/<lesson>-exercises.md` and `<lesson>-solutions.md` pairs. Lessons in `00-orientation` and `26-reference-library` are process material and reference pages, so they carry no companions by design.
 
@@ -35,7 +35,7 @@ Legend: **B** beginner · **I** intermediate · **A** advanced · **G** graduate
 - [x] [Mathematics for Geophysics](./01-mathematics/README.md) — `01-mathematics` · stages: beginner->advanced
 - [x] [Physics for Geophysics](./02-physics/README.md) — `02-physics` · stages: beginner->graduate
 - [x] [Scientific Computing and Python](./03-scientific-computing/README.md) — `03-scientific-computing` · stages: beginner->graduate
-- [ ] [Earth Science, Geology and Planetary Context](./04-earth-science-geology/README.md) — `04-earth-science-geology` · stages: beginner->advanced
+- [x] [Earth Science, Geology and Planetary Context](./04-earth-science-geology/README.md) — `04-earth-science-geology` · stages: beginner->advanced
 - [ ] [Core Geophysics: Principles and Methods](./05-core-geophysics/README.md) — `05-core-geophysics` · stages: intermediate->graduate
 - [ ] [Seismology](./06-seismology/README.md) — `06-seismology` · stages: intermediate->research
 - [ ] [Gravity, Geodesy and the Shape of the Earth](./07-gravity-geodesy/README.md) — `07-gravity-geodesy` · stages: intermediate->research
@@ -683,56 +683,56 @@ Module index: [`13-testing-profiling-packaging/README.md`](./03-scientific-compu
 
 ## Earth Science, Geology and Planetary Context
 
-`04-earth-science-geology` — **8 modules**, **9/37 lessons written**
+`04-earth-science-geology` — **8 modules**, **28/37 lessons written**
 
 [Folder index](./04-earth-science-geology/README.md)
 
-### [ ] The Structure and Composition of the Earth (0/5)
+### [x] The Structure and Composition of the Earth (5/5)
 
 Module index: [`01-earth-structure/README.md`](./04-earth-science-geology/01-earth-structure/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Crust, Mantle, Core: Seismological and Geochemical Evidence](./04-earth-science-geology/01-earth-structure/01-layered-earth.md) | B |
-| · | [Lithosphere, Asthenosphere and the Rheological Definition](./04-earth-science-geology/01-earth-structure/02-lithosphere-asthenosphere.md) | I |
-| · | [Rock-Forming Minerals and Their Physical Properties](./04-earth-science-geology/01-earth-structure/03-mineralogy.md) | I |
-| · | [Igneous, Sedimentary and Metamorphic Rocks](./04-earth-science-geology/01-earth-structure/04-rock-types.md) | B |
-| · | [Density, Porosity, Permeability and Elastic Properties](./04-earth-science-geology/01-earth-structure/05-rock-physics-basics.md) | I |
+| ✓ | [Crust, Mantle, Core: Seismological and Geochemical Evidence](./04-earth-science-geology/01-earth-structure/01-layered-earth.md) | B |
+| ✓ | [Lithosphere, Asthenosphere and the Rheological Definition](./04-earth-science-geology/01-earth-structure/02-lithosphere-asthenosphere.md) | I |
+| ✓ | [Rock-Forming Minerals and Their Physical Properties](./04-earth-science-geology/01-earth-structure/03-mineralogy.md) | I |
+| ✓ | [Igneous, Sedimentary and Metamorphic Rocks](./04-earth-science-geology/01-earth-structure/04-rock-types.md) | B |
+| ✓ | [Density, Porosity, Permeability and Elastic Properties](./04-earth-science-geology/01-earth-structure/05-rock-physics-basics.md) | I |
 
-### [ ] Plate Tectonics (0/5)
+### [x] Plate Tectonics (5/5)
 
 Module index: [`02-plate-tectonics/README.md`](./04-earth-science-geology/02-plate-tectonics/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Continental Drift to Plate Tectonics: The Evidence Trail](./04-earth-science-geology/02-plate-tectonics/01-tectonic-theory.md) | B |
-| · | [Divergent, Convergent and Transform Boundaries](./04-earth-science-geology/02-plate-tectonics/02-plate-boundaries.md) | B |
-| · | [Mantle Convection, Slab Pull and Ridge Push](./04-earth-science-geology/02-plate-tectonics/03-driving-forces.md) | A |
-| · | [Plate Motion Frames, Euler Poles and Global Models](./04-earth-science-geology/02-plate-tectonics/04-plate-motion-frames.md) | A |
-| · | [Tectonics and the Distribution of Earthquakes and Volcanoes](./04-earth-science-geology/02-plate-tectonics/05-tectonics-hazards.md) | I |
+| ✓ | [Continental Drift to Plate Tectonics: The Evidence Trail](./04-earth-science-geology/02-plate-tectonics/01-tectonic-theory.md) | B |
+| ✓ | [Divergent, Convergent and Transform Boundaries](./04-earth-science-geology/02-plate-tectonics/02-plate-boundaries.md) | B |
+| ✓ | [Mantle Convection, Slab Pull and Ridge Push](./04-earth-science-geology/02-plate-tectonics/03-driving-forces.md) | A |
+| ✓ | [Plate Motion Frames, Euler Poles and Global Models](./04-earth-science-geology/02-plate-tectonics/04-plate-motion-frames.md) | A |
+| ✓ | [Tectonics and the Distribution of Earthquakes and Volcanoes](./04-earth-science-geology/02-plate-tectonics/05-tectonics-hazards.md) | I |
 
-### [ ] Geologic Time, Stratigraphy and Dating (0/4)
+### [x] Geologic Time, Stratigraphy and Dating (4/4)
 
 Module index: [`03-geologic-time-and-stratigraphy/README.md`](./04-earth-science-geology/03-geologic-time-and-stratigraphy/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [The Geologic Time Scale and Deep Time](./04-earth-science-geology/03-geologic-time-and-stratigraphy/01-geologic-time-scale.md) | B |
-| · | [Stratigraphic Principles and Relative Dating](./04-earth-science-geology/03-geologic-time-and-stratigraphy/02-stratigraphic-principles.md) | B |
-| · | [Radiometric Dating Methods and Their Assumptions](./04-earth-science-geology/03-geologic-time-and-stratigraphy/03-radiometric-dating.md) | A |
-| · | [Sedimentary Basins: Formation, Fill and Subsidence](./04-earth-science-geology/03-geologic-time-and-stratigraphy/04-sedimentary-basins.md) | I |
+| ✓ | [The Geologic Time Scale and Deep Time](./04-earth-science-geology/03-geologic-time-and-stratigraphy/01-geologic-time-scale.md) | B |
+| ✓ | [Stratigraphic Principles and Relative Dating](./04-earth-science-geology/03-geologic-time-and-stratigraphy/02-stratigraphic-principles.md) | B |
+| ✓ | [Radiometric Dating Methods and Their Assumptions](./04-earth-science-geology/03-geologic-time-and-stratigraphy/03-radiometric-dating.md) | A |
+| ✓ | [Sedimentary Basins: Formation, Fill and Subsidence](./04-earth-science-geology/03-geologic-time-and-stratigraphy/04-sedimentary-basins.md) | I |
 
-### [ ] Structural Geology (0/5)
+### [x] Structural Geology (5/5)
 
 Module index: [`04-structural-geology/README.md`](./04-earth-science-geology/04-structural-geology/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Stress, Strain and Brittle vs Ductile Deformation](./04-earth-science-geology/04-structural-geology/01-stress-strain-rocks.md) | A |
-| · | [Fault Geometry, Kinematics and Fault Classification](./04-earth-science-geology/04-structural-geology/02-faults.md) | I |
-| · | [Fold Geometry, Mechanisms and Interpretation](./04-earth-science-geology/04-structural-geology/03-folds.md) | I |
-| · | [Fractures, Joints and Their Geophysical Signature](./04-earth-science-geology/04-structural-geology/04-fractures-joints.md) | A |
-| · | [Reading Geological Maps and Constructing Cross-Sections](./04-earth-science-geology/04-structural-geology/05-geologic-maps-sections.md) | I |
+| ✓ | [Stress, Strain and Brittle vs Ductile Deformation](./04-earth-science-geology/04-structural-geology/01-stress-strain-rocks.md) | A |
+| ✓ | [Fault Geometry, Kinematics and Fault Classification](./04-earth-science-geology/04-structural-geology/02-faults.md) | I |
+| ✓ | [Fold Geometry, Mechanisms and Interpretation](./04-earth-science-geology/04-structural-geology/03-folds.md) | I |
+| ✓ | [Fractures, Joints and Their Geophysical Signature](./04-earth-science-geology/04-structural-geology/04-fractures-joints.md) | A |
+| ✓ | [Reading Geological Maps and Constructing Cross-Sections](./04-earth-science-geology/04-structural-geology/05-geologic-maps-sections.md) | I |
 
 ### [x] Geomorphology and Quaternary Geology (4/4)
 
