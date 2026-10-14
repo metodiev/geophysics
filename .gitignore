@@ -45,3 +45,8 @@ data/
 *.log
 tmp/
 scratch/
+
+# --- Session / agent working artefacts (must not be committed) ---
+session_links.txt
+*_scratch.*
+scratch_*

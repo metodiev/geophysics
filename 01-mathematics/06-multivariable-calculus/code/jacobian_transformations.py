@@ -38,40 +38,54 @@ def matmul3(a, b):
 
 
 def jacobian_fd(map3, u, h):
-    """Finite-difference Jacobian of a map R^3 -> R^3 at the point u."""
+    """Finite-difference Jacobian of a map R^n -> R^n at the point u."""
+    n = len(u)
     cols = []
-    for axis in range(3):
+    for axis in range(n):
         up = list(u)
         down = list(u)
         up[axis] += h
         down[axis] -= h
         fp = map3(*up)
         fm = map3(*down)
-        cols.append([(fp[i] - fm[i]) / (2.0 * h) for i in range(3)])
-    # cols[axis][component] -> transpose into rows of components
-    return [[cols[j][i] for j in range(3)] for i in range(3)]
+        cols.append([(fp[i] - fm[i]) / (2.0 * h) for i in range(n)])
+    return [[cols[j][i] for j in range(n)] for i in range(n)]
+
+
+def det_n(m):
+    """Determinant by Laplace expansion; small n only."""
+    n = len(m)
+    if n == 1:
+        return m[0][0]
+    if n == 2:
+        return m[0][0] * m[1][1] - m[0][1] * m[1][0]
+    total = 0.0
+    for j in range(n):
+        minor = [[m[i][k] for k in range(n) if k != j] for i in range(1, n)]
+        total += (-1) ** j * m[0][j] * det_n(minor)
+    return total
 
 
 def main() -> None:
     section("1. Jacobian determinants as local volume scale factors")
     maps = [
-        ("polar        (r,theta)  -> (x,y)",
-         lambda r, t, _z: (r * math.cos(t), r * math.sin(t), 0.0),
-         lambda r, t, _z: r,
-         (3.0, 0.7, 0.0), 10),
-        ("cylindrical  (rho,phi,z)-> (x,y,z)",
+        ("polar        (r,theta)    -> (x,y)",
+         lambda r, t: (r * math.cos(t), r * math.sin(t)),
+         lambda r, t: r,
+         (3.0, 0.7)),
+        ("cylindrical  (rho,phi,z)  -> (x,y,z)",
          lambda p, ph, z: (p * math.cos(ph), p * math.sin(ph), z),
          lambda p, ph, z: p,
-         (3.0, 0.7, 1.5), 10),
-        ("spherical    (r,theta,phi)->(x,y,z)",
+         (3.0, 0.7, 1.5)),
+        ("spherical    (r,theta,phi)-> (x,y,z)",
          lambda r, t, ph: (r * math.sin(t) * math.cos(ph),
                            r * math.sin(t) * math.sin(ph),
                            r * math.cos(t)),
          lambda r, t, ph: r * r * math.sin(t),
-         (3.0, 0.7, 1.5), 1e-6),
+         (3.0, 0.7, 1.5)),
     ]
-    for name, map3, analytic, u, h in maps:
-        num = det3(jacobian_fd(map3, u, h))
+    for name, map_n, analytic, u in maps:
+        num = det_n(jacobian_fd(map_n, u, 1e-6))
         ana = analytic(*u)
         print(f"{name}")
         print(f"   at {u}:  numeric det J = {num:.9f}   analytic = {ana:.9f}"
