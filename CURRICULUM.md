@@ -11,10 +11,10 @@ Legend: **B** beginner · **I** intermediate · **A** advanced · **G** graduate
 | Folders | 27 |
 | Modules | 216 |
 | Lessons planned | 1146 |
-| Lessons written | 930 |
-| Lessons with valid frontmatter | 930 |
-| Exercise/solution companions written | 1814 / 2190 |
-| Completion | 81.2% |
+| Lessons written | 1146 |
+| Lessons with valid frontmatter | 1146 |
+| Exercise/solution companions written | 2190 / 2190 |
+| Completion | 100.0% |
 
 > Companion files are the conventional `exercises/<lesson>-exercises.md` and `<lesson>-solutions.md` pairs. Lessons in `00-orientation` and `26-reference-library` are process material and reference pages, so they carry no companions by design.
 
@@ -52,11 +52,11 @@ Legend: **B** beginner · **I** intermediate · **A** advanced · **G** graduate
 - [x] [Inverse Problems, Optimization and Uncertainty Quantification](./18-inverse-problems/README.md) — `18-inverse-problems` · stages: advanced->research
 - [x] [Numerical Modeling and High-Performance Computing](./19-numerical-modeling-hpc/README.md) — `19-numerical-modeling-hpc` · stages: advanced->research
 - [x] [Signal Processing and Time-Series Analysis](./20-signal-processing/README.md) — `20-signal-processing` · stages: intermediate->research
-- [ ] [Statistics, Bayesian Inference and Machine Learning](./21-statistics-bayesian-ml/README.md) — `21-statistics-bayesian-ml` · stages: intermediate->research
-- [ ] [Data Engineering, Reproducibility and Scientific Software](./22-data-engineering-reproducibility/README.md) — `22-data-engineering-reproducibility` · stages: intermediate->research
-- [ ] [Field Methods, Instruments and Laboratory Work](./23-field-methods-instruments/README.md) — `23-field-methods-instruments` · stages: beginner->research
-- [ ] [Research Papers, Scientific Writing and Communication](./24-research-papers-writing/README.md) — `24-research-papers-writing` · stages: intermediate->research
-- [ ] [Integrated Projects and Capstone Research](./25-projects-capstone/README.md) — `25-projects-capstone` · stages: beginner->research
+- [x] [Statistics, Bayesian Inference and Machine Learning](./21-statistics-bayesian-ml/README.md) — `21-statistics-bayesian-ml` · stages: intermediate->research
+- [x] [Data Engineering, Reproducibility and Scientific Software](./22-data-engineering-reproducibility/README.md) — `22-data-engineering-reproducibility` · stages: intermediate->research
+- [x] [Field Methods, Instruments and Laboratory Work](./23-field-methods-instruments/README.md) — `23-field-methods-instruments` · stages: beginner->research
+- [x] [Research Papers, Scientific Writing and Communication](./24-research-papers-writing/README.md) — `24-research-papers-writing` · stages: intermediate->research
+- [x] [Integrated Projects and Capstone Research](./25-projects-capstone/README.md) — `25-projects-capstone` · stages: beginner->research
 - [x] [Reference Library, Glossary and Formula Handbook](./26-reference-library/README.md) — `26-reference-library` · stages: beginner->research
 
 ---
@@ -2340,482 +2340,482 @@ Module index: [`08-timeseries-analysis-geophysics/README.md`](./20-signal-proces
 
 ## Statistics, Bayesian Inference and Machine Learning
 
-`21-statistics-bayesian-ml` — **9 modules**, **0/53 lessons written**
+`21-statistics-bayesian-ml` — **9 modules**, **53/53 lessons written**
 
 [Folder index](./21-statistics-bayesian-ml/README.md)
 
-### [ ] Statistics in Geophysical Practice (0/7)
+### [x] Statistics in Geophysical Practice (7/7)
 
 Module index: [`01-statistics-in-practice/README.md`](./21-statistics-bayesian-ml/01-statistics-in-practice/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Descriptive Statistics, Robust Measures and Outliers](./21-statistics-bayesian-ml/01-statistics-in-practice/01-descriptive-statistics.md) | I |
-| · | [Choosing Probability Models for Earth Data](./21-statistics-bayesian-ml/01-statistics-in-practice/02-probability-models-earth.md) | D |
-| · | [Resampling: Bootstrap, Jackknife, Permutation Tests](./21-statistics-bayesian-ml/01-statistics-in-practice/03-resampling.md) | G |
-| · | [Linear, Multiple and Robust Regression](./21-statistics-bayesian-ml/01-statistics-in-practice/04-regression.md) | A |
-| · | [Nonparametric Statistics and Kernel Density Estimation](./21-statistics-bayesian-ml/01-statistics-in-practice/05-nonparametric-methods.md) | G |
-| · | [Spatial and Directional Statistics in Earth Science](./21-statistics-bayesian-ml/01-statistics-in-practice/06-spatial-statistics-geo.md) | R |
-| · | [Extreme Value Theory for Geohazards](./21-statistics-bayesian-ml/01-statistics-in-practice/07-extreme-value-theory.md) | R |
+| ✓ | [Descriptive Statistics, Robust Measures and Outliers](./21-statistics-bayesian-ml/01-statistics-in-practice/01-descriptive-statistics.md) | I |
+| ✓ | [Choosing Probability Models for Earth Data](./21-statistics-bayesian-ml/01-statistics-in-practice/02-probability-models-earth.md) | D |
+| ✓ | [Resampling: Bootstrap, Jackknife, Permutation Tests](./21-statistics-bayesian-ml/01-statistics-in-practice/03-resampling.md) | G |
+| ✓ | [Linear, Multiple and Robust Regression](./21-statistics-bayesian-ml/01-statistics-in-practice/04-regression.md) | A |
+| ✓ | [Nonparametric Statistics and Kernel Density Estimation](./21-statistics-bayesian-ml/01-statistics-in-practice/05-nonparametric-methods.md) | G |
+| ✓ | [Spatial and Directional Statistics in Earth Science](./21-statistics-bayesian-ml/01-statistics-in-practice/06-spatial-statistics-geo.md) | R |
+| ✓ | [Extreme Value Theory for Geohazards](./21-statistics-bayesian-ml/01-statistics-in-practice/07-extreme-value-theory.md) | R |
 
-### [ ] Geostatistics (0/5)
+### [x] Geostatistics (5/5)
 
 Module index: [`02-geostatistics/README.md`](./21-statistics-bayesian-ml/02-geostatistics/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Regionalised Variables and Spatial Continuity](./21-statistics-bayesian-ml/02-geostatistics/01-regionalized-variables.md) | G |
-| · | [Variograms, Covariance and Model Fitting](./21-statistics-bayesian-ml/02-geostatistics/02-variograms.md) | D |
-| · | [Kriging: Simple, Ordinary, Universal, Indicator](./21-statistics-bayesian-ml/02-geostatistics/03-kriging.md) | R |
-| · | [Conditional Simulation and Uncertainty Realisations](./21-statistics-bayesian-ml/02-geostatistics/04-simulation-geostatistics.md) | R |
-| · | [Geostatistics Combined with Geophysical Inversion](./21-statistics-bayesian-ml/02-geostatistics/05-geostatistics-inversion.md) | R |
+| ✓ | [Regionalised Variables and Spatial Continuity](./21-statistics-bayesian-ml/02-geostatistics/01-regionalized-variables.md) | G |
+| ✓ | [Variograms, Covariance and Model Fitting](./21-statistics-bayesian-ml/02-geostatistics/02-variograms.md) | D |
+| ✓ | [Kriging: Simple, Ordinary, Universal, Indicator](./21-statistics-bayesian-ml/02-geostatistics/03-kriging.md) | R |
+| ✓ | [Conditional Simulation and Uncertainty Realisations](./21-statistics-bayesian-ml/02-geostatistics/04-simulation-geostatistics.md) | R |
+| ✓ | [Geostatistics Combined with Geophysical Inversion](./21-statistics-bayesian-ml/02-geostatistics/05-geostatistics-inversion.md) | R |
 
-### [ ] Bayesian Inference (0/6)
+### [x] Bayesian Inference (6/6)
 
 Module index: [`03-bayesian-inference/README.md`](./21-statistics-bayesian-ml/03-bayesian-inference/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [The Bayesian Paradigm and Subjective Probability](./21-statistics-bayesian-ml/03-bayesian-inference/01-bayesian-paradigm.md) | D |
-| · | [Conjugate Priors and Analytic Posteriors](./21-statistics-bayesian-ml/03-bayesian-inference/02-conjugate-priors.md) | R |
-| · | [Hierarchical Models and Exchangeability](./21-statistics-bayesian-ml/03-bayesian-inference/03-hierarchical-models.md) | R |
-| · | [MCMC in Practice: Diagnostics, Burn-In, Convergence](./21-statistics-bayesian-ml/03-bayesian-inference/04-mcmc-practice.md) | R |
-| · | [Variational Inference and Scalable Bayes](./21-statistics-bayesian-ml/03-bayesian-inference/05-variational-inference.md) | R |
-| · | [Bayesian Workflow and Principled Model Building](./21-statistics-bayesian-ml/03-bayesian-inference/06-bayesian-workflow.md) | R |
+| ✓ | [The Bayesian Paradigm and Subjective Probability](./21-statistics-bayesian-ml/03-bayesian-inference/01-bayesian-paradigm.md) | D |
+| ✓ | [Conjugate Priors and Analytic Posteriors](./21-statistics-bayesian-ml/03-bayesian-inference/02-conjugate-priors.md) | R |
+| ✓ | [Hierarchical Models and Exchangeability](./21-statistics-bayesian-ml/03-bayesian-inference/03-hierarchical-models.md) | R |
+| ✓ | [MCMC in Practice: Diagnostics, Burn-In, Convergence](./21-statistics-bayesian-ml/03-bayesian-inference/04-mcmc-practice.md) | R |
+| ✓ | [Variational Inference and Scalable Bayes](./21-statistics-bayesian-ml/03-bayesian-inference/05-variational-inference.md) | R |
+| ✓ | [Bayesian Workflow and Principled Model Building](./21-statistics-bayesian-ml/03-bayesian-inference/06-bayesian-workflow.md) | R |
 
-### [ ] Machine Learning Fundamentals (0/8)
+### [x] Machine Learning Fundamentals (8/8)
 
 Module index: [`04-machine-learning-fundamentals/README.md`](./21-statistics-bayesian-ml/04-machine-learning-fundamentals/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [ML Taxonomy: Supervised, Unsupervised, Reinforcement](./21-statistics-bayesian-ml/04-machine-learning-fundamentals/01-ml-taxonomy.md) | A |
-| · | [Bias-Variance Trade-Off, Underfitting and Overfitting](./21-statistics-bayesian-ml/04-machine-learning-fundamentals/02-bias-variance.md) | A |
-| · | [Cross-Validation, Metrics and the Danger of Leakage](./21-statistics-bayesian-ml/04-machine-learning-fundamentals/03-model-assessment.md) | G |
-| · | [Regularisation: Ridge, Lasso, Early Stopping](./21-statistics-bayesian-ml/04-machine-learning-fundamentals/04-regularization-ml.md) | A |
-| · | [Decision Trees, Random Forests and Gradient Boosting](./21-statistics-bayesian-ml/04-machine-learning-fundamentals/05-trees-and-ensembles.md) | G |
-| · | [Feature Engineering for Earth Data](./21-statistics-bayesian-ml/04-machine-learning-fundamentals/06-feature-engineering.md) | G |
-| · | [PCA, ICA and Manifold Learning](./21-statistics-bayesian-ml/04-machine-learning-fundamentals/07-dimensionality-reduction.md) | R |
-| · | [Clustering and Unsupervised Structure Discovery](./21-statistics-bayesian-ml/04-machine-learning-fundamentals/08-clustering.md) | G |
+| ✓ | [ML Taxonomy: Supervised, Unsupervised, Reinforcement](./21-statistics-bayesian-ml/04-machine-learning-fundamentals/01-ml-taxonomy.md) | A |
+| ✓ | [Bias-Variance Trade-Off, Underfitting and Overfitting](./21-statistics-bayesian-ml/04-machine-learning-fundamentals/02-bias-variance.md) | A |
+| ✓ | [Cross-Validation, Metrics and the Danger of Leakage](./21-statistics-bayesian-ml/04-machine-learning-fundamentals/03-model-assessment.md) | G |
+| ✓ | [Regularisation: Ridge, Lasso, Early Stopping](./21-statistics-bayesian-ml/04-machine-learning-fundamentals/04-regularization-ml.md) | A |
+| ✓ | [Decision Trees, Random Forests and Gradient Boosting](./21-statistics-bayesian-ml/04-machine-learning-fundamentals/05-trees-and-ensembles.md) | G |
+| ✓ | [Feature Engineering for Earth Data](./21-statistics-bayesian-ml/04-machine-learning-fundamentals/06-feature-engineering.md) | G |
+| ✓ | [PCA, ICA and Manifold Learning](./21-statistics-bayesian-ml/04-machine-learning-fundamentals/07-dimensionality-reduction.md) | R |
+| ✓ | [Clustering and Unsupervised Structure Discovery](./21-statistics-bayesian-ml/04-machine-learning-fundamentals/08-clustering.md) | G |
 
-### [ ] Deep Learning (0/7)
+### [x] Deep Learning (7/7)
 
 Module index: [`05-deep-learning/README.md`](./21-statistics-bayesian-ml/05-deep-learning/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Neural Networks: Architecture, Activation, Backpropagation](./21-statistics-bayesian-ml/05-deep-learning/01-neural-networks.md) | D |
-| · | [Convolutional Networks for Seismic and Image Data](./21-statistics-bayesian-ml/05-deep-learning/02-cnns.md) | R |
-| · | [Recurrent Networks and Temporal Earth Data](./21-statistics-bayesian-ml/05-deep-learning/03-rnns-time-series.md) | R |
-| · | [Attention and Transformers for Geophysical Sequences](./21-statistics-bayesian-ml/05-deep-learning/04-transformers.md) | R |
-| · | [Autoencoders for Compression and Denoising](./21-statistics-bayesian-ml/05-deep-learning/05-autoencoders.md) | R |
-| · | [GANs, VAEs and Diffusion Models](./21-statistics-bayesian-ml/05-deep-learning/06-generative-models.md) | R |
-| · | [Self-Supervised Learning with Unlabelled Earth Data](./21-statistics-bayesian-ml/05-deep-learning/07-self-supervised.md) | R |
+| ✓ | [Neural Networks: Architecture, Activation, Backpropagation](./21-statistics-bayesian-ml/05-deep-learning/01-neural-networks.md) | D |
+| ✓ | [Convolutional Networks for Seismic and Image Data](./21-statistics-bayesian-ml/05-deep-learning/02-cnns.md) | R |
+| ✓ | [Recurrent Networks and Temporal Earth Data](./21-statistics-bayesian-ml/05-deep-learning/03-rnns-time-series.md) | R |
+| ✓ | [Attention and Transformers for Geophysical Sequences](./21-statistics-bayesian-ml/05-deep-learning/04-transformers.md) | R |
+| ✓ | [Autoencoders for Compression and Denoising](./21-statistics-bayesian-ml/05-deep-learning/05-autoencoders.md) | R |
+| ✓ | [GANs, VAEs and Diffusion Models](./21-statistics-bayesian-ml/05-deep-learning/06-generative-models.md) | R |
+| ✓ | [Self-Supervised Learning with Unlabelled Earth Data](./21-statistics-bayesian-ml/05-deep-learning/07-self-supervised.md) | R |
 
-### [ ] Machine Learning in Geophysics (0/9)
+### [x] Machine Learning in Geophysics (9/9)
 
 Module index: [`06-ml-in-geophysics/README.md`](./21-statistics-bayesian-ml/06-ml-in-geophysics/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [ML for Seismic Detection, Picking and Classification](./21-statistics-bayesian-ml/06-ml-in-geophysics/01-seismic-ml.md) | R |
-| · | [Deep-Learning Phase Picking: SeisBench and Beyond](./21-statistics-bayesian-ml/06-ml-in-geophysics/02-phase-picking-ml.md) | R |
-| · | [ML for Magnitude Estimation and Source Characterisation](./21-statistics-bayesian-ml/06-ml-in-geophysics/03-magnitude-and-source-ml.md) | R |
-| · | [Facies and Lithology Prediction from Well Logs](./21-statistics-bayesian-ml/06-ml-in-geophysics/04-facies-and-lithology.md) | R |
-| · | [ML-Based Denoising of Geophysical Signals](./21-statistics-bayesian-ml/06-ml-in-geophysics/05-denoising-ml.md) | R |
-| · | [ML for Mineral Prospectivity Mapping](./21-statistics-bayesian-ml/06-ml-in-geophysics/06-mineral-prospectivity-ml.md) | R |
-| · | [ML for Climate Downscaling and Emulation](./21-statistics-bayesian-ml/06-ml-in-geophysics/07-climate-ml.md) | R |
-| · | [ML for Remote Sensing Classification](./21-statistics-bayesian-ml/06-ml-in-geophysics/08-remote-sensing-ml.md) | R |
-| · | [Pitfalls: Spurious Correlations, Non-Stationarity, Extrapolation](./21-statistics-bayesian-ml/06-ml-in-geophysics/09-ml-pitfalls-geophysics.md) | R |
+| ✓ | [ML for Seismic Detection, Picking and Classification](./21-statistics-bayesian-ml/06-ml-in-geophysics/01-seismic-ml.md) | R |
+| ✓ | [Deep-Learning Phase Picking: SeisBench and Beyond](./21-statistics-bayesian-ml/06-ml-in-geophysics/02-phase-picking-ml.md) | R |
+| ✓ | [ML for Magnitude Estimation and Source Characterisation](./21-statistics-bayesian-ml/06-ml-in-geophysics/03-magnitude-and-source-ml.md) | R |
+| ✓ | [Facies and Lithology Prediction from Well Logs](./21-statistics-bayesian-ml/06-ml-in-geophysics/04-facies-and-lithology.md) | R |
+| ✓ | [ML-Based Denoising of Geophysical Signals](./21-statistics-bayesian-ml/06-ml-in-geophysics/05-denoising-ml.md) | R |
+| ✓ | [ML for Mineral Prospectivity Mapping](./21-statistics-bayesian-ml/06-ml-in-geophysics/06-mineral-prospectivity-ml.md) | R |
+| ✓ | [ML for Climate Downscaling and Emulation](./21-statistics-bayesian-ml/06-ml-in-geophysics/07-climate-ml.md) | R |
+| ✓ | [ML for Remote Sensing Classification](./21-statistics-bayesian-ml/06-ml-in-geophysics/08-remote-sensing-ml.md) | R |
+| ✓ | [Pitfalls: Spurious Correlations, Non-Stationarity, Extrapolation](./21-statistics-bayesian-ml/06-ml-in-geophysics/09-ml-pitfalls-geophysics.md) | R |
 
-### [ ] Time-Series Modelling and Forecasting (0/5)
+### [x] Time-Series Modelling and Forecasting (5/5)
 
 Module index: [`07-time-series-and-forecasting/README.md`](./21-statistics-bayesian-ml/07-time-series-and-forecasting/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [AR, MA, ARIMA and Their Interpretation](./21-statistics-bayesian-ml/07-time-series-and-forecasting/01-arima-models.md) | R |
-| · | [State-Space Models and Kalman Filtering](./21-statistics-bayesian-ml/07-time-series-and-forecasting/02-state-space.md) | R |
-| · | [Statistical Spectral Analysis and Significance Testing](./21-statistics-bayesian-ml/07-time-series-and-forecasting/03-spectral-analysis-statistical.md) | R |
-| · | [Forecast Evaluation, Skill Scores and Calibration](./21-statistics-bayesian-ml/07-time-series-and-forecasting/04-forecast-evaluation.md) | R |
-| · | [Point Processes and Seismicity Rate Models](./21-statistics-bayesian-ml/07-time-series-and-forecasting/05-point-processes.md) | R |
+| ✓ | [AR, MA, ARIMA and Their Interpretation](./21-statistics-bayesian-ml/07-time-series-and-forecasting/01-arima-models.md) | R |
+| ✓ | [State-Space Models and Kalman Filtering](./21-statistics-bayesian-ml/07-time-series-and-forecasting/02-state-space.md) | R |
+| ✓ | [Statistical Spectral Analysis and Significance Testing](./21-statistics-bayesian-ml/07-time-series-and-forecasting/03-spectral-analysis-statistical.md) | R |
+| ✓ | [Forecast Evaluation, Skill Scores and Calibration](./21-statistics-bayesian-ml/07-time-series-and-forecasting/04-forecast-evaluation.md) | R |
+| ✓ | [Point Processes and Seismicity Rate Models](./21-statistics-bayesian-ml/07-time-series-and-forecasting/05-point-processes.md) | R |
 
-### [ ] Causal Inference and Experimental Design (0/3)
+### [x] Causal Inference and Experimental Design (3/3)
 
 Module index: [`08-causal-inference-and-design/README.md`](./21-statistics-bayesian-ml/08-causal-inference-and-design/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Experimental and Survey Design for Earth Studies](./21-statistics-bayesian-ml/08-causal-inference-and-design/01-experimental-design.md) | R |
-| · | [Causal Inference Methods and Counterfactuals](./21-statistics-bayesian-ml/08-causal-inference-and-design/02-causal-inference-methods.md) | R |
-| · | [Attribution in Climate and Hazard Science](./21-statistics-bayesian-ml/08-causal-inference-and-design/03-attribution-methods.md) | R |
+| ✓ | [Experimental and Survey Design for Earth Studies](./21-statistics-bayesian-ml/08-causal-inference-and-design/01-experimental-design.md) | R |
+| ✓ | [Causal Inference Methods and Counterfactuals](./21-statistics-bayesian-ml/08-causal-inference-and-design/02-causal-inference-methods.md) | R |
+| ✓ | [Attribution in Climate and Hazard Science](./21-statistics-bayesian-ml/08-causal-inference-and-design/03-attribution-methods.md) | R |
 
-### [ ] Ethical and Responsible Quantitative Practice (0/3)
+### [x] Ethical and Responsible Quantitative Practice (3/3)
 
 Module index: [`09-ethical-and-responsible-analytics/README.md`](./21-statistics-bayesian-ml/09-ethical-and-responsible-analytics/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Statistical Reproducibility, p-Hacking and Multiple Comparisons](./21-statistics-bayesian-ml/09-ethical-and-responsible-analytics/01-reproducibility-statistical.md) | G |
-| · | [Honest Reporting of Uncertainty and Limitations](./21-statistics-bayesian-ml/09-ethical-and-responsible-analytics/02-reporting-uncertainty-ethics.md) | D |
-| · | [Data Ethics, Indigenous Data Sovereignty and Geoscience](./21-statistics-bayesian-ml/09-ethical-and-responsible-analytics/03-data-ethics-geoscience.md) | R |
+| ✓ | [Statistical Reproducibility, p-Hacking and Multiple Comparisons](./21-statistics-bayesian-ml/09-ethical-and-responsible-analytics/01-reproducibility-statistical.md) | G |
+| ✓ | [Honest Reporting of Uncertainty and Limitations](./21-statistics-bayesian-ml/09-ethical-and-responsible-analytics/02-reporting-uncertainty-ethics.md) | D |
+| ✓ | [Data Ethics, Indigenous Data Sovereignty and Geoscience](./21-statistics-bayesian-ml/09-ethical-and-responsible-analytics/03-data-ethics-geoscience.md) | R |
 
 ## Data Engineering, Reproducibility and Scientific Software
 
-`22-data-engineering-reproducibility` — **7 modules**, **0/34 lessons written**
+`22-data-engineering-reproducibility` — **7 modules**, **34/34 lessons written**
 
 [Folder index](./22-data-engineering-reproducibility/README.md)
 
-### [ ] Research Software Engineering (0/5)
+### [x] Research Software Engineering (5/5)
 
 Module index: [`01-research-software-engineering/README.md`](./22-data-engineering-reproducibility/01-research-software-engineering/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Designing Software for Scientific Research](./22-data-engineering-reproducibility/01-research-software-engineering/01-software-design-science.md) | A |
-| · | [Version Control with Git: Branching, Rebasing, Conflicts](./22-data-engineering-reproducibility/01-research-software-engineering/02-version-control-git.md) | I |
-| · | [Code Review and Collaborative Development](./22-data-engineering-reproducibility/01-research-software-engineering/03-code-review.md) | G |
-| · | [Documentation, Docstrings and READMEs That Work](./22-data-engineering-reproducibility/01-research-software-engineering/04-documentation.md) | I |
-| · | [Licensing, Citation and Software Credit (CITATION.cff)](./22-data-engineering-reproducibility/01-research-software-engineering/05-licensing-and-citation.md) | G |
+| ✓ | [Designing Software for Scientific Research](./22-data-engineering-reproducibility/01-research-software-engineering/01-software-design-science.md) | A |
+| ✓ | [Version Control with Git: Branching, Rebasing, Conflicts](./22-data-engineering-reproducibility/01-research-software-engineering/02-version-control-git.md) | I |
+| ✓ | [Code Review and Collaborative Development](./22-data-engineering-reproducibility/01-research-software-engineering/03-code-review.md) | G |
+| ✓ | [Documentation, Docstrings and READMEs That Work](./22-data-engineering-reproducibility/01-research-software-engineering/04-documentation.md) | I |
+| ✓ | [Licensing, Citation and Software Credit (CITATION.cff)](./22-data-engineering-reproducibility/01-research-software-engineering/05-licensing-and-citation.md) | G |
 
-### [ ] Reproducible Research Workflows (0/6)
+### [x] Reproducible Research Workflows (6/6)
 
 Module index: [`02-reproducible-workflows/README.md`](./22-data-engineering-reproducibility/02-reproducible-workflows/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [The Reproducibility Problem in the Computational Sciences](./22-data-engineering-reproducibility/02-reproducible-workflows/01-reproducibility-crisis.md) | I |
-| · | [Pinning Environments and Managing Dependencies](./22-data-engineering-reproducibility/02-reproducible-workflows/02-environment-pinning.md) | A |
-| · | [Workflow Managers: Snakemake, Make, Dask, Prefect](./22-data-engineering-reproducibility/02-reproducible-workflows/03-workflow-managers.md) | R |
-| · | [Notebooks vs Pipelines: Choosing the Right Tool](./22-data-engineering-reproducibility/02-reproducible-workflows/04-notebooks-vs-pipelines.md) | A |
-| · | [Data Versioning and Provenance Tracking](./22-data-engineering-reproducibility/02-reproducible-workflows/05-data-versioning.md) | R |
-| · | [Containers for Computational Reproducibility](./22-data-engineering-reproducibility/02-reproducible-workflows/06-containers-reproducibility.md) | R |
+| ✓ | [The Reproducibility Problem in the Computational Sciences](./22-data-engineering-reproducibility/02-reproducible-workflows/01-reproducibility-crisis.md) | I |
+| ✓ | [Pinning Environments and Managing Dependencies](./22-data-engineering-reproducibility/02-reproducible-workflows/02-environment-pinning.md) | A |
+| ✓ | [Workflow Managers: Snakemake, Make, Dask, Prefect](./22-data-engineering-reproducibility/02-reproducible-workflows/03-workflow-managers.md) | R |
+| ✓ | [Notebooks vs Pipelines: Choosing the Right Tool](./22-data-engineering-reproducibility/02-reproducible-workflows/04-notebooks-vs-pipelines.md) | A |
+| ✓ | [Data Versioning and Provenance Tracking](./22-data-engineering-reproducibility/02-reproducible-workflows/05-data-versioning.md) | R |
+| ✓ | [Containers for Computational Reproducibility](./22-data-engineering-reproducibility/02-reproducible-workflows/06-containers-reproducibility.md) | R |
 
-### [ ] Data Formats and Engineering (0/6)
+### [x] Data Formats and Engineering (6/6)
 
 Module index: [`03-data-formats-and-engineering/README.md`](./22-data-engineering-reproducibility/03-data-formats-and-engineering/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Scientific File Formats: CSV, Parquet, HDF5, netCDF, Zarr](./22-data-engineering-reproducibility/03-data-formats-and-engineering/01-file-formats-scientific.md) | A |
-| · | [Format Trade-Offs: Access Patterns, Compression, Portability](./22-data-engineering-reproducibility/03-data-formats-and-engineering/02-format-design-tradeoffs.md) | R |
-| · | [Designing Robust Data Pipelines for Earth Data](./22-data-engineering-reproducibility/03-data-formats-and-engineering/03-data-pipelines.md) | R |
-| · | [Programmatic Access to Earth Data (FDSN, Earthdata, Copernicus)](./22-data-engineering-reproducibility/03-data-formats-and-engineering/04-getting-earth-data.md) | G |
-| · | [Automated Quality Control and Flagging](./22-data-engineering-reproducibility/03-data-formats-and-engineering/05-data-quality-control.md) | A |
-| · | [Metadata Standards and Controlled Vocabularies](./22-data-engineering-reproducibility/03-data-formats-and-engineering/06-metadata-standards.md) | R |
+| ✓ | [Scientific File Formats: CSV, Parquet, HDF5, netCDF, Zarr](./22-data-engineering-reproducibility/03-data-formats-and-engineering/01-file-formats-scientific.md) | A |
+| ✓ | [Format Trade-Offs: Access Patterns, Compression, Portability](./22-data-engineering-reproducibility/03-data-formats-and-engineering/02-format-design-tradeoffs.md) | R |
+| ✓ | [Designing Robust Data Pipelines for Earth Data](./22-data-engineering-reproducibility/03-data-formats-and-engineering/03-data-pipelines.md) | R |
+| ✓ | [Programmatic Access to Earth Data (FDSN, Earthdata, Copernicus)](./22-data-engineering-reproducibility/03-data-formats-and-engineering/04-getting-earth-data.md) | G |
+| ✓ | [Automated Quality Control and Flagging](./22-data-engineering-reproducibility/03-data-formats-and-engineering/05-data-quality-control.md) | A |
+| ✓ | [Metadata Standards and Controlled Vocabularies](./22-data-engineering-reproducibility/03-data-formats-and-engineering/06-metadata-standards.md) | R |
 
-### [ ] Databases and Large Data Collections (0/5)
+### [x] Databases and Large Data Collections (5/5)
 
 Module index: [`04-databases-and-large-data/README.md`](./22-data-engineering-reproducibility/04-databases-and-large-data/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Relational Databases and SQL for Earth Data](./22-data-engineering-reproducibility/04-databases-and-large-data/01-relational-databases.md) | A |
-| · | [Spatial Databases and PostGIS](./22-data-engineering-reproducibility/04-databases-and-large-data/02-spatial-databases.md) | R |
-| · | [Time-Series Databases for Sensor Networks](./22-data-engineering-reproducibility/04-databases-and-large-data/03-timeseries-databases.md) | R |
-| · | [Big-Data Patterns: Partitioning, Chunking, Out-of-Core](./22-data-engineering-reproducibility/04-databases-and-large-data/04-big-data-patterns.md) | R |
-| · | [Cloud-Native Geoscience Data Access](./22-data-engineering-reproducibility/04-databases-and-large-data/05-cloud-native-geoscience.md) | R |
+| ✓ | [Relational Databases and SQL for Earth Data](./22-data-engineering-reproducibility/04-databases-and-large-data/01-relational-databases.md) | A |
+| ✓ | [Spatial Databases and PostGIS](./22-data-engineering-reproducibility/04-databases-and-large-data/02-spatial-databases.md) | R |
+| ✓ | [Time-Series Databases for Sensor Networks](./22-data-engineering-reproducibility/04-databases-and-large-data/03-timeseries-databases.md) | R |
+| ✓ | [Big-Data Patterns: Partitioning, Chunking, Out-of-Core](./22-data-engineering-reproducibility/04-databases-and-large-data/04-big-data-patterns.md) | R |
+| ✓ | [Cloud-Native Geoscience Data Access](./22-data-engineering-reproducibility/04-databases-and-large-data/05-cloud-native-geoscience.md) | R |
 
-### [ ] Collaboration and Project Management (0/5)
+### [x] Collaboration and Project Management (5/5)
 
 Module index: [`05-collaboration-and-project-management/README.md`](./22-data-engineering-reproducibility/05-collaboration-and-project-management/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Project Directory Structure and Conventions](./22-data-engineering-reproducibility/05-collaboration-and-project-management/01-project-structure.md) | I |
-| · | [Issue Tracking, Milestones and Kanban for Research](./22-data-engineering-reproducibility/05-collaboration-and-project-management/02-issue-tracking.md) | I |
-| · | [Collaborative Writing with LaTeX and Markdown](./22-data-engineering-reproducibility/05-collaboration-and-project-management/03-collaborative-writing.md) | A |
-| · | [Research Data Management Plans and FAIR Principles](./22-data-engineering-reproducibility/05-collaboration-and-project-management/04-research-data-management-plan.md) | A |
-| · | [Open Science Practice in the Geosciences](./22-data-engineering-reproducibility/05-collaboration-and-project-management/05-open-science-practice.md) | G |
+| ✓ | [Project Directory Structure and Conventions](./22-data-engineering-reproducibility/05-collaboration-and-project-management/01-project-structure.md) | I |
+| ✓ | [Issue Tracking, Milestones and Kanban for Research](./22-data-engineering-reproducibility/05-collaboration-and-project-management/02-issue-tracking.md) | I |
+| ✓ | [Collaborative Writing with LaTeX and Markdown](./22-data-engineering-reproducibility/05-collaboration-and-project-management/03-collaborative-writing.md) | A |
+| ✓ | [Research Data Management Plans and FAIR Principles](./22-data-engineering-reproducibility/05-collaboration-and-project-management/04-research-data-management-plan.md) | A |
+| ✓ | [Open Science Practice in the Geosciences](./22-data-engineering-reproducibility/05-collaboration-and-project-management/05-open-science-practice.md) | G |
 
-### [ ] High-Performance and Cloud Computing for Research (0/3)
+### [x] High-Performance and Cloud Computing for Research (3/3)
 
 Module index: [`06-high-performance-and-cloud/README.md`](./22-data-engineering-reproducibility/06-high-performance-and-cloud/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Running Jobs on HPC Clusters and Schedulers](./22-data-engineering-reproducibility/06-high-performance-and-cloud/01-cluster-jobs.md) | R |
-| · | [Cloud Computing for Geophysical Computation](./22-data-engineering-reproducibility/06-high-performance-and-cloud/02-cloud-computing-research.md) | R |
-| · | [Cost, Scaling and Practical Efficiency](./22-data-engineering-reproducibility/06-high-performance-and-cloud/03-cost-and-scaling.md) | R |
+| ✓ | [Running Jobs on HPC Clusters and Schedulers](./22-data-engineering-reproducibility/06-high-performance-and-cloud/01-cluster-jobs.md) | R |
+| ✓ | [Cloud Computing for Geophysical Computation](./22-data-engineering-reproducibility/06-high-performance-and-cloud/02-cloud-computing-research.md) | R |
+| ✓ | [Cost, Scaling and Practical Efficiency](./22-data-engineering-reproducibility/06-high-performance-and-cloud/03-cost-and-scaling.md) | R |
 
-### [ ] Testing and Quality Assurance for Scientific Code (0/4)
+### [x] Testing and Quality Assurance for Scientific Code (4/4)
 
 Module index: [`07-software-testing-quality/README.md`](./22-data-engineering-reproducibility/07-software-testing-quality/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Test Strategy for Numerical and Data Code](./22-data-engineering-reproducibility/07-software-testing-quality/01-test-strategy-science.md) | R |
-| · | [Continuous Integration for Research Software](./22-data-engineering-reproducibility/07-software-testing-quality/02-continuous-integration.md) | R |
-| · | [Regression Testing Against Known Results](./22-data-engineering-reproducibility/07-software-testing-quality/03-regression-testing-data.md) | R |
-| · | [Benchmarking, Performance Tracking and Documentation Tests](./22-data-engineering-reproducibility/07-software-testing-quality/04-benchmarking-and-docs.md) | R |
+| ✓ | [Test Strategy for Numerical and Data Code](./22-data-engineering-reproducibility/07-software-testing-quality/01-test-strategy-science.md) | R |
+| ✓ | [Continuous Integration for Research Software](./22-data-engineering-reproducibility/07-software-testing-quality/02-continuous-integration.md) | R |
+| ✓ | [Regression Testing Against Known Results](./22-data-engineering-reproducibility/07-software-testing-quality/03-regression-testing-data.md) | R |
+| ✓ | [Benchmarking, Performance Tracking and Documentation Tests](./22-data-engineering-reproducibility/07-software-testing-quality/04-benchmarking-and-docs.md) | R |
 
 ## Field Methods, Instruments and Laboratory Work
 
-`23-field-methods-instruments` — **7 modules**, **0/38 lessons written**
+`23-field-methods-instruments` — **7 modules**, **38/38 lessons written**
 
 [Folder index](./23-field-methods-instruments/README.md)
 
-### [ ] Field Safety, Planning and Logistics (0/4)
+### [x] Field Safety, Planning and Logistics (4/4)
 
 Module index: [`01-field-safety-and-planning/README.md`](./23-field-methods-instruments/01-field-safety-and-planning/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Field Safety, Risk Assessment and Remote-Area Protocols](./23-field-methods-instruments/01-field-safety-and-planning/01-field-safety.md) | B |
-| · | [Planning a Field Campaign: Objectives, Permits, Logistics](./23-field-methods-instruments/01-field-safety-and-planning/02-field-planning.md) | I |
-| · | [Field Notebooks, Metadata and Data Provenance](./23-field-methods-instruments/01-field-safety-and-planning/03-field-notebooks.md) | B |
-| · | [Permits, Land Access, Cultural Heritage and Ethics](./23-field-methods-instruments/01-field-safety-and-planning/04-permits-and-ethics.md) | I |
+| ✓ | [Field Safety, Risk Assessment and Remote-Area Protocols](./23-field-methods-instruments/01-field-safety-and-planning/01-field-safety.md) | B |
+| ✓ | [Planning a Field Campaign: Objectives, Permits, Logistics](./23-field-methods-instruments/01-field-safety-and-planning/02-field-planning.md) | I |
+| ✓ | [Field Notebooks, Metadata and Data Provenance](./23-field-methods-instruments/01-field-safety-and-planning/03-field-notebooks.md) | B |
+| ✓ | [Permits, Land Access, Cultural Heritage and Ethics](./23-field-methods-instruments/01-field-safety-and-planning/04-permits-and-ethics.md) | I |
 
-### [ ] Seismic Instruments and Fieldwork (0/7)
+### [x] Seismic Instruments and Fieldwork (7/7)
 
 Module index: [`02-seismic-instruments-and-fieldwork/README.md`](./23-field-methods-instruments/02-seismic-instruments-and-fieldwork/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Seismometers: Broadband, Short-Period, Geophones, MEMS](./23-field-methods-instruments/02-seismic-instruments-and-fieldwork/01-seismometers.md) | A |
-| · | [Digitizers, Dynamic Range, Gain and Anti-Alias Filtering](./23-field-methods-instruments/02-seismic-instruments-and-fieldwork/02-digitizers-and-gain.md) | G |
-| · | [Seismic Network Design and Station Siting](./23-field-methods-instruments/02-seismic-instruments-and-fieldwork/03-seismic-network-design.md) | D |
-| · | [Active-Source Fieldwork: Sources, Spreads, Shooting Patterns](./23-field-methods-instruments/02-seismic-instruments-and-fieldwork/04-active-source-fieldwork.md) | G |
-| · | [Deployment, Orientation, Timing and Metadata](./23-field-methods-instruments/02-seismic-instruments-and-fieldwork/05-seismic-deployment.md) | A |
-| · | [Field QC: Noise Checks, Continuity, Station Uptime](./23-field-methods-instruments/02-seismic-instruments-and-fieldwork/06-seismic-field-qc.md) | A |
-| · | [Nodal Systems and Distributed Acoustic Sensing in the Field](./23-field-methods-instruments/02-seismic-instruments-and-fieldwork/07-das-and-nodal-systems.md) | R |
+| ✓ | [Seismometers: Broadband, Short-Period, Geophones, MEMS](./23-field-methods-instruments/02-seismic-instruments-and-fieldwork/01-seismometers.md) | A |
+| ✓ | [Digitizers, Dynamic Range, Gain and Anti-Alias Filtering](./23-field-methods-instruments/02-seismic-instruments-and-fieldwork/02-digitizers-and-gain.md) | G |
+| ✓ | [Seismic Network Design and Station Siting](./23-field-methods-instruments/02-seismic-instruments-and-fieldwork/03-seismic-network-design.md) | D |
+| ✓ | [Active-Source Fieldwork: Sources, Spreads, Shooting Patterns](./23-field-methods-instruments/02-seismic-instruments-and-fieldwork/04-active-source-fieldwork.md) | G |
+| ✓ | [Deployment, Orientation, Timing and Metadata](./23-field-methods-instruments/02-seismic-instruments-and-fieldwork/05-seismic-deployment.md) | A |
+| ✓ | [Field QC: Noise Checks, Continuity, Station Uptime](./23-field-methods-instruments/02-seismic-instruments-and-fieldwork/06-seismic-field-qc.md) | A |
+| ✓ | [Nodal Systems and Distributed Acoustic Sensing in the Field](./23-field-methods-instruments/02-seismic-instruments-and-fieldwork/07-das-and-nodal-systems.md) | R |
 
-### [ ] Gravity and Magnetic Fieldwork (0/4)
+### [x] Gravity and Magnetic Fieldwork (4/4)
 
 Module index: [`03-gravity-magnetic-fieldwork/README.md`](./23-field-methods-instruments/03-gravity-magnetic-fieldwork/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Gravity Fieldwork: Loops, Drift, Base Stations, Ties](./23-field-methods-instruments/03-gravity-magnetic-fieldwork/01-gravity-fieldwork.md) | A |
-| · | [Magnetic Fieldwork: Diurnal Variation, Leveling, Gradients](./23-field-methods-instruments/03-gravity-magnetic-fieldwork/02-magnetic-fieldwork.md) | A |
-| · | [Positioning and Elevation Determination in the Field](./23-field-methods-instruments/03-gravity-magnetic-fieldwork/03-positioning-in-field.md) | A |
-| · | [Field Data QC for Potential-Field Surveys](./23-field-methods-instruments/03-gravity-magnetic-fieldwork/04-field-data-qc-gravmag.md) | G |
+| ✓ | [Gravity Fieldwork: Loops, Drift, Base Stations, Ties](./23-field-methods-instruments/03-gravity-magnetic-fieldwork/01-gravity-fieldwork.md) | A |
+| ✓ | [Magnetic Fieldwork: Diurnal Variation, Leveling, Gradients](./23-field-methods-instruments/03-gravity-magnetic-fieldwork/02-magnetic-fieldwork.md) | A |
+| ✓ | [Positioning and Elevation Determination in the Field](./23-field-methods-instruments/03-gravity-magnetic-fieldwork/03-positioning-in-field.md) | A |
+| ✓ | [Field Data QC for Potential-Field Surveys](./23-field-methods-instruments/03-gravity-magnetic-fieldwork/04-field-data-qc-gravmag.md) | G |
 
-### [ ] Electrical and EM Fieldwork (0/5)
+### [x] Electrical and EM Fieldwork (5/5)
 
 Module index: [`04-electrical-em-fieldwork/README.md`](./23-field-methods-instruments/04-electrical-em-fieldwork/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [ERT Fieldwork: Electrode Layouts, Contact Resistance, Reciprocity](./23-field-methods-instruments/04-electrical-em-fieldwork/01-ert-fieldwork.md) | G |
-| · | [EM Fieldwork: Loop, Coil and Grounded-Source Configurations](./23-field-methods-instruments/04-electrical-em-fieldwork/02-em-fieldwork.md) | G |
-| · | [Magnetotelluric Fieldwork: Sites, Remote Reference, Noise](./23-field-methods-instruments/04-electrical-em-fieldwork/03-mt-fieldwork.md) | R |
-| · | [GPR Fieldwork: Antenna Choice, Grids, Coupling, Calibration](./23-field-methods-instruments/04-electrical-em-fieldwork/04-gpr-fieldwork.md) | G |
-| · | [Borehole Logging Operations and Tool Calibration](./23-field-methods-instruments/04-electrical-em-fieldwork/05-borehole-fieldwork.md) | G |
+| ✓ | [ERT Fieldwork: Electrode Layouts, Contact Resistance, Reciprocity](./23-field-methods-instruments/04-electrical-em-fieldwork/01-ert-fieldwork.md) | G |
+| ✓ | [EM Fieldwork: Loop, Coil and Grounded-Source Configurations](./23-field-methods-instruments/04-electrical-em-fieldwork/02-em-fieldwork.md) | G |
+| ✓ | [Magnetotelluric Fieldwork: Sites, Remote Reference, Noise](./23-field-methods-instruments/04-electrical-em-fieldwork/03-mt-fieldwork.md) | R |
+| ✓ | [GPR Fieldwork: Antenna Choice, Grids, Coupling, Calibration](./23-field-methods-instruments/04-electrical-em-fieldwork/04-gpr-fieldwork.md) | G |
+| ✓ | [Borehole Logging Operations and Tool Calibration](./23-field-methods-instruments/04-electrical-em-fieldwork/05-borehole-fieldwork.md) | G |
 
-### [ ] Instrumentation and Electronics for Geophysics (0/6)
+### [x] Instrumentation and Electronics for Geophysics (6/6)
 
 Module index: [`05-instrumentation-and-electronics/README.md`](./23-field-methods-instruments/05-instrumentation-and-electronics/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Sensors and Transducers: Principles and Selection](./23-field-methods-instruments/05-instrumentation-and-electronics/01-sensors-and-transducers.md) | A |
-| · | [Amplification, Filtering and Analog-Digital Conversion](./23-field-methods-instruments/05-instrumentation-and-electronics/02-signal-conditioning.md) | G |
-| · | [Timing, GNSS Disciplining and Clock Accuracy](./23-field-methods-instruments/05-instrumentation-and-electronics/03-timing-and-gnss-instruments.md) | G |
-| · | [Calibration, Testing and Traceability](./23-field-methods-instruments/05-instrumentation-and-electronics/04-calibration-and-testing.md) | R |
-| · | [Building Low-Cost Instruments for Teaching and Research](./23-field-methods-instruments/05-instrumentation-and-electronics/05-instrument-design-lowo.md) | R |
-| · | [IoT and Autonomous Sensor Networks for Earth Monitoring](./23-field-methods-instruments/05-instrumentation-and-electronics/06-iot-sensor-networks.md) | R |
+| ✓ | [Sensors and Transducers: Principles and Selection](./23-field-methods-instruments/05-instrumentation-and-electronics/01-sensors-and-transducers.md) | A |
+| ✓ | [Amplification, Filtering and Analog-Digital Conversion](./23-field-methods-instruments/05-instrumentation-and-electronics/02-signal-conditioning.md) | G |
+| ✓ | [Timing, GNSS Disciplining and Clock Accuracy](./23-field-methods-instruments/05-instrumentation-and-electronics/03-timing-and-gnss-instruments.md) | G |
+| ✓ | [Calibration, Testing and Traceability](./23-field-methods-instruments/05-instrumentation-and-electronics/04-calibration-and-testing.md) | R |
+| ✓ | [Building Low-Cost Instruments for Teaching and Research](./23-field-methods-instruments/05-instrumentation-and-electronics/05-instrument-design-lowo.md) | R |
+| ✓ | [IoT and Autonomous Sensor Networks for Earth Monitoring](./23-field-methods-instruments/05-instrumentation-and-electronics/06-iot-sensor-networks.md) | R |
 
-### [ ] Laboratory Measurements on Rocks and Fluids (0/8)
+### [x] Laboratory Measurements on Rocks and Fluids (8/8)
 
 Module index: [`06-laboratory-measurements/README.md`](./23-field-methods-instruments/06-laboratory-measurements/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Sample Preparation, Coring and Drying Protocols](./23-field-methods-instruments/06-laboratory-measurements/01-sample-preparation.md) | A |
-| · | [Ultrasonic Velocity Measurement and Pressure Dependence](./23-field-methods-instruments/06-laboratory-measurements/02-ultrasonic-velocity.md) | R |
-| · | [Laboratory Density, Porosity and Permeability Measurement](./23-field-methods-instruments/06-laboratory-measurements/03-density-porosity-lab.md) | A |
-| · | [Laboratory Resistivity, IP and Dielectric Measurements](./23-field-methods-instruments/06-laboratory-measurements/04-electrical-lab-measurements.md) | R |
-| · | [Laboratory Magnetic Susceptibility and Remanence (IRM, ARM)](./23-field-methods-instruments/06-laboratory-measurements/05-magnetic-lab-measurements.md) | R |
-| · | [Thermal Conductivity, Diffusivity and Specific Heat](./23-field-methods-instruments/06-laboratory-measurements/06-thermal-lab-measurements.md) | R |
-| · | [Rock Mechanics Testing: Strength, Friction, Fracture](./23-field-methods-instruments/06-laboratory-measurements/07-rock-mechanics-lab.md) | R |
-| · | [Laboratory Uncertainty Budgets and Reporting](./23-field-methods-instruments/06-laboratory-measurements/08-lab-data-uncertainty.md) | R |
+| ✓ | [Sample Preparation, Coring and Drying Protocols](./23-field-methods-instruments/06-laboratory-measurements/01-sample-preparation.md) | A |
+| ✓ | [Ultrasonic Velocity Measurement and Pressure Dependence](./23-field-methods-instruments/06-laboratory-measurements/02-ultrasonic-velocity.md) | R |
+| ✓ | [Laboratory Density, Porosity and Permeability Measurement](./23-field-methods-instruments/06-laboratory-measurements/03-density-porosity-lab.md) | A |
+| ✓ | [Laboratory Resistivity, IP and Dielectric Measurements](./23-field-methods-instruments/06-laboratory-measurements/04-electrical-lab-measurements.md) | R |
+| ✓ | [Laboratory Magnetic Susceptibility and Remanence (IRM, ARM)](./23-field-methods-instruments/06-laboratory-measurements/05-magnetic-lab-measurements.md) | R |
+| ✓ | [Thermal Conductivity, Diffusivity and Specific Heat](./23-field-methods-instruments/06-laboratory-measurements/06-thermal-lab-measurements.md) | R |
+| ✓ | [Rock Mechanics Testing: Strength, Friction, Fracture](./23-field-methods-instruments/06-laboratory-measurements/07-rock-mechanics-lab.md) | R |
+| ✓ | [Laboratory Uncertainty Budgets and Reporting](./23-field-methods-instruments/06-laboratory-measurements/08-lab-data-uncertainty.md) | R |
 
-### [ ] Field Campaign Case Studies (0/4)
+### [x] Field Campaign Case Studies (4/4)
 
 Module index: [`07-field-campaign-case-studies/README.md`](./23-field-methods-instruments/07-field-campaign-case-studies/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Case Study: Deploying a Temporary Seismic Array](./23-field-methods-instruments/07-field-campaign-case-studies/01-case-study-seismic-array.md) | R |
-| · | [Case Study: An ERT Survey from Design to Report](./23-field-methods-instruments/07-field-campaign-case-studies/02-case-study-ert-survey.md) | R |
-| · | [Case Study: A Magnetotelluric Campaign](./23-field-methods-instruments/07-field-campaign-case-studies/03-case-study-mt-campaign.md) | R |
-| · | [Case Study: A Marine Geophysical Cruise](./23-field-methods-instruments/07-field-campaign-case-studies/04-case-study-marine-cruise.md) | R |
+| ✓ | [Case Study: Deploying a Temporary Seismic Array](./23-field-methods-instruments/07-field-campaign-case-studies/01-case-study-seismic-array.md) | R |
+| ✓ | [Case Study: An ERT Survey from Design to Report](./23-field-methods-instruments/07-field-campaign-case-studies/02-case-study-ert-survey.md) | R |
+| ✓ | [Case Study: A Magnetotelluric Campaign](./23-field-methods-instruments/07-field-campaign-case-studies/03-case-study-mt-campaign.md) | R |
+| ✓ | [Case Study: A Marine Geophysical Cruise](./23-field-methods-instruments/07-field-campaign-case-studies/04-case-study-marine-cruise.md) | R |
 
 ## Research Papers, Scientific Writing and Communication
 
-`24-research-papers-writing` — **6 modules**, **0/31 lessons written**
+`24-research-papers-writing` — **6 modules**, **31/31 lessons written**
 
 [Folder index](./24-research-papers-writing/README.md)
 
-### [ ] Reading the Research Literature (0/5)
+### [x] Reading the Research Literature (5/5)
 
 Module index: [`01-reading-research-literature/README.md`](./24-research-papers-writing/01-reading-research-literature/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Anatomy of a Research Paper](./24-research-papers-writing/01-reading-research-literature/01-anatomy-of-a-paper.md) | I |
-| · | [Reading Strategies: Skim, Map, Deep-Read, Critique](./24-research-papers-writing/01-reading-research-literature/02-reading-strategies.md) | I |
-| · | [Critiquing Methods, Data and Inference](./24-research-papers-writing/01-reading-research-literature/03-critiquing-methods.md) | D |
-| · | [Systematic Literature Search and Reference Management](./24-research-papers-writing/01-reading-research-literature/04-literature-search.md) | I |
-| · | [Keeping Up: Journals, Preprints, Societies, Alerts](./24-research-papers-writing/01-reading-research-literature/05-keeping-up-with-literature.md) | I |
+| ✓ | [Anatomy of a Research Paper](./24-research-papers-writing/01-reading-research-literature/01-anatomy-of-a-paper.md) | I |
+| ✓ | [Reading Strategies: Skim, Map, Deep-Read, Critique](./24-research-papers-writing/01-reading-research-literature/02-reading-strategies.md) | I |
+| ✓ | [Critiquing Methods, Data and Inference](./24-research-papers-writing/01-reading-research-literature/03-critiquing-methods.md) | D |
+| ✓ | [Systematic Literature Search and Reference Management](./24-research-papers-writing/01-reading-research-literature/04-literature-search.md) | I |
+| ✓ | [Keeping Up: Journals, Preprints, Societies, Alerts](./24-research-papers-writing/01-reading-research-literature/05-keeping-up-with-literature.md) | I |
 
-### [ ] Scientific Writing (0/7)
+### [x] Scientific Writing (7/7)
 
 Module index: [`02-scientific-writing/README.md`](./24-research-papers-writing/02-scientific-writing/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Principles of Clear Scientific Writing](./24-research-papers-writing/02-scientific-writing/01-writing-principles.md) | I |
-| · | [Paper Structure: IMRaD and Its Variants](./24-research-papers-writing/02-scientific-writing/02-paper-structure.md) | A |
-| · | [Writing Methods Sections That Can Be Reproduced](./24-research-papers-writing/02-scientific-writing/03-writing-methods.md) | D |
-| · | [Writing Results and Discussion Without Overclaiming](./24-research-papers-writing/02-scientific-writing/04-writing-results-discussion.md) | D |
-| · | [Abstracts, Titles and the Art of the Concrete Claim](./24-research-papers-writing/02-scientific-writing/05-writing-abstracts-titles.md) | A |
-| · | [Figures, Captions and Self-Contained Visual Arguments](./24-research-papers-writing/02-scientific-writing/06-figures-and-captions.md) | A |
-| · | [Self-Editing, Revision and Response to Reviewers](./24-research-papers-writing/02-scientific-writing/07-editing-and-revision.md) | D |
+| ✓ | [Principles of Clear Scientific Writing](./24-research-papers-writing/02-scientific-writing/01-writing-principles.md) | I |
+| ✓ | [Paper Structure: IMRaD and Its Variants](./24-research-papers-writing/02-scientific-writing/02-paper-structure.md) | A |
+| ✓ | [Writing Methods Sections That Can Be Reproduced](./24-research-papers-writing/02-scientific-writing/03-writing-methods.md) | D |
+| ✓ | [Writing Results and Discussion Without Overclaiming](./24-research-papers-writing/02-scientific-writing/04-writing-results-discussion.md) | D |
+| ✓ | [Abstracts, Titles and the Art of the Concrete Claim](./24-research-papers-writing/02-scientific-writing/05-writing-abstracts-titles.md) | A |
+| ✓ | [Figures, Captions and Self-Contained Visual Arguments](./24-research-papers-writing/02-scientific-writing/06-figures-and-captions.md) | A |
+| ✓ | [Self-Editing, Revision and Response to Reviewers](./24-research-papers-writing/02-scientific-writing/07-editing-and-revision.md) | D |
 
-### [ ] Research Methods and Scientific Rigour (0/6)
+### [x] Research Methods and Scientific Rigour (6/6)
 
 Module index: [`03-research-methods-and-rigour/README.md`](./24-research-papers-writing/03-research-methods-and-rigour/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Formulating Answerable Research Questions](./24-research-papers-writing/03-research-methods-and-rigour/01-research-questions.md) | A |
-| · | [Hypotheses, Falsifiability and Testing in Earth Science](./24-research-papers-writing/03-research-methods-and-rigour/02-hypothesis-and-falsifiability.md) | D |
-| · | [Designing Observational, Experimental and Modelling Studies](./24-research-papers-writing/03-research-methods-and-rigour/03-study-design.md) | R |
-| · | [Reproducible Research Practice End to End](./24-research-papers-writing/03-research-methods-and-rigour/04-reproducible-research-practice.md) | R |
-| · | [Peer Review: How to Do It Well and Receive It Well](./24-research-papers-writing/03-research-methods-and-rigour/05-peer-review-practice.md) | R |
-| · | [Research Ethics, Plagiarism, Authorship and Integrity](./24-research-papers-writing/03-research-methods-and-rigour/06-research-ethics.md) | G |
+| ✓ | [Formulating Answerable Research Questions](./24-research-papers-writing/03-research-methods-and-rigour/01-research-questions.md) | A |
+| ✓ | [Hypotheses, Falsifiability and Testing in Earth Science](./24-research-papers-writing/03-research-methods-and-rigour/02-hypothesis-and-falsifiability.md) | D |
+| ✓ | [Designing Observational, Experimental and Modelling Studies](./24-research-papers-writing/03-research-methods-and-rigour/03-study-design.md) | R |
+| ✓ | [Reproducible Research Practice End to End](./24-research-papers-writing/03-research-methods-and-rigour/04-reproducible-research-practice.md) | R |
+| ✓ | [Peer Review: How to Do It Well and Receive It Well](./24-research-papers-writing/03-research-methods-and-rigour/05-peer-review-practice.md) | R |
+| ✓ | [Research Ethics, Plagiarism, Authorship and Integrity](./24-research-papers-writing/03-research-methods-and-rigour/06-research-ethics.md) | G |
 
-### [ ] Presentation and Science Communication (0/5)
+### [x] Presentation and Science Communication (5/5)
 
 Module index: [`04-presentation-and-communication/README.md`](./24-research-papers-writing/04-presentation-and-communication/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Conference Talks: Structure, Pacing, Visuals](./24-research-papers-writing/04-presentation-and-communication/01-conference-talks.md) | A |
-| · | [Designing Effective Scientific Posters](./24-research-papers-writing/04-presentation-and-communication/02-posters.md) | I |
-| · | [Seminars, Qualifying Exams and Thesis Defence](./24-research-papers-writing/04-presentation-and-communication/03-seminar-and-defence.md) | D |
-| · | [Communicating Uncertainty to Non-Specialists](./24-research-papers-writing/04-presentation-and-communication/04-communicating-uncertainty.md) | R |
-| · | [Public Engagement, Media and Policy Communication](./24-research-papers-writing/04-presentation-and-communication/05-public-and-media.md) | D |
+| ✓ | [Conference Talks: Structure, Pacing, Visuals](./24-research-papers-writing/04-presentation-and-communication/01-conference-talks.md) | A |
+| ✓ | [Designing Effective Scientific Posters](./24-research-papers-writing/04-presentation-and-communication/02-posters.md) | I |
+| ✓ | [Seminars, Qualifying Exams and Thesis Defence](./24-research-papers-writing/04-presentation-and-communication/03-seminar-and-defence.md) | D |
+| ✓ | [Communicating Uncertainty to Non-Specialists](./24-research-papers-writing/04-presentation-and-communication/04-communicating-uncertainty.md) | R |
+| ✓ | [Public Engagement, Media and Policy Communication](./24-research-papers-writing/04-presentation-and-communication/05-public-and-media.md) | D |
 
-### [ ] Theses, Proposals and Career Documents (0/4)
+### [x] Theses, Proposals and Career Documents (4/4)
 
 Module index: [`05-thesis-and-proposals/README.md`](./24-research-papers-writing/05-thesis-and-proposals/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Writing a Compelling Research Proposal](./24-research-papers-writing/05-thesis-and-proposals/01-research-proposal.md) | D |
-| · | [Thesis Structure, Chapters and the Contribution Statement](./24-research-papers-writing/05-thesis-and-proposals/02-thesis-structure.md) | R |
-| · | [Understanding Grant Funding and Review Criteria](./24-research-papers-writing/05-thesis-and-proposals/03-grant-funding.md) | R |
-| · | [Academic CVs, Research Statements and Career Paths](./24-research-papers-writing/05-thesis-and-proposals/04-cv-and-career.md) | A |
+| ✓ | [Writing a Compelling Research Proposal](./24-research-papers-writing/05-thesis-and-proposals/01-research-proposal.md) | D |
+| ✓ | [Thesis Structure, Chapters and the Contribution Statement](./24-research-papers-writing/05-thesis-and-proposals/02-thesis-structure.md) | R |
+| ✓ | [Understanding Grant Funding and Review Criteria](./24-research-papers-writing/05-thesis-and-proposals/03-grant-funding.md) | R |
+| ✓ | [Academic CVs, Research Statements and Career Paths](./24-research-papers-writing/05-thesis-and-proposals/04-cv-and-career.md) | A |
 
-### [ ] Reproducible Publication and Open Data (0/4)
+### [x] Reproducible Publication and Open Data (4/4)
 
 Module index: [`06-reproducible-publication/README.md`](./24-research-papers-writing/06-reproducible-publication/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Publishing Data and Code Alongside Papers](./24-research-papers-writing/06-reproducible-publication/01-data-publication.md) | R |
-| · | [DOIs, ORCID, Persistent Identifiers and Data Repositories](./24-research-papers-writing/06-reproducible-publication/02-persistent-identifiers.md) | A |
-| · | [Interactive Publications and Notebooks as Articles](./24-research-papers-writing/06-reproducible-publication/03-notebooks-as-publications.md) | R |
-| · | [Citation Practice and Attribution of Data and Software](./24-research-papers-writing/06-reproducible-publication/04-citation-and-attribution.md) | A |
+| ✓ | [Publishing Data and Code Alongside Papers](./24-research-papers-writing/06-reproducible-publication/01-data-publication.md) | R |
+| ✓ | [DOIs, ORCID, Persistent Identifiers and Data Repositories](./24-research-papers-writing/06-reproducible-publication/02-persistent-identifiers.md) | A |
+| ✓ | [Interactive Publications and Notebooks as Articles](./24-research-papers-writing/06-reproducible-publication/03-notebooks-as-publications.md) | R |
+| ✓ | [Citation Practice and Attribution of Data and Software](./24-research-papers-writing/06-reproducible-publication/04-citation-and-attribution.md) | A |
 
 ## Integrated Projects and Capstone Research
 
-`25-projects-capstone` — **6 modules**, **0/31 lessons written**
+`25-projects-capstone` — **6 modules**, **31/31 lessons written**
 
 [Folder index](./25-projects-capstone/README.md)
 
-### [ ] Beginner Projects (0/4)
+### [x] Beginner Projects (4/4)
 
 Module index: [`01-beginner-projects/README.md`](./25-projects-capstone/01-beginner-projects/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Project: Units, Conversions and First Scientific Plots](./25-projects-capstone/01-beginner-projects/01-units-and-plotting.md) | B |
-| · | [Project: Mapping Global Seismicity from a Real Catalogue](./25-projects-capstone/01-beginner-projects/02-earthquake-map.md) | B |
-| · | [Project: Computing Gravity Through a Layered Earth](./25-projects-capstone/01-beginner-projects/03-gravity-of-earths-layers.md) | B |
-| · | [Project: Reading and Describing a Real Seismogram](./25-projects-capstone/01-beginner-projects/04-reading-a-seismogram.md) | B |
+| ✓ | [Project: Units, Conversions and First Scientific Plots](./25-projects-capstone/01-beginner-projects/01-units-and-plotting.md) | B |
+| ✓ | [Project: Mapping Global Seismicity from a Real Catalogue](./25-projects-capstone/01-beginner-projects/02-earthquake-map.md) | B |
+| ✓ | [Project: Computing Gravity Through a Layered Earth](./25-projects-capstone/01-beginner-projects/03-gravity-of-earths-layers.md) | B |
+| ✓ | [Project: Reading and Describing a Real Seismogram](./25-projects-capstone/01-beginner-projects/04-reading-a-seismogram.md) | B |
 
-### [ ] Intermediate Projects (0/5)
+### [x] Intermediate Projects (5/5)
 
 Module index: [`02-intermediate-projects/README.md`](./25-projects-capstone/02-intermediate-projects/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Project: Travel-Time Curves and 1-D Velocity Structure](./25-projects-capstone/02-intermediate-projects/01-travel-time-curves.md) | I |
-| · | [Project: Gravity Anomaly of Simple Bodies](./25-projects-capstone/02-intermediate-projects/02-simple-gravity-model.md) | I |
-| · | [Project: Fourier Analysis of a Geophysical Signal](./25-projects-capstone/02-intermediate-projects/03-fourier-analysis-signals.md) | I |
-| · | [Project: Interpreting a Refraction Survey](./25-projects-capstone/02-intermediate-projects/04-refraction-interpretation.md) | I |
-| · | [Project: Porosity from Well Logs with Uncertainty](./25-projects-capstone/02-intermediate-projects/05-reservoir-porosity-quantitative.md) | I |
+| ✓ | [Project: Travel-Time Curves and 1-D Velocity Structure](./25-projects-capstone/02-intermediate-projects/01-travel-time-curves.md) | I |
+| ✓ | [Project: Gravity Anomaly of Simple Bodies](./25-projects-capstone/02-intermediate-projects/02-simple-gravity-model.md) | I |
+| ✓ | [Project: Fourier Analysis of a Geophysical Signal](./25-projects-capstone/02-intermediate-projects/03-fourier-analysis-signals.md) | I |
+| ✓ | [Project: Interpreting a Refraction Survey](./25-projects-capstone/02-intermediate-projects/04-refraction-interpretation.md) | I |
+| ✓ | [Project: Porosity from Well Logs with Uncertainty](./25-projects-capstone/02-intermediate-projects/05-reservoir-porosity-quantitative.md) | I |
 
-### [ ] Advanced Projects (0/6)
+### [x] Advanced Projects (6/6)
 
 Module index: [`03-advanced-projects/README.md`](./25-projects-capstone/03-advanced-projects/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Project: Magnetic Anomaly Modelling and Depth Estimation](./25-projects-capstone/03-advanced-projects/01-mag-anomaly-modelling.md) | A |
-| · | [Project: ERT Inversion with Resolution Assessment](./25-projects-capstone/03-advanced-projects/02-ert-inversion-project.md) | A |
-| · | [Project: Seismic Reflection Processing Flow](./25-projects-capstone/03-advanced-projects/03-seismic-processing-project.md) | A |
-| · | [Project: Climate Data Analysis and Trend Attribution](./25-projects-capstone/03-advanced-projects/04-climate-data-analysis-project.md) | A |
-| · | [Project: GNSS Strain Rate Estimation](./25-projects-capstone/03-advanced-projects/05-gnss-strain-project.md) | A |
-| · | [Project: Gravity Inversion with Uncertainty Quantification](./25-projects-capstone/03-advanced-projects/06-gravity-inversion-uq.md) | A |
+| ✓ | [Project: Magnetic Anomaly Modelling and Depth Estimation](./25-projects-capstone/03-advanced-projects/01-mag-anomaly-modelling.md) | A |
+| ✓ | [Project: ERT Inversion with Resolution Assessment](./25-projects-capstone/03-advanced-projects/02-ert-inversion-project.md) | A |
+| ✓ | [Project: Seismic Reflection Processing Flow](./25-projects-capstone/03-advanced-projects/03-seismic-processing-project.md) | A |
+| ✓ | [Project: Climate Data Analysis and Trend Attribution](./25-projects-capstone/03-advanced-projects/04-climate-data-analysis-project.md) | A |
+| ✓ | [Project: GNSS Strain Rate Estimation](./25-projects-capstone/03-advanced-projects/05-gnss-strain-project.md) | A |
+| ✓ | [Project: Gravity Inversion with Uncertainty Quantification](./25-projects-capstone/03-advanced-projects/06-gravity-inversion-uq.md) | A |
 
-### [ ] Graduate Projects (0/6)
+### [x] Graduate Projects (6/6)
 
 Module index: [`04-graduate-projects/README.md`](./25-projects-capstone/04-graduate-projects/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Project: Finite-Difference Wave Propagation and Convergence Testing](./25-projects-capstone/04-graduate-projects/01-fd-wave-propagation-project.md) | G |
-| · | [Project: 1-D and 2-D Magnetotelluric Inversion](./25-projects-capstone/04-graduate-projects/02-mt-1d-2d-inversion.md) | G |
-| · | [Project: InSAR Deformation Time Series Analysis](./25-projects-capstone/04-graduate-projects/03-insar-deformation-project.md) | G |
-| · | [Project: Earthquake Catalogue Statistics and Hazard Inputs](./25-projects-capstone/04-graduate-projects/04-earthquake-catalog-analysis.md) | G |
-| · | [Project: Joint Gravity-Seismic Inversion](./25-projects-capstone/04-graduate-projects/05-joint-inversion-project.md) | G |
-| · | [Project: Crustal Structure from Receiver Functions](./25-projects-capstone/04-graduate-projects/06-receiver-function-project.md) | G |
+| ✓ | [Project: Finite-Difference Wave Propagation and Convergence Testing](./25-projects-capstone/04-graduate-projects/01-fd-wave-propagation-project.md) | G |
+| ✓ | [Project: 1-D and 2-D Magnetotelluric Inversion](./25-projects-capstone/04-graduate-projects/02-mt-1d-2d-inversion.md) | G |
+| ✓ | [Project: InSAR Deformation Time Series Analysis](./25-projects-capstone/04-graduate-projects/03-insar-deformation-project.md) | G |
+| ✓ | [Project: Earthquake Catalogue Statistics and Hazard Inputs](./25-projects-capstone/04-graduate-projects/04-earthquake-catalog-analysis.md) | G |
+| ✓ | [Project: Joint Gravity-Seismic Inversion](./25-projects-capstone/04-graduate-projects/05-joint-inversion-project.md) | G |
+| ✓ | [Project: Crustal Structure from Receiver Functions](./25-projects-capstone/04-graduate-projects/06-receiver-function-project.md) | G |
 
-### [ ] Doctoral-Level Projects (0/5)
+### [x] Doctoral-Level Projects (5/5)
 
 Module index: [`05-doctoral-projects/README.md`](./25-projects-capstone/05-doctoral-projects/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Project: Local Earthquake Tomography with Resolution Tests](./25-projects-capstone/05-doctoral-projects/01-tomography-project.md) | D |
-| · | [Project: A Small-Scale Full-Waveform Inversion](./25-projects-capstone/05-doctoral-projects/02-full-waveform-inversion-project.md) | D |
-| · | [Project: Geodynamic Model-Data Comparison](./25-projects-capstone/05-doctoral-projects/03-geodynamic-model-data.md) | D |
-| · | [Project: Trans-Dimensional Bayesian Inversion](./25-projects-capstone/05-doctoral-projects/04-bayesian-inversion-project.md) | D |
-| · | [Project: Reproducing a Published Geophysical Result](./25-projects-capstone/05-doctoral-projects/05-reproduce-published-result.md) | D |
+| ✓ | [Project: Local Earthquake Tomography with Resolution Tests](./25-projects-capstone/05-doctoral-projects/01-tomography-project.md) | D |
+| ✓ | [Project: A Small-Scale Full-Waveform Inversion](./25-projects-capstone/05-doctoral-projects/02-full-waveform-inversion-project.md) | D |
+| ✓ | [Project: Geodynamic Model-Data Comparison](./25-projects-capstone/05-doctoral-projects/03-geodynamic-model-data.md) | D |
+| ✓ | [Project: Trans-Dimensional Bayesian Inversion](./25-projects-capstone/05-doctoral-projects/04-bayesian-inversion-project.md) | D |
+| ✓ | [Project: Reproducing a Published Geophysical Result](./25-projects-capstone/05-doctoral-projects/05-reproduce-published-result.md) | D |
 
-### [ ] Capstone Research Project (0/5)
+### [x] Capstone Research Project (5/5)
 
 Module index: [`06-capstone-research/README.md`](./25-projects-capstone/06-capstone-research/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Capstone: Designing an Original Research Study](./25-projects-capstone/06-capstone-research/01-capstone-design.md) | R |
-| · | [Capstone: Proposal, Literature Review and Methods Plan](./25-projects-capstone/06-capstone-research/02-capstone-proposal.md) | R |
-| · | [Capstone: Data, Modelling and Uncertainty Analysis](./25-projects-capstone/06-capstone-research/03-capstone-execution.md) | R |
-| · | [Capstone: Manuscript-Style Write-Up and Code Release](./25-projects-capstone/06-capstone-research/04-capstone-writeup.md) | R |
-| · | [Capstone: Presentation, Defence and Peer Critique](./25-projects-capstone/06-capstone-research/05-capstone-defence.md) | R |
+| ✓ | [Capstone: Designing an Original Research Study](./25-projects-capstone/06-capstone-research/01-capstone-design.md) | R |
+| ✓ | [Capstone: Proposal, Literature Review and Methods Plan](./25-projects-capstone/06-capstone-research/02-capstone-proposal.md) | R |
+| ✓ | [Capstone: Data, Modelling and Uncertainty Analysis](./25-projects-capstone/06-capstone-research/03-capstone-execution.md) | R |
+| ✓ | [Capstone: Manuscript-Style Write-Up and Code Release](./25-projects-capstone/06-capstone-research/04-capstone-writeup.md) | R |
+| ✓ | [Capstone: Presentation, Defence and Peer Critique](./25-projects-capstone/06-capstone-research/05-capstone-defence.md) | R |
 
 ## Reference Library, Glossary and Formula Handbook
 
-`26-reference-library` — **6 modules**, **4/33 lessons written**
+`26-reference-library` — **6 modules**, **33/33 lessons written**
 
 [Folder index](./26-reference-library/README.md)
 
-### [ ] Glossary of Geophysical Terms (0/4)
+### [x] Glossary of Geophysical Terms (4/4)
 
 Module index: [`01-glossary/README.md`](./26-reference-library/01-glossary/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Glossary: A-F](./26-reference-library/01-glossary/01-glossary-a-f.md) | B |
-| · | [Glossary: G-M](./26-reference-library/01-glossary/02-glossary-g-m.md) | B |
-| · | [Glossary: N-S](./26-reference-library/01-glossary/03-glossary-n-s.md) | B |
-| · | [Glossary: T-Z](./26-reference-library/01-glossary/04-glossary-t-z.md) | B |
+| ✓ | [Glossary: A-F](./26-reference-library/01-glossary/01-glossary-a-f.md) | B |
+| ✓ | [Glossary: G-M](./26-reference-library/01-glossary/02-glossary-g-m.md) | B |
+| ✓ | [Glossary: N-S](./26-reference-library/01-glossary/03-glossary-n-s.md) | B |
+| ✓ | [Glossary: T-Z](./26-reference-library/01-glossary/04-glossary-t-z.md) | B |
 
 ### [x] Symbols, Units and Conventions (4/4)
 
@@ -2828,58 +2828,58 @@ Module index: [`02-symbols-and-units/README.md`](./26-reference-library/02-symbo
 | ✓ | [Physical Constants and Earth Parameters with Sources](./26-reference-library/02-symbols-and-units/03-constant-handbook.md) | B |
 | ✓ | [Dimensional Analysis Quick Reference](./26-reference-library/02-symbols-and-units/04-dimensional-analysis-reference.md) | I |
 
-### [ ] Formula Handbook (0/7)
+### [x] Formula Handbook (7/7)
 
 Module index: [`03-formula-handbook/README.md`](./26-reference-library/03-formula-handbook/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Formula Sheet: Mathematics and Calculus](./26-reference-library/03-formula-handbook/01-formulas-mathematics.md) | I |
-| · | [Formula Sheet: Linear Algebra, SVD and Numerics](./26-reference-library/03-formula-handbook/02-formulas-linear-algebra-numerics.md) | A |
-| · | [Formula Sheet: Waves, Elasticity and Seismology](./26-reference-library/03-formula-handbook/03-formulas-waves-seismology.md) | A |
-| · | [Formula Sheet: Gravity, Magnetics and Potential Theory](./26-reference-library/03-formula-handbook/04-formulas-potential-fields.md) | A |
-| · | [Formula Sheet: Electromagnetics and Electrical Methods](./26-reference-library/03-formula-handbook/05-formulas-em-electrical.md) | A |
-| · | [Formula Sheet: Inverse Theory and Statistics](./26-reference-library/03-formula-handbook/06-formulas-inverse-statistics.md) | A |
-| · | [Formula Sheet: Atmosphere, Radiation and Ocean](./26-reference-library/03-formula-handbook/07-formulas-atmosphere-ocean.md) | G |
+| ✓ | [Formula Sheet: Mathematics and Calculus](./26-reference-library/03-formula-handbook/01-formulas-mathematics.md) | I |
+| ✓ | [Formula Sheet: Linear Algebra, SVD and Numerics](./26-reference-library/03-formula-handbook/02-formulas-linear-algebra-numerics.md) | A |
+| ✓ | [Formula Sheet: Waves, Elasticity and Seismology](./26-reference-library/03-formula-handbook/03-formulas-waves-seismology.md) | A |
+| ✓ | [Formula Sheet: Gravity, Magnetics and Potential Theory](./26-reference-library/03-formula-handbook/04-formulas-potential-fields.md) | A |
+| ✓ | [Formula Sheet: Electromagnetics and Electrical Methods](./26-reference-library/03-formula-handbook/05-formulas-em-electrical.md) | A |
+| ✓ | [Formula Sheet: Inverse Theory and Statistics](./26-reference-library/03-formula-handbook/06-formulas-inverse-statistics.md) | A |
+| ✓ | [Formula Sheet: Atmosphere, Radiation and Ocean](./26-reference-library/03-formula-handbook/07-formulas-atmosphere-ocean.md) | G |
 
-### [ ] Annotated Textbook Bibliography (0/8)
+### [x] Annotated Textbook Bibliography (8/8)
 
 Module index: [`04-textbook-bibliography/README.md`](./26-reference-library/04-textbook-bibliography/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Annotated Bibliography: Mathematics and Numerical Methods](./26-reference-library/04-textbook-bibliography/01-bibliography-mathematics.md) | I |
-| · | [Annotated Bibliography: Physics, Elasticity and Continuum Mechanics](./26-reference-library/04-textbook-bibliography/02-bibliography-physics.md) | A |
-| · | [Annotated Bibliography: Seismology and Seismic Exploration](./26-reference-library/04-textbook-bibliography/03-bibliography-seismology.md) | A |
-| · | [Annotated Bibliography: Potential Fields, EM and Electrical Methods](./26-reference-library/04-textbook-bibliography/04-bibliography-potential-em.md) | A |
-| · | [Annotated Bibliography: Inverse Theory, Statistics and ML](./26-reference-library/04-textbook-bibliography/05-bibliography-inverse-stats.md) | D |
-| · | [Annotated Bibliography: Climate, Atmosphere and Ocean](./26-reference-library/04-textbook-bibliography/06-bibliography-climate-ocean.md) | A |
-| · | [Annotated Bibliography: Geodesy, Remote Sensing and GIS](./26-reference-library/04-textbook-bibliography/07-bibliography-geodesy-rs.md) | A |
-| · | [Annotated Bibliography: Geology, Geodynamics and Tectonics](./26-reference-library/04-textbook-bibliography/08-bibliography-geology-geodynamics.md) | A |
+| ✓ | [Annotated Bibliography: Mathematics and Numerical Methods](./26-reference-library/04-textbook-bibliography/01-bibliography-mathematics.md) | I |
+| ✓ | [Annotated Bibliography: Physics, Elasticity and Continuum Mechanics](./26-reference-library/04-textbook-bibliography/02-bibliography-physics.md) | A |
+| ✓ | [Annotated Bibliography: Seismology and Seismic Exploration](./26-reference-library/04-textbook-bibliography/03-bibliography-seismology.md) | A |
+| ✓ | [Annotated Bibliography: Potential Fields, EM and Electrical Methods](./26-reference-library/04-textbook-bibliography/04-bibliography-potential-em.md) | A |
+| ✓ | [Annotated Bibliography: Inverse Theory, Statistics and ML](./26-reference-library/04-textbook-bibliography/05-bibliography-inverse-stats.md) | D |
+| ✓ | [Annotated Bibliography: Climate, Atmosphere and Ocean](./26-reference-library/04-textbook-bibliography/06-bibliography-climate-ocean.md) | A |
+| ✓ | [Annotated Bibliography: Geodesy, Remote Sensing and GIS](./26-reference-library/04-textbook-bibliography/07-bibliography-geodesy-rs.md) | A |
+| ✓ | [Annotated Bibliography: Geology, Geodynamics and Tectonics](./26-reference-library/04-textbook-bibliography/08-bibliography-geology-geodynamics.md) | A |
 
-### [ ] Catalogue of Open Datasets and Data Services (0/6)
+### [x] Catalogue of Open Datasets and Data Services (6/6)
 
 Module index: [`05-open-datasets-catalogue/README.md`](./26-reference-library/05-open-datasets-catalogue/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Open Data: Seismology and Earthquake Catalogues](./26-reference-library/05-open-datasets-catalogue/01-datasets-seismology.md) | I |
-| · | [Open Data: Gravity, Magnetic and Geodetic](./26-reference-library/05-open-datasets-catalogue/02-datasets-potential-fields.md) | I |
-| · | [Open Data: Climate, Atmosphere and Ocean](./26-reference-library/05-open-datasets-catalogue/03-datasets-climate.md) | I |
-| · | [Open Data: Remote Sensing and Earth Observation](./26-reference-library/05-open-datasets-catalogue/04-datasets-remote-sensing.md) | I |
-| · | [Open Data: Geology, Geodesy and Reference Frames](./26-reference-library/05-open-datasets-catalogue/05-datasets-geology-geodesy.md) | I |
-| · | [Synthetic Data Generators for Learning and Testing](./26-reference-library/05-open-datasets-catalogue/06-datasets-synthetic.md) | I |
+| ✓ | [Open Data: Seismology and Earthquake Catalogues](./26-reference-library/05-open-datasets-catalogue/01-datasets-seismology.md) | I |
+| ✓ | [Open Data: Gravity, Magnetic and Geodetic](./26-reference-library/05-open-datasets-catalogue/02-datasets-potential-fields.md) | I |
+| ✓ | [Open Data: Climate, Atmosphere and Ocean](./26-reference-library/05-open-datasets-catalogue/03-datasets-climate.md) | I |
+| ✓ | [Open Data: Remote Sensing and Earth Observation](./26-reference-library/05-open-datasets-catalogue/04-datasets-remote-sensing.md) | I |
+| ✓ | [Open Data: Geology, Geodesy and Reference Frames](./26-reference-library/05-open-datasets-catalogue/05-datasets-geology-geodesy.md) | I |
+| ✓ | [Synthetic Data Generators for Learning and Testing](./26-reference-library/05-open-datasets-catalogue/06-datasets-synthetic.md) | I |
 
-### [ ] Open Educational Resources and Software Directory (0/4)
+### [x] Open Educational Resources and Software Directory (4/4)
 
 Module index: [`06-open-educational-resources/README.md`](./26-reference-library/06-open-educational-resources/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [OER: Mathematics, Physics and Computing](./26-reference-library/06-open-educational-resources/01-oer-mathematics.md) | B |
-| · | [OER: Geophysics, Seismology and Earth Science Courses](./26-reference-library/06-open-educational-resources/02-oer-geophysics.md) | I |
-| · | [Software Directory: Open-Source Geophysics Tools](./26-reference-library/06-open-educational-resources/03-software-directory.md) | A |
-| · | [Data Licensing, Attribution and Reuse Policy](./26-reference-library/06-open-educational-resources/04-data-policy-and-licences.md) | G |
+| ✓ | [OER: Mathematics, Physics and Computing](./26-reference-library/06-open-educational-resources/01-oer-mathematics.md) | B |
+| ✓ | [OER: Geophysics, Seismology and Earth Science Courses](./26-reference-library/06-open-educational-resources/02-oer-geophysics.md) | I |
+| ✓ | [Software Directory: Open-Source Geophysics Tools](./26-reference-library/06-open-educational-resources/03-software-directory.md) | A |
+| ✓ | [Data Licensing, Attribution and Reuse Policy](./26-reference-library/06-open-educational-resources/04-data-policy-and-licences.md) | G |
 
 ---
 
