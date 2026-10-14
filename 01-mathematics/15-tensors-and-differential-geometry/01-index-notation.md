@@ -179,8 +179,10 @@ Similarly $\delta_{ii} = \delta_{11} + \delta_{22} + \delta_{33} = 3$. Nothing i
 hidden: the delta selects, and its trace counts the number of directions it can
 select. In $n$ dimensions the same calculation gives $\delta_{ii} = n$, which is
 why the combination $3\lambda + 2\mu$ appears in the three-dimensional volumetric
-stress-strain relation of Section 3.6 and a different combination would appear in
-two dimensions.
+stress-strain relation derived in Section 3.5 (contracting
+$\sigma_{ij} = \lambda e_{kk}\delta_{ij} + 2\mu e_{ij}$ over $i=j$ gives
+$\sigma_{kk} = (3\lambda + 2\mu)e_{kk}$, and the $3$ is this trace), and why a
+different combination would appear in two dimensions.
 
 ### 3.2 The epsilon-delta identity
 

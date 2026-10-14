@@ -208,10 +208,15 @@ $$\delta^{\mathsf{T}}\left(-\nabla\phi\right) = \delta^{\mathsf{T}}J^{\mathsf{T}
 \left(J^{\mathsf{T}}J + \lambda D\right)^{-1} J^{\mathsf{T}}r > 0,$$
 
 so it is always a descent direction. That is the entire robustness argument, and
-it is why the damping is not optional in a production code. The price is that
-$\lambda$ must be *reduced* as the model improves, or the iteration converges to
-a damped fixed point (Section 4.7 measured an error $10^{5}$ times worse than
-undamped Newton when $\lambda$ stayed at $10^{2}$).
+it is why the damping is not optional in a production code. Note carefully what
+a **fixed** damping weight does and does not do, because the usual shorthand is
+wrong: setting $\delta_k(\lambda) = 0$ forces $J^{\mathsf T}r = 0$, so the fixed
+point of the damped iteration still satisfies the normal equations — it *is* a
+least-squares stationary point. What a fixed weight costs is the **rate**, and
+the risk of crawling far from the basin. Section 4.5 shows the measured effect:
+from a start at $h = 90$ the undamped iteration stalls at a residual of
+$1.151\times10^{-1}$, while the damped version keeps moving and reaches
+$1.078\times10^{-2}$ — at the cost of many more iterations.
 
 ### 3.5 Weighting
 
@@ -483,9 +488,11 @@ their error bars are uncalibrated.
    covariance $C_m \approx \hat{\sigma}^{2}(J^{\mathsf{T}}J)^{-1}$ is a local,
    linearised, symmetric approximation, and it can be wrong by a lot when the
    model is far from linear or the residuals are large.
-6. **Damping must be reduced.** A fixed $\lambda$ converges to a damped fixed
-   point, not to the least-squares solution (Section 4.7 compared errors of
-   $1.4\times10^{-10}$ and $5.8\times10^{-6}$).
+6. **Assuming a fixed $\lambda$ converges to something other than the
+   least-squares solution.** It does not: $\delta = 0$ forces
+   $J^{\mathsf T}r = 0$, so the damped fixed point *is* a least-squares
+   stationary point. The real cost of leaving $\lambda$ fixed is the convergence
+   *rate*, and the risk of stalling far from the basin (Section 4.5).
 
 ## 7. Python demonstration
 
@@ -548,8 +555,10 @@ change.
 4. **Trusting a Gauss–Newton run whose step was never bounded.** Section 4.5's
    $h = 1645$ is a converged-looking wrong answer.
 5. **Ignoring exact model symmetries.** $\pm h$ is not a numerical artefact.
-6. **Leaving the damping weight fixed.** It converges to the damped fixed point,
-   not the least-squares solution.
+6. **Believing a fixed damping weight gives a different answer.** It does not —
+   the damped fixed point satisfies $J^{\mathsf T}r = 0$ and is therefore a
+   least-squares stationary point. What a fixed weight costs is convergence
+   *speed*, not correctness.
 7. **Reporting a covariance without the residuals that calibrated it.** The scale
    factor $\hat{\sigma}$ comes from $\|r\|^{2}/(n-p)$, and quoting
    $(J^{\mathsf{T}}J)^{-1}$ alone understates or overstates the error bars by

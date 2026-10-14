@@ -355,11 +355,14 @@ iteration on (3.4):
 | $40$ | $9.8645320540$ | $5.072\times10^{-3}$ | $1.9991$ |
 | $80$ | $9.8683361187$ | $1.268\times10^{-3}$ | $1.9998$ |
 
-Order $2$ again, and the discrete eigenvalue is systematically *below* $\pi^{2}$
-— the discrete Rayleigh quotient is a lower bound for the continuous one when
-the trial space is a subspace of the admissible set, which is a Rayleigh–Ritz
-property worth knowing: **refining the mesh can only lower the discrete
-eigenvalue toward the truth.**
+Order $2$ again, and the discrete eigenvalue is systematically *below* $\pi^{2}$.
+Note the direction carefully, because it is the **opposite** of the textbook
+Rayleigh–Ritz result: for a *conforming* Galerkin subspace the computed
+eigenvalue is an *upper* bound on the true one. This discretisation is
+non-conforming through its quadrature, so no bound is guaranteed, and the values
+sit below. **What the table shows unmistakably is that refining the mesh raises
+the discrete eigenvalue toward $\pi^{2}$ from below** — $9.7887$, $9.8493$,
+$9.8645$, $9.8683$ against $\pi^{2} = 9.8696$.
 
 ### 4.6 The price of refinement
 

@@ -117,7 +117,9 @@ $$\gamma_{ij} = 2e_{ij} \quad (i \neq j), \qquad \text{so } e_{12} =
 \tfrac{1}{2}\gamma_{12}.$$
 
 This is the convention trap that ruins otherwise correct rotation code, as
-demonstrated in [01-15-02](./02-tensor-algebra.md) Section 3.9.
+demonstrated in [01-15-02](./02-tensor-algebra.md) §3.9 (the engineering
+shear-strain entry of "Two arrays that are not tensors", where the rotated
+engineering array is wrong by a factor of two on every entry).
 
 ### 2.3 Decompositions
 
@@ -307,8 +309,8 @@ $$\tau_{\max} = \frac{\sigma_1 - \sigma_3}{2},$$
 
 attained on the two planes that bisect the planes normal to the largest and
 smallest principal stresses. In the demonstration a random search over 400000
-normals finds $\tau_{\max} = 39.402333$ MPa against the exact $(I_1 -
-3\sigma_2)/2 = 39.402446$ MPa, and the maximising normal is
+normals finds $\tau_{\max} = 39.402333$ MPa against the exact $(\sigma_1 -
+\sigma_3)/2 = 39.402446$ MPa, and the maximising normal is
 $(-0.4278, -0.6129, 0.6643)$ against the bisector of the two extreme principal
 directions, $(-0.4291, -0.6112, 0.6651)$. The two agree to the resolution of the
 search.
@@ -529,7 +531,7 @@ Compatibility, and the sign-convention check:
 |---|---|
 | principal stresses sum to $I_1$ and multiply to $I_3$ exactly | the invariants are the eigenvalues in disguise |
 | $I_2(\mathbf{s}) = -J_2$ to six decimals | for a deviator these are one number, not two |
-| the random search reaches $(I_1 - 3\sigma_2)/2$ but not more | shear is bounded by half the principal difference |
+| the random search reaches $(\sigma_1 - \sigma_3)/2$ but not more | shear is bounded by half the principal difference |
 | the circle residual is $2\times10^{-12}$ | Mohr's circle is the transformation law, not a drawing |
 | a rigid rotation gives exactly zero strain | the antisymmetric part is not deformation |
 | the incompatible field gives residual 4 | compatibility is a real constraint, not a formality |
