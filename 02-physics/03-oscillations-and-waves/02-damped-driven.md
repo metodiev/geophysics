@@ -257,10 +257,10 @@ equations and compares with equations (5) and (13). Observed output with
 $m = 1$ kg, $k = 100$ N m⁻¹ ($\omega_0 = 10$ rad s⁻¹):
 
 ```text
-  beta  regime     omega_d  x0/x1 meas  delta meas  Q=pi/delta    Q=w0/2b
-  0.50   light     9.98749    1.369647    0.314553      9.9875    10.0000
-  2.00  moderate   9.79796    3.605822    1.282550      2.4495     2.5000
- 10.00  critical         --          --          --          --     0.5000
+  beta           regime    omega_d  x0/x1 meas  delta meas  Q=pi/delta    Q=w0/2b
+  0.50            light    9.98749    1.369647    0.314553      9.9875    10.0000
+  2.00         moderate    9.79796    3.605822    1.282550      2.4495     2.5000
+ 10.00         critical         --          --          --          --     0.5000
 ```
 
 ```text

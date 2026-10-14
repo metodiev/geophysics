@@ -252,17 +252,17 @@ measures both speeds, and measures the spreading. Observed output:
   non-dispersive (omega = 100 k)
     measured k = 0.400000 1/m (input 0.4), measured omega = 40.000000 rad/s (input 40.000000)
     v_ph measured =  100.000000 m/s, omega/k0 =  100.000000 m/s, difference = -1.636e-13
-    v_g  measured =  100.000000 m/s, d(omega)/dk =  100.000000 m/s, difference = -2.955e-12
+    v_g  measured =  100.000000 m/s, d(omega)/dk =  100.000000 m/s, difference = +2.893e-12
 
   deep-water gravity (omega = sqrt(g k))
     measured k = 0.400000 1/m (input 0.4), measured omega = 1.980261 rad/s (input 1.980571)
-    v_ph measured =    4.950653 m/s, omega/k0 =    4.951427 m/s, difference = -1.563e-04
-    v_g  measured =    2.476875 m/s, d(omega)/dk =    2.475713 m/s, difference = +4.691e-04
+    v_ph measured =    4.950653 m/s, omega/k0 =    4.951427 m/s, difference = -1.562e-04
+    v_g  measured =    2.476874 m/s, d(omega)/dk =    2.475713 m/s, difference = +4.689e-04
 
   flexural plate (omega = 0.5 k^2)
     measured k = 0.400000 1/m (input 0.4), measured omega = 0.080100 rad/s (input 0.080000)
     v_ph measured =    0.200250 m/s, omega/k0 =    0.200000 m/s, difference = +1.249e-03
-    v_g  measured =    0.400000 m/s, d(omega)/dk =    0.400000 m/s, difference = -3.177e-12
+    v_g  measured =    0.400000 m/s, d(omega)/dk =    0.400000 m/s, difference = -4.013e-12
 ```
 
 ```text

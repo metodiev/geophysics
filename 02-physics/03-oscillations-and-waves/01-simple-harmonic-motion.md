@@ -288,7 +288,7 @@ L = 1.0 m, g = 9.80665 m/s^2  ->  T0 (small angle) = 2.006409293 s
    0.100   2.007664017   2.007664017    2.007664017 6.254e-04  -2.347e-10
    0.500   2.038215958   2.038208463    2.038215958 1.585e-02  -3.677e-06
    1.000   2.139502939   2.138994282    2.139502939 6.633e-02  -2.377e-04
-   2.000   2.666326241   2.622962148    2.666326242 3.289e-01  -1.626e-02
+   2.000   2.666326241   2.622962148    2.666326241 3.289e-01  -1.626e-02
 ```
 
 ```text
@@ -304,8 +304,8 @@ L = 1.0 m, g = 9.80665 m/s^2  ->  T0 (small angle) = 2.006409293 s
 ```text
 Any smooth potential well is a parabola near its minimum:
   Example: V(x) = 12.5 x^2 + 5 x^3, V''(0) = 25.0 N/m -> omega_eff = 2.500000 rad/s
-  amplitude  0.001 m: measured T = 2.513275 s, T_SHM = 2.513274 s, +1.501e-07
-  amplitude  0.100 m: measured T = 2.517219 s, T_SHM = 2.513274 s, +1.569e-03
+  amplitude  0.001 m: measured T = 2.513275 s, T_SHM = 2.513274 s, relative difference = +1.501e-07
+  amplitude  0.100 m: measured T = 2.517219 s, T_SHM = 2.513274 s, relative difference = +1.569e-03
 ```
 
 ### What to observe

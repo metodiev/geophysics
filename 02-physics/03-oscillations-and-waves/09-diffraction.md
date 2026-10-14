@@ -267,7 +267,7 @@ integrals and compares them with the closed forms. Observed output:
       0.000            1.000000000   1.000000000    0.00e+00
       0.100            0.756826106   0.756826729    6.22e-07
       0.250            0.000000000   0.000000000    1.81e-17
-max difference over the table = 7.685e-07
+max difference over the table = 1.154e-06
 first minimum at sin(theta) = lambda/a = 0.2500
 numerically located first zero of the pattern at sin(theta) = 0.250200 (relative difference 8.00e-04)
 ```

@@ -289,10 +289,10 @@ layer 1: rho = 2000 kg/m^3, c = 2000 m/s
 layer 2: rho = 2500 kg/m^3, c = 3000 m/s
 speed ratio c2/c1 = 1.500000
 critical angle = asin(c1/c2) = 41.8103 deg
- theta1 (deg)   p = sin(theta1)/c1  theta2 (deg)                 regime
-       0.0000          0.000000000        0.0000            transmitted
-      30.0000          0.000250000       48.5904            transmitted
-      41.8103          0.000333333       90.0000            transmitted
+ theta1 (deg)   p = sin(theta1)/c1  theta2 (deg)                    regime
+       0.0000          0.000000000        0.0000               transmitted
+      30.0000          0.000250000       48.5904               transmitted
+      41.8103          0.000333333       90.0000               transmitted
       50.0000          0.000383022            -- total internal reflection
 ```
 

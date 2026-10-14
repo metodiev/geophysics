@@ -256,15 +256,15 @@ N = 3 masses, k = 30.0 N/m, m = 0.5 kg:
     2    10.954451150    10.954451150   0.00e+00
     3    14.312680173    14.312680173   2.48e-16
   max |v_i . v_j - delta_ij| over all pairs = 2.220e-16
-  max ||A v - omega^2 v||                   = 8.286e-14
+  max ||A v - omega^2 v||                       = 8.286e-14
 ```
 
 ```text
 N = 2: omega1 = 7.745966692 rad/s, omega2 = 13.416407865 rad/s
   check: 2 sqrt(k/m) sin(pi/6) = 7.745966692 rad/s
   check: 2 sqrt(k/m) sin(pi/3) = 13.416407865 rad/s
-  |omega2 - omega1| = 5.670441173 rad/s, beat period 2 pi/|omega2-omega1| = 1.108059341 s
-  relative spread of total energy over 8 s: 3.749e-07
+  beat frequency |omega2 - omega1| = 5.670441173 rad/s, beat period = 1.108059341 s
+  relative energy drift over 8 s: 3.749e-07
   measured envelope maxima at t = 1.635, 2.817, 3.999, 4.905 s ...
   mean spacing of envelope maxima = 1.1130 s (beat period 2 pi/|omega2-omega1| = 1.1081 s)
   largest |x2| measured = 0.009998 m (theory 0.010000 m)
