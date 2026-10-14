@@ -106,9 +106,26 @@ before installing: it is short, and it tells you which packages are optional.
 The three packages whose installation is least like the others deserve comment,
 because the file says so explicitly:
 
-- **PyGMT is a wrapper around GMT.** It needs the GMT C library installed by your
-  package manager or by conda. On conda, installing PyGMT from `conda-forge`
-  installs both together, which the file describes as the least painful route.
+- **PyGMT is a wrapper around GMT, and GMT needs Ghostscript.** It needs the
+  GMT C library installed by your package manager or by conda. On conda,
+  installing PyGMT from `conda-forge` installs both together, which the file
+  describes as the least painful route. On macOS with Homebrew the verified
+  route is `brew install gmt ghostscript`.
+
+  Ghostscript is **not** optional in practice. GMT's `psconvert` module shells
+  out to the `gs` binary to rasterise a figure, so without it every
+  `Figure.savefig()` fails with
+
+  ```
+  pygmt.exceptions.GMTCLibError:
+    Module 'psconvert' failed with status code 79:
+    psconvert [ERROR]: Cannot execute Ghostscript (gs).
+  ```
+
+  PostScript output still works, which is what makes this trap confusing: the
+  library imports fine, the grid computes fine, and the failure appears only
+  when you try to write a raster or PDF — exactly the moment a beginner tries
+  their first figure. Installing PyGMT does not install Ghostscript for you.
 - **PyTorch with GPU support** needs a platform-specific index URL that depends
   on your CUDA (or other accelerator) version. Install it by following the
   official PyTorch instructions rather than from this file.

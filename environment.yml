@@ -55,6 +55,7 @@ dependencies:
   # --- Geophysics -----------------------------------------------------------
   - obspy
   - pygmt              # pulls in GMT from conda-forge
+  - ghostscript        # REQUIRED by GMT's psconvert; without it savefig fails
   - discretize         # meshing utilities used by simpeg
   - simpeg             # geophysical forward modelling and inversion
 
@@ -94,3 +95,30 @@ dependencies:
 #     python -c "import numpy, scipy, pandas, xarray, matplotlib, obspy; print('core stack ok')"
 #     python -c "import pygmt; print('pygmt ok, GMT version:', pygmt.__version__)"
 #     python -c "import geopandas, rasterio; print('geospatial ok')"
+#
+# --- PyGMT: Ghostscript is mandatory -------------------------------------------
+# GMT's `psconvert` module shells out to the `gs` binary to rasterise figures.
+# If Ghostscript is missing, EVERY PyGMT `Figure.savefig()` fails with:
+#
+#     pygmt.exceptions.GMTCLibError:
+#       Module 'psconvert' failed with status code 79:
+#       psconvert [ERROR]: Cannot execute Ghostscript (gs).
+#
+# PostScript output still works, so the failure only appears when you try to
+# write a raster or PDF -- which is exactly when a beginner tries their first
+# figure. Install Ghostscript explicitly; do not assume PyGMT's dependency
+# solver pulls it in on every platform.
+#
+# On macOS with Homebrew (this is the route that was verified for this
+# repository -- an isolated venv rather than conda):
+#     brew install gmt ghostscript
+#     python3 -m venv .venv && source .venv/bin/activate
+#     python -m pip install -r requirements.txt
+#
+# Known-good combination verified on macOS (CPython 3.14.8 venv):
+#   pygmt 0.19.0 with GMT 6.7.0 and Ghostscript 10.08.0.
+#
+# Note the conda pin above is python=3.12, whereas the verified venv route used
+# 3.14. Both are expected to work; they are recorded separately because they
+# were validated separately. If a wheel is missing for your interpreter, conda
+# is the easier fallback.

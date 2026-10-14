@@ -69,6 +69,14 @@ nbstripout>=0.7           # keep notebook outputs out of git
 # * GMT + PyGMT: PyGMT is a Python wrapper; it needs the GMT C library installed
 #   by your package manager or conda. On conda, `conda install -c conda-forge pygmt`
 #   installs both together, which is the least painful route.
+#   On macOS with Homebrew, GMT and Ghostscript are BOTH required:
+#       brew install gmt ghostscript
+#   Ghostscript is not optional. GMT's `psconvert` module shells out to `gs`, so
+#   without it every `Figure.savefig()` fails with
+#       pygmt.exceptions.GMTCLibError:
+#         Module 'psconvert' failed with status code 79:
+#         psconvert [ERROR]: Cannot execute Ghostscript (gs).
+#   PostScript output still works; only raster/PDF conversion needs Ghostscript.
 # * GPU support for torch requires a platform-specific index URL; install it
 #   separately following the official PyTorch instructions rather than from
 #   this file.
@@ -76,3 +84,29 @@ nbstripout>=0.7           # keep notebook outputs out of git
 #   new Python version (for example 3.14) and a wheel is unavailable, use the
 #   conda environment in environment.yml, which can fall back to older but
 #   fully supported interpreter versions.
+#
+# --- Verified working combination ---------------------------------------------
+# The versions below were observed to install and import successfully together,
+# and every lesson demo that imports them was executed against them. This is a
+# record of one known-good combination, not a requirement: pip will resolve
+# newer versions, and the minimums above are what the code actually needs.
+#
+#   CPython 3.14.8         (venv at .venv)
+#   numpy 2.5.4            scipy 1.18.1         sympy 1.14.0
+#   pandas 3.0.6           xarray 2026.9.0      netCDF4 1.7.4
+#   h5py 3.16.0            zarr 3.4.1           dask 2026.8.0
+#   matplotlib 3.11.2      cartopy 0.26.0       pyproj 3.8.0
+#   geopandas 1.2.0        shapely 2.2.0        rasterio 1.5.2
+#   fiona 1.10.1           obspy 1.5.1          pygmt 0.19.0
+#   scikit-learn 1.9.1     verde 1.9.0          nbformat 5.11.1
+#   pytest 9.1.1           pytest-cov 7.1.0     nbstripout 0.9.1
+#   System: GMT 6.7.0, Ghostscript 10.08.0 (both via Homebrew on macOS).
+#
+# Note two API-drift traps that these version numbers imply, both of which the
+# lessons document explicitly because the behaviour differs from older tutorials:
+#   * pandas 3 removed `DataFrame.applymap`, and `SettingWithCopyWarning` no
+#     longer exists -- chained assignment now raises `ChainedAssignmentError`
+#     and the write is DISCARDED. Text columns report dtype `str`, not `object`.
+#   * pandas 3 does not accept `Series.reset_index(names=...)`.
+# If you pin older versions, expect those lessons' advice to be inverted, so
+# read the version notes in the lesson before assuming a tutorial is wrong.

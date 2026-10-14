@@ -50,3 +50,5 @@ scratch/
 session_links.txt
 *_scratch.*
 scratch_*
+.demo_out_*
+demo_out_*.txt
