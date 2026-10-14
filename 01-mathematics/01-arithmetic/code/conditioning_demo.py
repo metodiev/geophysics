@@ -103,18 +103,26 @@ def main() -> None:
     print("Conditioning is a property of the point as much as of the function.")
 
     section("3. Cancellation in exp(x) - 1 for small x")
-    print(f"{'x':>8} {'exp(x) - 1':>22} {'expm1(x)':>22} {'rel err':>10} {'cond':>9}")
+    print(f"{'x':>8} {'exp(x) - 1':>20} {'expm1(x)':>20} {'rel err':>9} "
+          f"{'amp':>9} {'u * amp':>9}")
     for exponent in range(1, 12):
         x = 10.0 ** (-exponent)
         naive = math.exp(x) - 1.0
         good = math.expm1(x)
-        print(f"{x:>8.0e} {naive:>22.13e} {good:>22.13e} "
-              f"{abs(naive - good) / good:>10.2e} {1.0 / x:>9.1e}")
-    print("cond = x/(e**x - 1) -> 1/x, so the relative error is amplified by 1/x.")
+        amp = math.exp(x) / (math.exp(x) - 1.0)   # conditioning of "subtract 1"
+        print(f"{x:>8.0e} {naive:>20.13e} {good:>20.13e} "
+              f"{abs(naive - good) / good:>9.2e} {amp:>9.1e} "
+              f"{amp * 2.0 ** -53:>9.2e}")
+    print("The function f(x) = exp(x) - 1 is itself well conditioned (its")
+    print("relative condition number x*exp(x)/(exp(x)-1) tends to 1). What is")
+    print("badly conditioned is the step 'subtract 1' applied to exp(x):")
+    print("amp = exp(x)/(exp(x)-1) -> 1/x, and the observed relative error")
+    print("tracks u * amp. expm1 avoids that step, so the error stays at u.")
 
     section("4. Well-conditioned and ill-conditioned linear systems")
     print("Hilbert matrix H[i][j] = 1/(i+j-1), right-hand side = (1, ..., 1)")
-    print(f"{'n':>3} {'max |x_float - x_exact|':>24} {'max rel err':>12}")
+    print(f"{'n':>3} {'max relative error':>19} {'cond_inf(A)':>14} "
+          f"{'cond * u':>12}")
     for n in (3, 5, 8, 10):
         exact = solve_fraction(
             [[Fraction(1, i + j + 1) for j in range(n)] for i in range(n)],
@@ -126,10 +134,20 @@ def main() -> None:
         rel_err = max(abs(Decimal(approx[i]) - Decimal(exact[i].numerator) / Decimal(exact[i].denominator))
                       / abs(Decimal(exact[i].numerator) / Decimal(exact[i].denominator))
                       for i in range(n))
-        print(f"{n:>3} {float(abs_err):>24.3e} {float(rel_err):>12.3e}")
+        # Condition number in the infinity norm, from the exact and float solves.
+        inverse_columns = [solve_float(hilbert(n), [1.0 if k == j else 0.0
+                                                    for k in range(n)])
+                           for j in range(n)]
+        norm_a = max(sum(abs(v) for v in row) for row in hilbert(n))
+        norm_inv = max(sum(abs(inverse_columns[j][i]) for j in range(n))
+                       for i in range(n))
+        cond_inf = norm_a * norm_inv
+        print(f"{n:>3} {float(rel_err):>19.3e} {cond_inf:>14.3e} "
+              f"{cond_inf * 2.0 ** -53:>12.3e}")
     print("The data (1/(i+j-1)) are given to full double precision; nothing is")
-    print("'noisy'. Yet the computed solution loses digits as n grows: the")
-    print("problem itself is ill-conditioned, not the elimination routine.")
+    print("'noisy'. Yet the computed solution loses digits as n grows, tracking")
+    print("cond(A) * u: the problem itself is ill-conditioned, not the")
+    print("elimination routine.")
 
     section("5. Conditioning vs stability: I_n = integral of x**n/(x+10) on [0,1]")
     # Forward recurrence: I_n = 1/n - 10*I_{n-1}, starting from I_0 = ln(1.1).

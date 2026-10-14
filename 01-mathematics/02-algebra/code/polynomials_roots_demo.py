@@ -134,22 +134,32 @@ def main() -> None:
     print("Roots separated by O(1) are only mildly sensitive; the amplification")
     print("grows without bound as roots coalesce (lesson 01-01-05).")
 
-    section("6. Asymptotic behaviour: a rational model of a buried sphere")
-    # g(z) = G M z / (z**2 + R**2)**(3/2)
-    big_g, mass, radius = 6.674e-11, 1.0e12, 500.0
-    g_at = lambda z: big_g * mass * z / (z * z + radius * radius) ** 1.5
-    print(f"G = {big_g:.3e}, M = {mass:.3e} kg, R = {radius:.0f} m")
-    print(f"{'z (m)':>8} {'g (mGal)':>14} {'g z**2 / (G M)':>16} "
-          f"{'point-mass error':>18}")
-    point_mass_limit = big_g * mass
-    for z in (500.0, 1000.0, 2000.0, 5000.0, 10000.0):
-        g = g_at(z)
-        ratio = g * z * z / point_mass_limit
-        print(f"{z:>8.0f} {g / 1.0e-5:>14.6f} {ratio:>16.6f} "
-              f"{abs(1.0 - ratio):>18.6f}")
-    print("For z >> R the ratio tends to 1 as R**2/z**2: the far-field anomaly")
-    print("is the point-mass law, and the leading correction is the same shape")
-    print("as the next term of a binomial expansion.")
+    section("6. Asymptotic behaviour: the profile above a buried point mass")
+    # Moving along a profile line at offset x from the epicentre, the vertical
+    # attraction of a point mass (or, by Newton's shell theorem, of a uniform
+    # sphere) at depth h is  g(x) = G M h / (x**2 + h**2)**1.5.
+    big_g, mass, depth = 6.674e-11, 1.0e12, 500.0
+    g_at = lambda x: big_g * mass * depth / (x * x + depth * depth) ** 1.5
+    g_max = g_at(0.0)
+    print(f"G = {big_g:.3e}, M = {mass:.3e} kg, depth h = {depth:.0f} m")
+    print(f"peak anomaly g(0) = G M / h**2 = {g_max / 1.0e-5:.6f} mGal")
+    print(f"\n{'x (m)':>8} {'x/h':>6} {'g (mGal)':>12} {'g / g_max':>11} "
+          f"{'g x**3 / (G M h)':>18}")
+    for x in (0.0, 250.0, 500.0, 1000.0, 2500.0, 5000.0):
+        g = g_at(x)
+        numerator = g * x ** 3 / (big_g * mass * depth) if x > 0 else float("nan")
+        print(f"{x:>8.0f} {x / depth:>6.2f} {g / 1.0e-5:>12.6f} "
+              f"{g / g_max:>11.6f} {numerator:>18.6f}")
+    half_width = depth * math.sqrt(2.0 ** (2.0 / 3.0) - 1.0)
+    print(f"half-width at half maximum: x_1/2 = h*sqrt(2**(2/3)-1) = "
+          f"{half_width:.4f} m = {half_width / depth:.6f} h")
+    print(f"value at x = h: g/g_max = {g_at(depth) / g_max:.6f} "
+          f"(= 1/(2*sqrt(2)) = {1.0 / (2.0 * math.sqrt(2.0)):.6f})")
+    print("As x grows the last column tends to 1: the far-field decay is "
+          "1/x**3,")
+    print("while directly above the centre (x = 0) it is 1/h**2. The shape is a")
+    print("rational function, and both its peak and its tail are usable depth")
+    print("indicators: z ~ 1.305 * x_1/2 for a point mass.")
 
     section("7. A truncated series is a polynomial: exp(-x) by Taylor terms")
     print(f"{'x':>6} {'exp(-x)':>14} {'1 - x + x2/2':>14} {'error':>12} "

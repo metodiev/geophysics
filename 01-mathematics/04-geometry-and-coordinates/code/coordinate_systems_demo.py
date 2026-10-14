@@ -143,21 +143,24 @@ def main() -> None:
 
     section("4. Direction cosines, incidence angles and the ray parameter")
     print("A unit vector in Cartesian components (l, m, n) has direction")
-    print("cosines l = sin(theta) cos(phi) and so on. In seismology the")
-    print("take-off angle is measured from the downward vertical, so a ray")
-    print("leaving the source downwards has direction (0, 0, -1) rotated by")
-    print("the take-off angle.")
+    print("cosines l = sin(i) cos(phi), m = sin(i) sin(phi), n = -cos(i), with i")
+    print("the take-off angle from the downward vertical and phi the horizontal")
+    print("direction measured anticlockwise from east. Note phi = 90 deg is due")
+    print("NORTH in this convention. The geophysical azimuth A measured")
+    print("clockwise from north is A = 90 deg - phi, so")
+    print("  (east, north, up) = (sin(i) sin(A), sin(i) cos(A), -cos(i)).")
+    print("Check it at A = 0 (due north) and A = 90 (due east); a swapped sine")
+    print("and cosine here rotates every direction by 90 deg.")
     print(f"\n{'take-off (deg)':>16} {'l':>12} {'m':>12} {'n':>12} {'sum sq':>12}")
     for angle_deg in (0.0, 30.0, 45.0, 60.0, 89.0):
         a = angle_deg * DEG
-        # Azimuth fixed at 90 deg (due east) for this illustration.
         l = math.sin(a) * math.cos(math.pi / 2)
         m = math.sin(a) * math.sin(math.pi / 2)
         n = -math.cos(a)
         print(f"{angle_deg:>16.1f} {l:>12.6f} {m:>12.6f} {n:>12.6f} "
               f"{l * l + m * m + n * n:>12.6f}")
-    print("\nThe vector is a unit vector at every take-off angle: that is the")
-    print("check that catches a missing minus sign or a degree/radian mix-up.")
+    print("\nEvery row is a unit vector, which is the check that catches a")
+    print("missing minus sign or a degree/radian mix-up.")
 
     section("5. Surface areas on a sphere, checked against the exact formula")
     R = 6371.0088

@@ -231,10 +231,74 @@ def main() -> None:
         print(f"  {name:<34} spherical = {s_sph:11.4f} km   "
               f"WGS84 = {s_ell:11.4f} km   diff = {s_ell - s_sph:+9.4f} km"
               f"  ({(s_ell - s_sph) / s_ell * 100:+.4f} percent)")
-    print("\nThe correction grows with distance and with how closely the path")
-    print("follows a meridian. For a local survey it is negligible; for global")
-    print("seismology it is not, because a fraction of a percent at 10 000 km")
-    print("is tens of kilometres, which is seconds of S-wave travel time.")
+    section("7. Verifying the spherical cosine and sine rules outright")
+    print("The distance comparisons in section 1 test the spherical law of")
+    print("cosines only in the special case where one vertex is the pole. Here")
+    print("the general rule is tested on a triangle with no convenient corner.")
+    print("Interior angles are obtained from tangent directions at each vertex,")
+    print("which avoids the sign ambiguities of a cross-product angle.")
+    def unit3(p):
+        n = math.sqrt(sum(c * c for c in p))
+        return tuple(c / n for c in p)
+
+    def spherical_triangle(A, B, C):
+        A, B, C = unit3(A), unit3(B), unit3(C)
+        def side(P, Q):
+            return math.acos(max(-1.0, min(1.0, sum(p * q for p, q in zip(P, Q)))))
+        def angle(P, Q, S):
+            t1 = tuple(q - sum(x * y for x, y in zip(Q, P)) * p
+                       for p, q in zip(P, Q))
+            t2 = tuple(s - sum(x * y for x, y in zip(S, P)) * p
+                       for p, s in zip(P, S))
+            t1, t2 = unit3(t1), unit3(t2)
+            cr = (t1[1] * t2[2] - t1[2] * t2[1],
+                  t1[2] * t2[0] - t1[0] * t2[2],
+                  t1[0] * t2[1] - t1[1] * t2[0])
+            return math.atan2(math.sqrt(sum(c * c for c in cr)),
+                              sum(a * b for a, b in zip(t1, t2)))
+        return side(B, C), side(A, C), side(A, B), angle(A, B, C), angle(B, A, C), angle(C, A, B)
+
+    # Latitude and longitude in degrees; converted to unit vectors.
+    def from_latlon(lat, lon):
+        return (math.cos(lat * DEG) * math.cos(lon * DEG),
+                math.cos(lat * DEG) * math.sin(lon * DEG),
+                math.sin(lat * DEG))
+    a_ll, b_ll, c_ll = (10.0, 0.0), (60.0, 20.0), (35.0, 95.0)
+    a, b, c, A_ang, B_ang, C_ang = spherical_triangle(from_latlon(*a_ll),
+                                                       from_latlon(*b_ll),
+                                                       from_latlon(*c_ll))
+    print(f"\nvertices (lat, lon): {a_ll}, {b_ll}, {c_ll}")
+    print(f"  side a (opposite A) = {a / DEG:.9f} deg")
+    print(f"  side b (opposite B) = {b / DEG:.9f} deg")
+    print(f"  side c (opposite C) = {c / DEG:.9f} deg")
+    print(f"  angle A = {A_ang / DEG:.9f} deg, B = {B_ang / DEG:.9f} deg, "
+          f"C = {C_ang / DEG:.9f} deg")
+    print(f"  angle sum = {(A_ang + B_ang + C_ang) / DEG:.9f} deg")
+    lhs = math.cos(c)
+    rhs = math.cos(a) * math.cos(b) + math.sin(a) * math.sin(b) * math.cos(C_ang)
+    print(f"\nspherical law of cosines: cos c = {lhs:.14f}, "
+          f"cos a cos b + sin a sin b cos C = {rhs:.14f}")
+    print(f"difference = {abs(lhs - rhs):.3e}")
+    for label, num, den_num, den in (("a/sin A", a, A_ang, math.sin(A_ang)),
+                                     ("b/sin B", b, B_ang, math.sin(B_ang)),
+                                     ("c/sin C", c, C_ang, math.sin(C_ang))):
+        print(f"spherical law of sines: {label} = {math.sin(num) / den:.12f}")
+    # Closed form for the common ratio, from the Gram determinant of the three
+    # position vectors. The determinant itself equals sin b sin c sin A, and so
+    # on round the triangle.
+    ca, cb, cc = math.cos(a), math.cos(b), math.cos(c)
+    det = math.sqrt(max(0.0, 1.0 - ca ** 2 - cb ** 2 - cc ** 2 + 2.0 * ca * cb * cc))
+    common = math.sin(a) / math.sin(A_ang)
+    closed = math.sin(a) * math.sin(b) * math.sin(c) / det
+    print(f"\ncommon ratio from a/sin A                 = {common:.12f}")
+    print(f"common ratio from sin a sin b sin c / det = {closed:.12f}")
+    print(f"difference = {abs(common - closed):.3e}   "
+          f"(det = {det:.12f})")
+    print("\nAll three sine ratios are equal and the cosine rule holds to")
+    print("double-precision round-off, on a triangle with no special geometry.")
+    print("The closed form in the last two lines replaces the common ratio by a")
+    print("single expression built only from the three sides, which is the")
+    print("spherical analogue of the circumdiameter in the plane.")
 
 
 if __name__ == "__main__":

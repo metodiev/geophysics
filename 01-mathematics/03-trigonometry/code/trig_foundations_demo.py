@@ -39,8 +39,10 @@ def main() -> None:
             tan_text = f"{math.tan(rad):16.10f}"
         print(f"{deg:>5} {rad:>12.8f} {math.sin(rad):>12.8f} "
               f"{math.cos(rad):>12.8f} {tan_text}")
-    print("\nNote 1: at 90 and 270 deg the cosine prints as 6.1e-17, not 0.")
-    print("        That residual is round-off in the value of pi, not physics.")
+    print("\nNote 1: the format hides it, but cos(90 deg) is not exactly zero:")
+    print(f"        math.cos(math.pi / 2) = {math.cos(math.pi / 2)!r}")
+    print("        That residual is round-off in the stored value of pi. It")
+    print("        matters when you divide by a cosine or take an arccosine.")
     print("Note 2: tan(90 deg) is undefined; the loop tests cos before printing.")
 
     section("2. Triangle laws checked against a triangle built from its sides")

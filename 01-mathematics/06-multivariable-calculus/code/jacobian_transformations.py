@@ -22,12 +22,6 @@ def section(title: str) -> None:
     print(f"\n{'=' * 68}\n{title}\n{'=' * 68}")
 
 
-def det3(m):
-    return (m[0][0] * (m[1][1] * m[2][2] - m[1][2] * m[2][1])
-            - m[0][1] * (m[1][0] * m[2][2] - m[1][2] * m[2][0])
-            + m[0][2] * (m[1][0] * m[2][1] - m[1][1] * m[2][0]))
-
-
 def transpose3(m):
     return [[m[j][i] for j in range(3)] for i in range(3)]
 
@@ -179,7 +173,7 @@ def main() -> None:
     C_cart = matmul3(matmul3(J, C_sph), transpose3(J))
 
     random.seed(31415)
-    samples = 200000
+    samples = 500000
     acc = [[0.0] * 3 for _ in range(3)]
     mean = [0.0] * 3
     pts = []
@@ -209,6 +203,8 @@ def main() -> None:
         rel = abs(C_cart[i][i] - acc[i][i]) / C_cart[i][i]
         print(f"   sigma_{name}^2: {C_cart[i][i]:.4e} vs {acc[i][i]:.4e}"
               f"   relative difference = {rel:.3e}")
+    print(f"Monte Carlo noise floor on a variance is sqrt(2/N) = "
+          f"{math.sqrt(2.0 / samples):.3e} in relative terms.")
     print("The 1e-6 rad angular uncertainties become metres of horizontal error")
     print("because they are multiplied by r; the 5 m radial uncertainty stays")
     print("vertical. That scaling is the Jacobian at work.")

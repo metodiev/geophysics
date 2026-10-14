@@ -11,10 +11,10 @@ Legend: **B** beginner · **I** intermediate · **A** advanced · **G** graduate
 | Folders | 27 |
 | Modules | 216 |
 | Lessons planned | 1146 |
-| Lessons written | 54 |
-| Lessons with valid frontmatter | 54 |
-| Exercise/solution companions written | 41 / 2190 |
-| Completion | 4.7% |
+| Lessons written | 57 |
+| Lessons with valid frontmatter | 57 |
+| Exercise/solution companions written | 68 / 2190 |
+| Completion | 5.0% |
 
 > Companion files are the conventional `exercises/<lesson>-exercises.md` and `<lesson>-solutions.md` pairs. Lessons in `00-orientation` and `26-reference-library` are process material and reference pages, so they carry no companions by design.
 
@@ -33,7 +33,7 @@ Legend: **B** beginner · **I** intermediate · **A** advanced · **G** graduate
 
 - [x] [Orientation and Study Roadmap](./00-orientation/README.md) — `00-orientation` · stages: beginner
 - [x] [Mathematics for Geophysics](./01-mathematics/README.md) — `01-mathematics` · stages: beginner->advanced
-- [ ] [Physics for Geophysics](./02-physics/README.md) — `02-physics` · stages: beginner->graduate
+- [x] [Physics for Geophysics](./02-physics/README.md) — `02-physics` · stages: beginner->graduate
 - [ ] [Scientific Computing and Python](./03-scientific-computing/README.md) — `03-scientific-computing` · stages: beginner->graduate
 - [ ] [Earth Science, Geology and Planetary Context](./04-earth-science-geology/README.md) — `04-earth-science-geology` · stages: beginner->advanced
 - [ ] [Core Geophysics: Principles and Methods](./05-core-geophysics/README.md) — `05-core-geophysics` · stages: intermediate->graduate
@@ -115,7 +115,7 @@ Module index: [`04-orientation-geophysics/README.md`](./00-orientation/04-orient
 
 ## Mathematics for Geophysics
 
-`01-mathematics` — **16 modules**, **32/111 lessons written**
+`01-mathematics` — **16 modules**, **35/111 lessons written**
 
 [Folder index](./01-mathematics/README.md)
 
@@ -131,7 +131,7 @@ Module index: [`01-arithmetic/README.md`](./01-mathematics/01-arithmetic/README.
 | ✓ | [Floating-Point Representation, Round-Off and Catastrophic Cancellation](./01-mathematics/01-arithmetic/04-floating-point.md) | I |
 | ✓ | [Absolute vs Relative Error, Conditioning and Stability](./01-mathematics/01-arithmetic/05-error-and-conditioning.md) | I |
 
-### [x] Algebra, Functions and Modelling (4/5)
+### [x] Algebra, Functions and Modelling (5/5)
 
 Module index: [`02-algebra/README.md`](./01-mathematics/02-algebra/README.md)
 
@@ -141,7 +141,7 @@ Module index: [`02-algebra/README.md`](./01-mathematics/02-algebra/README.md)
 | ✓ | [Functions, Graphs and Transformations](./01-mathematics/02-algebra/02-functions-and-graphs.md) | B |
 | ✓ | [Exponentials, Logarithms and Decay Laws in Earth Science](./01-mathematics/02-algebra/03-exponentials-logarithms.md) | B |
 | ✓ | [Polynomials, Roots and Asymptotic Behaviour](./01-mathematics/02-algebra/04-polynomials-roots.md) | B |
-| · | [Linear and Nonlinear Systems of Equations](./01-mathematics/02-algebra/05-systems-of-equations.md) | I |
+| ✓ | [Linear and Nonlinear Systems of Equations](./01-mathematics/02-algebra/05-systems-of-equations.md) | I |
 
 ### [x] Trigonometry and Periodic Phenomena (5/5)
 
@@ -155,7 +155,7 @@ Module index: [`03-trigonometry/README.md`](./01-mathematics/03-trigonometry/REA
 | ✓ | [Spherical Trigonometry and Great-Circle Geometry](./01-mathematics/03-trigonometry/04-spherical-trigonometry.md) | I |
 | ✓ | [Phase, Harmonics and Superposition of Oscillations](./01-mathematics/03-trigonometry/05-phase-and-harmonics.md) | I |
 
-### [x] Geometry and Coordinate Systems (3/5)
+### [x] Geometry and Coordinate Systems (5/5)
 
 Module index: [`04-geometry-and-coordinates/README.md`](./01-mathematics/04-geometry-and-coordinates/README.md)
 
@@ -164,8 +164,8 @@ Module index: [`04-geometry-and-coordinates/README.md`](./01-mathematics/04-geom
 | ✓ | [Euclidean Geometry and Geometric Reasoning](./01-mathematics/04-geometry-and-coordinates/01-euclidean-geometry.md) | B |
 | ✓ | [Analytic Geometry: Lines, Planes and Distances](./01-mathematics/04-geometry-and-coordinates/02-analytic-geometry.md) | B |
 | ✓ | [Cartesian, Cylindrical and Spherical Coordinates](./01-mathematics/04-geometry-and-coordinates/03-cartesian-spherical.md) | I |
-| · | [Geographic Coordinates, Datums and Map Projections](./01-mathematics/04-geometry-and-coordinates/04-geographic-coordinates.md) | I |
-| · | [Surfaces, Parametrisation and Curvature](./01-mathematics/04-geometry-and-coordinates/05-surfaces-and-curvature.md) | A |
+| ✓ | [Geographic Coordinates, Datums and Map Projections](./01-mathematics/04-geometry-and-coordinates/04-geographic-coordinates.md) | I |
+| ✓ | [Surfaces, Parametrisation and Curvature](./01-mathematics/04-geometry-and-coordinates/05-surfaces-and-curvature.md) | A |
 
 ### [x] Single-Variable Calculus (7/7)
 
@@ -181,7 +181,7 @@ Module index: [`05-single-variable-calculus/README.md`](./01-mathematics/05-sing
 | ✓ | [Improper Integrals, Singularities and Convergence](./01-mathematics/05-single-variable-calculus/06-improper-integrals.md) | I |
 | ✓ | [Sequences, Series and Convergence Tests](./01-mathematics/05-single-variable-calculus/07-sequences-and-series.md) | I |
 
-### [ ] Multivariable and Vector Calculus (8/8)
+### [x] Multivariable and Vector Calculus (8/8)
 
 Module index: [`06-multivariable-calculus/README.md`](./01-mathematics/06-multivariable-calculus/README.md)
 

@@ -10,6 +10,7 @@ script; predict each output before running it.
 import math
 import struct
 from decimal import Decimal, getcontext
+from fractions import Fraction
 
 
 def section(title: str) -> None:
@@ -93,13 +94,18 @@ def main() -> None:
         carry = (t - compensated) - y
         compensated = t
     pairwise = math.fsum([0.1] * n)
+    builtin = sum([0.1] * n)                 # compensated in CPython >= 3.12
     exact = Decimal(n) / Decimal(10)
-    for name, value in (("naive (left to right)", naive),
+    for name, value in (("explicit loop is naive", naive),
                         ("Kahan compensated", compensated),
-                        ("math.fsum (exact)", pairwise)):
+                        ("math.fsum (exact)", pairwise),
+                        ("builtins sum()", builtin)):
         err = float(abs(Decimal(value) - exact))
         print(f"{name:>22}: {value!r}  abs err = {err:.3e}  rel err = {err / 1.0e5:.2e}")
     print(f"{'exact n/10':>22}: {exact}")
+    print("Note the first row is an explicit loop. CPython 3.12 and later")
+    print("compensates the built-in sum() for floats, so it is not naive any more;")
+    print("an explicit accumulation loop still is.")
 
     section("7. Round-off sets the floor of numerical differentiation")
     # Forward difference of sin(x) at x = 1: truncation error ~ h/2,
@@ -132,17 +138,32 @@ def main() -> None:
 
     section("9. Subtraction is not always lossy: exact cancellation (Sterbenz)")
     # If two floats are within a factor of two of each other, their difference
-    # is computed exactly. Compare each float difference with the exact result
-    # taken from the decimal expansions of the two inputs.
+    # is computed exactly (Sterbenz). Fraction is used so that the comparison is
+    # exact and independent of any decimal context precision.
     print(f"{'a':>20} {'b':>20} {'exact?':>7} {'within factor 2?':>17}")
     for a, b in ((1e5, 99999.9999999999), (1.0, 0.5000000000000001),
                  (10.0, 3.0), (1.0, 1.0 / 3.0)):
-        exact = Decimal(a - b) == Decimal(a) - Decimal(b)
+        exact = Fraction(a) - Fraction(b) == Fraction(a - b)
         within = (b / 2.0 <= a <= 2.0 * b) or (a / 2.0 <= b <= 2.0 * a)
         print(f"{a:>20} {b:>20} {str(exact):>7} {str(within):>17}")
-    print("Exact when it is inside the factor-of-two range, inexact outside it.")
-    print("The loss attributed to 'cancellation' is therefore the loss of the")
-    print("*inputs*' stored precision, not an error introduced by the subtraction.")
+    print("Every pair inside the factor-of-two range is exact (Sterbenz's")
+    print("lemma). Outside that range exactness is not guaranteed, though it can")
+    print("still happen: 10 - 3 = 7 is exact. What 'cancellation' destroys is the")
+    print("stored precision of the inputs, not a precision the subtraction adds.")
+
+
+    section("10. How the naive summation error grows with n")
+    print(f"{'n':>9} {'naive error':>14} {'error / n**2':>16}")
+    for n in (10_000, 100_000, 1_000_000, 10_000_000):
+        total = 0.0
+        for _ in range(n):
+            total += 0.1
+        exact = Decimal(n) / Decimal(10)
+        err = abs(Decimal(total) - exact)
+        print(f"{n:>9} {float(err):>14.3e} {float(err / (Decimal(n) ** 2)):>16.3e}")
+    print("The ratio error/n**2 is nearly constant, so the naive error grows like")
+    print("n**2 rather than like n. That happens when the rounding errors at each")
+    print("step share a sign instead of cancelling.")
 
 
 if __name__ == "__main__":
