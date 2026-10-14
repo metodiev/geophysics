@@ -350,7 +350,34 @@ Four identities make good self-checks on any VOI calculation:
 If any of these fails numerically, the code is wrong, and the demonstration
 verifies all four.
 
-## 11. Exercises
+## 11. Python demonstration
+
+`code/cost_benefit_demo.py` prints, with units:
+
+1. the payoff structure ($W = 500$ MUSD, $K = 60$ MUSD) and the break-even
+   probability $p^{*} = K/(W+K) = 0.10714$, with the decision at six priors;
+2. $\mathrm{EVPI} = \min(pW, (1-p)K)$ against a brute-force evaluation — the
+   peak is 53.571 MUSD, exactly at $p^{*}$;
+3. a geophysical survey written as a likelihood pair, and its EVSI;
+4. EVSI against test quality, including the exact zero at $\mathrm{TPR} =
+   \mathrm{FPR}$ (a test no better than a coin is worth nothing);
+5. the marginal EVSI of the next test against its price, so the number of tests
+   is a stopping problem and not a maximisation of EVSI;
+6. portfolio value with three $(N, p)$ pairs and the effect of a shared failure
+   mode;
+7. the flaw of averages: for $p \sim \mathrm{Beta}(1.8, 10.2)$ the Jensen gap is
+   $\mathbb{E}[V(p)] - V(\mathbb{E}[p]) = +10.1866$ MUSD ($+42.44\%$);
+8. verification of the EVSI identity by backward recursion.
+
+Run it with the project virtual environment:
+
+```bash
+cd 11-exploration-geophysics/01-exploration-workflow/code
+/Users/miroslav/Documents/workspace/geophysics/.venv/bin/python cost_benefit_demo.py
+```
+
+## 12. Exercises
+
 
 Full sets with worked solutions:
 [`exercises/03-cost-benefit-exercises.md`](exercises/03-cost-benefit-exercises.md)

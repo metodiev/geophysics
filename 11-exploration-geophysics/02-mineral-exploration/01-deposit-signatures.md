@@ -343,7 +343,35 @@ that the normalisation makes the EM channel numerically negligible — a 3% EM
 contrast and a 300% magnetic contrast are weighted by their components in a unit
 vector, not by their significance to a geologist.
 
-## 10. Exercises
+## 10. Python demonstration
+
+`code/deposit_signatures_demo.py` prints, with units:
+
+1. the SYNTHETIC contrast table — host $\rho = 100\ \mathrm{\Omega\,m}$,
+   $\kappa = 0.005$ SI, $K = 2.0\%$, $eU = 2.0$ ppm,
+   $eTh = 10.0$ ppm — and the six deposit classes against it;
+2. the anomaly amplitude every class would produce in the shared geometry;
+3. the signature matrix, its rank (6 of 6 at a tolerance of
+   $3.17 \times 10^{-15}$) and its condition number
+   ($1.29 \times 10^{5}$, i.e. the classes are only *just* independent);
+4. the pairwise cosine similarities;
+5. the confusable pairs. With the amplitude known, EM alone confuses VMS with
+   graphite at $P(\text{error}) = 0.4885$ — the same as a coin toss — while all
+   methods together separate them exactly; with the amplitude unknown, IOCG and
+   banded iron formation have $\cos = 0.9994$ and remain inseparable at low
+   signal-to-noise;
+6. the decision rule for the unknown-amplitude case and the error it implies;
+7. verification of the identities used above.
+
+Run it with the project virtual environment:
+
+```bash
+cd 11-exploration-geophysics/02-mineral-exploration/code
+/Users/miroslav/Documents/workspace/geophysics/.venv/bin/python deposit_signatures_demo.py
+```
+
+## 11. Exercises
+
 
 Full sets with worked solutions:
 [`exercises/01-deposit-signatures-exercises.md`](exercises/01-deposit-signatures-exercises.md)

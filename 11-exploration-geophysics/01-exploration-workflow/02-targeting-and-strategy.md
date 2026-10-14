@@ -372,7 +372,35 @@ $\mu_0/4\pi$ gives tesla. Forgetting the $\mu_0$ between $H$ and $B$ produces a
 factor of $4\pi\times10^{-7}$ — a thousandfold error in nT that looks like a
 "very magnetic" body.
 
-## 9. Exercises
+## 9. Python demonstration
+
+`code/targeting_strategy_demo.py` prints, with units:
+
+1. the three SYNTHETIC targets and their property contrasts
+   ($\Delta\rho$, $\kappa$, $\rho_{\text{body}}$, and the radioelement
+   contrasts of T1: $\Delta\rho = 400\ \mathrm{kg\,m^{-3}}$,
+   $\kappa = 0.001$ SI, $1.0\ \mathrm{\Omega\,m}$);
+2. the gravity and magnetic anomaly of the same sphere against depth, and the
+   depth at which their signal-to-noise ratios cross (298 m for this body);
+3. skin depth, induction number and the EM frequency index, whose maximum sits
+   near 60 Hz;
+4. the radiometric half-value layer of the synthetic soil
+   ($7.22\ \mathrm{cm}$, ten HVLs $= 72.2\ \mathrm{cm}$) and the height loss
+   of the K and Th windows;
+5. the detection probability $P_d = Q\!\left(Q^{-1}(P_{fa}) - d'\right)$
+   against depth for every method;
+6. the ranking table, which changes with depth *and* with target type;
+7. verification of the closed forms used in the sections above.
+
+Run it with the project virtual environment:
+
+```bash
+cd 11-exploration-geophysics/01-exploration-workflow/code
+/Users/miroslav/Documents/workspace/geophysics/.venv/bin/python targeting_strategy_demo.py
+```
+
+## 10. Exercises
+
 
 Full sets with worked solutions:
 [`exercises/02-targeting-and-strategy-exercises.md`](exercises/02-targeting-and-strategy-exercises.md)

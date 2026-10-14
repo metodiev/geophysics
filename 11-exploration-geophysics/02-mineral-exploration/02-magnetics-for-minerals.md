@@ -327,7 +327,35 @@ $[0,1]$, and the induction term $\kappa H$ must have the same units as the
 remanence, i.e. A m⁻¹ — a remanence quoted in A m⁻¹ and a susceptibility in SI can
 then be compared directly through $Q$.
 
-## 10. Exercises
+## 10. Python demonstration
+
+`code/magnetics_for_minerals_demo.py` prints, with units:
+
+1. induced and remanent magnetisation and the inclination of the total
+   magnetisation — $3.7^{\circ}$ for a $60^{\circ}$ inducing field with
+   $Q = 1.5$ at $-30^{\circ}$;
+2. total-field anomaly profiles for that mixed magnetisation;
+3. reduction to the pole, and what it fails to restore when remanence is
+   off-axis;
+4. depth from anomaly shape: the calibrated half-width/depth ratio 0.500683
+   against the analytic root 0.500700 (the analytic value comes from
+   $(2-u)(1+u)^{-5/2} = 1$, $x_{1/2}/z = \sqrt{u}$);
+5. self-demagnetisation, the factor $1 + \kappa/3$ that multiplies the
+   effective susceptibility of a sphere, and the factor-two over-prediction
+   it causes at $\kappa = 3$ if it is ignored;
+6. the scale invariance that makes the amplitude non-unique from a single
+   profile and a single flight line;
+7. verification of the analytic results used above.
+
+Run it with the project virtual environment:
+
+```bash
+cd 11-exploration-geophysics/02-mineral-exploration/code
+/Users/miroslav/Documents/workspace/geophysics/.venv/bin/python magnetics_for_minerals_demo.py
+```
+
+## 11. Exercises
+
 
 Full sets with worked solutions:
 [`exercises/02-magnetics-for-minerals-exercises.md`](exercises/02-magnetics-for-minerals-exercises.md)

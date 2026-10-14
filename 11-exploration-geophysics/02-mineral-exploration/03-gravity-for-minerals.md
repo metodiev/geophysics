@@ -394,7 +394,38 @@ larger usually means $\rho$ was used in g cm⁻³ instead of kg m⁻³. Second, 
 **free-air gradient must be about $0.31\ \mathrm{mGal\,m^{-1}}$**: an error of
 $\pi$ or of $2$ there is the commonest arithmetic slip in reduction work.
 
-## 10. Exercises
+## 10. Python demonstration
+
+`code/gravity_for_minerals_demo.py` prints, with units:
+
+1. the $1/z$ decay of a horizontal cylinder ($\Delta g = 2G\lambda/z$) against
+   the $1/z^{2}$ decay of a sphere, at the same depth;
+2. the anomaly amplitudes of three deposit classes;
+3. the one exact shape rule and one calibrated rule: the cylinder reaches half
+   its maximum exactly at $x = z$, whatever the depth, while for the sphere
+   $x_{1/2} = z\sqrt{2^{2/3}-1} = 0.766421\,z$, measured as 0.766421 in the
+   demo — so a "depth $\approx$ half-width" rule carries a $23\%$ bias when the
+   body is compact;
+4. the standard corrections computed from constants:
+   $2g/a = 0.3079\ \mathrm{mGal\,m^{-1}}$ (free air) and
+   $2\pi G\rho t = 0.1120\ \mathrm{mGal\,m^{-1}}$ at
+   $\rho = 2670\ \mathrm{kg\,m^{-3}}$;
+5. regional removal as a choice, not a measurement: the same data give
+   different residuals under different (equally defensible) regionals;
+6. the excess-mass invariant $\lambda = (1/2\pi G)\int \Delta g\,\mathrm{d}x$
+   and the window efficiency $(2/\pi)\arctan(X/z)$ that makes a finite profile
+   underestimate the mass;
+7. verification of the closed forms used above.
+
+Run it with the project virtual environment:
+
+```bash
+cd 11-exploration-geophysics/02-mineral-exploration/code
+/Users/miroslav/Documents/workspace/geophysics/.venv/bin/python gravity_for_minerals_demo.py
+```
+
+## 11. Exercises
+
 
 Full sets with worked solutions:
 [`exercises/03-gravity-for-minerals-exercises.md`](exercises/03-gravity-for-minerals-exercises.md)

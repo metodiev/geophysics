@@ -311,7 +311,35 @@ Three identities worth checking on any radiometric calculation:
    analytic $0.011785$ against a simulated $0.011816$ over $2\times10^{5}$ Poisson
    draws.
 
-## 9. Exercises
+## 9. Python demonstration
+
+`code/radiometrics_demo.py` prints, with units:
+
+1. the three-window spectrometer, the stripping inverse and its condition
+   number (1.588, so the inverse is well posed and the error budget is
+   dominated by counting statistics rather than by the stripping);
+2. the height response of an infinite plane source, $F(h) = (M/2)E_2(\mu h)$,
+   verified against a direct annular integration, with the half-heights
+   41.2 m (K window) and 60.6 m (Th window);
+3. differential attenuation and the Th/K ratio, biased by $+30.2\%$ when the
+   survey height is raised from 30 m to 120 m — a ratio is not immune to
+   height;
+4. burial: the synthetic soil has a half-value layer of 7.22 cm, so ten HVLs
+   are 72.2 cm and the method is effectively a map of the top half-metre;
+5. alteration mapping and the separability of the target from the background;
+6. counting statistics and their detection limits, and why the survey is flown
+   fast and wide rather than slow and narrow;
+7. verification of the identities used above.
+
+Run it with the project virtual environment:
+
+```bash
+cd 11-exploration-geophysics/02-mineral-exploration/code
+/Users/miroslav/Documents/workspace/geophysics/.venv/bin/python radiometrics_demo.py
+```
+
+## 10. Exercises
+
 
 Full sets with worked solutions:
 [`exercises/05-radiometrics-for-minerals-exercises.md`](exercises/05-radiometrics-for-minerals-exercises.md)

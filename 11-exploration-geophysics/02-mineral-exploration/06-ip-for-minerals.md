@@ -350,7 +350,40 @@ Four identities that make good self-checks:
 The demonstration verifies 1, 2, 3 and the window integral, the last against a
 direct numerical integration of the decay (agreement to $3\times10^{-8}$).
 
-## 9. Exercises
+## 9. Python demonstration
+
+`code/ip_for_minerals_demo.py` prints, with units:
+
+1. the Cole-Cole impedance
+   $Z = R_0[1 - m(1 - 1/(1 + (i\omega\tau)^{c}))]$ with
+   $R_0 = 100\ \mathrm{\Omega\,m}$, $m = 0.20$, $\tau = 1.00$ s,
+   $c = 0.60$, and its limits $Z(0) = R_0$, $Z(\infty) = R_0(1-m)$;
+2. the phase-area identity $(2/\pi)\int \varphi\,\mathrm{d}\ln\omega =
+   -\ln(1-m)$, and the bias you incur by estimating $m$ from one corner
+   phase: the corner phase over-estimates $m$ by $+11.53\%$ here, so a
+   single-frequency chargeability is not $m$;
+3. the $m$–$\tau$–$c$ trade-off, measured by a grid search at a 1 mrad phase
+   noise: two parameter sets fit within two decades of bandwidth, 15 within
+   one decade, and 78 within half a decade;
+4. why 5% sulphide beats 50% sulphide: $m = \varphi R_b/(R + \varphi R_b)$ is
+   dominated by the connected pore fraction once the grains form a network,
+   and the demo tabulates the ratio against the linear rule $4.5\varphi$;
+5. the window dependence of every chargeability, through
+   $M(t_1,t_2) = m\tau(\mathrm{e}^{-t_1/\tau} -
+   \mathrm{e}^{-t_2/\tau})/(t_2 - t_1)$ — the same body reports
+   100–300 ms, 500–1500 ms and 1–3 s windows differently;
+6. clay against sulphide, and the size of the discriminant;
+7. verification of the identities used above.
+
+Run it with the project virtual environment:
+
+```bash
+cd 11-exploration-geophysics/02-mineral-exploration/code
+/Users/miroslav/Documents/workspace/geophysics/.venv/bin/python ip_for_minerals_demo.py
+```
+
+## 10. Exercises
+
 
 Full sets with worked solutions:
 [`exercises/06-ip-for-minerals-exercises.md`](exercises/06-ip-for-minerals-exercises.md)

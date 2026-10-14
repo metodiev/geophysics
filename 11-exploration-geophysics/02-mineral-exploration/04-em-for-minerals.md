@@ -328,7 +328,39 @@ Three identities that make good self-checks on any EM calculation:
 3. the screening factor is 1 when either $\omega \to 0$, $S \to 0$ or
    $z \to 0$ — a target at the surface is not screened by a cover above it.
 
-## 9. Exercises
+## 9. Python demonstration
+
+`code/em_for_minerals_demo.py` prints, with units:
+
+1. skin depth and induction number — $\delta = \sqrt{2/\omega\mu_0\sigma}$, with
+   the synthetic host at $\delta = 871.7$ m at 100 Hz — as a closed form and
+   as $1/\mathrm{Im}(k)$ from the full diffusive solution (agreement to
+   $10^{-13}$ m);
+2. the thin-sheet conductance degeneracy: the response depends on the product
+   $\sigma t$ and never on $\sigma$ and $t$ separately;
+3. the conductor time constant
+   $\tau = \mu_0\sigma a^{2}/\pi^{2} = 1.8335$ ms, verified against a
+   finite-difference radial diffusion solve that returns the same 1.8335 ms,
+   and the corner frequency $1/(2\pi\tau) = 86.8056$ Hz;
+4. the shape of the decay — exponential for a compact conductor, a power law
+   for the host — and the window length over which an exponential still fits
+   the host (one to two decades, and the misfit reaches 45% over one decade);
+5. detectability against depth and the screening factor
+   $1 + \mu_0\omega S z/2$ (1.12 at 25 Hz through 250 m of overburden, but
+   10.9 at 2000 Hz — the same conductor is screened by the same overburden
+   purely because the frequency changed);
+6. what EM cannot do, using the graphite false positive;
+7. verification of the analytic results used above.
+
+Run it with the project virtual environment:
+
+```bash
+cd 11-exploration-geophysics/02-mineral-exploration/code
+/Users/miroslav/Documents/workspace/geophysics/.venv/bin/python em_for_minerals_demo.py
+```
+
+## 10. Exercises
+
 
 Full sets with worked solutions:
 [`exercises/04-em-for-minerals-exercises.md`](exercises/04-em-for-minerals-exercises.md)

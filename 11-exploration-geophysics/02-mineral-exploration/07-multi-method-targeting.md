@@ -325,7 +325,39 @@ Four identities worth checking on any combination:
    w^{-} = 0$ in expectation, and an AUC that is drawn from the *simulated* null,
    not from 0.5 by assumption.
 
-## 9. Exercises
+## 9. Python demonstration
+
+`code/multi_method_targeting_demo.py` prints, with units:
+
+1. the SYNTHETIC prospectivity problem: the known truth (81.9 expected
+   deposits) and the evidence layers, including one spurious regional trend
+   that is uncorrelated with the deposits;
+2. weights of evidence, with the single-layer posterior checked against the
+   empirical deposit rate;
+3. the AUC of every model against the known truth (the WofE combination scores
+   0.7938, layer 1 alone 0.8224) and, crucially, a 30-realisation Monte Carlo
+   null: mean AUC 0.5126 with sd 0.0768. The naive patch-count estimate of the
+   standard error is 4.3 times too small, so an AUC difference of 0.03 means
+   nothing on this grid;
+4. the capture curve, which is the decision metric: at a 10-site budget the
+   truth-ranked map finds 1.38 deposits, layer 1 alone 0.66, and the WofE
+   combination 0.06 — the aggregate metric and the decision metric disagree;
+5. the conditional-independence failure, quantified;
+6. training circularity: the weights fitted on half the truth and scored on
+   the other half give an AUC of 0.7938 against 0.7931 in training, so the
+   circularity here is small — but section 5 of this lesson shows it is not
+   always;
+7. verification of the weights-of-evidence algebra.
+
+Run it with the project virtual environment:
+
+```bash
+cd 11-exploration-geophysics/02-mineral-exploration/code
+/Users/miroslav/Documents/workspace/geophysics/.venv/bin/python multi_method_targeting_demo.py
+```
+
+## 10. Exercises
+
 
 Full sets with worked solutions:
 [`exercises/07-multi-method-targeting-exercises.md`](exercises/07-multi-method-targeting-exercises.md)
