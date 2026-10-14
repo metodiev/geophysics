@@ -53,6 +53,7 @@
 200	2026-10-14	https://docs.pytest.org/en/stable/how-to/fixtures.html	pytest fixtures, setup and teardown, scopes
 200	2026-10-14	https://docs.pytest.org/en/stable/how-to/monkeypatch.html	pytest monkeypatch fixture
 200	2026-10-14	https://docs.pytest.org/en/stable/how-to/parametrize.html	pytest parametrisation
+200	2026-10-14	https://docs.python.org	Python documentation home; entry point to the language reference and standard library
 200	2026-10-14	https://docs.python.org/3/library/ast.html	ast module; used for the static-analysis demo in 03-13-04
 200	2026-10-14	https://docs.python.org/3/library/configparser.html	INI reader; PEP 668 marker file format
 200	2026-10-14	https://docs.python.org/3/library/dataclasses.html	dataclasses; annotations as runtime data
@@ -72,10 +73,11 @@
 200	2026-10-14	https://docs.python.org/3/library/unittest.html	unittest; the standard-library test framework pytest replaces
 200	2026-10-14	https://docs.python.org/3/library/urllib.request.html	urllib.request; HTTP client used in 03-13-07
 200	2026-10-14	https://docs.python.org/3/library/venv.html	venv; environment creation
+200	2026-10-14	https://docs.python.org/3/tutorial/	The official Python tutorial
 200	2026-10-14	https://docs.python.org/3/tutorial/venv.html	venv tutorial; the workflow presented in 03-13-05 and 03-13-08
 200	2026-10-14	https://docs.scipy.org/doc/scipy/	SciPy reference documentation
 200	2026-10-14	https://docs.xarray.dev	Xarray documentation
-200	2026-10-14	https://doi.org/10.1016/S0031-9201(99)00115-6	Crotwell, Owens & Ritsema (1999), TauP: flexible seismic travel-time and ray-path utilities
+200	2026-10-14	https://doi.org/10.1016/S0031-9201%2899%2900115-6	Crotwell, Owens & Ritsema (1999), TauP: flexible seismic travel-time and ray-path utilities (DOI 10.1016/S0031-9201(99)00115-6, percent-encoded so the link checker parses it whole)
 200	2026-10-14	https://ds.iris.edu	IRIS Data Services
 200	2026-10-14	https://ds.iris.edu/ds/nodes/dmc/	IRIS DMC, waveform archive
 200	2026-10-14	https://ds.iris.edu/ds/nodes/dmc/data/formats/	IRIS/EarthScope data format descriptions (MiniSEED, SAC, StationXML)
@@ -169,3 +171,52 @@
 403	2026-10-14	https://www.usgs.gov	USGS main site; blocks automated requests, valid in a browser
 200	2026-10-14	https://xarray.dev	Xarray project site
 200	2026-10-14	https://zarr.readthedocs.io	Zarr chunked array storage documentation
+
+# === Open educational resources, licences and NASA/USGS access points (verified 2026-10-14) ===
+200	2026-10-14	https://earthdata.nasa.gov	NASA Earthdata: federated search and access for NASA Earth-science data
+200	2026-10-14	https://earthexplorer.usgs.gov	USGS EarthExplorer: search and download for Landsat and other USGS archives
+200	2026-10-14	https://www.earthobservatory.nasa.gov	NASA Earth Observatory: illustrative mission imagery (not for quantitative analysis)
+200	2026-10-14	https://ocw.mit.edu	MIT OpenCourseWare: free course materials across mathematics, physics and computing
+200	2026-10-14	https://scipy-lectures.org	Scipy Lecture Notes: open text on scientific computing with NumPy, SciPy and Matplotlib
+200	2026-10-14	https://se.copernicus.org	Solid Earth (Copernicus/EGU): open-access journal for solid-Earth science
+200	2026-10-14	https://www.earthscope.org/education	EarthScope education and outreach resources
+200	2026-10-14	https://pubs.usgs.gov	USGS Publications Warehouse: open reports, maps and professional papers
+200	2026-10-14	https://www.ipcc.ch	IPCC: assessment reports and the data distribution centre
+200	2026-10-14	https://www.nap.edu	National Academies Press: free online reading of consensus studies
+200	2026-10-14	https://www.bgs.ac.uk	British Geological Survey: national geoscience data and publications
+200	2026-10-14	https://creativecommons.org/licenses/by/4.0/	Creative Commons Attribution 4.0 licence deed
+200	2026-10-14	https://creativecommons.org/publicdomain/zero/1.0/	Creative Commons CC0 1.0 public-domain dedication
+200	2026-10-14	https://opendatacommons.org/licenses/odbl/	Open Database License (ODbL) 1.0
+200	2026-10-14	https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/	UK Open Government Licence v3.0
+200	2026-10-14	https://opensource.org/licenses	Open Source Initiative: approved licence list
+200	2026-10-14	https://www.apache.org/licenses/LICENSE-2.0	Apache License 2.0
+403	2026-10-14	https://www.gnu.org/licenses/gpl-3.0.html	GNU GPL v3; blocks automated requests, valid in a browser
+
+# === Open-source geophysics software and Earth-science societies (verified 2026-10-14) ===
+200	2026-10-14	https://www.obspy.org	ObsPy project site (seismological data processing in Python)
+200	2026-10-14	https://github.com/obspy/obspy	ObsPy source repository (version history and issue tracker)
+200	2026-10-14	https://www.generic-mapping-tools.org	GMT, the Generic Mapping Tools: map plotting and grid processing
+200	2026-10-14	https://docs.generic-mapping-tools.org	GMT documentation
+200	2026-10-14	https://www.fatiando.org	Fatiando a Terra: open-source Python tools for geophysics
+200	2026-10-14	https://simpeg.xyz	SimPEG: simulation and parameter estimation in geophysics
+200	2026-10-14	https://www.pygimli.org	PyGIMLi: geophysical inversion and modelling library
+200	2026-10-14	https://pyrocko.org	Pyrocko: seismological tools and waveform databases
+200	2026-10-14	https://www.ahay.org	Madagascar: reproducible seismic data-processing package
+200	2026-10-14	https://seismic-unix.org	SeisUnix: open seismic processing package (successor community of Seismic Un*x)
+200	2026-10-14	https://em.geosci.xyz	Electromagnetic Geophysics: open online textbook (Kang, Heagy and others)
+200	2026-10-14	https://gpg.geosci.xyz	Geophysics for Practicing Geoscientists: open online textbook (UBC-GIF)
+200	2026-10-14	https://geodynamics.org	Computational Infrastructure for Geodynamics (CIG): community modelling software
+200	2026-10-14	https://aspect.geodynamics.org	ASPECT: mantle convection and lithospheric dynamics modelling code
+200	2026-10-14	https://segyio.readthedocs.io	segyio: reading and writing SEG-Y seismic files
+200	2026-10-14	https://lasio.readthedocs.io	lasio: reading borehole well-log LAS files
+200	2026-10-14	https://matplotlib.org	Matplotlib: the Python plotting library used throughout this curriculum
+200	2026-10-14	https://pandas.pydata.org	pandas: labelled tabular data structures
+200	2026-10-14	https://scikit-learn.org	scikit-learn: classical machine-learning algorithms
+200	2026-10-14	https://www.tensorflow.org	TensorFlow: machine-learning framework
+200	2026-10-14	https://jupyterbook.org	Jupyter Book: build books and documentation from notebooks
+200	2026-10-14	https://pypi.org	PyPI: the Python package index
+200	2026-10-14	https://conda-forge.org	conda-forge: community conda channel
+200	2026-10-14	https://www.egu.eu	European Geosciences Union (open-access journals and meetings)
+200	2026-10-14	https://www.eage.org	EAGE: European Association of Geoscientists and Engineers
+200	2026-10-14	https://www.seismosoc.org	Seismological Society of America (Bulletin and SRL publisher)
+403	2026-10-14	https://www.agu.org	American Geophysical Union; blocks automated requests, valid in a browser
