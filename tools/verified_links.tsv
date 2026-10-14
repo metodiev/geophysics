@@ -18,6 +18,9 @@
 #           as 403. Often transient rate limiting -- verify_links.py --check
 #           retries once before believing it.
 #   429  -> rate limited; transient, retried automatically, same treatment
+#   422  -> reachable, and the service is correctly rejecting a bare request
+#           because it needs query parameters. Expected for FDSN endpoints such
+#           as dataselect/query, so it is a pass, not a failure.
 #   404  -> NOT valid, do not cite
 #   000  -> connection/TLS failure from this machine, do not cite
 #
@@ -56,6 +59,7 @@
 200	2026-10-14	https://docs.python.org/3/library/hashlib.html	hashlib; content addressing and payload checksums
 200	2026-10-14	https://docs.python.org/3/library/http.server.html	http.server; the loopback FDSN-style service in 03-13-07
 200	2026-10-14	https://docs.python.org/3/library/importlib.metadata.html	importlib.metadata; installed distribution metadata
+200	2026-10-14	https://docs.python.org/3/library/json.html	python json module reference
 200	2026-10-14	https://docs.python.org/3/library/profile.html	cProfile and pstats; the profiler used in 03-13-03
 200	2026-10-14	https://docs.python.org/3/library/random.html	random; seeded reproducibility discussion
 200	2026-10-14	https://docs.python.org/3/library/statistics.html	statistics; median and spread of benchmark rounds
@@ -79,6 +83,7 @@
 200	2026-10-14	https://earthquake.usgs.gov	USGS Earthquake Hazards Program
 200	2026-10-14	https://earthquake.usgs.gov/data/comcat/	USGS ANSS Comprehensive Earthquake Catalog (ComCat)
 200	2026-10-14	https://earthquake.usgs.gov/fdsnws/event/1/	USGS FDSN event web service (query endpoint for earthquake catalogs)
+200	2026-10-14	https://earthquake.usgs.gov/fdsnws/event/1/query	USGS FDSN event query endpoint itself, as used in code examples
 200	2026-10-14	https://epsg.io	EPSG.io coordinate system lookup
 200	2026-10-14	https://epsg.org	EPSG geodetic parameter registry (coordinate systems and ellipsoid parameters; WGS 84 ellipsoid is EPSG:7030)
 200	2026-10-14	https://gdal.org	GDAL documentation
@@ -86,13 +91,16 @@
 200	2026-10-14	https://geopandas.org	GeoPandas documentation
 200	2026-10-14	https://grace.jpl.nasa.gov	NASA GRACE/GRACE-FO mission pages
 200	2026-10-14	https://icgem.gfz-potsdam.de/	ICGEM, International Centre for Global Earth Models (gravity models)
+200	2026-10-14	https://jupyter.org	Project Jupyter; notebooks used throughout folder 03
 200	2026-10-14	https://numpy.org	NumPy
 200	2026-10-14	https://numpy.org/doc/stable/reference/generated/numpy.einsum.html	numpy.einsum; compared against BLAS dot in 03-13-03
 200	2026-10-14	https://numpy.org/doc/stable/reference/generated/numpy.sum.html	numpy.sum; pairwise summation and call overhead
 200	2026-10-14	https://numpy.org/doc/stable/reference/generated/numpy.testing.assert_allclose.html	assert_allclose defaults rtol=1e-7, atol=0
 200	2026-10-14	https://numpy.org/doc/stable/reference/random/generator.html	numpy Generator and default_rng; the recommended RNG API
 200	2026-10-14	https://packaging.python.org/en/latest/specifications/dependency-specifiers.html	dependency specifier syntax and semantics
+200	2026-10-14	https://packaging.python.org/en/latest/specifications/dependency-specifiers/	PEP 508 dependency specifier grammar
 200	2026-10-14	https://packaging.python.org/en/latest/specifications/pyproject-toml.html	pyproject.toml specification
+200	2026-10-14	https://packaging.python.org/en/latest/specifications/pyproject-toml/	PEP 621 pyproject.toml metadata specification
 200	2026-10-14	https://packaging.python.org/en/latest/tutorials/packaging-projects/	packaging a project; sdist and wheel walkthrough
 200	2026-10-14	https://peps.python.org/pep-0008/	PEP 8; style conventions
 200	2026-10-14	https://peps.python.org/pep-0484/	PEP 484; type hints
@@ -115,9 +123,12 @@
 200	2026-10-14	https://seis.sc.edu/taup/	TauP reference implementation and documentation (Crotwell, Owens, Ritsema)
 200	2026-10-14	https://service.earthscope.org	EarthScope FDSN web-service base URL (used by the obspy client)
 200	2026-10-14	https://service.iris.edu/fdsnws/dataselect/1/	IRIS/EarthScope FDSN dataselect service (waveform retrieval)
+422	2026-10-14	https://service.iris.edu/fdsnws/dataselect/1/query	dataselect query endpoint; 422 without parameters is the service correctly rejecting a bare request
 404	2026-10-14	https://service.iris.edu/fdsnws/event/1/	DEAD: IRIS event web service base path retired; use the USGS FDSN event service instead
 404	2026-10-14	https://service.iris.edu/fdsnws/event/1/query	DEAD: IRIS event service retired; use the USGS FDSN event service
 200	2026-10-14	https://service.iris.edu/fdsnws/station/1/	FDSN station (StationXML) service
+200	2026-10-14	https://service.iris.edu/fdsnws/station/1/query	FDSN station query endpoint
+200	2026-10-14	https://service.iris.edu/fdsnws/station/1/query?net=IU&sta=ANMO&level=response	Example StationXML request used in the ObsPy lessons
 200	2026-10-14	https://shapely.readthedocs.io	Shapely documentation
 200	2026-10-14	https://topex.ucsd.edu/marine_grav/mar_grav.html	Scripps/Sandwell marine gravity from satellite altimetry
 200	2026-10-14	https://unidata.github.io/netcdf4-python/	Unidata netCDF4-python documentation

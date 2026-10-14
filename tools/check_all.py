@@ -278,7 +278,55 @@ def check_links(verbose: bool) -> list[str]:
 # Check 3: LaTeX delimiter balance
 # --------------------------------------------------------------------------
 
-INLINE_CODE_RE = re.compile(r"`+[^`\n]*`+")
+
+def strip_inline_code(text: str) -> str:
+    """Remove backtick-delimited spans, matching equal-length backtick runs.
+
+    Two subtleties that a single regex gets wrong, both of which caused this
+    checker to fail lessons for writing correct Markdown:
+
+    * A lesson teaching fences legitimately writes a four-backtick span wrapping
+      a three-backtick one (```` ```` ``` ```` ````). Runs must be paired by
+      length, or a half-stripped span leaves a stray ``$`` behind that then
+      looks like an unclosed math delimiter.
+    * CommonMark allows a code span to contain line breaks, so a span may open
+      on one line and close on the next. Refusing to pair across lines left such
+      spans in place. Newlines inside a removed span are re-emitted so that
+      reported line numbers stay correct.
+
+    An unmatched run is left untouched rather than swallowing the rest of the
+    file.
+    """
+    out: list[str] = []
+    i = 0
+    n = len(text)
+    while i < n:
+        if text[i] != "`":
+            out.append(text[i])
+            i += 1
+            continue
+        j = i
+        while j < n and text[j] == "`":
+            j += 1
+        run = j - i
+        closer = j
+        while True:
+            closer = text.find("`" * run, closer)
+            if closer == -1:
+                break
+            after = closer + run
+            if after < n and text[after] == "`":
+                closer = after  # part of a longer run; keep searching
+                continue
+            break
+        if closer == -1:
+            out.append(text[i:j])
+            i = j
+        else:
+            span = text[i : closer + run]
+            out.append("\n" * span.count("\n"))
+            i = closer + run
+    return "".join(out)
 
 
 def _strip_code(text: str) -> list[str]:
@@ -304,7 +352,7 @@ def _prose_only(text: str) -> str:
     time to work around.
     """
     joined = "\n".join(_strip_code(text))
-    return INLINE_CODE_RE.sub("", joined)
+    return strip_inline_code(joined)
 
 
 def check_math(verbose: bool) -> list[str]:
@@ -323,10 +371,9 @@ def check_math(verbose: bool) -> list[str]:
     files = 0
     for path in iter_markdown():
         files += 1
-        lines = [
-            INLINE_CODE_RE.sub("", line)
-            for line in _strip_code(path.read_text(encoding="utf-8"))
-        ]
+        lines = strip_inline_code(
+            "\n".join(_strip_code(path.read_text(encoding="utf-8")))
+        ).split("\n")
         rel = path.relative_to(REPO_ROOT).as_posix()
 
         # Display math: count $$ delimiters across the whole file.

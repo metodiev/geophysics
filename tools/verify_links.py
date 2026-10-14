@@ -75,7 +75,7 @@ def audit_markdown() -> int:
     for path in iter_markdown():
         rel = path.relative_to(REPO_ROOT).as_posix()
         for url in URL_RE.findall(path.read_text(encoding="utf-8")):
-            url = url.rstrip(".,;:")
+            url = url.rstrip(".,;:`")
             if NON_ROUTABLE_RE.match(url):
                 continue  # cannot be an external resource; nothing to verify
             if url not in registry:
@@ -115,6 +115,11 @@ def check_urls() -> int:
     # large registry quickly, and a retry distinguishes a real block from
     # transient rate limiting.
     bot_block_codes = {403, 406, 429}
+    # Reachable, and the service is correctly rejecting a bare request because it
+    # requires query parameters. FDSN endpoints such as dataselect/query return
+    # this for an unparameterised GET, so it is a pass rather than link rot.
+    needs_params_codes = {422}
+    acceptable = target_status | bot_block_codes | needs_params_codes
     changes = 0
     for url, (status, _note) in sorted(registry.items()):
         if status in {"404", "000"}:
@@ -129,7 +134,7 @@ def check_urls() -> int:
             if retry in target_status:
                 observed = retry  # transient rate limit; the link itself is fine
         flag = ""
-        if observed not in target_status and observed not in bot_block_codes:
+        if observed not in acceptable:
             flag = "  <-- CHANGED"
             changes += 1
         print(f"{observed:>3}  (was {status:>3})  {url}{flag}")

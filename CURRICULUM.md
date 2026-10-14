@@ -11,10 +11,10 @@ Legend: **B** beginner · **I** intermediate · **A** advanced · **G** graduate
 | Folders | 27 |
 | Modules | 216 |
 | Lessons planned | 1146 |
-| Lessons written | 316 |
-| Lessons with valid frontmatter | 316 |
-| Exercise/solution companions written | 586 / 2190 |
-| Completion | 27.6% |
+| Lessons written | 327 |
+| Lessons with valid frontmatter | 327 |
+| Exercise/solution companions written | 608 / 2190 |
+| Completion | 28.5% |
 
 > Companion files are the conventional `exercises/<lesson>-exercises.md` and `<lesson>-solutions.md` pairs. Lessons in `00-orientation` and `26-reference-library` are process material and reference pages, so they carry no companions by design.
 
@@ -500,7 +500,7 @@ Module index: [`11-physics-of-earths-interior-and-atmosphere/README.md`](./02-ph
 
 ## Scientific Computing and Python
 
-`03-scientific-computing` — **13 modules**, **41/86 lessons written**
+`03-scientific-computing` — **13 modules**, **52/86 lessons written**
 
 [Folder index](./03-scientific-computing/README.md)
 
@@ -603,30 +603,30 @@ Module index: [`07-sympy/README.md`](./03-scientific-computing/07-sympy/README.m
 | · | [Symbolic Tensors and Index Notation](./03-scientific-computing/07-sympy/04-tensor-symbolic.md) | A |
 | · | [Generating Fast Numerical Code from Symbolic Results](./03-scientific-computing/07-sympy/05-code-generation.md) | G |
 
-### [ ] xarray, netCDF, and Gridded Earth Data (0/6)
+### [x] xarray, netCDF, and Gridded Earth Data (6/6)
 
 Module index: [`08-gridded-geospatial-data/README.md`](./03-scientific-computing/08-gridded-geospatial-data/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [netCDF/HDF5 Formats and Self-Describing Data](./03-scientific-computing/08-gridded-geospatial-data/01-netcdf-and-hdf5.md) | I |
-| · | [xarray DataArray, Coordinates and Labeled Dimensions](./03-scientific-computing/08-gridded-geospatial-data/02-xarray-dataarray.md) | I |
-| · | [Dataset, Alignment, Broadcasting and GroupBy](./03-scientific-computing/08-gridded-geospatial-data/03-xarray-dataset.md) | A |
-| · | [Chunking with Dask for Out-of-Core Analysis](./03-scientific-computing/08-gridded-geospatial-data/04-dask-chunking.md) | G |
-| · | [Case Study: Analysing a Climate Data Cube](./03-scientific-computing/08-gridded-geospatial-data/05-climate-data-cube.md) | A |
-| · | [rasterio: Rasters, Windows, Masks and Reprojection](./03-scientific-computing/08-gridded-geospatial-data/06-rasterio-rasters.md) | A |
+| ✓ | [netCDF/HDF5 Formats and Self-Describing Data](./03-scientific-computing/08-gridded-geospatial-data/01-netcdf-and-hdf5.md) | I |
+| ✓ | [xarray DataArray, Coordinates and Labeled Dimensions](./03-scientific-computing/08-gridded-geospatial-data/02-xarray-dataarray.md) | I |
+| ✓ | [Dataset, Alignment, Broadcasting and GroupBy](./03-scientific-computing/08-gridded-geospatial-data/03-xarray-dataset.md) | A |
+| ✓ | [Chunking with Dask for Out-of-Core Analysis](./03-scientific-computing/08-gridded-geospatial-data/04-dask-chunking.md) | G |
+| ✓ | [Case Study: Analysing a Climate Data Cube](./03-scientific-computing/08-gridded-geospatial-data/05-climate-data-cube.md) | A |
+| ✓ | [rasterio: Rasters, Windows, Masks and Reprojection](./03-scientific-computing/08-gridded-geospatial-data/06-rasterio-rasters.md) | A |
 
-### [ ] GeoPandas and Geospatial Python (0/5)
+### [x] GeoPandas and Geospatial Python (5/5)
 
 Module index: [`09-geospatial-python/README.md`](./03-scientific-computing/09-geospatial-python/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Shapely Geometries and Planar Operations](./03-scientific-computing/09-geospatial-python/01-shapely-geometries.md) | I |
-| · | [GeoDataFrame, CRS Handling and Spatial Joins](./03-scientific-computing/09-geospatial-python/02-geopandas-basics.md) | I |
-| · | [Spatial Indexing, Spatial Joins and Performance](./03-scientific-computing/09-geospatial-python/03-spatial-indexing.md) | A |
-| · | [Raster-Vector Integration and Zonal Statistics](./03-scientific-computing/09-geospatial-python/04-vector-raster-ops.md) | A |
-| · | [Cartopy: Map Projections and Geographic Plotting](./03-scientific-computing/09-geospatial-python/05-maps-cartopy.md) | I |
+| ✓ | [Shapely Geometries and Planar Operations](./03-scientific-computing/09-geospatial-python/01-shapely-geometries.md) | I |
+| ✓ | [GeoDataFrame, CRS Handling and Spatial Joins](./03-scientific-computing/09-geospatial-python/02-geopandas-basics.md) | I |
+| ✓ | [Spatial Indexing, Spatial Joins and Performance](./03-scientific-computing/09-geospatial-python/03-spatial-indexing.md) | A |
+| ✓ | [Raster-Vector Integration and Zonal Statistics](./03-scientific-computing/09-geospatial-python/04-vector-raster-ops.md) | A |
+| ✓ | [Cartopy: Map Projections and Geographic Plotting](./03-scientific-computing/09-geospatial-python/05-maps-cartopy.md) | I |
 
 ### [ ] ObsPy and Seismological Data Handling (0/8)
 
