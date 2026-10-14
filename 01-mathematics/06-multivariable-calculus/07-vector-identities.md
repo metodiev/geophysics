@@ -434,7 +434,7 @@ each residual against a reference scale. Test fields:
 $f = x^2y + y^2z + z^2x$ and
 $\mathbf{F} = (xy+z^2,\ yz+x^2,\ zx+y^2)$, evaluated at $(0.7,-0.4,1.1)$.
 
-### 5.1 The two structural identities are exact for the discrete operator
+### 5.1 The two structural identities cancel to round-off
 
 ```text
 curl(grad f)
@@ -460,9 +460,10 @@ field, so the zeros are meaningful.
 
 This is a fact about the *discrete* operator that is worth remembering in two
 ways. It is a genuine check that the stencils are mutually consistent — a code
-whose discrete $\nabla\times\nabla$ is not zero to round-off has a bug. And it is a limitation:
-as Section 5.4 shows, this exact cancellation happens even for a field with a
-singularity, so a zero residual here proves nothing about smoothness.
+whose discrete $\nabla\times\nabla$ is not zero to round-off has a bug. And it
+is a limitation: as Section 5.4 shows, this algebraic cancellation happens even
+for a field with a singularity, so a zero residual here proves nothing about
+smoothness.
 
 ### 5.2 The curl–curl identity, and the second-order convergence of the check
 
@@ -497,6 +498,16 @@ A factor of 10 in $H$ cuts the residual by almost exactly 100 — second order, 
 expected — until the last row, where round-off has begun to intrude and the
 reduction is slightly short of a factor of 100. **The residual is the scheme
 talking, not the identity failing.**
+
+That convergence table is for a *first-order* product rule, whose residual is
+truncation-limited. The curl–curl residual behaves differently: it is built from
+nested second-order operators, so its round-off term scales as $\epsilon_m/H^2$
+and dominates at every step that can be resolved; a sweep from $H = 1$ m down to
+$10^{-5}$ m shows it *growing* from $8\times10^{-16}$ to $2.7\times10^{-6}$ rather
+than falling. Exercise ★★★9 in
+[`exercises/07-vector-identities-exercises.md`](./exercises/07-vector-identities-exercises.md)
+works this through: **which of the two error sources dominates is a property of
+the operator being tested, and it has to be measured, not assumed.**
 
 ### 5.3 The delta-function identity: what a numerical check cannot show
 
