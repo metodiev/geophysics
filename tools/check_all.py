@@ -22,6 +22,7 @@ used directly as a CI gate.
 from __future__ import annotations
 
 import argparse
+import os
 import re
 import sys
 from pathlib import Path
@@ -111,19 +112,72 @@ def check_structure(verbose: bool) -> list[str]:
 # Check 2: relative links
 # --------------------------------------------------------------------------
 
+def _known_targets() -> dict[str, list[str]]:
+    """Map basename to repo-relative POSIX paths of files that exist or are planned."""
+    index: dict[str, list[str]] = {}
+    seen: set[str] = set()
+
+    def add(rel: str) -> None:
+        if rel in seen:
+            return
+        seen.add(rel)
+        index.setdefault(rel.rsplit("/", 1)[-1], []).append(rel)
+
+    for path in iter_markdown():
+        add(path.relative_to(REPO_ROOT).as_posix())
+    for planned in plan.planned_paths():
+        add(planned)
+    return index
+
+
+def _suggest_target(index: dict[str, list[str]], linking_rel: str, target: str) -> str | None:
+    """Suggest the correct relative path for a link whose depth is wrong.
+
+    Link-depth mistakes are the single most common defect in this repository:
+    a file one directory deeper needs one more ``../``. Rather than only
+    reporting the failure, locate the intended target by matching trailing path
+    components and return the relative path that would have worked.
+    """
+    basename = target.rstrip("/").rsplit("/", 1)[-1]
+    candidates = index.get(basename, [])
+    if not candidates:
+        return None
+
+    wanted = [part for part in target.split("/") if part not in ("", ".", "..")]
+    best_path: str | None = None
+    best_score = 0
+    for candidate in candidates:
+        candidate_parts = candidate.split("/")
+        score = 0
+        for want, have in zip(reversed(wanted), reversed(candidate_parts)):
+            if want != have:
+                break
+            score += 1
+        if score > best_score:
+            best_score, best_path = score, candidate
+    if best_path is None or best_score == 0:
+        return None
+
+    base_dir = Path(linking_rel).parent
+    return os.path.relpath(best_path, base_dir)
+
+
 def check_links(verbose: bool) -> list[str]:
     """Fail only on links that are neither present nor declared in the plan.
 
     Because this curriculum is written in batches, a link may legitimately point
     at a lesson that is planned but not yet written. Such links are reported as
     *pending* (informational) rather than broken (failure). A link that is
-    neither on disk nor in the plan is a genuine error.
+    neither on disk nor in the plan is a genuine error, and the report includes
+    a suggested correct path when one can be inferred.
     """
     problems: list[str] = []
     planned = set(plan.planned_paths())
+    index = _known_targets()
     checked = pending = 0
 
     for path in iter_markdown():
+        rel = path.relative_to(REPO_ROOT).as_posix()
         text = path.read_text(encoding="utf-8")
         for match in LINK_RE.finditer(text):
             target = match.group(1).strip()
@@ -132,7 +186,6 @@ def check_links(verbose: bool) -> list[str]:
             if target.startswith("/"):
                 # Absolute filesystem paths are machine-specific and break for
                 # every other reader. Always use a repository-relative link.
-                rel = path.relative_to(REPO_ROOT).as_posix()
                 problems.append(f"{rel}: absolute path link -> {target}")
                 continue
             target = target.split("#", 1)[0]
@@ -150,8 +203,11 @@ def check_links(verbose: bool) -> list[str]:
             if rel_target in planned:
                 pending += 1
                 continue
-            rel = path.relative_to(REPO_ROOT).as_posix()
-            problems.append(f"{rel}: broken relative link -> {match.group(1)}")
+            message = f"{rel}: broken relative link -> {match.group(1)}"
+            suggestion = _suggest_target(index, rel, target)
+            if suggestion and suggestion != target:
+                message += f"   [did you mean '{suggestion}'?]"
+            problems.append(message)
 
     if verbose:
         print(f"  relative links checked: {checked} ({pending} pending, planned but "
