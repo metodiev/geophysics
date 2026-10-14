@@ -11,10 +11,10 @@ Legend: **B** beginner · **I** intermediate · **A** advanced · **G** graduate
 | Folders | 27 |
 | Modules | 216 |
 | Lessons planned | 1146 |
-| Lessons written | 327 |
-| Lessons with valid frontmatter | 327 |
-| Exercise/solution companions written | 608 / 2190 |
-| Completion | 28.5% |
+| Lessons written | 348 |
+| Lessons with valid frontmatter | 348 |
+| Exercise/solution companions written | 650 / 2190 |
+| Completion | 30.4% |
 
 > Companion files are the conventional `exercises/<lesson>-exercises.md` and `<lesson>-solutions.md` pairs. Lessons in `00-orientation` and `26-reference-library` are process material and reference pages, so they carry no companions by design.
 
@@ -500,7 +500,7 @@ Module index: [`11-physics-of-earths-interior-and-atmosphere/README.md`](./02-ph
 
 ## Scientific Computing and Python
 
-`03-scientific-computing` — **13 modules**, **52/86 lessons written**
+`03-scientific-computing` — **13 modules**, **73/86 lessons written**
 
 [Folder index](./03-scientific-computing/README.md)
 
@@ -580,28 +580,28 @@ Module index: [`05-plotting-and-visualisation/README.md`](./03-scientific-comput
 | ✓ | [Publication-Quality Figures, Fonts, DPI and Accessibility](./03-scientific-computing/05-plotting-and-visualisation/07-publication-figures.md) | A |
 | ✓ | [Interactive Exploration: Plotly and HoloViews](./03-scientific-computing/05-plotting-and-visualisation/08-interactive-viz.md) | I |
 
-### [ ] Jupyter, Notebooks and Literate Computing (0/4)
+### [x] Jupyter, Notebooks and Literate Computing (4/4)
 
 Module index: [`06-jupyter-and-notebooks/README.md`](./03-scientific-computing/06-jupyter-and-notebooks/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Notebook Workflow, Cells, Kernels and Execution Order](./03-scientific-computing/06-jupyter-and-notebooks/01-notebook-workflow.md) | B |
-| · | [Markdown and LaTeX in Notebooks](./03-scientific-computing/06-jupyter-and-notebooks/02-markdown-and-latex.md) | B |
-| · | [Making Notebooks Reproducible (Restart-and-Run-All)](./03-scientific-computing/06-jupyter-and-notebooks/03-reproducible-notebooks.md) | I |
-| · | [Converting Notebooks to Scripts, Tests and Reports](./03-scientific-computing/06-jupyter-and-notebooks/04-notebooks-to-scripts.md) | I |
+| ✓ | [Notebook Workflow, Cells, Kernels and Execution Order](./03-scientific-computing/06-jupyter-and-notebooks/01-notebook-workflow.md) | B |
+| ✓ | [Markdown and LaTeX in Notebooks](./03-scientific-computing/06-jupyter-and-notebooks/02-markdown-and-latex.md) | B |
+| ✓ | [Making Notebooks Reproducible (Restart-and-Run-All)](./03-scientific-computing/06-jupyter-and-notebooks/03-reproducible-notebooks.md) | I |
+| ✓ | [Converting Notebooks to Scripts, Tests and Reports](./03-scientific-computing/06-jupyter-and-notebooks/04-notebooks-to-scripts.md) | I |
 
-### [ ] SymPy and Symbolic Computation (0/5)
+### [x] SymPy and Symbolic Computation (5/5)
 
 Module index: [`07-sympy/README.md`](./03-scientific-computing/07-sympy/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Symbolic Variables, Expressions and Assumptions](./03-scientific-computing/07-sympy/01-symbolic-basics.md) | I |
-| · | [Symbolic Differentiation, Integration and Limits](./03-scientific-computing/07-sympy/02-symbolic-calculus.md) | I |
-| · | [Symbolic Solvers for Algebraic and Differential Equations](./03-scientific-computing/07-sympy/03-solving-equations.md) | A |
-| · | [Symbolic Tensors and Index Notation](./03-scientific-computing/07-sympy/04-tensor-symbolic.md) | A |
-| · | [Generating Fast Numerical Code from Symbolic Results](./03-scientific-computing/07-sympy/05-code-generation.md) | G |
+| ✓ | [Symbolic Variables, Expressions and Assumptions](./03-scientific-computing/07-sympy/01-symbolic-basics.md) | I |
+| ✓ | [Symbolic Differentiation, Integration and Limits](./03-scientific-computing/07-sympy/02-symbolic-calculus.md) | I |
+| ✓ | [Symbolic Solvers for Algebraic and Differential Equations](./03-scientific-computing/07-sympy/03-solving-equations.md) | A |
+| ✓ | [Symbolic Tensors and Index Notation](./03-scientific-computing/07-sympy/04-tensor-symbolic.md) | A |
+| ✓ | [Generating Fast Numerical Code from Symbolic Results](./03-scientific-computing/07-sympy/05-code-generation.md) | G |
 
 ### [x] xarray, netCDF, and Gridded Earth Data (6/6)
 
@@ -643,16 +643,16 @@ Module index: [`10-obspy-and-seismic-data/README.md`](./03-scientific-computing/
 | · | [Cross-Correlation, Polarisation and Array Processing](./03-scientific-computing/10-obspy-and-seismic-data/07-obspy-advanced.md) | A |
 | · | [Fetching Data from FDSN Web Services](./03-scientific-computing/10-obspy-and-seismic-data/08-fdsn-clients.md) | I |
 
-### [ ] PyGMT and Professional Mapping (0/4)
+### [x] PyGMT and Professional Mapping (4/4)
 
 Module index: [`11-pygmt-and-mapping/README.md`](./03-scientific-computing/11-pygmt-and-mapping/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [PyGMT Fundamentals and the GMT Ecosystem](./03-scientific-computing/11-pygmt-and-mapping/01-pygmt-basics.md) | I |
-| · | [Gridding, Contours, Shading and Hillshade](./03-scientific-computing/11-pygmt-and-mapping/02-grids-and-contours.md) | I |
-| · | [Plotting Seismicity, Focal Mechanisms and Plate Boundaries](./03-scientific-computing/11-pygmt-and-mapping/03-seismicity-maps.md) | A |
-| · | [Layout, Insets, Legends and Multi-Panel Maps](./03-scientific-computing/11-pygmt-and-mapping/04-inset-and-layout.md) | A |
+| ✓ | [PyGMT Fundamentals and the GMT Ecosystem](./03-scientific-computing/11-pygmt-and-mapping/01-pygmt-basics.md) | I |
+| ✓ | [Gridding, Contours, Shading and Hillshade](./03-scientific-computing/11-pygmt-and-mapping/02-grids-and-contours.md) | I |
+| ✓ | [Plotting Seismicity, Focal Mechanisms and Plate Boundaries](./03-scientific-computing/11-pygmt-and-mapping/03-seismicity-maps.md) | A |
+| ✓ | [Layout, Insets, Legends and Multi-Panel Maps](./03-scientific-computing/11-pygmt-and-mapping/04-inset-and-layout.md) | A |
 
 ### [ ] Building Numerical Simulation Code in Python (0/5)
 
@@ -666,20 +666,20 @@ Module index: [`12-numerical-simulation-python/README.md`](./03-scientific-compu
 | · | [Verification vs Validation: Benchmarks and Convergence Tests](./03-scientific-computing/12-numerical-simulation-python/04-verification-and-validation.md) | G |
 | · | [Parallelism in Python: Multiprocessing, Threads, Numba, JAX](./03-scientific-computing/12-numerical-simulation-python/05-parallel-python.md) | G |
 
-### [ ] Testing, Profiling, and Packaging (0/8)
+### [x] Testing, Profiling, and Packaging (8/8)
 
 Module index: [`13-testing-profiling-packaging/README.md`](./03-scientific-computing/13-testing-profiling-packaging/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [pytest: Tests, Fixtures, Parametrisation and Approximate Comparisons](./03-scientific-computing/13-testing-profiling-packaging/01-pytest-basics.md) | I |
-| · | [Testing Numerical Code Against Analytic Solutions](./03-scientific-computing/13-testing-profiling-packaging/02-testing-scientific-code.md) | A |
-| · | [Profiling CPU and Memory: cProfile, line_profiler, memory_profiler](./03-scientific-computing/13-testing-profiling-packaging/03-profiling.md) | A |
-| · | [Linting, Formatting, Type Hints and Static Analysis](./03-scientific-computing/13-testing-profiling-packaging/04-code-quality.md) | I |
-| · | [Packaging and Distributing a Python Library](./03-scientific-computing/13-testing-profiling-packaging/05-packaging.md) | A |
-| · | [Git for Scientific Collaboration: Branching, Review, History Hygiene](./03-scientific-computing/13-testing-profiling-packaging/06-git-workflow.md) | I |
-| · | [Consuming APIs and Web Services for Earth Data](./03-scientific-computing/13-testing-profiling-packaging/07-apis-and-web-data.md) | I |
-| · | [Reproducible Environments: pip-tools, conda, Containers](./03-scientific-computing/13-testing-profiling-packaging/08-reproducible-environment.md) | A |
+| ✓ | [pytest: Tests, Fixtures, Parametrisation and Approximate Comparisons](./03-scientific-computing/13-testing-profiling-packaging/01-pytest-basics.md) | I |
+| ✓ | [Testing Numerical Code Against Analytic Solutions](./03-scientific-computing/13-testing-profiling-packaging/02-testing-scientific-code.md) | A |
+| ✓ | [Profiling CPU and Memory: cProfile, line_profiler, memory_profiler](./03-scientific-computing/13-testing-profiling-packaging/03-profiling.md) | A |
+| ✓ | [Linting, Formatting, Type Hints and Static Analysis](./03-scientific-computing/13-testing-profiling-packaging/04-code-quality.md) | I |
+| ✓ | [Packaging and Distributing a Python Library](./03-scientific-computing/13-testing-profiling-packaging/05-packaging.md) | A |
+| ✓ | [Git for Scientific Collaboration: Branching, Review, History Hygiene](./03-scientific-computing/13-testing-profiling-packaging/06-git-workflow.md) | I |
+| ✓ | [Consuming APIs and Web Services for Earth Data](./03-scientific-computing/13-testing-profiling-packaging/07-apis-and-web-data.md) | I |
+| ✓ | [Reproducible Environments: pip-tools, conda, Containers](./03-scientific-computing/13-testing-profiling-packaging/08-reproducible-environment.md) | A |
 
 ## Earth Science, Geology and Planetary Context
 
