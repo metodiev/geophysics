@@ -66,6 +66,11 @@
 200	2026-10-14	https://pytorch.org	PyTorch project site
 200	2026-10-14	https://pytorch.org/get-started/locally/	PyTorch installation selector (cited in environment.yml)
 
+200	2026-10-14	https://physics.nist.gov/cuu/Constants/	NIST CODATA fundamental physical constants (authoritative source for G, c, h, e, k_B, N_A)
+200	2026-10-14	https://physics.nist.gov/cgi-bin/cuu/Value?bg	NIST CODATA individual value: Newtonian constant of gravitation G (value read directly: 6.674 30(15)e-11)
+200	2026-10-14	https://epsg.org	EPSG geodetic parameter registry (coordinate systems and ellipsoid parameters; WGS 84 ellipsoid is EPSG:7030)
+200	2026-10-14	https://www.iers.org	International Earth Rotation and Reference Systems Service (Earth orientation and geodetic parameters)
+
 # === REJECTED: do not cite these ===
 404	2026-10-14	https://www.ngdc.noaa.gov/seg/wdm/	DEAD: retired World Data Center for Marine Geology page
 404	2026-10-14	https://www.ngdc.noaa.gov/mgg/geology/data.html	DEAD: NOAA marine geology data index path has moved; locate the current page from ngdc.noaa.gov

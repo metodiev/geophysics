@@ -11,9 +11,9 @@ Legend: **B** beginner · **I** intermediate · **A** advanced · **G** graduate
 | Folders | 27 |
 | Modules | 216 |
 | Lessons planned | 1146 |
-| Lessons written | 21 |
-| Lessons with valid frontmatter | 21 |
-| Completion | 1.8% |
+| Lessons written | 25 |
+| Lessons with valid frontmatter | 25 |
+| Completion | 2.2% |
 
 ## The six learning stages
 
@@ -54,7 +54,7 @@ Legend: **B** beginner · **I** intermediate · **A** advanced · **G** graduate
 - [ ] [Field Methods, Instruments and Laboratory Work](./23-field-methods-instruments/README.md) — `23-field-methods-instruments` · stages: beginner->research
 - [ ] [Research Papers, Scientific Writing and Communication](./24-research-papers-writing/README.md) — `24-research-papers-writing` · stages: intermediate->research
 - [ ] [Integrated Projects and Capstone Research](./25-projects-capstone/README.md) — `25-projects-capstone` · stages: beginner->research
-- [ ] [Reference Library, Glossary and Formula Handbook](./26-reference-library/README.md) — `26-reference-library` · stages: beginner->research
+- [x] [Reference Library, Glossary and Formula Handbook](./26-reference-library/README.md) — `26-reference-library` · stages: beginner->research
 
 ---
 
@@ -2799,7 +2799,7 @@ Module index: [`06-capstone-research/README.md`](./25-projects-capstone/06-capst
 
 ## Reference Library, Glossary and Formula Handbook
 
-`26-reference-library` — **6 modules**, **0/33 lessons written**
+`26-reference-library` — **6 modules**, **4/33 lessons written**
 
 [Folder index](./26-reference-library/README.md)
 
@@ -2814,16 +2814,16 @@ Module index: [`01-glossary/README.md`](./26-reference-library/01-glossary/READM
 | · | [Glossary: N-S](./26-reference-library/01-glossary/03-glossary-n-s.md) | B |
 | · | [Glossary: T-Z](./26-reference-library/01-glossary/04-glossary-t-z.md) | B |
 
-### [ ] Symbols, Units and Conventions (0/4)
+### [x] Symbols, Units and Conventions (4/4)
 
 Module index: [`02-symbols-and-units/README.md`](./26-reference-library/02-symbols-and-units/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Symbol Handbook: Notation Used Throughout](./26-reference-library/02-symbols-and-units/01-symbol-handbook.md) | B |
-| · | [Units Handbook, Conversions and Preferred Conventions](./26-reference-library/02-symbols-and-units/02-units-handbook.md) | B |
-| · | [Physical Constants and Earth Parameters with Sources](./26-reference-library/02-symbols-and-units/03-constant-handbook.md) | B |
-| · | [Dimensional Analysis Quick Reference](./26-reference-library/02-symbols-and-units/04-dimensional-analysis-reference.md) | I |
+| ✓ | [Symbol Handbook: Notation Used Throughout](./26-reference-library/02-symbols-and-units/01-symbol-handbook.md) | B |
+| ✓ | [Units Handbook, Conversions and Preferred Conventions](./26-reference-library/02-symbols-and-units/02-units-handbook.md) | B |
+| ✓ | [Physical Constants and Earth Parameters with Sources](./26-reference-library/02-symbols-and-units/03-constant-handbook.md) | B |
+| ✓ | [Dimensional Analysis Quick Reference](./26-reference-library/02-symbols-and-units/04-dimensional-analysis-reference.md) | I |
 
 ### [ ] Formula Handbook (0/7)
 
