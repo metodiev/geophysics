@@ -217,7 +217,7 @@ divergence threshold. (ii) The optimum is sharp: at
 $\omega = 2/(1+\sin\pi h)$ the rate is $\omega-1$, but for $\omega$ significantly
 above the optimum the iteration *diverges*, and just below it the rate degrades
 rapidly. A practical code estimates $\rho_J$ by a few power iterations
-(see [01-12-08](./08-matrix-eigen-solvers.md)) and then uses the formula.
+(see [01-12-08](../08-matrix-eigen-solvers.md)) and then uses the formula.
 
 ---
 
@@ -354,6 +354,6 @@ to act as regularisation (the "iterative regularisation" of Krylov methods). It 
 cheaper than the SVD and gives much of the benefit, at the price of a stopping rule
 that is harder to interpret than an explicit $\lambda$.
 
-See [01-07-08](../07-linear-algebra/08-svd.md) for the resolution and covariance
+See [01-07-08](../../07-linear-algebra/08-svd.md) for the resolution and covariance
 formulas and [18 Inverse Problems](../../../18-inverse-problems/README.md) for the
 regularisation theory.
