@@ -40,6 +40,25 @@ NON_LESSON_DIRS = {"exercises", "code", "tools", "images", "data", "solutions"}
 LINK_RE = re.compile(r"\[[^\]]*\]\(([^)]+)\)")
 FENCE_RE = re.compile(r"^\s*(```|~~~)")
 
+# A real Markdown link target is a URL, an anchor, or a path. Anything else that
+# happens to sit inside `[...](...)` is prose or code, not a link. Without this
+# guard, text such as `[:,\nNone](12, 500)` -- which appears in a lesson about
+# array broadcasting whenever an inline code span wraps across a line -- is
+# reported as a broken link whose target is "12, 500".
+_LINK_TARGET_RE = re.compile(
+    r"^(?:#|/|\.\.?/|https?://|mailto:)"              # anchor, absolute or relative path, URL
+    r"|/"                                              # any relative path
+    r"|\.(?:md|markdown|py|txt|ya?ml|cff|toml|json|csv|tsv|ipynb)$",
+    re.IGNORECASE,
+)
+
+
+def looks_like_link_target(target: str) -> bool:
+    """True if the text could plausibly be a link target rather than stray prose."""
+    if not target or any(char.isspace() for char in target):
+        return False
+    return bool(_LINK_TARGET_RE.search(target))
+
 
 def iter_markdown() -> list[Path]:
     files: list[Path] = []
@@ -178,7 +197,7 @@ def check_links(verbose: bool) -> list[str]:
 
     for path in iter_markdown():
         rel = path.relative_to(REPO_ROOT).as_posix()
-        text = path.read_text(encoding="utf-8")
+        text = _prose_only(path.read_text(encoding="utf-8"))
         for match in LINK_RE.finditer(text):
             target = match.group(1).strip()
             if target.startswith(("http://", "https://", "mailto:", "#")):
@@ -190,6 +209,8 @@ def check_links(verbose: bool) -> list[str]:
                 continue
             target = target.split("#", 1)[0]
             if not target:
+                continue
+            if not looks_like_link_target(match.group(1).strip()):
                 continue
             checked += 1
             resolved = (path.parent / target).resolve()
@@ -219,6 +240,9 @@ def check_links(verbose: bool) -> list[str]:
 # Check 3: LaTeX delimiter balance
 # --------------------------------------------------------------------------
 
+INLINE_CODE_RE = re.compile(r"`[^`\n]*`")
+
+
 def _strip_code(text: str) -> list[str]:
     """Return lines with fenced code blocks replaced by blanks."""
     out: list[str] = []
@@ -230,6 +254,19 @@ def _strip_code(text: str) -> list[str]:
             continue
         out.append("" if in_fence else line)
     return out
+
+
+def _prose_only(text: str) -> str:
+    """Remove fenced code blocks and inline code spans before link extraction.
+
+    Code samples legitimately contain text that looks like a Markdown link --
+    for example ``datetime64[ns](1)`` in a pandas lesson, or the literal
+    ``[text](target)`` used when teaching Markdown itself. Neither is a link,
+    and reporting them as broken targets is a false positive that costs an agent
+    time to work around.
+    """
+    joined = "\n".join(_strip_code(text))
+    return INLINE_CODE_RE.sub("", joined)
 
 
 def check_math(verbose: bool) -> list[str]:
