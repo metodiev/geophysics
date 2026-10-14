@@ -129,6 +129,7 @@
 200	2026-10-14	https://service.iris.edu/fdsnws/station/1/	FDSN station (StationXML) service
 200	2026-10-14	https://service.iris.edu/fdsnws/station/1/query	FDSN station query endpoint
 200	2026-10-14	https://service.iris.edu/fdsnws/station/1/query?net=IU&sta=ANMO&level=response	Example StationXML request used in the ObsPy lessons
+200	2026-10-14	https://service.iris.edu/fdsnws/station/1/query?net=IU&sta=ANMO&loc=00&cha=BHZ&start=2024-03-15T08:00:00	Example channel-level FDSN station request used in 03-10-08
 200	2026-10-14	https://shapely.readthedocs.io	Shapely documentation
 200	2026-10-14	https://topex.ucsd.edu/marine_grav/mar_grav.html	Scripps/Sandwell marine gravity from satellite altimetry
 200	2026-10-14	https://unidata.github.io/netcdf4-python/	Unidata netCDF4-python documentation
