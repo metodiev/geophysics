@@ -1821,13 +1821,60 @@ def all_modules() -> list[dict[str, object]]:
     return [module for folder in PLAN for module in folder["modules"]]
 
 
+# Folders whose content is process material or lookup reference rather than
+# taught lessons. Lessons there do not carry exercise/solution companions.
+NO_COMPANION_FOLDERS = frozenset({"00-orientation", "26-reference-library"})
+
+
+def companion_paths() -> list[str]:
+    """Conventional exercise and solution files derived from each lesson.
+
+    The curriculum convention is that a taught lesson carries two companions:
+
+        <module>/exercises/<lesson-stem>-exercises.md
+        <module>/exercises/<lesson-stem>-solutions.md
+
+    These are derived from the plan rather than listed individually, because
+    hard-coding ~2000 companion entries would be error-prone and would drift.
+    Deriving them means a lesson that links its exercise file before writing it
+    is reported as *pending* (expected, not yet present) rather than *broken*
+    (an undeclared target) -- which is the honest classification.
+    """
+    paths: list[str] = []
+    for lesson in all_lessons():
+        if lesson["folder"] in NO_COMPANION_FOLDERS:
+            continue
+        path = str(lesson["path"])
+        directory, _, filename = path.rpartition("/")
+        stem = filename[:-3] if filename.endswith(".md") else filename
+        paths.append(f"{directory}/exercises/{stem}-exercises.md")
+        paths.append(f"{directory}/exercises/{stem}-solutions.md")
+    return paths
+
+
 def planned_paths() -> list[str]:
-    """Every file the plan intends to create, folders and modules included."""
+    """Every file the plan intends to create, folders, modules and companions."""
     paths: list[str] = [folder["reference"] for folder in PLAN]
     for module in all_modules():
         paths.append(module["path"])
         paths.extend(lesson["path"] for lesson in module["lessons"])
+    paths.extend(companion_paths())
     return paths
+
+
+def coverage() -> dict[str, int]:
+    """Planned versus present counts for lessons and their companions."""
+    from pathlib import Path
+
+    root = Path(__file__).resolve().parent.parent
+    lessons = all_lessons()
+    companions = companion_paths()
+    return {
+        "lessons_planned": len(lessons),
+        "lessons_present": sum(1 for lesson in lessons if (root / str(lesson["path"])).exists()),
+        "companions_planned": len(companions),
+        "companions_present": sum(1 for path in companions if (root / path).exists()),
+    }
 
 
 def summary() -> dict[str, int]:

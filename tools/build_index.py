@@ -39,6 +39,7 @@ def status_of(rel_path: str) -> str:
 
 def render() -> str:
     counts = plan.summary()
+    cov = plan.coverage()
     lessons = plan.all_lessons()
     written = [lesson for lesson in lessons if (REPO_ROOT / lesson["path"]).exists()]
     # A lesson only counts as written if it is substantive, not a stub.
@@ -72,8 +73,14 @@ def render() -> str:
     add(f"| Lessons planned | {counts['lessons']} |")
     add(f"| Lessons written | {len(written)} |")
     add(f"| Lessons with valid frontmatter | {len(substantive)} |")
+    add(f"| Exercise/solution companions written | {cov['companions_present']} / "
+        f"{cov['companions_planned']} |")
     add(f"| Completion | {pct:.1f}% |")
     add("")
+    add("> Companion files are the conventional `exercises/<lesson>-exercises.md` and "
+        "`<lesson>-solutions.md` pairs. Lessons in `00-orientation` and "
+        "`26-reference-library` are process material and reference pages, so they "
+        "carry no companions by design.\n")
 
     add("## The six learning stages\n")
     add("| Stage | Entry requirement | Mastery checkpoint |")

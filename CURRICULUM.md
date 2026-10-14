@@ -11,9 +11,12 @@ Legend: **B** beginner · **I** intermediate · **A** advanced · **G** graduate
 | Folders | 27 |
 | Modules | 216 |
 | Lessons planned | 1146 |
-| Lessons written | 25 |
-| Lessons with valid frontmatter | 25 |
-| Completion | 2.2% |
+| Lessons written | 54 |
+| Lessons with valid frontmatter | 54 |
+| Exercise/solution companions written | 41 / 2190 |
+| Completion | 4.7% |
+
+> Companion files are the conventional `exercises/<lesson>-exercises.md` and `<lesson>-solutions.md` pairs. Lessons in `00-orientation` and `26-reference-library` are process material and reference pages, so they carry no companions by design.
 
 ## The six learning stages
 
@@ -112,11 +115,11 @@ Module index: [`04-orientation-geophysics/README.md`](./00-orientation/04-orient
 
 ## Mathematics for Geophysics
 
-`01-mathematics` — **16 modules**, **3/111 lessons written**
+`01-mathematics` — **16 modules**, **32/111 lessons written**
 
 [Folder index](./01-mathematics/README.md)
 
-### [x] Arithmetic and Numerical Reasoning (3/5)
+### [x] Arithmetic and Numerical Reasoning (5/5)
 
 Module index: [`01-arithmetic/README.md`](./01-mathematics/01-arithmetic/README.md)
 
@@ -125,73 +128,73 @@ Module index: [`01-arithmetic/README.md`](./01-mathematics/01-arithmetic/README.
 | ✓ | [Number Systems, Precision and Scientific Notation](./01-mathematics/01-arithmetic/01-number-systems-and-precision.md) | B |
 | ✓ | [Orders of Magnitude and Fermi Estimation in Earth Science](./01-mathematics/01-arithmetic/02-orders-of-magnitude.md) | B |
 | ✓ | [Units, SI Conventions and Dimensional Analysis](./01-mathematics/01-arithmetic/03-units-and-dimensional-analysis.md) | B |
-| · | [Floating-Point Representation, Round-Off and Catastrophic Cancellation](./01-mathematics/01-arithmetic/04-floating-point.md) | I |
-| · | [Absolute vs Relative Error, Conditioning and Stability](./01-mathematics/01-arithmetic/05-error-and-conditioning.md) | I |
+| ✓ | [Floating-Point Representation, Round-Off and Catastrophic Cancellation](./01-mathematics/01-arithmetic/04-floating-point.md) | I |
+| ✓ | [Absolute vs Relative Error, Conditioning and Stability](./01-mathematics/01-arithmetic/05-error-and-conditioning.md) | I |
 
-### [ ] Algebra, Functions and Modelling (0/5)
+### [x] Algebra, Functions and Modelling (4/5)
 
 Module index: [`02-algebra/README.md`](./01-mathematics/02-algebra/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Algebraic Manipulation and Solving Equations](./01-mathematics/02-algebra/01-algebraic-manipulation.md) | B |
-| · | [Functions, Graphs and Transformations](./01-mathematics/02-algebra/02-functions-and-graphs.md) | B |
-| · | [Exponentials, Logarithms and Decay Laws in Earth Science](./01-mathematics/02-algebra/03-exponentials-logarithms.md) | B |
-| · | [Polynomials, Roots and Asymptotic Behaviour](./01-mathematics/02-algebra/04-polynomials-roots.md) | B |
+| ✓ | [Algebraic Manipulation and Solving Equations](./01-mathematics/02-algebra/01-algebraic-manipulation.md) | B |
+| ✓ | [Functions, Graphs and Transformations](./01-mathematics/02-algebra/02-functions-and-graphs.md) | B |
+| ✓ | [Exponentials, Logarithms and Decay Laws in Earth Science](./01-mathematics/02-algebra/03-exponentials-logarithms.md) | B |
+| ✓ | [Polynomials, Roots and Asymptotic Behaviour](./01-mathematics/02-algebra/04-polynomials-roots.md) | B |
 | · | [Linear and Nonlinear Systems of Equations](./01-mathematics/02-algebra/05-systems-of-equations.md) | I |
 
-### [ ] Trigonometry and Periodic Phenomena (0/5)
+### [x] Trigonometry and Periodic Phenomena (5/5)
 
 Module index: [`03-trigonometry/README.md`](./01-mathematics/03-trigonometry/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Angles, Triangles and the Unit Circle](./01-mathematics/03-trigonometry/01-angles-and-triangles.md) | B |
-| · | [Trigonometric Identities and Their Uses](./01-mathematics/03-trigonometry/02-trig-identities.md) | B |
-| · | [Inverse Trigonometric Functions and Branch Ambiguity](./01-mathematics/03-trigonometry/03-inverse-trig.md) | I |
-| · | [Spherical Trigonometry and Great-Circle Geometry](./01-mathematics/03-trigonometry/04-spherical-trigonometry.md) | I |
-| · | [Phase, Harmonics and Superposition of Oscillations](./01-mathematics/03-trigonometry/05-phase-and-harmonics.md) | I |
+| ✓ | [Angles, Triangles and the Unit Circle](./01-mathematics/03-trigonometry/01-angles-and-triangles.md) | B |
+| ✓ | [Trigonometric Identities and Their Uses](./01-mathematics/03-trigonometry/02-trig-identities.md) | B |
+| ✓ | [Inverse Trigonometric Functions and Branch Ambiguity](./01-mathematics/03-trigonometry/03-inverse-trig.md) | I |
+| ✓ | [Spherical Trigonometry and Great-Circle Geometry](./01-mathematics/03-trigonometry/04-spherical-trigonometry.md) | I |
+| ✓ | [Phase, Harmonics and Superposition of Oscillations](./01-mathematics/03-trigonometry/05-phase-and-harmonics.md) | I |
 
-### [ ] Geometry and Coordinate Systems (0/5)
+### [x] Geometry and Coordinate Systems (3/5)
 
 Module index: [`04-geometry-and-coordinates/README.md`](./01-mathematics/04-geometry-and-coordinates/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Euclidean Geometry and Geometric Reasoning](./01-mathematics/04-geometry-and-coordinates/01-euclidean-geometry.md) | B |
-| · | [Analytic Geometry: Lines, Planes and Distances](./01-mathematics/04-geometry-and-coordinates/02-analytic-geometry.md) | B |
-| · | [Cartesian, Cylindrical and Spherical Coordinates](./01-mathematics/04-geometry-and-coordinates/03-cartesian-spherical.md) | I |
+| ✓ | [Euclidean Geometry and Geometric Reasoning](./01-mathematics/04-geometry-and-coordinates/01-euclidean-geometry.md) | B |
+| ✓ | [Analytic Geometry: Lines, Planes and Distances](./01-mathematics/04-geometry-and-coordinates/02-analytic-geometry.md) | B |
+| ✓ | [Cartesian, Cylindrical and Spherical Coordinates](./01-mathematics/04-geometry-and-coordinates/03-cartesian-spherical.md) | I |
 | · | [Geographic Coordinates, Datums and Map Projections](./01-mathematics/04-geometry-and-coordinates/04-geographic-coordinates.md) | I |
 | · | [Surfaces, Parametrisation and Curvature](./01-mathematics/04-geometry-and-coordinates/05-surfaces-and-curvature.md) | A |
 
-### [ ] Single-Variable Calculus (0/7)
+### [x] Single-Variable Calculus (7/7)
 
 Module index: [`05-single-variable-calculus/README.md`](./01-mathematics/05-single-variable-calculus/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Limits, Continuity and the Idea of Approximation](./01-mathematics/05-single-variable-calculus/01-limits-and-continuity.md) | B |
-| · | [Derivatives and Rates of Change](./01-mathematics/05-single-variable-calculus/02-derivatives.md) | B |
-| · | [Differentiation Rules and Implicit Differentiation](./01-mathematics/05-single-variable-calculus/03-differentiation-rules.md) | B |
-| · | [Taylor Series, Linearisation and Small-Angle Approximations](./01-mathematics/05-single-variable-calculus/04-taylor-series.md) | I |
-| · | [Integration Techniques and Definite Integrals](./01-mathematics/05-single-variable-calculus/05-integration.md) | I |
-| · | [Improper Integrals, Singularities and Convergence](./01-mathematics/05-single-variable-calculus/06-improper-integrals.md) | I |
-| · | [Sequences, Series and Convergence Tests](./01-mathematics/05-single-variable-calculus/07-sequences-and-series.md) | I |
+| ✓ | [Limits, Continuity and the Idea of Approximation](./01-mathematics/05-single-variable-calculus/01-limits-and-continuity.md) | B |
+| ✓ | [Derivatives and Rates of Change](./01-mathematics/05-single-variable-calculus/02-derivatives.md) | B |
+| ✓ | [Differentiation Rules and Implicit Differentiation](./01-mathematics/05-single-variable-calculus/03-differentiation-rules.md) | B |
+| ✓ | [Taylor Series, Linearisation and Small-Angle Approximations](./01-mathematics/05-single-variable-calculus/04-taylor-series.md) | I |
+| ✓ | [Integration Techniques and Definite Integrals](./01-mathematics/05-single-variable-calculus/05-integration.md) | I |
+| ✓ | [Improper Integrals, Singularities and Convergence](./01-mathematics/05-single-variable-calculus/06-improper-integrals.md) | I |
+| ✓ | [Sequences, Series and Convergence Tests](./01-mathematics/05-single-variable-calculus/07-sequences-and-series.md) | I |
 
-### [ ] Multivariable and Vector Calculus (0/8)
+### [ ] Multivariable and Vector Calculus (8/8)
 
 Module index: [`06-multivariable-calculus/README.md`](./01-mathematics/06-multivariable-calculus/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Partial Derivatives, Gradients and Directional Derivatives](./01-mathematics/06-multivariable-calculus/01-partial-derivatives.md) | I |
-| · | [Multiple Integrals and Change of Variables](./01-mathematics/06-multivariable-calculus/02-multiple-integrals.md) | I |
-| · | [Jacobians, Coordinate Transformations and Volume Elements](./01-mathematics/06-multivariable-calculus/03-jacobians.md) | I |
-| · | [Divergence, Curl and Physical Meaning](./01-mathematics/06-multivariable-calculus/04-divergence-and-curl.md) | I |
-| · | [Line and Surface Integrals; Flux and Circulation](./01-mathematics/06-multivariable-calculus/05-line-surface-integrals.md) | A |
-| · | [Gauss, Stokes and Green Theorems](./01-mathematics/06-multivariable-calculus/06-integral-theorems.md) | A |
-| · | [Vector Identities and Their Role in Geophysics](./01-mathematics/06-multivariable-calculus/07-vector-identities.md) | A |
-| · | [Potential Fields, Laplace and Poisson Equations](./01-mathematics/06-multivariable-calculus/08-potential-theory.md) | A |
+| ✓ | [Partial Derivatives, Gradients and Directional Derivatives](./01-mathematics/06-multivariable-calculus/01-partial-derivatives.md) | I |
+| ✓ | [Multiple Integrals and Change of Variables](./01-mathematics/06-multivariable-calculus/02-multiple-integrals.md) | I |
+| ✓ | [Jacobians, Coordinate Transformations and Volume Elements](./01-mathematics/06-multivariable-calculus/03-jacobians.md) | I |
+| ✓ | [Divergence, Curl and Physical Meaning](./01-mathematics/06-multivariable-calculus/04-divergence-and-curl.md) | I |
+| ✓ | [Line and Surface Integrals; Flux and Circulation](./01-mathematics/06-multivariable-calculus/05-line-surface-integrals.md) | A |
+| ✓ | [Gauss, Stokes and Green Theorems](./01-mathematics/06-multivariable-calculus/06-integral-theorems.md) | A |
+| ✓ | [Vector Identities and Their Role in Geophysics](./01-mathematics/06-multivariable-calculus/07-vector-identities.md) | A |
+| ✓ | [Potential Fields, Laplace and Poisson Equations](./01-mathematics/06-multivariable-calculus/08-potential-theory.md) | A |
 
 ### [ ] Linear Algebra (0/10)
 
