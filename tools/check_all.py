@@ -278,7 +278,7 @@ def check_links(verbose: bool) -> list[str]:
 # Check 3: LaTeX delimiter balance
 # --------------------------------------------------------------------------
 
-INLINE_CODE_RE = re.compile(r"`[^`\n]*`")
+INLINE_CODE_RE = re.compile(r"`+[^`\n]*`+")
 
 
 def _strip_code(text: str) -> list[str]:
@@ -313,12 +313,20 @@ def check_math(verbose: bool) -> list[str]:
     Inline ``$...$`` spans are tracked *across* lines, because inline math
     legitimately wraps in Markdown source. A single file-level unbalanced state
     is reported with the line where the unclosed span began.
+
+    Inline code spans are removed first. A lesson *about* Markdown and LaTeX
+    has to write a bare ``$`` inside backticks to explain the delimiters, and
+    counting those made the checker fail the one file that teaches correct
+    delimiter use.
     """
     problems: list[str] = []
     files = 0
     for path in iter_markdown():
         files += 1
-        lines = _strip_code(path.read_text(encoding="utf-8"))
+        lines = [
+            INLINE_CODE_RE.sub("", line)
+            for line in _strip_code(path.read_text(encoding="utf-8"))
+        ]
         rel = path.relative_to(REPO_ROOT).as_posix()
 
         # Display math: count $$ delimiters across the whole file.

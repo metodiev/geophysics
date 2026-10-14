@@ -11,10 +11,10 @@ Legend: **B** beginner · **I** intermediate · **A** advanced · **G** graduate
 | Folders | 27 |
 | Modules | 216 |
 | Lessons planned | 1146 |
-| Lessons written | 284 |
-| Lessons with valid frontmatter | 284 |
-| Exercise/solution companions written | 522 / 2190 |
-| Completion | 24.8% |
+| Lessons written | 305 |
+| Lessons with valid frontmatter | 305 |
+| Exercise/solution companions written | 564 / 2190 |
+| Completion | 26.6% |
 
 > Companion files are the conventional `exercises/<lesson>-exercises.md` and `<lesson>-solutions.md` pairs. Lessons in `00-orientation` and `26-reference-library` are process material and reference pages, so they carry no companions by design.
 
@@ -782,58 +782,58 @@ Module index: [`08-planetary-science/README.md`](./04-earth-science-geology/08-p
 
 ## Core Geophysics: Principles and Methods
 
-`05-core-geophysics` — **9 modules**, **0/48 lessons written**
+`05-core-geophysics` — **9 modules**, **21/48 lessons written**
 
 [Folder index](./05-core-geophysics/README.md)
 
-### [ ] What Geophysics Measures and Why (0/5)
+### [x] What Geophysics Measures and Why (5/5)
 
 Module index: [`01-what-geophysics-measures/README.md`](./05-core-geophysics/01-what-geophysics-measures/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [The Central Idea: Property Contrasts Produce Signals](./05-core-geophysics/01-what-geophysics-measures/01-physical-property-contrast.md) | I |
-| · | [Taxonomy of Methods: Active/Passive, Source/Receiver Geometry](./05-core-geophysics/01-what-geophysics-measures/02-method-taxonomy.md) | I |
-| · | [Resolution, Penetration Depth and the Fundamental Trade-Off](./05-core-geophysics/01-what-geophysics-measures/03-resolution-depth-tradeoff.md) | A |
-| · | [Non-Uniqueness of Geophysical Models](./05-core-geophysics/01-what-geophysics-measures/04-ambiguity-and-nonuniqueness.md) | A |
-| · | [Choosing a Method: A Decision Framework](./05-core-geophysics/01-what-geophysics-measures/05-choosing-a-method.md) | I |
+| ✓ | [The Central Idea: Property Contrasts Produce Signals](./05-core-geophysics/01-what-geophysics-measures/01-physical-property-contrast.md) | I |
+| ✓ | [Taxonomy of Methods: Active/Passive, Source/Receiver Geometry](./05-core-geophysics/01-what-geophysics-measures/02-method-taxonomy.md) | I |
+| ✓ | [Resolution, Penetration Depth and the Fundamental Trade-Off](./05-core-geophysics/01-what-geophysics-measures/03-resolution-depth-tradeoff.md) | A |
+| ✓ | [Non-Uniqueness of Geophysical Models](./05-core-geophysics/01-what-geophysics-measures/04-ambiguity-and-nonuniqueness.md) | A |
+| ✓ | [Choosing a Method: A Decision Framework](./05-core-geophysics/01-what-geophysics-measures/05-choosing-a-method.md) | I |
 
-### [ ] Geophysical Fields and Observables (0/4)
+### [x] Geophysical Fields and Observables (4/4)
 
 Module index: [`02-geophysical-fields-and-observables/README.md`](./05-core-geophysics/02-geophysical-fields-and-observables/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Scalar and Vector Fields; Potentials and Gradients](./05-core-geophysics/02-geophysical-fields-and-observables/01-scalar-vs-vector-fields.md) | A |
-| · | [Units and Conventions for Gravity, Magnetic and EM Fields](./05-core-geophysics/02-geophysical-fields-and-observables/02-field-measurement-units.md) | I |
-| · | [Noise, Drift, Tides and Instrument Bias in Field Data](./05-core-geophysics/02-geophysical-fields-and-observables/03-noise-and-drift.md) | A |
-| · | [Reduction of Observations to Anomalies](./05-core-geophysics/02-geophysical-fields-and-observables/04-reduction-of-observations.md) | A |
+| ✓ | [Scalar and Vector Fields; Potentials and Gradients](./05-core-geophysics/02-geophysical-fields-and-observables/01-scalar-vs-vector-fields.md) | A |
+| ✓ | [Units and Conventions for Gravity, Magnetic and EM Fields](./05-core-geophysics/02-geophysical-fields-and-observables/02-field-measurement-units.md) | I |
+| ✓ | [Noise, Drift, Tides and Instrument Bias in Field Data](./05-core-geophysics/02-geophysical-fields-and-observables/03-noise-and-drift.md) | A |
+| ✓ | [Reduction of Observations to Anomalies](./05-core-geophysics/02-geophysical-fields-and-observables/04-reduction-of-observations.md) | A |
 
-### [ ] Forward Modelling Principles (0/5)
+### [x] Forward Modelling Principles (5/5)
 
 Module index: [`03-forward-modelling-principles/README.md`](./05-core-geophysics/03-forward-modelling-principles/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [The Forward Problem: From Model to Data](./05-core-geophysics/03-forward-modelling-principles/01-forward-problem.md) | I |
-| · | [Analytical Solutions for Simple Bodies (Sphere, Sheet, Dyke)](./05-core-geophysics/03-forward-modelling-principles/02-analytical-solutions.md) | A |
-| · | [Superposition and Building Complex Models](./05-core-geophysics/03-forward-modelling-principles/03-superposition.md) | I |
-| · | [Numerical Forward Modelling and Discretisation](./05-core-geophysics/03-forward-modelling-principles/04-numerical-forward-modelling.md) | G |
-| · | [Validating Forward Codes Against Analytic Benchmarks](./05-core-geophysics/03-forward-modelling-principles/05-forward-model-validation.md) | G |
+| ✓ | [The Forward Problem: From Model to Data](./05-core-geophysics/03-forward-modelling-principles/01-forward-problem.md) | I |
+| ✓ | [Analytical Solutions for Simple Bodies (Sphere, Sheet, Dyke)](./05-core-geophysics/03-forward-modelling-principles/02-analytical-solutions.md) | A |
+| ✓ | [Superposition and Building Complex Models](./05-core-geophysics/03-forward-modelling-principles/03-superposition.md) | I |
+| ✓ | [Numerical Forward Modelling and Discretisation](./05-core-geophysics/03-forward-modelling-principles/04-numerical-forward-modelling.md) | G |
+| ✓ | [Validating Forward Codes Against Analytic Benchmarks](./05-core-geophysics/03-forward-modelling-principles/05-forward-model-validation.md) | G |
 
-### [ ] Rock Physics and Property Relations (0/7)
+### [x] Rock Physics and Property Relations (7/7)
 
 Module index: [`04-rock-physics/README.md`](./05-core-geophysics/04-rock-physics/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Porosity, Density and Velocity Relationships](./05-core-geophysics/04-rock-physics/01-porosity-density-velocity.md) | A |
-| · | [Effective-Medium Theories (Voigt, Reuss, Hashin-Shtrikman)](./05-core-geophysics/04-rock-physics/02-effective-medium-theory.md) | G |
-| · | [Gassmann Fluid Substitution and Saturation Effects](./05-core-geophysics/04-rock-physics/03-gassmann-fluid-substitution.md) | G |
-| · | [Velocity-Porosity-Clay Models and Empirical Relations](./05-core-geophysics/04-rock-physics/04-velocity-porosity-clay.md) | G |
-| · | [Anisotropy in Rocks: Causes and Magnitudes](./05-core-geophysics/04-rock-physics/05-anisotropy-rock.md) | D |
-| · | [Attenuation and Velocity Dispersion in Rocks](./05-core-geophysics/04-rock-physics/06-attenuation-dispersion-rock.md) | D |
-| · | [Electrical Properties, Archie's Law and Clay Effects](./05-core-geophysics/04-rock-physics/07-electrical-properties-rock.md) | A |
+| ✓ | [Porosity, Density and Velocity Relationships](./05-core-geophysics/04-rock-physics/01-porosity-density-velocity.md) | A |
+| ✓ | [Effective-Medium Theories (Voigt, Reuss, Hashin-Shtrikman)](./05-core-geophysics/04-rock-physics/02-effective-medium-theory.md) | G |
+| ✓ | [Gassmann Fluid Substitution and Saturation Effects](./05-core-geophysics/04-rock-physics/03-gassmann-fluid-substitution.md) | G |
+| ✓ | [Velocity-Porosity-Clay Models and Empirical Relations](./05-core-geophysics/04-rock-physics/04-velocity-porosity-clay.md) | G |
+| ✓ | [Anisotropy in Rocks: Causes and Magnitudes](./05-core-geophysics/04-rock-physics/05-anisotropy-rock.md) | D |
+| ✓ | [Attenuation and Velocity Dispersion in Rocks](./05-core-geophysics/04-rock-physics/06-attenuation-dispersion-rock.md) | D |
+| ✓ | [Electrical Properties, Archie's Law and Clay Effects](./05-core-geophysics/04-rock-physics/07-electrical-properties-rock.md) | A |
 
 ### [ ] Survey Design and Data Acquisition Principles (0/5)
 
