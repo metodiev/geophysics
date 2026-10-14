@@ -18,13 +18,21 @@ from __future__ import annotations
 import argparse
 import re
 import sys
+import time
 import urllib.error
 import urllib.request
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 TSV = Path(__file__).resolve().parent / "verified_links.tsv"
-SKIP_DIRS = {".git", "node_modules", "__pycache__", ".venv", "venv"}
+SKIP_DIRS = {
+    ".git", "node_modules", "__pycache__", ".venv", "venv", "site-packages",
+    # Keep this set identical to tools/check_all.py: tool caches are generated
+    # artefacts, not repository content. pytest writes a .pytest_cache/README.md
+    # containing docs.pytest.org, which is not a link this repository cites.
+    ".pytest_cache", ".mypy_cache", ".ruff_cache", ".ipynb_checkpoints",
+    "build", "dist",
+}
 
 URL_RE = re.compile(r"https?://[^\s\)\]\"'<>]+")
 
@@ -75,23 +83,41 @@ def audit_markdown() -> int:
     return 1
 
 
+def _fetch(url: str, timeout: int = 25) -> int:
+    """Return the HTTP status for url, or 0 on any transport failure."""
+    try:
+        request = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+        with urllib.request.urlopen(request, timeout=timeout) as response:
+            return response.status
+    except urllib.error.HTTPError as exc:
+        return exc.code
+    except Exception:
+        return 0
+
+
 def check_urls() -> int:
     registry = load_registry()
-    target_status = {200, 301, 302}  # 403 is bot-blocking, reported separately
+    target_status = {200, 301, 302}
+    # Reachable, but refusing automated clients. 403 is documented bot
+    # protection; 406 and 429 show up the same way when a checker walks a
+    # large registry quickly, and a retry distinguishes a real block from
+    # transient rate limiting.
+    bot_block_codes = {403, 406, 429}
     changes = 0
     for url, (status, _note) in sorted(registry.items()):
-        if status == "404":
-            continue  # explicitly rejected; nothing to re-check
-        try:
-            request = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-            with urllib.request.urlopen(request, timeout=25) as response:
-                observed = response.status
-        except urllib.error.HTTPError as exc:
-            observed = exc.code
-        except Exception:
-            observed = 0
+        if status in {"404", "000"}:
+            # Recorded as unusable, deliberately, so they are documented as
+            # "do not cite" rather than re-reported as a status change on every
+            # run. Re-checking them would also re-request known-dead endpoints.
+            continue
+        observed = _fetch(url)
+        if observed in bot_block_codes:
+            time.sleep(1.5)
+            retry = _fetch(url)
+            if retry in target_status:
+                observed = retry  # transient rate limit; the link itself is fine
         flag = ""
-        if observed not in target_status and observed != 403:
+        if observed not in target_status and observed not in bot_block_codes:
             flag = "  <-- CHANGED"
             changes += 1
         print(f"{observed:>3}  (was {status:>3})  {url}{flag}")

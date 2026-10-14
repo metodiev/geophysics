@@ -14,65 +14,146 @@
 #   200  -> reachable
 #   403  -> reachable but blocks automated requests (usually bot protection);
 #           treat as valid, verify manually in a browser before relying on it
+#   406  -> reachable but refuses the checker's Accept header; same treatment
+#           as 403. Often transient rate limiting -- verify_links.py --check
+#           retries once before believing it.
+#   429  -> rate limited; transient, retried automatically, same treatment
 #   404  -> NOT valid, do not cite
 #   000  -> connection/TLS failure from this machine, do not cite
 #
 # === Institutional and data-service endpoints ===
-200	2026-10-14	https://earthquake.usgs.gov	USGS Earthquake Hazards Program
-200	2026-10-14	https://earthquake.usgs.gov/fdsnws/event/1/	USGS FDSN event web service (query endpoint for earthquake catalogs)
-403	2026-10-14	https://www.usgs.gov	USGS main site; blocks automated requests, valid in a browser
-200	2026-10-14	https://www.iris.edu	IRIS consortium site (data services now operated by EarthScope)
-200	2026-10-14	https://www.iris.edu/hq/	IRIS headquarters pages
+# === Geophysics data collections ===
+# === Software documentation ===
+# === Geospatial and gridded-data documentation ===
+# === REJECTED: do not cite these ===
+# === ObsPy and seismological data services (verified 2026-10-14) ===
+# === REJECTED (additional, verified 2026-10-14) ===
+200	2026-10-14	https://cartopy.readthedocs.io	Cartopy documentation
+200	2026-10-14	https://cds.climate.copernicus.eu	Copernicus Climate Data Store
+200	2026-10-14	https://cf-xarray.readthedocs.io	cf-xarray: CF convention aware accessors
+200	2026-10-14	https://cfconventions.org	CF conventions for climate and forecast metadata
+200	2026-10-14	https://dataspace.copernicus.eu/	Copernicus Data Space Ecosystem (Sentinel data access)
+200	2026-10-14	https://datatracker.ietf.org/doc/html/rfc7946	RFC 7946, the GeoJSON specification
+200	2026-10-14	https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html	conda environments; the environment.yml path
+200	2026-10-14	https://docs.dask.org	Dask documentation
+200	2026-10-14	https://docs.github.com/en/actions	GitHub Actions; CI description in 03-13-01 and 03-13-06
+200	2026-10-14	https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions	GitHub Actions workflow syntax; the YAML shown in the lessons
+200	2026-10-14	https://docs.obspy.org	ObsPy documentation
+200	2026-10-14	https://docs.obspy.org/packages/autogen/obspy.clients.fdsn.client.Client.html	FDSN web-service client API reference
+200	2026-10-14	https://docs.obspy.org/packages/autogen/obspy.core.stream.Stream.html	Stream class API reference
+200	2026-10-14	https://docs.obspy.org/packages/autogen/obspy.core.trace.Trace.html	Trace class API reference
+200	2026-10-14	https://docs.obspy.org/packages/autogen/obspy.signal.array_analysis.array_processing.html	array_processing (beamforming/f-k) API reference
+200	2026-10-14	https://docs.obspy.org/packages/obspy.taup.html	obspy.taup documentation (TauP travel times and ray paths)
+200	2026-10-14	https://docs.obspy.org/tutorial/	ObsPy tutorial (reading data, processing, plotting)
+200	2026-10-14	https://docs.pytest.org/en/stable/	pytest documentation home
+200	2026-10-14	https://docs.pytest.org/en/stable/how-to/assert.html	pytest assertion rewriting and approx
+200	2026-10-14	https://docs.pytest.org/en/stable/how-to/fixtures.html	pytest fixtures, setup and teardown, scopes
+200	2026-10-14	https://docs.pytest.org/en/stable/how-to/monkeypatch.html	pytest monkeypatch fixture
+200	2026-10-14	https://docs.pytest.org/en/stable/how-to/parametrize.html	pytest parametrisation
+200	2026-10-14	https://docs.python.org/3/library/ast.html	ast module; used for the static-analysis demo in 03-13-04
+200	2026-10-14	https://docs.python.org/3/library/configparser.html	INI reader; PEP 668 marker file format
+200	2026-10-14	https://docs.python.org/3/library/dataclasses.html	dataclasses; annotations as runtime data
+200	2026-10-14	https://docs.python.org/3/library/hashlib.html	hashlib; content addressing and payload checksums
+200	2026-10-14	https://docs.python.org/3/library/http.server.html	http.server; the loopback FDSN-style service in 03-13-07
+200	2026-10-14	https://docs.python.org/3/library/importlib.metadata.html	importlib.metadata; installed distribution metadata
+200	2026-10-14	https://docs.python.org/3/library/profile.html	cProfile and pstats; the profiler used in 03-13-03
+200	2026-10-14	https://docs.python.org/3/library/random.html	random; seeded reproducibility discussion
+200	2026-10-14	https://docs.python.org/3/library/statistics.html	statistics; median and spread of benchmark rounds
+200	2026-10-14	https://docs.python.org/3/library/subprocess.html	subprocess; read-only git calls and thread-count probes
+200	2026-10-14	https://docs.python.org/3/library/sysconfig.html	sysconfig; stdlib paths and EXTERNALLY-MANAGED lookup
+200	2026-10-14	https://docs.python.org/3/library/timeit.html	timeit; micro-benchmark protocol reference
+200	2026-10-14	https://docs.python.org/3/library/tomllib.html	tomllib; parsing pyproject.toml
+200	2026-10-14	https://docs.python.org/3/library/tracemalloc.html	tracemalloc; peak-allocation measurement
+200	2026-10-14	https://docs.python.org/3/library/typing.html	typing; annotations and get_type_hints
+200	2026-10-14	https://docs.python.org/3/library/unittest.html	unittest; the standard-library test framework pytest replaces
+200	2026-10-14	https://docs.python.org/3/library/urllib.request.html	urllib.request; HTTP client used in 03-13-07
+200	2026-10-14	https://docs.python.org/3/library/venv.html	venv; environment creation
+200	2026-10-14	https://docs.python.org/3/tutorial/venv.html	venv tutorial; the workflow presented in 03-13-05 and 03-13-08
+200	2026-10-14	https://docs.scipy.org/doc/scipy/	SciPy reference documentation
+200	2026-10-14	https://docs.xarray.dev	Xarray documentation
+200	2026-10-14	https://doi.org/10.1016/S0031-9201(99)00115-6	Crotwell, Owens & Ritsema (1999), TauP: flexible seismic travel-time and ray-path utilities
 200	2026-10-14	https://ds.iris.edu	IRIS Data Services
 200	2026-10-14	https://ds.iris.edu/ds/nodes/dmc/	IRIS DMC, waveform archive
-200	2026-10-14	https://www.earthscope.org	EarthScope Consortium (successor to IRIS and UNAVCO)
-200	2026-10-14	https://www.earthscope.org/data/	EarthScope data access portal
-200	2026-10-14	https://service.iris.edu/fdsnws/dataselect/1/	IRIS/EarthScope FDSN dataselect service (waveform retrieval)
-200	2026-10-14	https://www.fdsn.org	International Federation of Digital Seismograph Networks
-200	2026-10-14	https://www.orfeus-eu.org	ORFEUS, European seismological data infrastructure
-200	2026-10-14	https://www.isc.ac.uk	International Seismological Centre, global bulletin
-200	2026-10-14	https://www.gfz-potsdam.de	GFZ German Research Centre for Geosciences
-200	2026-10-14	https://icgem.gfz-potsdam.de/	ICGEM, International Centre for Global Earth Models (gravity models)
-403	2026-10-14	https://www.noaa.gov	NOAA main site; blocks automated requests, valid in a browser
-200	2026-10-14	https://www.ncei.noaa.gov	NOAA National Centers for Environmental Information
-200	2026-10-14	https://www.nodc.noaa.gov	NOAA National Oceanographic Data Center
-200	2026-10-14	https://www.ngdc.noaa.gov	NOAA National Geophysical Data Center (geophysics and geomagnetism)
-200	2026-10-14	https://www.nasa.gov	NASA
-200	2026-10-14	https://www.esa.int	European Space Agency
-200	2026-10-14	https://www.copernicus.eu	Copernicus programme
-200	2026-10-14	https://cds.climate.copernicus.eu	Copernicus Climate Data Store
-200	2026-10-14	https://grace.jpl.nasa.gov	NASA GRACE/GRACE-FO mission pages
+200	2026-10-14	https://ds.iris.edu/ds/nodes/dmc/data/formats/	IRIS/EarthScope data format descriptions (MiniSEED, SAC, StationXML)
+200	2026-10-14	https://ds.iris.edu/ds/nodes/dmc/software/downloads/	IRIS/EarthScope software downloads (ObsPy, SAC, TauP)
+200	2026-10-14	https://earthquake.usgs.gov	USGS Earthquake Hazards Program
+200	2026-10-14	https://earthquake.usgs.gov/data/comcat/	USGS ANSS Comprehensive Earthquake Catalog (ComCat)
+200	2026-10-14	https://earthquake.usgs.gov/fdsnws/event/1/	USGS FDSN event web service (query endpoint for earthquake catalogs)
+200	2026-10-14	https://epsg.io	EPSG.io coordinate system lookup
+200	2026-10-14	https://epsg.org	EPSG geodetic parameter registry (coordinate systems and ellipsoid parameters; WGS 84 ellipsoid is EPSG:7030)
+200	2026-10-14	https://gdal.org	GDAL documentation
 200	2026-10-14	https://geodesy.noaa.gov	NOAA National Geodetic Survey
-200	2026-10-14	https://www.unavco.org	UNAVCO (now part of EarthScope); GNSS and geodetic facility
-200	2026-10-14	https://www.tidesandcurrents.noaa.gov/	NOAA Center for Operational Oceanographic Products and Services (tides, sea level)
-200	2026-10-14	https://psmsl.org/	Permanent Service for Mean Sea Level
-200	2026-10-14	https://www.opentopography.org/	OpenTopography: high-resolution topography and bathymetry
-200	2026-10-14	https://dataspace.copernicus.eu/	Copernicus Data Space Ecosystem (Sentinel data access)
-
-# === Geophysics data collections ===
-200	2026-10-14	https://www.ngdc.noaa.gov/geomag/calculators/magcalc.shtml	NOAA magnetic field calculator (uses IGRF/WMM)
-200	2026-10-14	https://www.ngdc.noaa.gov/IAGA/vmod/igrf.html	International Geomagnetic Reference Field model and coefficients
-200	2026-10-14	https://www.ngdc.noaa.gov/mgg/global/	NOAA global relief (ETOPO) grids
-200	2026-10-14	https://www.ncei.noaa.gov/products/etopo-global-relief-model	ETOPO global relief model product page
-200	2026-10-14	https://www.ngdc.noaa.gov/mgg/gravity/	NOAA global gravity database
-200	2026-10-14	https://topex.ucsd.edu/marine_grav/mar_grav.html	Scripps/Sandwell marine gravity from satellite altimetry
-200	2026-10-14	https://www.ncei.noaa.gov/products/land-based-station	NOAA land-based station climate data
-
-# === Software documentation ===
+200	2026-10-14	https://geopandas.org	GeoPandas documentation
+200	2026-10-14	https://grace.jpl.nasa.gov	NASA GRACE/GRACE-FO mission pages
+200	2026-10-14	https://icgem.gfz-potsdam.de/	ICGEM, International Centre for Global Earth Models (gravity models)
 200	2026-10-14	https://numpy.org	NumPy
-200	2026-10-14	https://scipy.org	SciPy
-200	2026-10-14	https://docs.obspy.org	ObsPy documentation
+200	2026-10-14	https://numpy.org/doc/stable/reference/generated/numpy.einsum.html	numpy.einsum; compared against BLAS dot in 03-13-03
+200	2026-10-14	https://numpy.org/doc/stable/reference/generated/numpy.sum.html	numpy.sum; pairwise summation and call overhead
+200	2026-10-14	https://numpy.org/doc/stable/reference/generated/numpy.testing.assert_allclose.html	assert_allclose defaults rtol=1e-7, atol=0
+200	2026-10-14	https://numpy.org/doc/stable/reference/random/generator.html	numpy Generator and default_rng; the recommended RNG API
+200	2026-10-14	https://packaging.python.org/en/latest/specifications/dependency-specifiers.html	dependency specifier syntax and semantics
+200	2026-10-14	https://packaging.python.org/en/latest/specifications/pyproject-toml.html	pyproject.toml specification
+200	2026-10-14	https://packaging.python.org/en/latest/tutorials/packaging-projects/	packaging a project; sdist and wheel walkthrough
+200	2026-10-14	https://peps.python.org/pep-0008/	PEP 8; style conventions
+200	2026-10-14	https://peps.python.org/pep-0484/	PEP 484; type hints
+200	2026-10-14	https://peps.python.org/pep-0517/	PEP 517; the build-backend hook interface
+200	2026-10-14	https://peps.python.org/pep-0518/	PEP 518; build-system requirements in pyproject.toml
+200	2026-10-14	https://peps.python.org/pep-0621/	PEP 621; project metadata in pyproject.toml
+200	2026-10-14	https://peps.python.org/pep-0668/	PEP 668; externally managed environments
+200	2026-10-14	https://physics.nist.gov/cgi-bin/cuu/Value?bg	NIST CODATA individual value: Newtonian constant of gravitation G (value read directly: 6.674 30(15)e-11)
+200	2026-10-14	https://physics.nist.gov/cuu/Constants/	NIST CODATA fundamental physical constants (authoritative source for G, c, h, e, k_B, N_A)
+200	2026-10-14	https://pip.pypa.io/en/stable/user_guide/	pip user guide; editable installs and requirements files
+200	2026-10-14	https://proj.org	PROJ coordinate transformation software
+200	2026-10-14	https://psmsl.org/	Permanent Service for Mean Sea Level
 200	2026-10-14	https://pygmt.org	PyGMT documentation
+200	2026-10-14	https://pyproj4.github.io/pyproj/	pyproj documentation
 200	2026-10-14	https://pytorch.org	PyTorch project site
 200	2026-10-14	https://pytorch.org/get-started/locally/	PyTorch installation selector (cited in environment.yml)
-
-200	2026-10-14	https://physics.nist.gov/cuu/Constants/	NIST CODATA fundamental physical constants (authoritative source for G, c, h, e, k_B, N_A)
-200	2026-10-14	https://physics.nist.gov/cgi-bin/cuu/Value?bg	NIST CODATA individual value: Newtonian constant of gravitation G (value read directly: 6.674 30(15)e-11)
-200	2026-10-14	https://epsg.org	EPSG geodetic parameter registry (coordinate systems and ellipsoid parameters; WGS 84 ellipsoid is EPSG:7030)
-200	2026-10-14	https://www.iers.org	International Earth Rotation and Reference Systems Service (Earth orientation and geodetic parameters)
-
-# === REJECTED: do not cite these ===
-404	2026-10-14	https://www.ngdc.noaa.gov/seg/wdm/	DEAD: retired World Data Center for Marine Geology page
-404	2026-10-14	https://www.ngdc.noaa.gov/mgg/geology/data.html	DEAD: NOAA marine geology data index path has moved; locate the current page from ngdc.noaa.gov
-404	2026-10-14	https://service.iris.edu/fdsnws/event/1/	DEAD: IRIS event web service base path retired; use the USGS FDSN event service instead
+200	2026-10-14	https://rasterio.readthedocs.io	Rasterio documentation
 000	2026-10-14	https://scihub.copernicus.eu/	UNREACHABLE: legacy Copernicus scihub; use dataspace.copernicus.eu
+200	2026-10-14	https://scipy.org	SciPy
+200	2026-10-14	https://seis.sc.edu/taup/	TauP reference implementation and documentation (Crotwell, Owens, Ritsema)
+200	2026-10-14	https://service.earthscope.org	EarthScope FDSN web-service base URL (used by the obspy client)
+200	2026-10-14	https://service.iris.edu/fdsnws/dataselect/1/	IRIS/EarthScope FDSN dataselect service (waveform retrieval)
+404	2026-10-14	https://service.iris.edu/fdsnws/event/1/	DEAD: IRIS event web service base path retired; use the USGS FDSN event service instead
+404	2026-10-14	https://service.iris.edu/fdsnws/event/1/query	DEAD: IRIS event service retired; use the USGS FDSN event service
+200	2026-10-14	https://service.iris.edu/fdsnws/station/1/	FDSN station (StationXML) service
+200	2026-10-14	https://shapely.readthedocs.io	Shapely documentation
+200	2026-10-14	https://topex.ucsd.edu/marine_grav/mar_grav.html	Scripps/Sandwell marine gravity from satellite altimetry
+200	2026-10-14	https://unidata.github.io/netcdf4-python/	Unidata netCDF4-python documentation
+200	2026-10-14	https://www.copernicus.eu	Copernicus programme
+200	2026-10-14	https://www.earthscope.org	EarthScope Consortium (successor to IRIS and UNAVCO)
+200	2026-10-14	https://www.earthscope.org/data/	EarthScope data access portal
+404	2026-10-14	https://www.earthscope.org/data/software/	DEAD: no software page at this path
+404	2026-10-14	https://www.earthscope.org/data/waveforms/	DEAD: no waveform page at this path
+200	2026-10-14	https://www.esa.int	European Space Agency
+200	2026-10-14	https://www.fdsn.org	International Federation of Digital Seismograph Networks
+200	2026-10-14	https://www.fdsn.org/webservices/	FDSN web services specification (station, dataselect, event)
+200	2026-10-14	https://www.gfz-potsdam.de	GFZ German Research Centre for Geosciences
+200	2026-10-14	https://www.iers.org	International Earth Rotation and Reference Systems Service (Earth orientation and geodetic parameters)
+200	2026-10-14	https://www.iris.edu	IRIS consortium site (data services now operated by EarthScope)
+200	2026-10-14	https://www.iris.edu/hq/	IRIS headquarters pages
+200	2026-10-14	https://www.isc.ac.uk	International Seismological Centre, global bulletin
+200	2026-10-14	https://www.nasa.gov	NASA
+200	2026-10-14	https://www.naturalearthdata.com	Natural Earth public-domain map data
+200	2026-10-14	https://www.ncei.noaa.gov	NOAA National Centers for Environmental Information
+200	2026-10-14	https://www.ncei.noaa.gov/	NCEI: NOAA's archive for climate, ocean and geophysical data
+200	2026-10-14	https://www.ncei.noaa.gov/products/etopo-global-relief-model	ETOPO global relief model product page
+200	2026-10-14	https://www.ncei.noaa.gov/products/land-based-station	NOAA land-based station climate data
+200	2026-10-14	https://www.ngdc.noaa.gov	NOAA National Geophysical Data Center (geophysics and geomagnetism)
+200	2026-10-14	https://www.ngdc.noaa.gov/IAGA/vmod/igrf.html	International Geomagnetic Reference Field model and coefficients
+200	2026-10-14	https://www.ngdc.noaa.gov/geomag/calculators/magcalc.shtml	NOAA magnetic field calculator (uses IGRF/WMM)
+404	2026-10-14	https://www.ngdc.noaa.gov/mgg/geology/data.html	DEAD: NOAA marine geology data index path has moved; locate the current page from ngdc.noaa.gov
+200	2026-10-14	https://www.ngdc.noaa.gov/mgg/global/	NOAA global relief (ETOPO) grids
+200	2026-10-14	https://www.ngdc.noaa.gov/mgg/gravity/	NOAA global gravity database
+404	2026-10-14	https://www.ngdc.noaa.gov/seg/wdm/	DEAD: retired World Data Center for Marine Geology page
+403	2026-10-14	https://www.noaa.gov	NOAA main site; blocks automated requests, valid in a browser
+200	2026-10-14	https://www.nodc.noaa.gov	NOAA National Oceanographic Data Center
+200	2026-10-14	https://www.opentopography.org/	OpenTopography: high-resolution topography and bathymetry
+200	2026-10-14	https://www.orfeus-eu.org	ORFEUS, European seismological data infrastructure
+000	2026-10-14	https://www.seismo-live.org/	UNREACHABLE from this machine (TLS handshake failure); do not cite
+200	2026-10-14	https://www.tidesandcurrents.noaa.gov/	NOAA Center for Operational Oceanographic Products and Services (tides, sea level)
+200	2026-10-14	https://www.unavco.org	UNAVCO (now part of EarthScope); GNSS and geodetic facility
+403	2026-10-14	https://www.usgs.gov	USGS main site; blocks automated requests, valid in a browser
+200	2026-10-14	https://xarray.dev	Xarray project site
+200	2026-10-14	https://zarr.readthedocs.io	Zarr chunked array storage documentation
