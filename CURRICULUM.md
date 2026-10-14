@@ -11,10 +11,10 @@ Legend: **B** beginner · **I** intermediate · **A** advanced · **G** graduate
 | Folders | 27 |
 | Modules | 216 |
 | Lessons planned | 1146 |
-| Lessons written | 802 |
-| Lessons with valid frontmatter | 802 |
-| Exercise/solution companions written | 1558 / 2190 |
-| Completion | 70.0% |
+| Lessons written | 930 |
+| Lessons with valid frontmatter | 930 |
+| Exercise/solution companions written | 1814 / 2190 |
+| Completion | 81.2% |
 
 > Companion files are the conventional `exercises/<lesson>-exercises.md` and `<lesson>-solutions.md` pairs. Lessons in `00-orientation` and `26-reference-library` are process material and reference pages, so they carry no companions by design.
 
@@ -49,9 +49,9 @@ Legend: **B** beginner · **I** intermediate · **A** advanced · **G** graduate
 - [x] [Oceanography and Marine Geophysics](./15-oceanography-marine/README.md) — `15-oceanography-marine` · stages: intermediate->research
 - [x] [Atmospheric Physics, Meteorology and Climate Science](./16-atmosphere-climate/README.md) — `16-atmosphere-climate` · stages: beginner->research
 - [x] [Remote Sensing, GIS and Satellite Geophysics](./17-remote-sensing-gis/README.md) — `17-remote-sensing-gis` · stages: beginner->research
-- [ ] [Inverse Problems, Optimization and Uncertainty Quantification](./18-inverse-problems/README.md) — `18-inverse-problems` · stages: advanced->research
-- [ ] [Numerical Modeling and High-Performance Computing](./19-numerical-modeling-hpc/README.md) — `19-numerical-modeling-hpc` · stages: advanced->research
-- [ ] [Signal Processing and Time-Series Analysis](./20-signal-processing/README.md) — `20-signal-processing` · stages: intermediate->research
+- [x] [Inverse Problems, Optimization and Uncertainty Quantification](./18-inverse-problems/README.md) — `18-inverse-problems` · stages: advanced->research
+- [x] [Numerical Modeling and High-Performance Computing](./19-numerical-modeling-hpc/README.md) — `19-numerical-modeling-hpc` · stages: advanced->research
+- [x] [Signal Processing and Time-Series Analysis](./20-signal-processing/README.md) — `20-signal-processing` · stages: intermediate->research
 - [ ] [Statistics, Bayesian Inference and Machine Learning](./21-statistics-bayesian-ml/README.md) — `21-statistics-bayesian-ml` · stages: intermediate->research
 - [ ] [Data Engineering, Reproducibility and Scientific Software](./22-data-engineering-reproducibility/README.md) — `22-data-engineering-reproducibility` · stages: intermediate->research
 - [ ] [Field Methods, Instruments and Laboratory Work](./23-field-methods-instruments/README.md) — `23-field-methods-instruments` · stages: beginner->research
@@ -2019,324 +2019,324 @@ Module index: [`08-remote-sensing-applications-geophysics/README.md`](./17-remot
 
 ## Inverse Problems, Optimization and Uncertainty Quantification
 
-`18-inverse-problems` — **9 modules**, **0/52 lessons written**
+`18-inverse-problems` — **9 modules**, **52/52 lessons written**
 
 [Folder index](./18-inverse-problems/README.md)
 
-### [ ] Foundations of Inverse Problems (0/5)
+### [x] Foundations of Inverse Problems (5/5)
 
 Module index: [`01-inverse-problem-foundations/README.md`](./18-inverse-problems/01-inverse-problem-foundations/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Forward vs Inverse Problems and the Practical Asymmetry](./18-inverse-problems/01-inverse-problem-foundations/01-forward-and-inverse.md) | A |
-| · | [Hadamard's Conditions: Existence, Uniqueness, Stability](./18-inverse-problems/01-inverse-problem-foundations/02-hadamard-well-posedness.md) | G |
-| · | [Null Space, Non-Uniqueness and Equivalence Classes](./18-inverse-problems/01-inverse-problem-foundations/03-null-space.md) | G |
-| · | [Discretisation, Parameterisation and Model Choice](./18-inverse-problems/01-inverse-problem-foundations/04-discretisation-reality.md) | D |
-| · | [Model Space, Data Space and Mappings Between Them](./18-inverse-problems/01-inverse-problem-foundations/05-model-space-data-space.md) | G |
+| ✓ | [Forward vs Inverse Problems and the Practical Asymmetry](./18-inverse-problems/01-inverse-problem-foundations/01-forward-and-inverse.md) | A |
+| ✓ | [Hadamard's Conditions: Existence, Uniqueness, Stability](./18-inverse-problems/01-inverse-problem-foundations/02-hadamard-well-posedness.md) | G |
+| ✓ | [Null Space, Non-Uniqueness and Equivalence Classes](./18-inverse-problems/01-inverse-problem-foundations/03-null-space.md) | G |
+| ✓ | [Discretisation, Parameterisation and Model Choice](./18-inverse-problems/01-inverse-problem-foundations/04-discretisation-reality.md) | D |
+| ✓ | [Model Space, Data Space and Mappings Between Them](./18-inverse-problems/01-inverse-problem-foundations/05-model-space-data-space.md) | G |
 
-### [ ] Linear Inverse Problems (0/6)
+### [x] Linear Inverse Problems (6/6)
 
 Module index: [`02-linear-inverse-problems/README.md`](./18-inverse-problems/02-linear-inverse-problems/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Overdetermined Problems and Least Squares](./18-inverse-problems/02-linear-inverse-problems/01-overdetermined.md) | A |
-| · | [Underdetermined Problems and Minimum-Norm Solutions](./18-inverse-problems/02-linear-inverse-problems/02-underdetermined.md) | A |
-| · | [The Generalised (Moore-Penrose) Inverse](./18-inverse-problems/02-linear-inverse-problems/03-generalized-inverse.md) | G |
-| · | [SVD Analysis: Model Resolution and Data Importance](./18-inverse-problems/02-linear-inverse-problems/04-svd-analysis-inverse.md) | D |
-| · | [Resolution and Information Matrices in Interpretation](./18-inverse-problems/02-linear-inverse-problems/05-resolution-matrices.md) | D |
-| · | [Data Weighting and Error Covariance Specification](./18-inverse-problems/02-linear-inverse-problems/06-weighting-and-covariance.md) | G |
+| ✓ | [Overdetermined Problems and Least Squares](./18-inverse-problems/02-linear-inverse-problems/01-overdetermined.md) | A |
+| ✓ | [Underdetermined Problems and Minimum-Norm Solutions](./18-inverse-problems/02-linear-inverse-problems/02-underdetermined.md) | A |
+| ✓ | [The Generalised (Moore-Penrose) Inverse](./18-inverse-problems/02-linear-inverse-problems/03-generalized-inverse.md) | G |
+| ✓ | [SVD Analysis: Model Resolution and Data Importance](./18-inverse-problems/02-linear-inverse-problems/04-svd-analysis-inverse.md) | D |
+| ✓ | [Resolution and Information Matrices in Interpretation](./18-inverse-problems/02-linear-inverse-problems/05-resolution-matrices.md) | D |
+| ✓ | [Data Weighting and Error Covariance Specification](./18-inverse-problems/02-linear-inverse-problems/06-weighting-and-covariance.md) | G |
 
-### [ ] Regularisation and Stabilisation (0/7)
+### [x] Regularisation and Stabilisation (7/7)
 
 Module index: [`03-regularization/README.md`](./18-inverse-problems/03-regularization/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Why Regularisation Is Physically and Statistically Justified](./18-inverse-problems/03-regularization/01-why-regularize.md) | G |
-| · | [Tikhonov Regularisation and the Smoothing Trade-Off](./18-inverse-problems/03-regularization/02-tikhonov.md) | D |
-| · | [Choosing the Trade-Off: L-Curve, GCV, Discrepancy Principle](./18-inverse-problems/03-regularization/03-parameter-choice.md) | R |
-| · | [L1 Regularisation, Sparsity and Compressive Sensing](./18-inverse-problems/03-regularization/04-sparsity.md) | R |
-| · | [Total Variation and Edge-Preserving Inversion](./18-inverse-problems/03-regularization/05-total-variation.md) | R |
-| · | [Physical Constraints, Bounds and Feasible Model Sets](./18-inverse-problems/03-regularization/06-constraints.md) | G |
-| · | [Regularisation of Nonlinear Problems](./18-inverse-problems/03-regularization/07-nonlinear-regularization.md) | R |
+| ✓ | [Why Regularisation Is Physically and Statistically Justified](./18-inverse-problems/03-regularization/01-why-regularize.md) | G |
+| ✓ | [Tikhonov Regularisation and the Smoothing Trade-Off](./18-inverse-problems/03-regularization/02-tikhonov.md) | D |
+| ✓ | [Choosing the Trade-Off: L-Curve, GCV, Discrepancy Principle](./18-inverse-problems/03-regularization/03-parameter-choice.md) | R |
+| ✓ | [L1 Regularisation, Sparsity and Compressive Sensing](./18-inverse-problems/03-regularization/04-sparsity.md) | R |
+| ✓ | [Total Variation and Edge-Preserving Inversion](./18-inverse-problems/03-regularization/05-total-variation.md) | R |
+| ✓ | [Physical Constraints, Bounds and Feasible Model Sets](./18-inverse-problems/03-regularization/06-constraints.md) | G |
+| ✓ | [Regularisation of Nonlinear Problems](./18-inverse-problems/03-regularization/07-nonlinear-regularization.md) | R |
 
-### [ ] Nonlinear Inversion and Optimisation (0/7)
+### [x] Nonlinear Inversion and Optimisation (7/7)
 
 Module index: [`04-nonlinear-inversion/README.md`](./18-inverse-problems/04-nonlinear-inversion/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Local Linearisation, Jacobians and Iteration](./18-inverse-problems/04-nonlinear-inversion/01-local-linearization.md) | G |
-| · | [Gradient, Gauss-Newton and Full Newton Methods](./18-inverse-problems/04-nonlinear-inversion/02-gradient-and-newton.md) | G |
-| · | [Conjugate Gradient and Large-Scale Inversion](./18-inverse-problems/04-nonlinear-inversion/03-conjugate-gradient-inverse.md) | R |
-| · | [Global Search: Monte Carlo, Simulated Annealing, Genetic Algorithms](./18-inverse-problems/04-nonlinear-inversion/04-global-search.md) | R |
-| · | [Neighbourhood and Very Fast Simulated Annealing](./18-inverse-problems/04-nonlinear-inversion/05-neighbourhood-algorithms.md) | R |
-| · | [Multi-Start, Hybrid and Memetic Strategies](./18-inverse-problems/04-nonlinear-inversion/06-multi-start-and-hybrid.md) | R |
-| · | [Convergence Diagnosis and Local-Minimum Traps](./18-inverse-problems/04-nonlinear-inversion/07-convergence-and-local-minima.md) | D |
+| ✓ | [Local Linearisation, Jacobians and Iteration](./18-inverse-problems/04-nonlinear-inversion/01-local-linearization.md) | G |
+| ✓ | [Gradient, Gauss-Newton and Full Newton Methods](./18-inverse-problems/04-nonlinear-inversion/02-gradient-and-newton.md) | G |
+| ✓ | [Conjugate Gradient and Large-Scale Inversion](./18-inverse-problems/04-nonlinear-inversion/03-conjugate-gradient-inverse.md) | R |
+| ✓ | [Global Search: Monte Carlo, Simulated Annealing, Genetic Algorithms](./18-inverse-problems/04-nonlinear-inversion/04-global-search.md) | R |
+| ✓ | [Neighbourhood and Very Fast Simulated Annealing](./18-inverse-problems/04-nonlinear-inversion/05-neighbourhood-algorithms.md) | R |
+| ✓ | [Multi-Start, Hybrid and Memetic Strategies](./18-inverse-problems/04-nonlinear-inversion/06-multi-start-and-hybrid.md) | R |
+| ✓ | [Convergence Diagnosis and Local-Minimum Traps](./18-inverse-problems/04-nonlinear-inversion/07-convergence-and-local-minima.md) | D |
 
-### [ ] Bayesian Inversion and Inference (0/8)
+### [x] Bayesian Inversion and Inference (8/8)
 
 Module index: [`05-bayesian-inversion/README.md`](./18-inverse-problems/05-bayesian-inversion/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Bayes' Theorem as an Inverse-Problem Formulation](./18-inverse-problems/05-bayesian-inversion/01-bayes-inverse-formulation.md) | D |
-| · | [Constructing Likelihoods and Error Models](./18-inverse-problems/05-bayesian-inversion/02-likelihood-models.md) | R |
-| · | [Priors: Informative, Reference and Their Influence](./18-inverse-problems/05-bayesian-inversion/03-priors.md) | R |
-| · | [Markov Chain Monte Carlo: Metropolis-Hastings and Gibbs](./18-inverse-problems/05-bayesian-inversion/04-mcmc.md) | R |
-| · | [Hamiltonian Monte Carlo and Modern Samplers](./18-inverse-problems/05-bayesian-inversion/05-hmc-and-modern-samplers.md) | R |
-| · | [Posterior Summaries: Marginals, Credible Intervals, Correlations](./18-inverse-problems/05-bayesian-inversion/06-posterior-summary.md) | D |
-| · | [Bayesian Evidence and Model Selection](./18-inverse-problems/05-bayesian-inversion/07-evidence-and-model-selection.md) | R |
-| · | [Trans-Dimensional and Reversible-Jump MCMC](./18-inverse-problems/05-bayesian-inversion/08-trans-dimensional.md) | R |
+| ✓ | [Bayes' Theorem as an Inverse-Problem Formulation](./18-inverse-problems/05-bayesian-inversion/01-bayes-inverse-formulation.md) | D |
+| ✓ | [Constructing Likelihoods and Error Models](./18-inverse-problems/05-bayesian-inversion/02-likelihood-models.md) | R |
+| ✓ | [Priors: Informative, Reference and Their Influence](./18-inverse-problems/05-bayesian-inversion/03-priors.md) | R |
+| ✓ | [Markov Chain Monte Carlo: Metropolis-Hastings and Gibbs](./18-inverse-problems/05-bayesian-inversion/04-mcmc.md) | R |
+| ✓ | [Hamiltonian Monte Carlo and Modern Samplers](./18-inverse-problems/05-bayesian-inversion/05-hmc-and-modern-samplers.md) | R |
+| ✓ | [Posterior Summaries: Marginals, Credible Intervals, Correlations](./18-inverse-problems/05-bayesian-inversion/06-posterior-summary.md) | D |
+| ✓ | [Bayesian Evidence and Model Selection](./18-inverse-problems/05-bayesian-inversion/07-evidence-and-model-selection.md) | R |
+| ✓ | [Trans-Dimensional and Reversible-Jump MCMC](./18-inverse-problems/05-bayesian-inversion/08-trans-dimensional.md) | R |
 
-### [ ] Uncertainty Quantification (0/6)
+### [x] Uncertainty Quantification (6/6)
 
 Module index: [`06-uncertainty-quantification/README.md`](./18-inverse-problems/06-uncertainty-quantification/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Taxonomy of Uncertainty: Aleatory, Epistemic, Structural](./18-inverse-problems/06-uncertainty-quantification/01-uncertainty-taxonomy.md) | D |
-| · | [Monte Carlo Propagation and Its Convergence](./18-inverse-problems/06-uncertainty-quantification/02-monte-carlo-uq.md) | G |
-| · | [Sensitivity Analysis: Local, Global, Sobol Indices](./18-inverse-problems/06-uncertainty-quantification/03-sensitivity-analysis.md) | R |
-| · | [Surrogate Models and Polynomial Chaos for UQ](./18-inverse-problems/06-uncertainty-quantification/04-surrogate-uq.md) | R |
-| · | [Visualising and Communicating Uncertainty](./18-inverse-problems/06-uncertainty-quantification/05-uncertainty-visualisation.md) | D |
-| · | [Decision-Making Under Uncertainty and Value of Information](./18-inverse-problems/06-uncertainty-quantification/06-decision-under-uncertainty.md) | R |
+| ✓ | [Taxonomy of Uncertainty: Aleatory, Epistemic, Structural](./18-inverse-problems/06-uncertainty-quantification/01-uncertainty-taxonomy.md) | D |
+| ✓ | [Monte Carlo Propagation and Its Convergence](./18-inverse-problems/06-uncertainty-quantification/02-monte-carlo-uq.md) | G |
+| ✓ | [Sensitivity Analysis: Local, Global, Sobol Indices](./18-inverse-problems/06-uncertainty-quantification/03-sensitivity-analysis.md) | R |
+| ✓ | [Surrogate Models and Polynomial Chaos for UQ](./18-inverse-problems/06-uncertainty-quantification/04-surrogate-uq.md) | R |
+| ✓ | [Visualising and Communicating Uncertainty](./18-inverse-problems/06-uncertainty-quantification/05-uncertainty-visualisation.md) | D |
+| ✓ | [Decision-Making Under Uncertainty and Value of Information](./18-inverse-problems/06-uncertainty-quantification/06-decision-under-uncertainty.md) | R |
 
-### [ ] Joint and Multi-Physics Inversion (0/5)
+### [x] Joint and Multi-Physics Inversion (5/5)
 
 Module index: [`07-joint-and-multi-physics-inversion/README.md`](./18-inverse-problems/07-joint-and-multi-physics-inversion/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Why Joint Inversion: Complementary Sensitivities](./18-inverse-problems/07-joint-and-multi-physics-inversion/01-joint-inversion-concepts.md) | R |
-| · | [Structural (Cross-Gradient) Coupling](./18-inverse-problems/07-joint-and-multi-physics-inversion/02-structural-joint-inversion.md) | R |
-| · | [Petrophysically Coupled Joint Inversion](./18-inverse-problems/07-joint-and-multi-physics-inversion/03-petrophysical-joint-inversion.md) | R |
-| · | [Sequential vs Simultaneous Inversion](./18-inverse-problems/07-joint-and-multi-physics-inversion/04-sequential-vs-simultaneous.md) | R |
-| · | [Pitfalls: Inconsistent Physics, Weighting, Over-Coupling](./18-inverse-problems/07-joint-and-multi-physics-inversion/05-joint-inversion-pitfalls.md) | R |
+| ✓ | [Why Joint Inversion: Complementary Sensitivities](./18-inverse-problems/07-joint-and-multi-physics-inversion/01-joint-inversion-concepts.md) | R |
+| ✓ | [Structural (Cross-Gradient) Coupling](./18-inverse-problems/07-joint-and-multi-physics-inversion/02-structural-joint-inversion.md) | R |
+| ✓ | [Petrophysically Coupled Joint Inversion](./18-inverse-problems/07-joint-and-multi-physics-inversion/03-petrophysical-joint-inversion.md) | R |
+| ✓ | [Sequential vs Simultaneous Inversion](./18-inverse-problems/07-joint-and-multi-physics-inversion/04-sequential-vs-simultaneous.md) | R |
+| ✓ | [Pitfalls: Inconsistent Physics, Weighting, Over-Coupling](./18-inverse-problems/07-joint-and-multi-physics-inversion/05-joint-inversion-pitfalls.md) | R |
 
-### [ ] Practical Inversion Workflow (0/4)
+### [x] Practical Inversion Workflow (4/4)
 
 Module index: [`08-practical-inversion-workflow/README.md`](./18-inverse-problems/08-practical-inversion-workflow/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Setting Up a Solvable Inverse Problem](./18-inverse-problems/08-practical-inversion-workflow/01-problem-setup.md) | G |
-| · | [Synthetic Testing, Checkerboards and Recovery Tests](./18-inverse-problems/08-practical-inversion-workflow/02-synthetic-testing.md) | R |
-| · | [Assessing a Model: Resolution, Artifacts, Alternatives](./18-inverse-problems/08-practical-inversion-workflow/03-model-assessment.md) | R |
-| · | [Reporting Inversion Results Responsibly](./18-inverse-problems/08-practical-inversion-workflow/04-reporting-inversion.md) | D |
+| ✓ | [Setting Up a Solvable Inverse Problem](./18-inverse-problems/08-practical-inversion-workflow/01-problem-setup.md) | G |
+| ✓ | [Synthetic Testing, Checkerboards and Recovery Tests](./18-inverse-problems/08-practical-inversion-workflow/02-synthetic-testing.md) | R |
+| ✓ | [Assessing a Model: Resolution, Artifacts, Alternatives](./18-inverse-problems/08-practical-inversion-workflow/03-model-assessment.md) | R |
+| ✓ | [Reporting Inversion Results Responsibly](./18-inverse-problems/08-practical-inversion-workflow/04-reporting-inversion.md) | D |
 
-### [ ] Machine Learning Approaches to Inversion (0/4)
+### [x] Machine Learning Approaches to Inversion (4/4)
 
 Module index: [`09-machine-learning-inversion/README.md`](./18-inverse-problems/09-machine-learning-inversion/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Learned Inversion: Direct and Iterative Networks](./18-inverse-problems/09-machine-learning-inversion/01-learned-inversion.md) | R |
-| · | [Physics-Informed Neural Networks](./18-inverse-problems/09-machine-learning-inversion/02-physics-informed-networks.md) | R |
-| · | [Generative Priors: GANs, VAEs, Diffusion Models](./18-inverse-problems/09-machine-learning-inversion/03-generative-models-inversion.md) | R |
-| · | [Uncertainty in Learned Inversion: Pitfalls and Calibration](./18-inverse-problems/09-machine-learning-inversion/04-uncertainty-in-learned-inversion.md) | R |
+| ✓ | [Learned Inversion: Direct and Iterative Networks](./18-inverse-problems/09-machine-learning-inversion/01-learned-inversion.md) | R |
+| ✓ | [Physics-Informed Neural Networks](./18-inverse-problems/09-machine-learning-inversion/02-physics-informed-networks.md) | R |
+| ✓ | [Generative Priors: GANs, VAEs, Diffusion Models](./18-inverse-problems/09-machine-learning-inversion/03-generative-models-inversion.md) | R |
+| ✓ | [Uncertainty in Learned Inversion: Pitfalls and Calibration](./18-inverse-problems/09-machine-learning-inversion/04-uncertainty-in-learned-inversion.md) | R |
 
 ## Numerical Modeling and High-Performance Computing
 
-`19-numerical-modeling-hpc` — **8 modules**, **0/39 lessons written**
+`19-numerical-modeling-hpc` — **8 modules**, **39/39 lessons written**
 
 [Folder index](./19-numerical-modeling-hpc/README.md)
 
-### [ ] Numerical Foundations for Simulation (0/4)
+### [x] Numerical Foundations for Simulation (4/4)
 
 Module index: [`01-numerical-foundations/README.md`](./19-numerical-modeling-hpc/01-numerical-foundations/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Discretisation: Grids, Nodes, Cells and Degrees of Freedom](./19-numerical-modeling-hpc/01-numerical-foundations/01-discretisation-concepts.md) | G |
-| · | [Truncation Error, Order of Accuracy and Convergence Rates](./19-numerical-modeling-hpc/01-numerical-foundations/02-convergence-and-error.md) | D |
-| · | [Consistency, Stability and the Lax Equivalence Theorem](./19-numerical-modeling-hpc/01-numerical-foundations/03-consistency-stability.md) | R |
-| · | [Numerical Dispersion, Dissipation and Grid Anisotropy](./19-numerical-modeling-hpc/01-numerical-foundations/04-numerical-dispersion-diffusion.md) | R |
+| ✓ | [Discretisation: Grids, Nodes, Cells and Degrees of Freedom](./19-numerical-modeling-hpc/01-numerical-foundations/01-discretisation-concepts.md) | G |
+| ✓ | [Truncation Error, Order of Accuracy and Convergence Rates](./19-numerical-modeling-hpc/01-numerical-foundations/02-convergence-and-error.md) | D |
+| ✓ | [Consistency, Stability and the Lax Equivalence Theorem](./19-numerical-modeling-hpc/01-numerical-foundations/03-consistency-stability.md) | R |
+| ✓ | [Numerical Dispersion, Dissipation and Grid Anisotropy](./19-numerical-modeling-hpc/01-numerical-foundations/04-numerical-dispersion-diffusion.md) | R |
 
-### [ ] Finite-Difference Methods (0/6)
+### [x] Finite-Difference Methods (6/6)
 
 Module index: [`02-finite-difference-methods/README.md`](./19-numerical-modeling-hpc/02-finite-difference-methods/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Deriving Finite-Difference Operators via Taylor Expansion](./19-numerical-modeling-hpc/02-finite-difference-methods/01-fd-derivation.md) | A |
-| · | [High-Order and Compact Stencils; Staggered Grids](./19-numerical-modeling-hpc/02-finite-difference-methods/02-fd-stencils.md) | D |
-| · | [Boundary Conditions: Dirichlet, Neumann, Absorbing, PML](./19-numerical-modeling-hpc/02-finite-difference-methods/03-fd-boundary-conditions.md) | R |
-| · | [Explicit vs Implicit Time Stepping and Stability Limits](./19-numerical-modeling-hpc/02-finite-difference-methods/04-fd-time-stepping.md) | D |
-| · | [Finite-Difference Acoustic and Elastic Wave Propagation](./19-numerical-modeling-hpc/02-finite-difference-methods/05-fd-wave-propagation.md) | R |
-| · | [FD for Diffusion, Laplace and Poisson Problems](./19-numerical-modeling-hpc/02-finite-difference-methods/06-fd-diffusion-and-potential.md) | D |
+| ✓ | [Deriving Finite-Difference Operators via Taylor Expansion](./19-numerical-modeling-hpc/02-finite-difference-methods/01-fd-derivation.md) | A |
+| ✓ | [High-Order and Compact Stencils; Staggered Grids](./19-numerical-modeling-hpc/02-finite-difference-methods/02-fd-stencils.md) | D |
+| ✓ | [Boundary Conditions: Dirichlet, Neumann, Absorbing, PML](./19-numerical-modeling-hpc/02-finite-difference-methods/03-fd-boundary-conditions.md) | R |
+| ✓ | [Explicit vs Implicit Time Stepping and Stability Limits](./19-numerical-modeling-hpc/02-finite-difference-methods/04-fd-time-stepping.md) | D |
+| ✓ | [Finite-Difference Acoustic and Elastic Wave Propagation](./19-numerical-modeling-hpc/02-finite-difference-methods/05-fd-wave-propagation.md) | R |
+| ✓ | [FD for Diffusion, Laplace and Poisson Problems](./19-numerical-modeling-hpc/02-finite-difference-methods/06-fd-diffusion-and-potential.md) | D |
 
-### [ ] Finite Element and Finite Volume Methods (0/5)
+### [x] Finite Element and Finite Volume Methods (5/5)
 
 Module index: [`03-finite-element-and-volume/README.md`](./19-numerical-modeling-hpc/03-finite-element-and-volume/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Weak Formulation and the Galerkin Method](./19-numerical-modeling-hpc/03-finite-element-and-volume/01-fem-weak-form.md) | R |
-| · | [Element Types, Shape Functions and Quadrature](./19-numerical-modeling-hpc/03-finite-element-and-volume/02-fem-element-types.md) | R |
-| · | [Assembly, Sparsity and Linear System Structure](./19-numerical-modeling-hpc/03-finite-element-and-volume/03-fem-assembly.md) | R |
-| · | [Finite Volume Methods and Conservative Discretisation](./19-numerical-modeling-hpc/03-finite-element-and-volume/04-finite-volume.md) | R |
-| · | [FEM in Geophysics: EM, Geodynamics and Seismology](./19-numerical-modeling-hpc/03-finite-element-and-volume/05-fem-geophysics.md) | R |
+| ✓ | [Weak Formulation and the Galerkin Method](./19-numerical-modeling-hpc/03-finite-element-and-volume/01-fem-weak-form.md) | R |
+| ✓ | [Element Types, Shape Functions and Quadrature](./19-numerical-modeling-hpc/03-finite-element-and-volume/02-fem-element-types.md) | R |
+| ✓ | [Assembly, Sparsity and Linear System Structure](./19-numerical-modeling-hpc/03-finite-element-and-volume/03-fem-assembly.md) | R |
+| ✓ | [Finite Volume Methods and Conservative Discretisation](./19-numerical-modeling-hpc/03-finite-element-and-volume/04-finite-volume.md) | R |
+| ✓ | [FEM in Geophysics: EM, Geodynamics and Seismology](./19-numerical-modeling-hpc/03-finite-element-and-volume/05-fem-geophysics.md) | R |
 
-### [ ] Spectral and Pseudospectral Methods (0/4)
+### [x] Spectral and Pseudospectral Methods (4/4)
 
 Module index: [`04-spectral-and-pseudospectral/README.md`](./19-numerical-modeling-hpc/04-spectral-and-pseudospectral/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Spectral Methods: Basis Choice and Exponential Convergence](./19-numerical-modeling-hpc/04-spectral-and-pseudospectral/01-spectral-methods.md) | R |
-| · | [Pseudospectral Methods, Transforms and Aliasing](./19-numerical-modeling-hpc/04-spectral-and-pseudospectral/02-pseudospectral.md) | R |
-| · | [Spectral Element Methods and Their Geophysical Use](./19-numerical-modeling-hpc/04-spectral-and-pseudospectral/03-spectral-elements.md) | R |
-| · | [Spherical Harmonic Modelling of Global Fields](./19-numerical-modeling-hpc/04-spectral-and-pseudospectral/04-spherical-harmonics-modelling.md) | R |
+| ✓ | [Spectral Methods: Basis Choice and Exponential Convergence](./19-numerical-modeling-hpc/04-spectral-and-pseudospectral/01-spectral-methods.md) | R |
+| ✓ | [Pseudospectral Methods, Transforms and Aliasing](./19-numerical-modeling-hpc/04-spectral-and-pseudospectral/02-pseudospectral.md) | R |
+| ✓ | [Spectral Element Methods and Their Geophysical Use](./19-numerical-modeling-hpc/04-spectral-and-pseudospectral/03-spectral-elements.md) | R |
+| ✓ | [Spherical Harmonic Modelling of Global Fields](./19-numerical-modeling-hpc/04-spectral-and-pseudospectral/04-spherical-harmonics-modelling.md) | R |
 
-### [ ] Integral Equation and Boundary Methods (0/4)
+### [x] Integral Equation and Boundary Methods (4/4)
 
 Module index: [`05-integral-equation-and-boundary-methods/README.md`](./19-numerical-modeling-hpc/05-integral-equation-and-boundary-methods/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Volume and Surface Integral Equations](./19-numerical-modeling-hpc/05-integral-equation-and-boundary-methods/01-integral-equations.md) | R |
-| · | [Boundary Element Methods for Potential Fields](./19-numerical-modeling-hpc/05-integral-equation-and-boundary-methods/02-boundary-element.md) | R |
-| · | [Numerical Green's Functions and Their Computation](./19-numerical-modeling-hpc/05-integral-equation-and-boundary-methods/03-greens-function-numerics.md) | R |
-| · | [Fast Multipole and Hierarchical Acceleration](./19-numerical-modeling-hpc/05-integral-equation-and-boundary-methods/04-fast-multipole.md) | R |
+| ✓ | [Volume and Surface Integral Equations](./19-numerical-modeling-hpc/05-integral-equation-and-boundary-methods/01-integral-equations.md) | R |
+| ✓ | [Boundary Element Methods for Potential Fields](./19-numerical-modeling-hpc/05-integral-equation-and-boundary-methods/02-boundary-element.md) | R |
+| ✓ | [Numerical Green's Functions and Their Computation](./19-numerical-modeling-hpc/05-integral-equation-and-boundary-methods/03-greens-function-numerics.md) | R |
+| ✓ | [Fast Multipole and Hierarchical Acceleration](./19-numerical-modeling-hpc/05-integral-equation-and-boundary-methods/04-fast-multipole.md) | R |
 
-### [ ] High-Performance and Parallel Computing (0/7)
+### [x] High-Performance and Parallel Computing (7/7)
 
 Module index: [`06-hpc-and-parallel-computing/README.md`](./19-numerical-modeling-hpc/06-hpc-and-parallel-computing/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Computer Architecture, Memory Hierarchy and Roofline Thinking](./19-numerical-modeling-hpc/06-hpc-and-parallel-computing/01-hpc-architecture.md) | G |
-| · | [Shared-Memory Parallelism: OpenMP and Threading](./19-numerical-modeling-hpc/06-hpc-and-parallel-computing/02-shared-memory-parallelism.md) | R |
-| · | [Distributed-Memory Parallelism with MPI](./19-numerical-modeling-hpc/06-hpc-and-parallel-computing/03-mpi-distributed.md) | R |
-| · | [GPU Computing: CUDA, OpenCL and Portability Layers](./19-numerical-modeling-hpc/06-hpc-and-parallel-computing/04-gpu-computing.md) | R |
-| · | [Domain Decomposition and Load Balancing](./19-numerical-modeling-hpc/06-hpc-and-parallel-computing/05-domain-decomposition.md) | R |
-| · | [Parallel I/O, Checkpointing and Job Management](./19-numerical-modeling-hpc/06-hpc-and-parallel-computing/06-hpc-io-and-checkpointing.md) | R |
-| · | [Reproducibility and Provenance in HPC Workflows](./19-numerical-modeling-hpc/06-hpc-and-parallel-computing/07-reproducible-hpc.md) | R |
+| ✓ | [Computer Architecture, Memory Hierarchy and Roofline Thinking](./19-numerical-modeling-hpc/06-hpc-and-parallel-computing/01-hpc-architecture.md) | G |
+| ✓ | [Shared-Memory Parallelism: OpenMP and Threading](./19-numerical-modeling-hpc/06-hpc-and-parallel-computing/02-shared-memory-parallelism.md) | R |
+| ✓ | [Distributed-Memory Parallelism with MPI](./19-numerical-modeling-hpc/06-hpc-and-parallel-computing/03-mpi-distributed.md) | R |
+| ✓ | [GPU Computing: CUDA, OpenCL and Portability Layers](./19-numerical-modeling-hpc/06-hpc-and-parallel-computing/04-gpu-computing.md) | R |
+| ✓ | [Domain Decomposition and Load Balancing](./19-numerical-modeling-hpc/06-hpc-and-parallel-computing/05-domain-decomposition.md) | R |
+| ✓ | [Parallel I/O, Checkpointing and Job Management](./19-numerical-modeling-hpc/06-hpc-and-parallel-computing/06-hpc-io-and-checkpointing.md) | R |
+| ✓ | [Reproducibility and Provenance in HPC Workflows](./19-numerical-modeling-hpc/06-hpc-and-parallel-computing/07-reproducible-hpc.md) | R |
 
-### [ ] Verification, Validation and Numerical Uncertainty (0/4)
+### [x] Verification, Validation and Numerical Uncertainty (4/4)
 
 Module index: [`07-verification-validation-uncertainty/README.md`](./19-numerical-modeling-hpc/07-verification-validation-uncertainty/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Code Verification: Order-of-Accuracy and Manufactured Solutions](./19-numerical-modeling-hpc/07-verification-validation-uncertainty/01-code-verification.md) | R |
-| · | [Solution Verification and Discretisation Error Estimation](./19-numerical-modeling-hpc/07-verification-validation-uncertainty/02-solution-verification.md) | R |
-| · | [Model Validation Against Observations](./19-numerical-modeling-hpc/07-verification-validation-uncertainty/03-model-validation.md) | R |
-| · | [Standard Benchmark Problems and Community Comparisons](./19-numerical-modeling-hpc/07-verification-validation-uncertainty/04-benchmark-problems.md) | R |
+| ✓ | [Code Verification: Order-of-Accuracy and Manufactured Solutions](./19-numerical-modeling-hpc/07-verification-validation-uncertainty/01-code-verification.md) | R |
+| ✓ | [Solution Verification and Discretisation Error Estimation](./19-numerical-modeling-hpc/07-verification-validation-uncertainty/02-solution-verification.md) | R |
+| ✓ | [Model Validation Against Observations](./19-numerical-modeling-hpc/07-verification-validation-uncertainty/03-model-validation.md) | R |
+| ✓ | [Standard Benchmark Problems and Community Comparisons](./19-numerical-modeling-hpc/07-verification-validation-uncertainty/04-benchmark-problems.md) | R |
 
-### [ ] Geophysical Simulation Case Studies (0/5)
+### [x] Geophysical Simulation Case Studies (5/5)
 
 Module index: [`08-geophysical-simulation-case-studies/README.md`](./19-numerical-modeling-hpc/08-geophysical-simulation-case-studies/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Simulating a 2-D/3-D Seismic Wavefield](./19-numerical-modeling-hpc/08-geophysical-simulation-case-studies/01-simulate-seismic-wavefield.md) | R |
-| · | [Simulating Gravity and Magnetic Responses](./19-numerical-modeling-hpc/08-geophysical-simulation-case-studies/02-simulate-gravity-response.md) | D |
-| · | [Simulating EM Diffusion in Conductive Media](./19-numerical-modeling-hpc/08-geophysical-simulation-case-studies/03-simulate-em-diffusion.md) | R |
-| · | [Simulating Mantle Convection](./19-numerical-modeling-hpc/08-geophysical-simulation-case-studies/04-simulate-mantle-convection.md) | R |
-| · | [Running a Simple Climate Model](./19-numerical-modeling-hpc/08-geophysical-simulation-case-studies/05-simulate-climate-model.md) | R |
+| ✓ | [Simulating a 2-D/3-D Seismic Wavefield](./19-numerical-modeling-hpc/08-geophysical-simulation-case-studies/01-simulate-seismic-wavefield.md) | R |
+| ✓ | [Simulating Gravity and Magnetic Responses](./19-numerical-modeling-hpc/08-geophysical-simulation-case-studies/02-simulate-gravity-response.md) | D |
+| ✓ | [Simulating EM Diffusion in Conductive Media](./19-numerical-modeling-hpc/08-geophysical-simulation-case-studies/03-simulate-em-diffusion.md) | R |
+| ✓ | [Simulating Mantle Convection](./19-numerical-modeling-hpc/08-geophysical-simulation-case-studies/04-simulate-mantle-convection.md) | R |
+| ✓ | [Running a Simple Climate Model](./19-numerical-modeling-hpc/08-geophysical-simulation-case-studies/05-simulate-climate-model.md) | R |
 
 ## Signal Processing and Time-Series Analysis
 
-`20-signal-processing` — **8 modules**, **0/37 lessons written**
+`20-signal-processing` — **8 modules**, **37/37 lessons written**
 
 [Folder index](./20-signal-processing/README.md)
 
-### [ ] Signals and Systems (0/5)
+### [x] Signals and Systems (5/5)
 
 Module index: [`01-signals-and-systems/README.md`](./20-signal-processing/01-signals-and-systems/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Signal Classification: Continuous/Discrete, Deterministic/Random](./20-signal-processing/01-signals-and-systems/01-signal-classification.md) | I |
-| · | [Linear Time-Invariant Systems and Impulse Response](./20-signal-processing/01-signals-and-systems/02-lti-systems.md) | A |
-| · | [Convolution, Correlation and Filtering](./20-signal-processing/01-signals-and-systems/03-convolution-and-filters.md) | A |
-| · | [Transfer Functions, Poles and Zeros](./20-signal-processing/01-signals-and-systems/04-transfer-functions.md) | G |
-| · | [Sampling, Nyquist and Reconstruction](./20-signal-processing/01-signals-and-systems/05-sampling-theory.md) | A |
+| ✓ | [Signal Classification: Continuous/Discrete, Deterministic/Random](./20-signal-processing/01-signals-and-systems/01-signal-classification.md) | I |
+| ✓ | [Linear Time-Invariant Systems and Impulse Response](./20-signal-processing/01-signals-and-systems/02-lti-systems.md) | A |
+| ✓ | [Convolution, Correlation and Filtering](./20-signal-processing/01-signals-and-systems/03-convolution-and-filters.md) | A |
+| ✓ | [Transfer Functions, Poles and Zeros](./20-signal-processing/01-signals-and-systems/04-transfer-functions.md) | G |
+| ✓ | [Sampling, Nyquist and Reconstruction](./20-signal-processing/01-signals-and-systems/05-sampling-theory.md) | A |
 
-### [ ] Fourier and Spectral Analysis (0/6)
+### [x] Fourier and Spectral Analysis (6/6)
 
 Module index: [`02-fourier-and-spectral-analysis/README.md`](./20-signal-processing/02-fourier-and-spectral-analysis/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Practical DFT/FFT: Normalisation, Units and Pitfalls](./20-signal-processing/02-fourier-and-spectral-analysis/01-dft-fft-practice.md) | I |
-| · | [Spectral Estimation: Periodogram, Welch, Multitaper](./20-signal-processing/02-fourier-and-spectral-analysis/02-spectral-estimation.md) | G |
-| · | [Window Functions and Spectral Leakage Control](./20-signal-processing/02-fourier-and-spectral-analysis/03-windowing-advanced.md) | A |
-| · | [Cross-Spectra, Coherence and Phase Estimation](./20-signal-processing/02-fourier-and-spectral-analysis/04-cross-spectra-coherence.md) | D |
-| · | [Time-Frequency Analysis: STFT, Wavelets, Spectrograms](./20-signal-processing/02-fourier-and-spectral-analysis/05-time-frequency.md) | R |
-| · | [Wavelet Transforms and Multiresolution Analysis](./20-signal-processing/02-fourier-and-spectral-analysis/06-wavelet-analysis.md) | R |
+| ✓ | [Practical DFT/FFT: Normalisation, Units and Pitfalls](./20-signal-processing/02-fourier-and-spectral-analysis/01-dft-fft-practice.md) | I |
+| ✓ | [Spectral Estimation: Periodogram, Welch, Multitaper](./20-signal-processing/02-fourier-and-spectral-analysis/02-spectral-estimation.md) | G |
+| ✓ | [Window Functions and Spectral Leakage Control](./20-signal-processing/02-fourier-and-spectral-analysis/03-windowing-advanced.md) | A |
+| ✓ | [Cross-Spectra, Coherence and Phase Estimation](./20-signal-processing/02-fourier-and-spectral-analysis/04-cross-spectra-coherence.md) | D |
+| ✓ | [Time-Frequency Analysis: STFT, Wavelets, Spectrograms](./20-signal-processing/02-fourier-and-spectral-analysis/05-time-frequency.md) | R |
+| ✓ | [Wavelet Transforms and Multiresolution Analysis](./20-signal-processing/02-fourier-and-spectral-analysis/06-wavelet-analysis.md) | R |
 
-### [ ] Digital Filtering (0/6)
+### [x] Digital Filtering (6/6)
 
 Module index: [`03-digital-filtering/README.md`](./20-signal-processing/03-digital-filtering/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [FIR Filter Design: Windows, Parks-McClellan, Least Squares](./20-signal-processing/03-digital-filtering/01-fir-filters.md) | G |
-| · | [IIR Filter Design: Butterworth, Chebyshev, Elliptic](./20-signal-processing/03-digital-filtering/02-iir-filters.md) | G |
-| · | [Filter Selection for Geophysical Data](./20-signal-processing/03-digital-filtering/03-filter-applications.md) | A |
-| · | [Phase Response, Zero-Phase Filtering and Distortion](./20-signal-processing/03-digital-filtering/04-phase-and-zero-phase.md) | D |
-| · | [Adaptive Filtering and Noise Cancellation](./20-signal-processing/03-digital-filtering/05-adaptive-filtering.md) | R |
-| · | [Multichannel and Array Filtering (f-k, Radon)](./20-signal-processing/03-digital-filtering/06-multichannel-filtering.md) | R |
+| ✓ | [FIR Filter Design: Windows, Parks-McClellan, Least Squares](./20-signal-processing/03-digital-filtering/01-fir-filters.md) | G |
+| ✓ | [IIR Filter Design: Butterworth, Chebyshev, Elliptic](./20-signal-processing/03-digital-filtering/02-iir-filters.md) | G |
+| ✓ | [Filter Selection for Geophysical Data](./20-signal-processing/03-digital-filtering/03-filter-applications.md) | A |
+| ✓ | [Phase Response, Zero-Phase Filtering and Distortion](./20-signal-processing/03-digital-filtering/04-phase-and-zero-phase.md) | D |
+| ✓ | [Adaptive Filtering and Noise Cancellation](./20-signal-processing/03-digital-filtering/05-adaptive-filtering.md) | R |
+| ✓ | [Multichannel and Array Filtering (f-k, Radon)](./20-signal-processing/03-digital-filtering/06-multichannel-filtering.md) | R |
 
-### [ ] Deconvolution and Inverse Filtering (0/4)
+### [x] Deconvolution and Inverse Filtering (4/4)
 
 Module index: [`04-deconvolution-and-inverse-filtering/README.md`](./20-signal-processing/04-deconvolution-and-inverse-filtering/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Deconvolution: Concept, Ill-Posedness and Stabilisation](./20-signal-processing/04-deconvolution-and-inverse-filtering/01-deconvolution-concept.md) | D |
-| · | [Spiking (Predictive) Deconvolution and Wavelet Estimation](./20-signal-processing/04-deconvolution-and-inverse-filtering/02-spiking-deconvolution.md) | R |
-| · | [Wiener Filtering and Least-Squares Inverse Filters](./20-signal-processing/04-deconvolution-and-inverse-filtering/03-wiener-filtering.md) | R |
-| · | [Deconvolution in the Presence of Noise](./20-signal-processing/04-deconvolution-and-inverse-filtering/04-deconvolution-noise.md) | R |
+| ✓ | [Deconvolution: Concept, Ill-Posedness and Stabilisation](./20-signal-processing/04-deconvolution-and-inverse-filtering/01-deconvolution-concept.md) | D |
+| ✓ | [Spiking (Predictive) Deconvolution and Wavelet Estimation](./20-signal-processing/04-deconvolution-and-inverse-filtering/02-spiking-deconvolution.md) | R |
+| ✓ | [Wiener Filtering and Least-Squares Inverse Filters](./20-signal-processing/04-deconvolution-and-inverse-filtering/03-wiener-filtering.md) | R |
+| ✓ | [Deconvolution in the Presence of Noise](./20-signal-processing/04-deconvolution-and-inverse-filtering/04-deconvolution-noise.md) | R |
 
-### [ ] Noise and Random Signals (0/4)
+### [x] Noise and Random Signals (4/4)
 
 Module index: [`05-noise-and-random-signals/README.md`](./20-signal-processing/05-noise-and-random-signals/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Stochastic Processes, Stationarity and Ergodicity](./20-signal-processing/05-noise-and-random-signals/01-stochastic-processes.md) | R |
-| · | [Autocorrelation, Power Spectral Density and Wiener-Khinchin](./20-signal-processing/05-noise-and-random-signals/02-autocorrelation-spectra.md) | R |
-| · | [Colour of Noise: White, Pink, Red and Geophysical Examples](./20-signal-processing/05-noise-and-random-signals/03-noise-colour.md) | D |
-| · | [Noise Reduction Strategies in Practice](./20-signal-processing/05-noise-and-random-signals/04-noise-reduction.md) | G |
+| ✓ | [Stochastic Processes, Stationarity and Ergodicity](./20-signal-processing/05-noise-and-random-signals/01-stochastic-processes.md) | R |
+| ✓ | [Autocorrelation, Power Spectral Density and Wiener-Khinchin](./20-signal-processing/05-noise-and-random-signals/02-autocorrelation-spectra.md) | R |
+| ✓ | [Colour of Noise: White, Pink, Red and Geophysical Examples](./20-signal-processing/05-noise-and-random-signals/03-noise-colour.md) | D |
+| ✓ | [Noise Reduction Strategies in Practice](./20-signal-processing/05-noise-and-random-signals/04-noise-reduction.md) | G |
 
-### [ ] Polarisation and Array Processing (0/4)
+### [x] Polarisation and Array Processing (4/4)
 
 Module index: [`06-polarisation-and-array-processing/README.md`](./20-signal-processing/06-polarisation-and-array-processing/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Particle Motion Analysis and Polarisation Attributes](./20-signal-processing/06-polarisation-and-array-processing/01-particle-motion.md) | R |
-| · | [Beamforming, Slowness Estimation and f-k Analysis](./20-signal-processing/06-polarisation-and-array-processing/02-beamforming.md) | R |
-| · | [Seismic Array Design and Resolution](./20-signal-processing/06-polarisation-and-array-processing/03-array-design.md) | R |
-| · | [Back-Projection Imaging of Rupture](./20-signal-processing/06-polarisation-and-array-processing/04-backprojection.md) | R |
+| ✓ | [Particle Motion Analysis and Polarisation Attributes](./20-signal-processing/06-polarisation-and-array-processing/01-particle-motion.md) | R |
+| ✓ | [Beamforming, Slowness Estimation and f-k Analysis](./20-signal-processing/06-polarisation-and-array-processing/02-beamforming.md) | R |
+| ✓ | [Seismic Array Design and Resolution](./20-signal-processing/06-polarisation-and-array-processing/03-array-design.md) | R |
+| ✓ | [Back-Projection Imaging of Rupture](./20-signal-processing/06-polarisation-and-array-processing/04-backprojection.md) | R |
 
-### [ ] Inverse Methods in Signal Processing (0/3)
+### [x] Inverse Methods in Signal Processing (3/3)
 
 Module index: [`07-inversion-in-signal-processing/README.md`](./20-signal-processing/07-inversion-in-signal-processing/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Sparse and L1 Deconvolution](./20-signal-processing/07-inversion-in-signal-processing/01-sparse-deconvolution.md) | R |
-| · | [Compressive Sensing and Data Reconstruction](./20-signal-processing/07-inversion-in-signal-processing/02-compressive-sensing-signals.md) | R |
-| · | [Sparse Representations for Seismic Data](./20-signal-processing/07-inversion-in-signal-processing/03-sparsity-seismic.md) | R |
+| ✓ | [Sparse and L1 Deconvolution](./20-signal-processing/07-inversion-in-signal-processing/01-sparse-deconvolution.md) | R |
+| ✓ | [Compressive Sensing and Data Reconstruction](./20-signal-processing/07-inversion-in-signal-processing/02-compressive-sensing-signals.md) | R |
+| ✓ | [Sparse Representations for Seismic Data](./20-signal-processing/07-inversion-in-signal-processing/03-sparsity-seismic.md) | R |
 
-### [ ] Time-Series Analysis in Geophysics (0/5)
+### [x] Time-Series Analysis in Geophysics (5/5)
 
 Module index: [`08-timeseries-analysis-geophysics/README.md`](./20-signal-processing/08-timeseries-analysis-geophysics/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Detrending, Deseasonalising and Anomalies](./20-signal-processing/08-timeseries-analysis-geophysics/01-detrending-seasonality.md) | G |
-| · | [Tidal Harmonic Analysis and Prediction](./20-signal-processing/08-timeseries-analysis-geophysics/02-spectral-analysis-tides.md) | D |
-| · | [Geodetic Time Series: Trends, Offsets, Noise Models](./20-signal-processing/08-timeseries-analysis-geophysics/03-geodetic-time-series.md) | R |
-| · | [Change-Point Detection and Regime Shifts](./20-signal-processing/08-timeseries-analysis-geophysics/04-change-point-and-detection.md) | R |
-| · | [Climate Time-Series Analysis and Modes of Variability](./20-signal-processing/08-timeseries-analysis-geophysics/05-climate-timeseries.md) | R |
+| ✓ | [Detrending, Deseasonalising and Anomalies](./20-signal-processing/08-timeseries-analysis-geophysics/01-detrending-seasonality.md) | G |
+| ✓ | [Tidal Harmonic Analysis and Prediction](./20-signal-processing/08-timeseries-analysis-geophysics/02-spectral-analysis-tides.md) | D |
+| ✓ | [Geodetic Time Series: Trends, Offsets, Noise Models](./20-signal-processing/08-timeseries-analysis-geophysics/03-geodetic-time-series.md) | R |
+| ✓ | [Change-Point Detection and Regime Shifts](./20-signal-processing/08-timeseries-analysis-geophysics/04-change-point-and-detection.md) | R |
+| ✓ | [Climate Time-Series Analysis and Modes of Variability](./20-signal-processing/08-timeseries-analysis-geophysics/05-climate-timeseries.md) | R |
 
 ## Statistics, Bayesian Inference and Machine Learning
 
