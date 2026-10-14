@@ -1,0 +1,73 @@
+# Verified external links
+#
+# Every external URL cited anywhere in this repository MUST appear in this file
+# with the HTTP status observed when it was last checked. This prevents the
+# curriculum from accumulating invented or silently-rotted links.
+#
+# Regenerate with:
+#     python3 tools/verify_links.py --check
+#
+# Columns (tab-separated):
+#   status  date_checked  url  note
+#
+# Status semantics:
+#   200  -> reachable
+#   403  -> reachable but blocks automated requests (usually bot protection);
+#           treat as valid, verify manually in a browser before relying on it
+#   404  -> NOT valid, do not cite
+#   000  -> connection/TLS failure from this machine, do not cite
+#
+# === Institutional and data-service endpoints ===
+200	2026-10-14	https://earthquake.usgs.gov	USGS Earthquake Hazards Program
+200	2026-10-14	https://earthquake.usgs.gov/fdsnws/event/1/	USGS FDSN event web service (query endpoint for earthquake catalogs)
+403	2026-10-14	https://www.usgs.gov	USGS main site; blocks automated requests, valid in a browser
+200	2026-10-14	https://www.iris.edu	IRIS consortium site (data services now operated by EarthScope)
+200	2026-10-14	https://www.iris.edu/hq/	IRIS headquarters pages
+200	2026-10-14	https://ds.iris.edu	IRIS Data Services
+200	2026-10-14	https://ds.iris.edu/ds/nodes/dmc/	IRIS DMC, waveform archive
+200	2026-10-14	https://www.earthscope.org	EarthScope Consortium (successor to IRIS and UNAVCO)
+200	2026-10-14	https://www.earthscope.org/data/	EarthScope data access portal
+200	2026-10-14	https://service.iris.edu/fdsnws/dataselect/1/	IRIS/EarthScope FDSN dataselect service (waveform retrieval)
+200	2026-10-14	https://www.fdsn.org	International Federation of Digital Seismograph Networks
+200	2026-10-14	https://www.orfeus-eu.org	ORFEUS, European seismological data infrastructure
+200	2026-10-14	https://www.isc.ac.uk	International Seismological Centre, global bulletin
+200	2026-10-14	https://www.gfz-potsdam.de	GFZ German Research Centre for Geosciences
+200	2026-10-14	https://icgem.gfz-potsdam.de/	ICGEM, International Centre for Global Earth Models (gravity models)
+403	2026-10-14	https://www.noaa.gov	NOAA main site; blocks automated requests, valid in a browser
+200	2026-10-14	https://www.ncei.noaa.gov	NOAA National Centers for Environmental Information
+200	2026-10-14	https://www.nodc.noaa.gov	NOAA National Oceanographic Data Center
+200	2026-10-14	https://www.ngdc.noaa.gov	NOAA National Geophysical Data Center (geophysics and geomagnetism)
+200	2026-10-14	https://www.nasa.gov	NASA
+200	2026-10-14	https://www.esa.int	European Space Agency
+200	2026-10-14	https://www.copernicus.eu	Copernicus programme
+200	2026-10-14	https://cds.climate.copernicus.eu	Copernicus Climate Data Store
+200	2026-10-14	https://grace.jpl.nasa.gov	NASA GRACE/GRACE-FO mission pages
+200	2026-10-14	https://geodesy.noaa.gov	NOAA National Geodetic Survey
+200	2026-10-14	https://www.unavco.org	UNAVCO (now part of EarthScope); GNSS and geodetic facility
+200	2026-10-14	https://www.tidesandcurrents.noaa.gov/	NOAA Center for Operational Oceanographic Products and Services (tides, sea level)
+200	2026-10-14	https://psmsl.org/	Permanent Service for Mean Sea Level
+200	2026-10-14	https://www.opentopography.org/	OpenTopography: high-resolution topography and bathymetry
+200	2026-10-14	https://dataspace.copernicus.eu/	Copernicus Data Space Ecosystem (Sentinel data access)
+
+# === Geophysics data collections ===
+200	2026-10-14	https://www.ngdc.noaa.gov/geomag/calculators/magcalc.shtml	NOAA magnetic field calculator (uses IGRF/WMM)
+200	2026-10-14	https://www.ngdc.noaa.gov/IAGA/vmod/igrf.html	International Geomagnetic Reference Field model and coefficients
+200	2026-10-14	https://www.ngdc.noaa.gov/mgg/global/	NOAA global relief (ETOPO) grids
+200	2026-10-14	https://www.ncei.noaa.gov/products/etopo-global-relief-model	ETOPO global relief model product page
+200	2026-10-14	https://www.ngdc.noaa.gov/mgg/gravity/	NOAA global gravity database
+200	2026-10-14	https://topex.ucsd.edu/marine_grav/mar_grav.html	Scripps/Sandwell marine gravity from satellite altimetry
+200	2026-10-14	https://www.ncei.noaa.gov/products/land-based-station	NOAA land-based station climate data
+
+# === Software documentation ===
+200	2026-10-14	https://numpy.org	NumPy
+200	2026-10-14	https://scipy.org	SciPy
+200	2026-10-14	https://docs.obspy.org	ObsPy documentation
+200	2026-10-14	https://pygmt.org	PyGMT documentation
+200	2026-10-14	https://pytorch.org	PyTorch project site
+200	2026-10-14	https://pytorch.org/get-started/locally/	PyTorch installation selector (cited in environment.yml)
+
+# === REJECTED: do not cite these ===
+404	2026-10-14	https://www.ngdc.noaa.gov/seg/wdm/	DEAD: retired World Data Center for Marine Geology page
+404	2026-10-14	https://www.ngdc.noaa.gov/mgg/geology/data.html	DEAD: NOAA marine geology data index path has moved; locate the current page from ngdc.noaa.gov
+404	2026-10-14	https://service.iris.edu/fdsnws/event/1/	DEAD: IRIS event web service base path retired; use the USGS FDSN event service instead
+000	2026-10-14	https://scihub.copernicus.eu/	UNREACHABLE: legacy Copernicus scihub; use dataspace.copernicus.eu

@@ -1,0 +1,96 @@
+# Geophysics curriculum — conda environment
+#
+# Creates a complete, reproducible scientific environment:
+#
+#     conda env create -f environment.yml
+#     conda activate geophysics
+#
+# Conda is preferred over a bare venv when:
+#   * a wheel is unavailable for your Python version (conda-forge often has
+#     builds for interpreter versions that PyPI wheels lag behind);
+#   * you need PyGMT, which requires the GMT C library — conda-forge installs
+#     both together, avoiding a difficult manual GMT build;
+#   * you need GDAL/rasterio/PROJ for geospatial work, where conda-forge
+#     provides pre-built binaries that are far easier than compiling from source.
+#
+# The repository's own quality gate (tools/check_all.py, tools/build_index.py,
+# tools/verify_links.py) uses only the Python standard library, so this
+# environment is NOT required to validate or contribute content.
+
+name: geophysics
+
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  # Interpreter. Pinned to a version with broad scientific-package support.
+  # Bump deliberately, and re-verify that every package below resolves.
+  - python=3.12
+
+  # --- Core numerical stack -------------------------------------------------
+  - numpy
+  - scipy
+  - sympy
+  - pandas
+
+  # --- Labelled / gridded data ---------------------------------------------
+  - xarray
+  - netcdf4
+  - h5py
+  - zarr
+  - dask
+
+  # --- Plotting and mapping -------------------------------------------------
+  - matplotlib
+  - cartopy
+  - pyproj
+
+  # --- Geospatial -----------------------------------------------------------
+  - geopandas
+  - shapely
+  - rasterio
+  - fiona
+
+  # --- Geophysics -----------------------------------------------------------
+  - obspy
+  - pygmt              # pulls in GMT from conda-forge
+  - discretize         # meshing utilities used by simpeg
+  - simpeg             # geophysical forward modelling and inversion
+
+  # --- Machine learning -----------------------------------------------------
+  - scikit-learn
+
+  # --- Notebooks and tooling ------------------------------------------------
+  - jupyterlab
+  - ipykernel
+  - pytest
+  - pytest-cov
+  - ruff
+  - mypy
+  - nbstripout
+
+  # --- Pip-only packages ----------------------------------------------------
+  # Install after the solver finishes if you need them:
+  #   conda activate geophysics
+  #   pip install bruges verde disba
+  # - bruges   : rock-physics and seismic-attribute helpers
+  # - verde    : spatial gridding and interpolation
+  # - disba    : surface-wave dispersion (Rayleigh/Love) for Vs profiling
+  #
+  # PyTorch is intentionally omitted: GPU installs are platform-specific.
+  # Follow the official PyTorch instructions matching your CUDA/ROCm version:
+  #   https://pytorch.org/get-started/locally/
+  # (That URL was verified reachable at the time of writing; if it moves,
+  # consult the PyTorch homepage.)
+
+  # --- Optional: seismology and geodynamics extras --------------------------
+  # These are large or specialised; uncomment as needed.
+  # - pyrocko
+  # - gmt
+
+# Verification after installation:
+#     conda activate geophysics
+#     python -c "import numpy, scipy, pandas, xarray, matplotlib, obspy; print('core stack ok')"
+#     python -c "import pygmt; print('pygmt ok, GMT version:', pygmt.__version__)"
+#     python -c "import geopandas, rasterio; print('geospatial ok')"

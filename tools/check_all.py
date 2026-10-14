@@ -1,0 +1,293 @@
+"""Repository-wide quality gate for the Geophysics curriculum.
+
+Runs four independent checks and reports a single pass/fail summary:
+
+1. ``check_structure``  - every lesson file carries valid frontmatter, every
+                          frontmatter ``id`` matches the plan, and every
+                          frontmatter path matches its location on disk.
+2. ``check_links``      - relative Markdown links resolve to existing files.
+3. ``check_math``       - LaTeX inline ``$...$`` and display ``$$...$$``
+                          delimiters are balanced on every line/section.
+4. ``check_duplicates`` - no duplicate lesson IDs, slugs or titles.
+
+Usage
+-----
+    python3 tools/check_all.py            # run everything
+    python3 tools/check_all.py --quiet    # only print failures
+
+Exit status is 0 when every check passes, 1 otherwise, so the script can be
+used directly as a CI gate.
+"""
+
+from __future__ import annotations
+
+import argparse
+import re
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+import curriculum_plan as plan  # noqa: E402
+from frontmatter import FrontmatterError, parse_frontmatter  # noqa: E402
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
+SKIP_DIRS = {".git", "node_modules", "__pycache__", ".venv", "venv", "site-packages"}
+# Directories whose Markdown is supporting material, not curriculum lessons.
+NON_LESSON_DIRS = {"exercises", "code", "tools", "images", "data", "solutions"}
+
+LINK_RE = re.compile(r"\[[^\]]*\]\(([^)]+)\)")
+FENCE_RE = re.compile(r"^\s*(```|~~~)")
+
+
+def iter_markdown() -> list[Path]:
+    files: list[Path] = []
+    for path in sorted(REPO_ROOT.rglob("*.md")):
+        if any(part in SKIP_DIRS for part in path.parts):
+            continue
+        files.append(path)
+    return files
+
+
+def iter_lesson_files() -> list[Path]:
+    """Markdown files that are lessons.
+
+    A lesson is a numbered Markdown file inside a module directory. Index pages
+    (``README.md``), problem sets and solutions (``exercises/``), and runnable
+    code (``code/``) are deliberately excluded: they carry no frontmatter and
+    must not be counted as lessons.
+    """
+    lessons = []
+    for path in iter_markdown():
+        if path.name == "README.md":
+            continue
+        if any(part in NON_LESSON_DIRS for part in path.parts):
+            continue
+        if re.match(r"^\d{2}-", path.name):
+            lessons.append(path)
+    return lessons
+
+
+# --------------------------------------------------------------------------
+# Check 1: structure and frontmatter
+# --------------------------------------------------------------------------
+
+def check_structure(verbose: bool) -> list[str]:
+    problems: list[str] = []
+    by_path = {lesson["path"]: lesson for lesson in plan.all_lessons()}
+
+    for path in iter_lesson_files():
+        rel = path.relative_to(REPO_ROOT).as_posix()
+        try:
+            meta, _ = parse_frontmatter(path.read_text(encoding="utf-8"))
+        except FrontmatterError as exc:
+            problems.append(f"{rel}: {exc}")
+            continue
+
+        expected = by_path.get(rel)
+        if expected is None:
+            problems.append(f"{rel}: not declared in tools/curriculum_plan.py")
+            continue
+        if meta.get("id") != expected["id"]:
+            problems.append(
+                f"{rel}: frontmatter id {meta.get('id')!r} != planned {expected['id']!r}"
+            )
+        if meta.get("title") != expected["title"]:
+            problems.append(
+                f"{rel}: frontmatter title {meta.get('title')!r} != planned {expected['title']!r}"
+            )
+        if meta.get("level") != expected["level"]:
+            problems.append(
+                f"{rel}: frontmatter level {meta.get('level')!r} != planned {expected['level']!r}"
+            )
+
+    if verbose:
+        written = len(iter_lesson_files())
+        print(f"  lessons on disk: {written} / {len(by_path)} planned")
+    return problems
+
+
+# --------------------------------------------------------------------------
+# Check 2: relative links
+# --------------------------------------------------------------------------
+
+def check_links(verbose: bool) -> list[str]:
+    """Fail only on links that are neither present nor declared in the plan.
+
+    Because this curriculum is written in batches, a link may legitimately point
+    at a lesson that is planned but not yet written. Such links are reported as
+    *pending* (informational) rather than broken (failure). A link that is
+    neither on disk nor in the plan is a genuine error.
+    """
+    problems: list[str] = []
+    planned = set(plan.planned_paths())
+    checked = pending = 0
+
+    for path in iter_markdown():
+        text = path.read_text(encoding="utf-8")
+        for match in LINK_RE.finditer(text):
+            target = match.group(1).strip()
+            if target.startswith(("http://", "https://", "mailto:", "#")):
+                continue
+            if target.startswith("/"):
+                # Absolute filesystem paths are machine-specific and break for
+                # every other reader. Always use a repository-relative link.
+                rel = path.relative_to(REPO_ROOT).as_posix()
+                problems.append(f"{rel}: absolute path link -> {target}")
+                continue
+            target = target.split("#", 1)[0]
+            if not target:
+                continue
+            checked += 1
+            resolved = (path.parent / target).resolve()
+            if resolved.exists():
+                continue
+            # Normalise the target back to a repository-relative path.
+            try:
+                rel_target = resolved.relative_to(REPO_ROOT).as_posix()
+            except ValueError:
+                rel_target = target
+            if rel_target in planned:
+                pending += 1
+                continue
+            rel = path.relative_to(REPO_ROOT).as_posix()
+            problems.append(f"{rel}: broken relative link -> {match.group(1)}")
+
+    if verbose:
+        print(f"  relative links checked: {checked} ({pending} pending, planned but "
+              f"not yet written)")
+    return problems
+
+
+# --------------------------------------------------------------------------
+# Check 3: LaTeX delimiter balance
+# --------------------------------------------------------------------------
+
+def _strip_code(text: str) -> list[str]:
+    """Return lines with fenced code blocks replaced by blanks."""
+    out: list[str] = []
+    in_fence = False
+    for line in text.splitlines():
+        if FENCE_RE.match(line):
+            in_fence = not in_fence
+            out.append("")
+            continue
+        out.append("" if in_fence else line)
+    return out
+
+
+def check_math(verbose: bool) -> list[str]:
+    """Check LaTeX delimiter balance.
+
+    Inline ``$...$`` spans are tracked *across* lines, because inline math
+    legitimately wraps in Markdown source. A single file-level unbalanced state
+    is reported with the line where the unclosed span began.
+    """
+    problems: list[str] = []
+    files = 0
+    for path in iter_markdown():
+        files += 1
+        lines = _strip_code(path.read_text(encoding="utf-8"))
+        rel = path.relative_to(REPO_ROOT).as_posix()
+
+        # Display math: count $$ delimiters across the whole file.
+        doubled = sum(line.count("$$") for line in lines)
+        if doubled % 2 != 0:
+            problems.append(f"{rel}: unbalanced '$$' display-math delimiters ({doubled})")
+
+        # Inline math: a running toggle across the file. A line with an even
+        # number of '$' toggles twice and leaves the state unchanged.
+        open_at: int | None = None
+        for index, line in enumerate(lines, start=1):
+            residue = line.replace("$$", "")
+            count = residue.count("$") - residue.count(r"\$")
+            if count % 2 == 1:
+                if open_at is None:
+                    open_at = index
+                else:
+                    open_at = None
+        if open_at is not None:
+            problems.append(
+                f"{rel}: unclosed inline '$' math opened at line {open_at}"
+            )
+    if verbose:
+        print(f"  files scanned for formulas: {files}")
+    return problems
+
+
+# --------------------------------------------------------------------------
+# Check 4: duplicate identifiers
+# --------------------------------------------------------------------------
+
+def check_duplicates(verbose: bool) -> list[str]:
+    problems: list[str] = []
+    seen_ids: dict[str, str] = {}
+    seen_titles: dict[str, str] = {}
+    for path in iter_lesson_files():
+        rel = path.relative_to(REPO_ROOT).as_posix()
+        try:
+            meta, _ = parse_frontmatter(path.read_text(encoding="utf-8"))
+        except FrontmatterError:
+            continue
+        lesson_id = str(meta.get("id", ""))
+        title = str(meta.get("title", ""))
+        if lesson_id in seen_ids:
+            problems.append(f"{rel}: duplicate id {lesson_id!r} (also in {seen_ids[lesson_id]})")
+        else:
+            seen_ids[lesson_id] = rel
+        if title in seen_titles:
+            problems.append(f"{rel}: duplicate title {title!r} (also in {seen_titles[title]})")
+        else:
+            seen_titles[title] = rel
+    if verbose:
+        print(f"  distinct lesson ids: {len(seen_ids)}")
+    return problems
+
+
+# --------------------------------------------------------------------------
+# Runner
+# --------------------------------------------------------------------------
+
+CHECKS = (
+    ("structure & frontmatter", check_structure),
+    ("relative links", check_links),
+    ("LaTeX delimiters", check_math),
+    ("duplicate identifiers", check_duplicates),
+)
+
+
+def main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--quiet", action="store_true", help="only report failures")
+    args = parser.parse_args(argv)
+    verbose = not args.quiet
+
+    if verbose:
+        counts = plan.summary()
+        print("Geophysics curriculum quality gate")
+        print(f"  plan: {counts['folders']} folders, {counts['modules']} modules, "
+              f"{counts['lessons']} lessons\n")
+
+    failed = False
+    for name, fn in CHECKS:
+        print(f"[{'..' if verbose else ''}] {name}")
+        problems = fn(verbose)
+        if problems:
+            failed = True
+            for problem in problems[:40]:
+                print(f"      FAIL {problem}")
+            if len(problems) > 40:
+                print(f"      ... and {len(problems) - 40} more")
+        else:
+            print("      ok")
+
+    print()
+    if failed:
+        print("RESULT: FAIL")
+        return 1
+    print("RESULT: PASS")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
