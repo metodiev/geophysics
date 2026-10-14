@@ -11,10 +11,10 @@ Legend: **B** beginner · **I** intermediate · **A** advanced · **G** graduate
 | Folders | 27 |
 | Modules | 216 |
 | Lessons planned | 1146 |
-| Lessons written | 305 |
-| Lessons with valid frontmatter | 305 |
-| Exercise/solution companions written | 564 / 2190 |
-| Completion | 26.6% |
+| Lessons written | 316 |
+| Lessons with valid frontmatter | 316 |
+| Exercise/solution companions written | 586 / 2190 |
+| Completion | 27.6% |
 
 > Companion files are the conventional `exercises/<lesson>-exercises.md` and `<lesson>-solutions.md` pairs. Lessons in `00-orientation` and `26-reference-library` are process material and reference pages, so they carry no companions by design.
 
@@ -782,7 +782,7 @@ Module index: [`08-planetary-science/README.md`](./04-earth-science-geology/08-p
 
 ## Core Geophysics: Principles and Methods
 
-`05-core-geophysics` — **9 modules**, **21/48 lessons written**
+`05-core-geophysics` — **9 modules**, **32/48 lessons written**
 
 [Folder index](./05-core-geophysics/README.md)
 
@@ -835,30 +835,30 @@ Module index: [`04-rock-physics/README.md`](./05-core-geophysics/04-rock-physics
 | ✓ | [Attenuation and Velocity Dispersion in Rocks](./05-core-geophysics/04-rock-physics/06-attenuation-dispersion-rock.md) | D |
 | ✓ | [Electrical Properties, Archie's Law and Clay Effects](./05-core-geophysics/04-rock-physics/07-electrical-properties-rock.md) | A |
 
-### [ ] Survey Design and Data Acquisition Principles (0/5)
+### [x] Survey Design and Data Acquisition Principles (5/5)
 
 Module index: [`05-survey-design-and-acquisition/README.md`](./05-core-geophysics/05-survey-design-and-acquisition/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [Survey Planning: Objectives, Target Resolution, Budget](./05-core-geophysics/05-survey-design-and-acquisition/01-survey-planning.md) | A |
-| · | [Array Geometry, Fold, Offsets and Spatial Sampling](./05-core-geophysics/05-survey-design-and-acquisition/02-geometry-and-coverage.md) | A |
-| · | [Spatial Sampling, Wavenumber Aliasing and Reconstruction](./05-core-geophysics/05-survey-design-and-acquisition/03-spatial-sampling-theory.md) | G |
-| · | [Positioning with GNSS/DGPS and Static Corrections](./05-core-geophysics/05-survey-design-and-acquisition/04-positioning-gnss.md) | I |
-| · | [Acquisition QC: Noise Tests, Repeatability, Metadata](./05-core-geophysics/05-survey-design-and-acquisition/05-quality-control.md) | A |
+| ✓ | [Survey Planning: Objectives, Target Resolution, Budget](./05-core-geophysics/05-survey-design-and-acquisition/01-survey-planning.md) | A |
+| ✓ | [Array Geometry, Fold, Offsets and Spatial Sampling](./05-core-geophysics/05-survey-design-and-acquisition/02-geometry-and-coverage.md) | A |
+| ✓ | [Spatial Sampling, Wavenumber Aliasing and Reconstruction](./05-core-geophysics/05-survey-design-and-acquisition/03-spatial-sampling-theory.md) | G |
+| ✓ | [Positioning with GNSS/DGPS and Static Corrections](./05-core-geophysics/05-survey-design-and-acquisition/04-positioning-gnss.md) | I |
+| ✓ | [Acquisition QC: Noise Tests, Repeatability, Metadata](./05-core-geophysics/05-survey-design-and-acquisition/05-quality-control.md) | A |
 
-### [ ] Data Processing Principles (0/6)
+### [x] Data Processing Principles (6/6)
 
 Module index: [`06-data-processing-principles/README.md`](./05-core-geophysics/06-data-processing-principles/README.md)
 
 | | Lesson | Level |
 |---|---|---|
-| · | [The Processing Pipeline: Editing, Correction, Enhancement](./05-core-geophysics/06-data-processing-principles/01-processing-pipeline-concept.md) | I |
-| · | [Noise Suppression: Stacking, Filtering, Median, KL Transform](./05-core-geophysics/06-data-processing-principles/02-noise-suppression.md) | A |
-| · | [Static Corrections, Datum and Elevation Effects](./05-core-geophysics/06-data-processing-principles/03-static-and-datum.md) | A |
-| · | [Gain Control, Amplitude Recovery and True-Amplitude Handling](./05-core-geophysics/06-data-processing-principles/04-gain-and-amplitude.md) | A |
-| · | [Gridding, Merging and Levelling of Survey Data](./05-core-geophysics/06-data-processing-principles/05-merge-and-regularisation.md) | A |
-| · | [Documenting Processing: Reproducibility in Practice](./05-core-geophysics/06-data-processing-principles/06-processing-transparency.md) | A |
+| ✓ | [The Processing Pipeline: Editing, Correction, Enhancement](./05-core-geophysics/06-data-processing-principles/01-processing-pipeline-concept.md) | I |
+| ✓ | [Noise Suppression: Stacking, Filtering, Median, KL Transform](./05-core-geophysics/06-data-processing-principles/02-noise-suppression.md) | A |
+| ✓ | [Static Corrections, Datum and Elevation Effects](./05-core-geophysics/06-data-processing-principles/03-static-and-datum.md) | A |
+| ✓ | [Gain Control, Amplitude Recovery and True-Amplitude Handling](./05-core-geophysics/06-data-processing-principles/04-gain-and-amplitude.md) | A |
+| ✓ | [Gridding, Merging and Levelling of Survey Data](./05-core-geophysics/06-data-processing-principles/05-merge-and-regularisation.md) | A |
+| ✓ | [Documenting Processing: Reproducibility in Practice](./05-core-geophysics/06-data-processing-principles/06-processing-transparency.md) | A |
 
 ### [ ] Interpretation and Geological Integration (0/6)
 

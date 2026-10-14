@@ -36,6 +36,16 @@ SKIP_DIRS = {
 
 URL_RE = re.compile(r"https?://[^\s\)\]\"'<>]+")
 
+# Loopback and other non-routable addresses. These cannot be external resources,
+# so requiring them in a registry of verified *external* links is meaningless.
+# Lessons on offline testing legitimately show a deliberately dead endpoint such
+# as http://127.0.0.1:9/fdsnws/ to demonstrate how a client fails.
+NON_ROUTABLE_RE = re.compile(
+    r"^https?://(?:localhost|127\.|0\.0\.0\.0|\[::1\]"
+    r"|10\.|192\.168\.|172\.(?:1[6-9]|2\d|3[01])\.|169\.254\.)",
+    re.IGNORECASE,
+)
+
 
 def load_registry() -> dict[str, tuple[str, str]]:
     """Return {url: (status, note)} from the TSV."""
@@ -66,6 +76,8 @@ def audit_markdown() -> int:
         rel = path.relative_to(REPO_ROOT).as_posix()
         for url in URL_RE.findall(path.read_text(encoding="utf-8")):
             url = url.rstrip(".,;:")
+            if NON_ROUTABLE_RE.match(url):
+                continue  # cannot be an external resource; nothing to verify
             if url not in registry:
                 unregistered.setdefault(url, set()).add(rel)
 
