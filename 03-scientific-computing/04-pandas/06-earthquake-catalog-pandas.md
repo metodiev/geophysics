@@ -451,7 +451,7 @@ reports `origin_time` as `datetime64[ns]` *because* `parse_dates` was supplied.
 - Next: [07 Performance, dtypes and When to Leave Pandas](./07-performance-pandas.md).
 - [03-04-03 Cleaning: Missing Values, Duplicates and Outliers](./03-cleaning-data.md)
   — the policy this lesson applies.
-- [21-statistics-bayesian-ml](../../21-statistics-bayesian-ml) — maximum
+- [21-statistics-bayesian-ml](../../21-statistics-bayesian-ml/README.md) — maximum
   likelihood, uncertainty and model selection, in depth.
 
 ## Exercises

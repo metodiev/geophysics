@@ -446,7 +446,7 @@ final check that the magnitude-frequency counts above M 2 and M 3 are unchanged.
   the regional medians used for imputation here are a group-by.
 - [03-04-06 Case Study: Earthquake Catalogue Wrangling](./06-earthquake-catalog-pandas.md)
   — where the cleaned catalogue is used and the completeness problem is faced.
-- [21-statistics-bayesian-ml](../../21-statistics-bayesian-ml) — for imputation
+- [21-statistics-bayesian-ml](../../21-statistics-bayesian-ml/README.md) — for imputation
   as a statistical model rather than a single fill.
 
 ## Exercises

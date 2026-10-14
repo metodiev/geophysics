@@ -60,6 +60,26 @@ def looks_like_link_target(target: str) -> bool:
     return bool(_LINK_TARGET_RE.search(target))
 
 
+# Subdirectories that belong to the module that contains them.
+_MODULE_SUBDIRS = {"exercises", "code", "images", "data", "solutions"}
+
+
+def _module_dir_of(file_path: Path) -> Path:
+    """The module directory that owns a file (its parent, or grandparent in exercises/)."""
+    parent = file_path.parent
+    return parent.parent if parent.name in _MODULE_SUBDIRS else parent
+
+
+def _within_own_module(file_path: Path, resolved: Path) -> bool:
+    """True if a directory target lies inside the linking file's own module."""
+    module_dir = _module_dir_of(file_path)
+    try:
+        resolved.relative_to(module_dir)
+        return True
+    except ValueError:
+        return False
+
+
 def iter_markdown() -> list[Path]:
     files: list[Path] = []
     for path in sorted(REPO_ROOT.rglob("*.md")):
@@ -215,6 +235,16 @@ def check_links(verbose: bool) -> list[str]:
             checked += 1
             resolved = (path.parent / target).resolve()
             if resolved.exists():
+                if resolved.is_dir() and not _within_own_module(path, resolved):
+                    # A link to a directory in ANOTHER module breaks in a fresh
+                    # clone when that module has no committed files yet, because
+                    # git does not track empty directories. Links to ./exercises
+                    # or ./code within the same module are fine -- those always
+                    # contain committed companions and demos.
+                    problems.append(
+                        f"{rel}: links to a directory in another module -> "
+                        f"{match.group(1)}   [link to '<dir>/README.md' instead]"
+                    )
                 continue
             # Normalise the target back to a repository-relative path.
             try:
